@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ST185 Celica GT-Four / All-Trac — Repair Manual</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2b333f;
+    --txt:#e6edf3; --muted:#93a1b0; --accent:#e5484d; --accent2:#3fb950;
+    --blue:#4493f8; --purple:#bc8cff; --amber:#e3b341; --chip:#21262d;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg);color:var(--txt);
+    font:14px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    display:flex;flex-direction:column;overflow:hidden}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{background:linear-gradient(180deg,#12181f,#0d1117);
+    border-bottom:1px solid var(--line);padding:10px 16px;flex:0 0 auto}
+  .brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .brand h1{font-size:15px;margin:0;letter-spacing:.3px}
+  .brand .car{color:var(--accent);font-weight:700}
+  .stats{color:var(--muted);font-size:12px;margin-left:auto}
+  .toolbar{display:flex;gap:9px;margin-top:9px;flex-wrap:wrap;align-items:center}
+  #q{flex:1;min-width:220px;background:var(--panel2);border:1px solid var(--line);
+    color:var(--txt);padding:9px 12px;border-radius:8px;font-size:14px}
+  #q:focus{outline:none;border-color:var(--blue)}
+  select,.tglbtn{background:var(--panel2);border:1px solid var(--line);color:var(--txt);
+    padding:8px 10px;border-radius:8px;font-size:13px;cursor:pointer}
+  .tglbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  #protowarn{display:none;background:#3a2b10;color:#ffd88a;border-bottom:1px solid #5a451c;
+    padding:8px 16px;font-size:13px}
+  main{flex:1;display:flex;min-height:0}
+  .rail{width:206px;flex:0 0 auto;border-right:1px solid var(--line);overflow:auto;
+    background:var(--panel);padding:8px}
+  .railsec{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.8px;
+    padding:10px 10px 4px}
+  .railbtn{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;
+    text-align:left;padding:8px 10px;border-radius:8px;background:transparent;color:var(--muted);
+    border:1px solid transparent;cursor:pointer;margin-bottom:2px;font-size:13px}
+  .railbtn:hover{background:var(--panel2);color:var(--txt)}
+  .railbtn.active{background:#1b2735;color:var(--txt);border-color:#264056;box-shadow:inset 3px 0 0 var(--blue)}
+  .railbtn .cnt{font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--chip);
+    padding:1px 6px;border-radius:9px}
+  .content{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
+  .cbar{padding:9px 16px;border-bottom:1px solid var(--line);background:var(--panel2);
+    display:flex;align-items:center;gap:12px;flex:0 0 auto}
+  .cbar .ttl{font-weight:700}
+  .cbar .sub{color:var(--muted);font-size:12px}
+  .gridwrap{flex:1;overflow:auto;padding:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:14px}
+  .grid .divider{grid-column:1/-1;color:var(--muted);font-size:11px;text-transform:uppercase;
+    letter-spacing:.8px;padding:4px 2px;border-bottom:1px solid var(--line)}
+  .gcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    cursor:pointer;display:flex;flex-direction:column;transition:border-color .12s,transform .12s}
+  .gcard:hover{border-color:var(--blue);transform:translateY(-2px)}
+  .gthumb{position:relative;aspect-ratio:17/22;background:#fff;overflow:hidden;
+    display:flex;align-items:flex-start;justify-content:center}
+  .gthumb img{width:100%;height:100%;object-fit:cover;object-position:top center;background:#fff}
+  .gthumb .ph{color:#666;font-size:11px;padding:20px;text-align:center}
+  .bstack{position:absolute;top:6px;right:6px;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+  .gmeta{padding:8px 10px}
+  .gtitle{font-weight:600;font-size:13px;line-height:1.3}
+  .gsub{color:var(--muted);font-size:11px;margin-top:3px}
+  .gsnip{color:var(--muted);font-size:11px;margin-top:5px;border-top:1px solid var(--line);padding-top:5px}
+  mark{background:#5a4600;color:#ffe08a;padding:0 1px;border-radius:2px}
+  .badge{font-family:var(--mono);font-size:10px;padding:2px 6px;border-radius:5px;white-space:nowrap;
+    border:1px solid var(--line)}
+  .b-3sgte{background:#3a1416;color:#ff9a9e;border-color:#5a1f22}
+  .b-5sfe{background:#20262e;color:#9fb0c0}
+  .b-both{background:#2a1c3a;color:var(--purple);border-color:#43305f}
+  .b-code{background:var(--chip);color:var(--muted)}
+  .b-img{background:#2b2410;color:var(--amber);border-color:#4a3d16}
+  .b-ref{background:#20262e;color:#8899a8}
+  .b-tq{background:#12251a;color:#7ee2a8;border-color:#1f4630}
+  .empty{padding:50px;text-align:center;color:var(--muted)}
+  .detail{flex:1;display:flex;flex-direction:column;overflow:hidden}
+  .dtop{padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel2);flex:0 0 auto}
+  .dtop .row1{display:flex;align-items:center;gap:12px}
+  .dtop h2{margin:0;font-size:17px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .dmeta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:12px;margin-top:6px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:7px 13px;border-radius:8px;
+    font-weight:600;font-size:13px;border:none;cursor:pointer;white-space:nowrap}
+  .btn:hover{filter:brightness(1.08);text-decoration:none}
+  .btn.ghost{background:var(--panel);border:1px solid var(--line);color:var(--txt)}
+  .dsplit{flex:1;display:flex;min-height:0}
+  .pdfpane{flex:1.7;min-width:0;background:#3c4043;border-right:1px solid var(--line)}
+  .pdfpane iframe{width:100%;height:100%;border:0;display:block}
+  .infopane{width:400px;flex:0 0 auto;overflow:auto;padding:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:14px;overflow:hidden}
+  .card h3{margin:0;padding:9px 13px;font-size:12px;background:var(--panel2);border-bottom:1px solid var(--line);
+    text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+  .card .inner{padding:11px 13px}
+  .reflist{display:flex;flex-wrap:wrap;gap:6px}
+  .refbtn{background:var(--chip);border:1px solid var(--line);color:var(--blue);
+    font-size:12px;padding:5px 9px;border-radius:6px;cursor:pointer}
+  .refbtn.dead{color:var(--muted);cursor:default;border-style:dashed}
+  .refbtn.approx{border-style:dashed}
+  .refbtn:hover:not(.dead){border-color:var(--blue);background:#182130}
+  .refbtn .pg{font-family:var(--mono);color:var(--muted);font-size:11px;margin-left:5px}
+  .tqsrc{margin-bottom:11px}
+  .tqsrc:last-child{margin-bottom:0}
+  .tqsrc-name{display:block;font-size:12.5px;color:var(--txt);margin-bottom:7px}
+  .tqsrc-name b{color:var(--accent2)}
+  .tqsrc-name .kind{color:var(--muted);font-size:11px}
+  .tqgrid{display:flex;flex-wrap:wrap;gap:8px}
+  .tqcard{width:104px;background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;
+    cursor:pointer;transition:border-color .12s,transform .12s}
+  .tqcard:hover{border-color:var(--accent2);transform:translateY(-2px)}
+  .tqcard img{width:100%;aspect-ratio:17/22;object-fit:cover;object-position:top center;display:block;background:#fff}
+  .tqcard .cap{display:block;text-align:center;font-family:var(--mono);font-size:11px;
+    background:var(--panel2);color:var(--accent2);padding:3px 0;border-top:1px solid var(--line)}
+  .note{color:var(--amber);font-size:12.5px;margin:0}
+  .hint{color:var(--muted);font-size:11.5px;margin:0 0 9px}
+  #pv{display:none;position:fixed;z-index:99;pointer-events:none;background:#fff;
+    border:2px solid var(--blue);border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.55);overflow:hidden}
+  #pv img{display:block;width:270px;background:#fff}
+  #pv .cap{display:block;background:var(--panel2);color:var(--txt);font-size:11px;padding:3px 8px;
+    border-top:1px solid var(--line)}
+  .sec-link{cursor:pointer;color:var(--blue)}
+  .addwrap{flex:1;overflow:auto;padding:20px 16px}
+  .addwrap .card{max-width:760px;margin:0 auto 14px}
+  .dropzone{border:2px dashed var(--line);border-radius:10px;padding:34px 16px;text-align:center;
+    color:var(--muted);cursor:pointer;transition:border-color .12s,background .12s}
+  .dropzone:hover,.dropzone.drag{border-color:var(--blue);background:#141c28;color:var(--txt)}
+  .dropzone b{color:var(--txt)}
+  .flist{margin:12px 0 0;padding:0;list-style:none}
+  .flist li{display:flex;align-items:center;gap:10px;padding:6px 4px;
+    border-bottom:1px solid var(--line);font-size:13px}
+  .flist li:last-child{border-bottom:none}
+  .flist .fname{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .flist .fsize{color:var(--muted);font-family:var(--mono);font-size:11px;white-space:nowrap}
+  .fst{font-family:var(--mono);font-size:11px;white-space:nowrap}
+  .fst.ok{color:var(--accent2)} .fst.err{color:var(--accent)}
+  .btnrow{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:12px}
+  .btnrow .sub{color:var(--muted);font-size:12px}
+  .btn:disabled{opacity:.45;cursor:default;filter:none}
+  .buildlog{background:#0a0e14;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+    font-family:var(--mono);font-size:11.5px;color:#9fb0c0;max-height:260px;overflow:auto;
+    white-space:pre-wrap;margin-top:12px}
+  .spin{display:inline-block;width:12px;height:12px;border:2px solid var(--muted);
+    border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;
+    vertical-align:-2px;margin-right:6px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  ::-webkit-scrollbar{width:11px;height:11px}
+  ::-webkit-scrollbar-thumb{background:#2b333f;border-radius:6px}
+  ::-webkit-scrollbar-track{background:transparent}
+  @media(max-width:900px){
+    .rail{width:150px}
+    .dsplit{flex-direction:column}
+    .pdfpane{flex:none;height:58vh;border-right:none;border-bottom:1px solid var(--line)}
+    .infopane{width:100%}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>🔧 ST185 Celica <span class="car">GT-Four / All-Trac</span> — Repair Manual</h1>
+    <span class="stats" id="stats"></span>
+  </div>
+  <div class="toolbar">
+    <input id="q" placeholder="Search procedures, parts, specs…  (press /)">
+    <select id="fengine">
+      <option value="">All engines</option>
+      <option value="3sgte">3S-GTE (turbo)</option>
+      <option value="5sfe">5S-FE</option>
+      <option value="both">Shared</option>
+      <option value="na">Non-engine</option>
+    </select>
+    <button class="tglbtn" id="fcar" title="Show only content that applies to your 1993 All-Trac">My car</button>
+  </div>
+</header>
+<div id="protowarn">⚠ Opened as a plain file — the in-app PDF viewer needs the local server.
+  Close this tab and double-click <b>Open Celica Manual.bat</b> instead.</div>
+<main>
+  <nav class="rail" id="rail"></nav>
+  <section class="content" id="content"></section>
+</main>
+<div id="pv"><img alt=""><span class="cap"></span></div>
+
+<script src="data/data.js"></script>
+<script>
+"use strict";
+const D = window.CELICA_DATA || {records:[],page_index:{}};
+const RECS = D.records;
+const BY_ID = {};
+RECS.forEach(r=>{
+  BY_ID[r.id]=r;
+  r.torque_table_pages=r.torque_table_pages||[];
+  r.master_torque=r.master_torque||[];
+  r._titleBlob=(r.title+" "+r.heading+" "+r.code+" "+r.system+" "+r.group).toLowerCase();
+  r._blob=(r._titleBlob+" "+r.text).toLowerCase();
+});
+const TQ_TABLES = RECS.filter(r=>r.torque_table_pages.length).length;
+
+const GROUP_ORDER = ["Engine","Engine Electrical","Drivetrain","Chassis","Brakes",
+  "Electrical","HVAC","Body","General","Other"];
+const ENG_BADGE = {"3sgte":["3S-GTE","b-3sgte"],"5sfe":["5S-FE","b-5sfe"],
+  "both":["3S+5S","b-both"],"na":["",""]};
+
+const state = {group:"All", q:"", engine:"", carOnly:false, view:"grid", sel:null, page:null};
+
+document.getElementById("stats").textContent =
+  RECS.length+" sections · "+TQ_TABLES+" torque tables · "+
+  Object.keys(D.page_index).length+" indexed pages";
+if(location.protocol==="file:") document.getElementById("protowarn").style.display="block";
+
+// ---------- helpers ----------
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function terms(){return state.q.toLowerCase().split(/\s+/).filter(Boolean);}
+function matchGroup(r){return state.group==="All" || r.group===state.group;}
+function matchFilters(r){
+  if(!matchGroup(r)) return false;
+  if(state.engine && r.engine!==state.engine) return false;
+  if(state.carOnly && r.relevance!=="car") return false;
+  return terms().every(w=>r._blob.includes(w));
+}
+// rank 0 = every search term found in title/header; rank 1 = body-only match
+function rankOf(r){
+  const t=terms(); if(!t.length) return 0;
+  return t.every(w=>r._titleBlob.includes(w)) ? 0 : 1;
+}
+function hi(text){
+  let out=esc(text); const t=terms();
+  t.forEach(w=>{ if(!w)return;
+    const re=new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");
+    out=out.replace(re,"<mark>$1</mark>"); });
+  return out;
+}
+function snippet(r){
+  const t=terms(); if(!t.length) return "";
+  const low=r.text.toLowerCase(); let i=-1;
+  for(const w of t){const p=low.indexOf(w); if(p>=0&&(i<0||p<i))i=p;}
+  if(i<0) return "";
+  const s=Math.max(0,i-60), e=Math.min(r.text.length,i+110);
+  return (s>0?"…":"")+hi(r.text.slice(s,e).replace(/\s+/g," "))+(e<r.text.length?"…":"");
+}
+function thumbHref(r){return "thumbs/"+encodeURIComponent(r.thumb);}
+function pageThumb(id,page){return "thumbs/pages/"+encodeURIComponent(id)+"_p"+page+".png";}
+// PDF.js viewer URL — renders the PDF in-app (no browser plugin, no download)
+function viewerSrc(r,page){
+  const abs=new URL("../manuals/"+encodeURIComponent(r.file),location.href).href;
+  return "pdfjs/web/viewer.html?file="+encodeURIComponent(abs)+
+         (page?("#page="+page+"&zoom=page-width"):"#zoom=page-width");
+}
+function openSection(id,page){ if(!BY_ID[id])return; state.sel=id; state.view="detail";
+  state.page=page||null; hidePv(); render(); }
+
+// ---------- floating hover preview ----------
+const pv=document.getElementById("pv");
+function hidePv(){pv.style.display="none";}
+function movePv(e){
+  const w=274,h=380; let x=e.clientX+18,y=e.clientY+14;
+  if(x+w>innerWidth)x=e.clientX-w-18;
+  if(y+h>innerHeight)y=Math.max(8,innerHeight-h-8);
+  pv.style.left=x+"px"; pv.style.top=y+"px";
+}
+function bindPreviews(root){
+  root.querySelectorAll("[data-pv]").forEach(el=>{
+    el.addEventListener("mouseenter",e=>{
+      const img=pv.querySelector("img");
+      img.onerror=hidePv;
+      img.src=el.dataset.pv;
+      pv.querySelector(".cap").textContent=el.dataset.pvcap||"";
+      pv.style.display="block"; movePv(e);
+    });
+    el.addEventListener("mousemove",movePv);
+    el.addEventListener("mouseleave",hidePv);
+  });
+}
+
+// ---------- left rail ----------
+function buildRail(){
+  const counts={}; RECS.forEach(r=>counts[r.group]=(counts[r.group]||0)+1);
+  const rail=document.getElementById("rail");
+  let h='<div class="railsec">Browse</div>';
+  h+=railBtn("All","Systems",RECS.length);
+  GROUP_ORDER.filter(g=>counts[g]).forEach(g=>{ h+=railBtn(g,g,counts[g]); });
+  h+='<div class="railsec">Tools</div>';
+  h+='<button class="railbtn" data-view="torque"><span>⚙ Torque tables</span>'+
+     '<span class="cnt">'+TQ_TABLES+'</span></button>';
+  h+='<button class="railbtn" data-view="add"><span>+ Add manuals</span></button>';
+  rail.innerHTML=h;
+  rail.querySelectorAll("[data-group]").forEach(b=>b.onclick=()=>{
+    state.group=b.dataset.group; state.view="grid"; state.sel=null; render();
+  });
+  rail.querySelector('[data-view="torque"]').onclick=()=>{state.view="torque";render();};
+  rail.querySelector('[data-view="add"]').onclick=()=>{state.view="add";render();};
+}
+function railBtn(group,label,count){
+  return '<button class="railbtn" data-group="'+esc(group)+'"><span>'+esc(label)+
+    '</span><span class="cnt">'+count+'</span></button>';
+}
+function syncRail(){
+  document.querySelectorAll(".rail .railbtn").forEach(b=>{
+    const on = (state.view!=="torque" && state.view!=="add" && b.dataset.group===state.group) ||
+               (state.view==="torque" && b.dataset.view==="torque") ||
+               (state.view==="add" && b.dataset.view==="add");
+    b.classList.toggle("active",!!on);
+  });
+}
+
+// ---------- render ----------
+function render(){
+  syncRail(); hidePv();
+  const c=document.getElementById("content");
+  if(state.view==="torque"){ c.innerHTML=gridHTML(true); wireGrid(c); return; }
+  if(state.view==="add"){ c.innerHTML=addHTML(); wireAdd(c); return; }
+  if(state.view==="detail" && BY_ID[state.sel]){
+    const p=state.page; state.page=null;
+    c.innerHTML=detailHTML(BY_ID[state.sel],p); wireDetail(c); return;
+  }
+  c.innerHTML=gridHTML(false); wireGrid(c);
+}
+
+// ---------- grid ----------
+function gridHTML(torqueOnly){
+  let list=RECS.filter(matchFilters);
+  if(torqueOnly) list=list.filter(r=>r.torque_table_pages.length);
+  const searching=terms().length>0;
+  list.sort((a,b)=>{
+    const ra=rankOf(a), rb=rankOf(b);
+    if(ra!==rb) return ra-rb;
+    if(a.relevance!==b.relevance) return a.relevance==="car"?-1:1;
+    return a.title.localeCompare(b.title);
+  });
+  const title=torqueOnly?"Torque tables":(state.group==="All"?"All systems":state.group);
+  const sub=list.length+" section"+(list.length!==1?"s":"")+
+    (torqueOnly?" with a factory torque table":"")+
+    (state.q?' matching “'+esc(state.q)+'” — title/header matches first':'')+
+    (torqueOnly?" — opens the PDF at the table page":"");
+  const head='<div class="cbar"><span class="ttl">'+esc(title)+'</span><span class="sub">'+sub+'</span></div>';
+  if(!list.length) return head+'<div class="empty">No sections match. Try clearing the search or the “My car” filter.</div>';
+  let cards=""; let lastRank=-1;
+  list.forEach(r=>{
+    const rk=rankOf(r);
+    if(searching && rk!==lastRank){
+      cards+='<div class="divider">'+(rk===0?"Title / header matches":"Content matches")+'</div>';
+      lastRank=rk;
+    }
+    const eb=ENG_BADGE[r.engine];
+    const jp=torqueOnly?r.torque_table_pages[0]:"";
+    const badges='<div class="bstack">'+
+      (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
+      (r.relevance==="ref"?'<span class="badge b-ref">REF</span>':'')+
+      (r.torque_table_pages.length?'<span class="badge b-tq">TORQUE TABLE</span>':
+        (r.image_only?'<span class="badge b-img">DIAGRAM</span>':''))+'</div>';
+    const sub=torqueOnly
+      ? 'Table p.'+r.torque_table_pages.join(', p.')
+      : esc(r.system)+(r.code?' · '+esc(r.code):'')+' · '+r.pages+'p';
+    cards+='<div class="gcard" data-id="'+esc(r.id)+'" data-page="'+jp+'">'+
+      '<div class="gthumb"><img loading="lazy" src="'+thumbHref(r)+'" alt="'+esc(r.title)+'" '+
+        'onerror="this.style.display=\'none\';this.parentNode.insertAdjacentHTML(\'beforeend\',\'<div class=ph>No preview</div>\')">'+
+        badges+'</div>'+
+      '<div class="gmeta"><div class="gtitle">'+hi(r.title)+'</div>'+
+        '<div class="gsub">'+sub+'</div>'+
+        (snippet(r)?'<div class="gsnip">'+snippet(r)+'</div>':'')+
+      '</div></div>';
+  });
+  return head+'<div class="gridwrap"><div class="grid">'+cards+'</div></div>';
+}
+function wireGrid(c){
+  c.querySelectorAll(".gcard").forEach(el=>el.onclick=()=>{
+    const pg=el.dataset.page?parseInt(el.dataset.page,10):null;
+    openSection(el.dataset.id,pg);
+  });
+}
+
+// ---------- detail ----------
+function tqSource(rr,kind){
+  let h='<div class="tqsrc"><span class="tqsrc-name"><b>Torque ref</b> — '+esc(rr.title)+
+    ' <span class="kind">('+kind+')</span></span><div class="tqgrid">';
+  rr.torque_table_pages.forEach(p=>{
+    h+='<div class="tqcard" data-open="'+esc(rr.id)+'" data-page="'+p+'">'+
+      '<img loading="lazy" src="'+pageThumb(rr.id,p)+'" alt="torque table page '+p+'" '+
+      'onerror="this.style.display=\'none\'">'+
+      '<span class="cap">p.'+p+'</span></div>';
+  });
+  return h+'</div></div>';
+}
+function detailHTML(r,jumpPage){
+  const eb=ENG_BADGE[r.engine];
+
+  // jump links — named per linked section, hover shows target-page image
+  let refs="";
+  if(r.refs_resolved && r.refs_resolved.length){
+    refs='<div class="card"><h3>Jump links — related sections</h3><div class="inner">'+
+      '<p class="hint">Hover to preview the target page; click to open it in the viewer.</p>'+
+      '<div class="reflist">';
+    r.refs_resolved.forEach(x=>{
+      if(x.target && BY_ID[x.target]){
+        const t=BY_ID[x.target];
+        const code=(x.approx?"~":"")+x.code;
+        refs+='<span class="refbtn'+(x.approx?' approx':'')+'" data-open="'+esc(x.target)+'" data-page="'+(x.page||'')+'"'+
+          (x.approx?' title="nearest page — exact page not in this set"':'')+
+          (x.page?' data-pv="'+pageThumb(x.target,x.page)+'" data-pvcap="'+esc(t.title)+' — p.'+x.page+' ('+esc(code)+')"':'')+
+          '>'+esc(t.title)+'<span class="pg">'+esc(code)+'</span></span>';
+      } else {
+        const sys=x.system||"";
+        const pfx=x.code.split("-")[0];
+        refs+='<span class="refbtn dead" title="This page is not included in your PDF set'+
+          (sys?' ('+esc(pfx)+' = '+esc(sys)+')':'')+'">'+esc(x.code)+
+          (sys?'<span class="pg">· '+esc(sys)+'</span>':'')+'</span>';
+      }
+    });
+    refs+='</div></div></div>';
+  }
+
+  // torque tables — ONLY factory torque-table pages, with page preview images
+  const shown={}; shown[r.id]=1;
+  let srcs="";
+  if(r.torque_table_pages.length) srcs+=tqSource(r,"this section");
+  r.master_torque.forEach(m=>{
+    if(shown[m.target]||!BY_ID[m.target])return; shown[m.target]=1;
+    srcs+=tqSource(BY_ID[m.target],"master torque table");
+  });
+  (r.refs_resolved||[]).forEach(x=>{
+    const t=x.target;
+    if(t && !shown[t] && BY_ID[t] && BY_ID[t].torque_table_pages.length){
+      shown[t]=1; srcs+=tqSource(BY_ID[t],"related section");
+    }
+  });
+  let tq='<div class="card"><h3>Torque tables</h3><div class="inner">';
+  tq+=srcs
+    ? '<p class="hint">Factory torque-specification tables for this section. Click a page image to open it in the viewer.</p>'+srcs
+    : '<p class="note">No factory torque table is associated with this section.</p>';
+  tq+='</div></div>';
+
+  return ''+
+    '<div class="detail">'+
+      '<div class="dtop"><div class="row1">'+
+        '<button class="btn ghost" id="back">← Sections</button>'+
+        '<h2>'+esc(r.title)+'</h2>'+
+        '<a class="btn" href="'+viewerSrc(r,jumpPage)+'" target="_blank" rel="noopener">Open in new tab ↗</a>'+
+      '</div>'+
+      '<div class="dmeta">'+
+        '<span class="badge b-code">'+esc(r.system)+(r.code?' · '+esc(r.code):'')+'</span>'+
+        (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
+        (r.relevance==="ref"?'<span class="badge b-ref">5S-FE reference</span>':'')+
+        '<span>'+r.pages+' pages</span><span style="color:#63707d">'+esc(r.file)+'</span>'+
+      '</div></div>'+
+      '<div class="dsplit">'+
+        '<div class="pdfpane"><iframe src="'+viewerSrc(r,jumpPage)+'" title="'+esc(r.title)+' PDF"></iframe></div>'+
+        '<div class="infopane">'+tq+refs+'</div>'+
+      '</div>'+
+    '</div>';
+}
+function wireDetail(c){
+  c.querySelector("#back").onclick=()=>{state.view="grid";state.sel=null;render();};
+  c.querySelectorAll("[data-open]").forEach(el=>el.onclick=()=>{
+    const pg=el.dataset.page?parseInt(el.dataset.page,10):null;
+    openSection(el.dataset.open,pg);
+  });
+  bindPreviews(c);
+}
+
+// ---------- add manuals ----------
+const ADD={files:[],uploading:false,building:false,doneOk:false,poll:null,api:null};
+function fmtSize(n){
+  if(n>=1048576) return (n/1048576).toFixed(1)+" MB";
+  if(n>=1024) return (n/1024).toFixed(0)+" KB";
+  return n+" B";
+}
+function addHTML(){
+  let h='<div class="cbar"><span class="ttl">Add manuals</span>'+
+    '<span class="sub">Drop in extra PDF sections and rebuild the library</span></div>'+
+    '<div class="addwrap">';
+  h+='<div class="card" id="apinote" style="display:none"><h3>Heads up</h3><div class="inner">'+
+    '<p class="note">Adding manuals needs the app server. Close this window and run '+
+    '<b>CelicaManual.exe</b>, then open “+ Add manuals” again.</p></div></div>';
+  h+='<div class="card"><h3>1 · Choose PDFs</h3><div class="inner">'+
+    '<div class="dropzone" id="drop">Drag &amp; drop PDF files here<br>or <b>click to browse</b></div>'+
+    '<input type="file" id="fpick" accept=".pdf,application/pdf" multiple style="display:none">'+
+    '<ul class="flist" id="flist"></ul>'+
+    '<div class="btnrow">'+
+      '<button class="btn" id="upbtn" disabled>Upload</button>'+
+      '<button class="btn ghost" id="clrbtn" disabled>Clear list</button>'+
+      '<span class="sub" id="upmsg"></span>'+
+    '</div></div></div>';
+  h+='<div class="card"><h3>2 · Rebuild library</h3><div class="inner">'+
+    '<p class="hint">Rebuilding re-scans every PDF and takes about 10–30 seconds. New sections get '+
+    'the full treatment: search, thumbnails, torque-table links and cross-references.</p>'+
+    '<div class="btnrow">'+
+      '<button class="btn" id="rbbtn">Rebuild library</button>'+
+      '<button class="btn" id="rlbtn" style="display:none;background:var(--accent2)">Reload app</button>'+
+      '<span class="sub" id="rbmsg"></span>'+
+    '</div>'+
+    '<div class="buildlog" id="blog" style="display:none"></div>'+
+    '</div></div>';
+  return h+'</div>';
+}
+function addFiles(list){
+  for(const f of list){
+    if(!/\.pdf$/i.test(f.name)) continue;
+    if(ADD.files.some(x=>x.file.name===f.name)) continue;
+    ADD.files.push({file:f,status:""});
+  }
+  drawFlist();
+}
+function drawFlist(){
+  const ul=document.getElementById("flist"); if(!ul) return;
+  ul.innerHTML=ADD.files.map((x,i)=>
+    '<li><span class="fname">'+esc(x.file.name)+'</span>'+
+    '<span class="fsize">'+fmtSize(x.file.size)+'</span>'+
+    (x.status?'<span class="fst '+(x.status==="uploaded"?"ok":x.status==="…"?"":"err")+'">'+esc(x.status)+'</span>':'')+
+    '</li>').join("");
+  const pending=ADD.files.some(x=>x.status!=="uploaded");
+  document.getElementById("upbtn").disabled=
+    ADD.api===false||!ADD.files.length||!pending||ADD.uploading;
+  document.getElementById("clrbtn").disabled=!ADD.files.length||ADD.uploading;
+}
+async function uploadAll(){
+  ADD.uploading=true; drawFlist();
+  const msg=document.getElementById("upmsg");
+  let okCount=0,total=null;
+  for(const x of ADD.files){
+    if(x.status==="uploaded") {okCount++; continue;}
+    x.status="…"; drawFlist();
+    try{
+      const res=await fetch("/api/upload",{method:"POST",
+        headers:{"X-Filename":x.file.name,"Content-Type":"application/pdf"},
+        body:x.file});
+      const j=await res.json();
+      if(j.ok){x.status="uploaded"; okCount++; total=j.count;}
+      else x.status=j.error||"failed";
+    }catch(e){x.status="failed — is CelicaManual.exe running?";}
+    drawFlist();
+  }
+  ADD.uploading=false; drawFlist();
+  msg.textContent=okCount?okCount+" file"+(okCount!==1?"s":"")+" saved"+
+    (total?" — library now has "+total+" PDFs. Now rebuild below.":""):"";
+}
+function pollStatus(){
+  fetch("/api/status").then(r=>r.json()).then(s=>{
+    const log=document.getElementById("blog"), msg=document.getElementById("rbmsg");
+    if(!log) {clearInterval(ADD.poll); return;}
+    log.style.display="block";
+    log.textContent=(s.log||[]).join("\n")||"Starting…";
+    log.scrollTop=log.scrollHeight;
+    if(s.done){
+      clearInterval(ADD.poll); ADD.poll=null; ADD.building=false;
+      const rb=document.getElementById("rbbtn");
+      rb.disabled=false; rb.textContent="Rebuild library";
+      if(s.error){ msg.textContent="Build failed — see log"; log.textContent+="\n"+s.error; }
+      else{
+        ADD.doneOk=true;
+        msg.textContent="Done! Reload to see the new sections.";
+        document.getElementById("rlbtn").style.display="";
+      }
+    }
+  }).catch(()=>{});
+}
+function startRebuild(){
+  const rb=document.getElementById("rbbtn"), msg=document.getElementById("rbmsg");
+  fetch("/api/rebuild",{method:"POST"}).then(r=>r.json()).then(j=>{
+    ADD.building=true; ADD.doneOk=false;
+    rb.disabled=true; rb.innerHTML='<span class="spin"></span>Rebuilding…';
+    msg.textContent=j.started?"":"A rebuild was already running — showing its progress.";
+    document.getElementById("rlbtn").style.display="none";
+    if(ADD.poll) clearInterval(ADD.poll);
+    ADD.poll=setInterval(pollStatus,1500); pollStatus();
+  }).catch(()=>{msg.textContent="Could not reach the app server.";});
+}
+function wireAdd(c){
+  // detect the API (only available under CelicaManual.exe / app.py server)
+  fetch("/api/status").then(r=>r.json()).then(()=>{ADD.api=true;})
+    .catch(()=>{ADD.api=false;
+      const n=c.querySelector("#apinote"); if(n)n.style.display="";
+      ["upbtn","rbbtn"].forEach(id=>{const b=c.querySelector("#"+id); if(b)b.disabled=true;});
+    });
+  const drop=c.querySelector("#drop"), pick=c.querySelector("#fpick");
+  drop.onclick=()=>pick.click();
+  pick.onchange=()=>{addFiles(pick.files); pick.value="";};
+  drop.ondragover=e=>{e.preventDefault(); drop.classList.add("drag");};
+  drop.ondragleave=()=>drop.classList.remove("drag");
+  drop.ondrop=e=>{e.preventDefault(); drop.classList.remove("drag"); addFiles(e.dataTransfer.files);};
+  c.querySelector("#upbtn").onclick=uploadAll;
+  c.querySelector("#clrbtn").onclick=()=>{ADD.files=[]; drawFlist();
+    document.getElementById("upmsg").textContent="";};
+  c.querySelector("#rbbtn").onclick=startRebuild;
+  c.querySelector("#rlbtn").onclick=()=>location.reload();
+  drawFlist();
+  if(ADD.building){
+    const rb=c.querySelector("#rbbtn");
+    rb.disabled=true; rb.innerHTML='<span class="spin"></span>Rebuilding…';
+    if(!ADD.poll) ADD.poll=setInterval(pollStatus,1500);
+    pollStatus();
+  } else if(ADD.doneOk){
+    c.querySelector("#rlbtn").style.display="";
+    c.querySelector("#rbmsg").textContent="Done! Reload to see the new sections.";
+  }
+}
+
+// ---------- events ----------
+let deb;
+document.getElementById("q").addEventListener("input",e=>{
+  clearTimeout(deb); deb=setTimeout(()=>{
+    state.q=e.target.value.trim();
+    if(state.view==="detail") state.view="grid";
+    render();
+  },130);
+});
+document.getElementById("fengine").onchange=e=>{
+  state.engine=e.target.value; if(state.view==="detail")state.view="grid"; render();};
+document.getElementById("fcar").onclick=e=>{
+  state.carOnly=!state.carOnly; e.target.classList.toggle("on",state.carOnly);
+  if(state.view==="detail")state.view="grid"; render();};
+document.addEventListener("keydown",e=>{
+  if(e.key==="/"&&document.activeElement.id!=="q"){e.preventDefault();document.getElementById("q").focus();}
+  if(e.key==="Escape"&&state.view==="detail"){state.view="grid";state.sel=null;render();}
+});
+
+buildRail();
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyInstaller
+*.spec
+build/CelicaManual/
+cm-build/
+
+# Build-time downloads / verification artifacts
+celica-manual/build/pdfjs-dist.zip
+celica-manual/build/*.png
+
+# OneDrive / Windows noise
+~$*
+desktop.ini
+Thumbs.db
