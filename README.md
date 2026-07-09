@@ -12,8 +12,31 @@ internet connection needed.
 Double-click **`CelicaManual.exe`**. That's it — it starts a private local
 server and opens the app in a native window.
 
-Requirements: Windows 10/11 with the Microsoft Edge WebView2 runtime
-(preinstalled on any up-to-date Windows).
+## Prerequisites
+
+**To use the app (typical user):**
+
+- Windows 10 or 11 (64-bit)
+- Microsoft Edge WebView2 Runtime — preinstalled on Windows 11 and any
+  Windows 10 with Edge; otherwise free from Microsoft:
+  <https://developer.microsoft.com/microsoft-edge/webview2/>
+- ~700 MB free disk space
+- No Python, no internet connection, no Adobe, no browser configuration
+  required — everything is bundled in `CelicaManual.exe`, including adding
+  new PDFs and rebuilding the index via the in-app **+ Add manuals** panel
+
+**Getting the app:**
+
+- Clone or download this repo and keep the folder structure intact
+  (`CelicaManual.exe` at the root, `manuals\` subfolder), then double-click
+  `CelicaManual.exe`
+- First launch may show Windows SmartScreen — click **More info** then
+  **Run anyway** (the exe is unsigned)
+
+**Only for developers modifying the app:**
+
+- Python 3.12+ with `pymupdf`, `pywebview`, `pyinstaller`
+- Git + GitHub CLI
 
 ## Folder layout
 
