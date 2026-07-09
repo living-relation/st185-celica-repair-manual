@@ -8,6 +8,9 @@ __pycache__/
 build/CelicaManual/
 cm-build/
 
+# Upload staging area (managed by the app at runtime)
+manuals/.staging/
+
 # Build-time downloads / verification artifacts
 celica-manual/build/pdfjs-dist.zip
 celica-manual/build/*.png

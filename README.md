@@ -60,14 +60,41 @@ Celica Repair Manuals\
 No Python needed. In the running app:
 
 1. Click **+ Add manuals** in the left rail (under Tools).
-2. Drag PDF files into the drop zone (or click to browse), then **Upload**.
-3. Click **Rebuild library** — takes ~10–30 seconds; progress is shown live.
+2. Drag PDF files into the drop zone (or click to browse), then
+   **Upload & check**.
+3. Resolve any conflicts (see below), click **Rebuild library** —
+   takes ~10–30 seconds; progress is shown live.
 4. Click **Reload app** when it finishes.
 
 New sections get full functionality automatically: search, thumbnails,
 torque-table links and cross-references.
 
 You can also just copy PDFs into `manuals\` by hand and rebuild from the app.
+
+### Duplicate / conflict protection
+
+Every upload is checked against the current library before it is added —
+by filename and by the Toyota page codes printed on each page (e.g.
+EM-46), so a section that overlaps an existing one is caught even under a
+different name. For each conflict the app shows both files' page counts
+and code ranges plus a verdict, e.g. *"Existing: 21 pages (EM-46–EM-66) ·
+Your upload: 24 pages → MORE complete (+3 pages)"* or *"Your upload has
+3 pages; 18 existing pages would be LOST"*. You then choose:
+
+- **Abort** — discard the upload, library untouched.
+- **Overwrite** — replace the existing file (the button shows exactly how
+  many pages you would lose, if any).
+- **Keep both** — add the upload under an auto-numbered name
+  (`Name_v2.pdf`).
+
+### Replace a single page
+
+Fix one bad scan without re-uploading the whole section: in the
+**Add manuals** panel, search for the manual by title or filename, enter
+the page number, pick a one-page replacement PDF and click
+**Replace page**. The page is swapped in place (page count is preserved;
+multi-page PDFs are rejected) — then rebuild the library to refresh
+search and previews.
 
 ## Rebuilding from the command line (developers)
 
