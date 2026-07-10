@@ -1,6 +1,6 @@
 # ST185 Celica GT-Four / All-Trac - Master Section Index
 
-Total section files: **283**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
+Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
 
 ## Body  (117)
 
@@ -329,3 +329,11 @@ Total section files: **283**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | TS-AC009-04 | A/C Bulletin | - | - | 13 | 0 |
 | RadAirAuto | Radiator / A/C Fan | - | 3S-GTE + 5S-FE | 11 | 0 |
 | RadAirMan | Radiator / A/C Fan | - | 3S-GTE + 5S-FE | 8 | 0 |
+
+## Other  (3)
+
+| Title | System | Code | Engine | Pages | Torques |
+|---|---|---|---|---|---|
+| 3SGE-workshop-manual-early | Uncategorized | - | - | 495 | 0 |
+| 90 ST185 Wiring Diagram | Uncategorized | - | 5S-FE | 168 | 0 |
+| Toyota - 3S-GTE - 1991 - Repair Manual (RM266E) | Uncategorized | - | 3S-GTE | 144 | 0 |
