@@ -1,0 +1,18 @@
+/* Shared palette + base styles for the workshop-library shell and both apps. */
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2b333f;
+  --txt:#e6edf3; --muted:#93a1b0; --accent:#e5484d; --accent2:#3fb950;
+  --blue:#4493f8; --purple:#bc8cff; --amber:#e3b341; --chip:#21262d;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--txt);
+  font:14px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-thumb{background:#2b333f;border-radius:6px}
+::-webkit-scrollbar-track{background:transparent}
+/* Inside the shell the app's own title row is redundant with the shell tabs. */
+body.embedded .brand h1{display:none}

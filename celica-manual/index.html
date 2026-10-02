@@ -4,20 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ST185 Celica GT-Four / All-Trac — Repair Manual</title>
+<link rel="stylesheet" href="../shared/theme.css">
 <style>
-  :root{
-    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2b333f;
-    --txt:#e6edf3; --muted:#93a1b0; --accent:#e5484d; --accent2:#3fb950;
-    --blue:#4493f8; --purple:#bc8cff; --amber:#e3b341; --chip:#21262d;
-    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;height:100%}
-  body{background:var(--bg);color:var(--txt);
-    font:14px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    display:flex;flex-direction:column;overflow:hidden}
-  a{color:var(--blue);text-decoration:none}
-  a:hover{text-decoration:underline}
+  body{display:flex;flex-direction:column;overflow:hidden}
   header{background:linear-gradient(180deg,#12181f,#0d1117);
     border-bottom:1px solid var(--line);padding:10px 16px;flex:0 0 auto}
   .brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -165,9 +154,6 @@
     border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;
     vertical-align:-2px;margin-right:6px}
   @keyframes spin{to{transform:rotate(360deg)}}
-  ::-webkit-scrollbar{width:11px;height:11px}
-  ::-webkit-scrollbar-thumb{background:#2b333f;border-radius:6px}
-  ::-webkit-scrollbar-track{background:transparent}
   @media(max-width:900px){
     .rail{width:150px}
     .dsplit{flex-direction:column}
@@ -202,6 +188,7 @@
 </main>
 <div id="pv"><img alt=""><span class="cap"></span></div>
 
+<script src="../shared/bridge.js"></script>
 <script src="data/data.js"></script>
 <script>
 "use strict";
@@ -264,7 +251,7 @@ function pageThumb(id,page){return "thumbs/pages/"+encodeURIComponent(id)+"_p"+p
 // PDF.js viewer URL — renders the PDF in-app (no browser plugin, no download)
 function viewerSrc(r,page){
   const abs=new URL("../manuals/"+encodeURIComponent(r.file),location.href).href;
-  return "pdfjs/web/viewer.html?file="+encodeURIComponent(abs)+
+  return "../shared/pdfjs/web/viewer.html?file="+encodeURIComponent(abs)+
          (page?("#page="+page+"&zoom=page-width"):"#zoom=page-width");
 }
 function openSection(id,page){ if(!BY_ID[id])return; state.sel=id; state.view="detail";
@@ -797,6 +784,7 @@ document.addEventListener("keydown",e=>{
 
 buildRail();
 render();
+Shell.onOpen((id,page)=>openSection(id,page));
 </script>
 </body>
 </html>
