@@ -11,6 +11,7 @@
   .b-5sfe{background:#20262e;color:#9fb0c0}
   .b-both{background:#2a1c3a;color:var(--purple);border-color:#43305f}
   .b-tq{background:#12251a;color:#7ee2a8;border-color:#1f4630}
+  .b-ewd{background:#2b2410;color:var(--amber);border-color:#4a3d16}
   .tqsrc{margin-bottom:11px}
   .tqsrc:last-child{margin-bottom:0}
   .tqsrc-name{display:block;font-size:12.5px;color:var(--txt);margin-bottom:7px}
@@ -55,6 +56,7 @@
 <script src="../shared/bridge.js"></script>
 <script src="../shared/addmanuals.js"></script>
 <script src="data/data.js"></script>
+<script src="../electrical/data/repair_links.js" onerror="window.EWD_LINKS={}"></script>
 <script>
 "use strict";
 const D = window.CELICA_DATA || {records:[],page_index:{}};
@@ -219,6 +221,7 @@ function gridHTML(torqueOnly){
     const badges='<div class="bstack">'+
       (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
       (r.relevance==="ref"?'<span class="badge b-ref">REF</span>':'')+
+      ((window.EWD_LINKS||{})[r.id]?'<span class="badge b-ewd" title="Has wiring diagrams in the Electrical app">⚡ WIRING</span>':'')+
       (r.torque_table_pages.length?'<span class="badge b-tq">TORQUE TABLE</span>':
         (r.image_only?'<span class="badge b-img">DIAGRAM</span>':''))+'</div>';
     const sub=torqueOnly
@@ -302,6 +305,12 @@ function detailHTML(r,jumpPage){
     : '<p class="note">No factory torque table is associated with this section.</p>';
   tq+='</div></div>';
 
+  const wiring=(window.EWD_LINKS||{})[r.id]||[];
+  const ewd=wiring.length?'<div class="card"><h3>Wiring diagrams</h3><div class="inner">'+
+    '<p class="hint">Circuits for this system in the Electrical app — opens the edition that matches your car.</p>'+
+    '<div class="reflist">'+wiring.map(w=>'<span class="refbtn" data-ewd="'+esc(w.system)+'">⚡ '+esc(w.name)+'</span>').join("")+
+    '</div></div></div>':'';
+
   return ''+
     '<div class="detail">'+
       '<div class="dtop"><div class="row1">'+
@@ -317,7 +326,7 @@ function detailHTML(r,jumpPage){
       '</div></div>'+
       '<div class="dsplit">'+
         '<div class="pdfpane"><iframe src="'+viewerSrc(r,jumpPage)+'" title="'+esc(r.title)+' PDF"></iframe></div>'+
-        '<div class="infopane">'+tq+refs+'</div>'+
+        '<div class="infopane">'+ewd+tq+refs+'</div>'+
       '</div>'+
     '</div>';
 }
@@ -327,6 +336,7 @@ function wireDetail(c){
     const pg=el.dataset.page?parseInt(el.dataset.page,10):null;
     openSection(el.dataset.open,pg);
   });
+  c.querySelectorAll("[data-ewd]").forEach(el=>el.onclick=()=>Shell.open("electrical","sys:"+el.dataset.ewd));
   bindPreviews(c);
 }
 
