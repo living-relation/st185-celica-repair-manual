@@ -3,93 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
 <title>ST185 Celica GT-Four / All-Trac — Repair Manual</title>
 <link rel="stylesheet" href="../shared/theme.css">
 <style>
-  body{display:flex;flex-direction:column;overflow:hidden}
-  header{background:linear-gradient(180deg,#12181f,#0d1117);
-    border-bottom:1px solid var(--line);padding:10px 16px;flex:0 0 auto}
-  .brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .brand h1{font-size:15px;margin:0;letter-spacing:.3px}
-  .brand .car{color:var(--accent);font-weight:700}
-  .stats{color:var(--muted);font-size:12px;margin-left:auto}
-  .toolbar{display:flex;gap:9px;margin-top:9px;flex-wrap:wrap;align-items:center}
-  #q{flex:1;min-width:220px;background:var(--panel2);border:1px solid var(--line);
-    color:var(--txt);padding:9px 12px;border-radius:8px;font-size:14px}
-  #q:focus{outline:none;border-color:var(--blue)}
-  select,.tglbtn{background:var(--panel2);border:1px solid var(--line);color:var(--txt);
-    padding:8px 10px;border-radius:8px;font-size:13px;cursor:pointer}
-  .tglbtn.on{background:var(--accent);border-color:var(--accent);color:#fff}
-  #protowarn{display:none;background:#3a2b10;color:#ffd88a;border-bottom:1px solid #5a451c;
-    padding:8px 16px;font-size:13px}
-  main{flex:1;display:flex;min-height:0}
-  .rail{width:206px;flex:0 0 auto;border-right:1px solid var(--line);overflow:auto;
-    background:var(--panel);padding:8px}
-  .railsec{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.8px;
-    padding:10px 10px 4px}
-  .railbtn{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;
-    text-align:left;padding:8px 10px;border-radius:8px;background:transparent;color:var(--muted);
-    border:1px solid transparent;cursor:pointer;margin-bottom:2px;font-size:13px}
-  .railbtn:hover{background:var(--panel2);color:var(--txt)}
-  .railbtn.active{background:#1b2735;color:var(--txt);border-color:#264056;box-shadow:inset 3px 0 0 var(--blue)}
-  .railbtn .cnt{font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--chip);
-    padding:1px 6px;border-radius:9px}
-  .content{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
-  .cbar{padding:9px 16px;border-bottom:1px solid var(--line);background:var(--panel2);
-    display:flex;align-items:center;gap:12px;flex:0 0 auto}
-  .cbar .ttl{font-weight:700}
-  .cbar .sub{color:var(--muted);font-size:12px}
-  .gridwrap{flex:1;overflow:auto;padding:14px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:14px}
-  .grid .divider{grid-column:1/-1;color:var(--muted);font-size:11px;text-transform:uppercase;
-    letter-spacing:.8px;padding:4px 2px;border-bottom:1px solid var(--line)}
-  .gcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;
-    cursor:pointer;display:flex;flex-direction:column;transition:border-color .12s,transform .12s}
-  .gcard:hover{border-color:var(--blue);transform:translateY(-2px)}
-  .gthumb{position:relative;aspect-ratio:17/22;background:#fff;overflow:hidden;
-    display:flex;align-items:flex-start;justify-content:center}
-  .gthumb img{width:100%;height:100%;object-fit:cover;object-position:top center;background:#fff}
-  .gthumb .ph{color:#666;font-size:11px;padding:20px;text-align:center}
-  .bstack{position:absolute;top:6px;right:6px;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
-  .gmeta{padding:8px 10px}
-  .gtitle{font-weight:600;font-size:13px;line-height:1.3}
-  .gsub{color:var(--muted);font-size:11px;margin-top:3px}
-  .gsnip{color:var(--muted);font-size:11px;margin-top:5px;border-top:1px solid var(--line);padding-top:5px}
-  mark{background:#5a4600;color:#ffe08a;padding:0 1px;border-radius:2px}
-  .badge{font-family:var(--mono);font-size:10px;padding:2px 6px;border-radius:5px;white-space:nowrap;
-    border:1px solid var(--line)}
   .b-3sgte{background:#3a1416;color:#ff9a9e;border-color:#5a1f22}
   .b-5sfe{background:#20262e;color:#9fb0c0}
   .b-both{background:#2a1c3a;color:var(--purple);border-color:#43305f}
-  .b-code{background:var(--chip);color:var(--muted)}
-  .b-img{background:#2b2410;color:var(--amber);border-color:#4a3d16}
-  .b-ref{background:#20262e;color:#8899a8}
   .b-tq{background:#12251a;color:#7ee2a8;border-color:#1f4630}
-  .empty{padding:50px;text-align:center;color:var(--muted)}
-  .detail{flex:1;display:flex;flex-direction:column;overflow:hidden}
-  .dtop{padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel2);flex:0 0 auto}
-  .dtop .row1{display:flex;align-items:center;gap:12px}
-  .dtop h2{margin:0;font-size:17px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .dmeta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:12px;margin-top:6px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:7px 13px;border-radius:8px;
-    font-weight:600;font-size:13px;border:none;cursor:pointer;white-space:nowrap}
-  .btn:hover{filter:brightness(1.08);text-decoration:none}
-  .btn.ghost{background:var(--panel);border:1px solid var(--line);color:var(--txt)}
-  .dsplit{flex:1;display:flex;min-height:0}
-  .pdfpane{flex:1.7;min-width:0;background:#3c4043;border-right:1px solid var(--line)}
-  .pdfpane iframe{width:100%;height:100%;border:0;display:block}
-  .infopane{width:400px;flex:0 0 auto;overflow:auto;padding:14px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:14px;overflow:hidden}
-  .card h3{margin:0;padding:9px 13px;font-size:12px;background:var(--panel2);border-bottom:1px solid var(--line);
-    text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
-  .card .inner{padding:11px 13px}
-  .reflist{display:flex;flex-wrap:wrap;gap:6px}
-  .refbtn{background:var(--chip);border:1px solid var(--line);color:var(--blue);
-    font-size:12px;padding:5px 9px;border-radius:6px;cursor:pointer}
-  .refbtn.dead{color:var(--muted);cursor:default;border-style:dashed}
-  .refbtn.approx{border-style:dashed}
-  .refbtn:hover:not(.dead){border-color:var(--blue);background:#182130}
-  .refbtn .pg{font-family:var(--mono);color:var(--muted);font-size:11px;margin-left:5px}
   .tqsrc{margin-bottom:11px}
   .tqsrc:last-child{margin-bottom:0}
   .tqsrc-name{display:block;font-size:12.5px;color:var(--txt);margin-bottom:7px}
@@ -102,64 +23,7 @@
   .tqcard img{width:100%;aspect-ratio:17/22;object-fit:cover;object-position:top center;display:block;background:#fff}
   .tqcard .cap{display:block;text-align:center;font-family:var(--mono);font-size:11px;
     background:var(--panel2);color:var(--accent2);padding:3px 0;border-top:1px solid var(--line)}
-  .note{color:var(--amber);font-size:12.5px;margin:0}
-  .hint{color:var(--muted);font-size:11.5px;margin:0 0 9px}
-  #pv{display:none;position:fixed;z-index:99;pointer-events:none;background:#fff;
-    border:2px solid var(--blue);border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.55);overflow:hidden}
-  #pv img{display:block;width:270px;background:#fff}
-  #pv .cap{display:block;background:var(--panel2);color:var(--txt);font-size:11px;padding:3px 8px;
-    border-top:1px solid var(--line)}
   .sec-link{cursor:pointer;color:var(--blue)}
-  .addwrap{flex:1;overflow:auto;padding:20px 16px}
-  .addwrap .card{max-width:760px;margin:0 auto 14px}
-  .dropzone{border:2px dashed var(--line);border-radius:10px;padding:34px 16px;text-align:center;
-    color:var(--muted);cursor:pointer;transition:border-color .12s,background .12s}
-  .dropzone:hover,.dropzone.drag{border-color:var(--blue);background:#141c28;color:var(--txt)}
-  .dropzone b{color:var(--txt)}
-  .flist{margin:12px 0 0;padding:0;list-style:none}
-  .flist li{display:flex;align-items:center;gap:10px;padding:6px 4px;
-    border-bottom:1px solid var(--line);font-size:13px}
-  .flist li:last-child{border-bottom:none}
-  .flist .fname{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .flist .fsize{color:var(--muted);font-family:var(--mono);font-size:11px;white-space:nowrap}
-  .fst{font-family:var(--mono);font-size:11px;white-space:nowrap}
-  .fst.ok{color:var(--accent2)} .fst.err{color:var(--accent)} .fst.warn{color:var(--amber)}
-  .conflict{border:1px solid #5a451c;background:#1d1810;border-radius:8px;
-    padding:11px 13px;margin-top:12px}
-  .cf-name{font-size:13px;margin-bottom:6px}
-  .cf-name b{color:var(--txt)}
-  .cf-nums{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin-bottom:6px}
-  .cf-verdict{font-size:12.5px;font-weight:600}
-  .cf-verdict.good{color:var(--accent2)} .cf-verdict.bad{color:var(--accent)}
-  .cf-verdict.warn{color:var(--amber)}
-  .rp-row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:10px}
-  .rp-row input{background:var(--panel2);border:1px solid var(--line);color:var(--txt);
-    padding:8px 10px;border-radius:8px;font-size:13px}
-  .rp-row input:focus{outline:none;border-color:var(--blue)}
-  .rpsearchwrap{position:relative;flex:1;min-width:240px}
-  #rpsearch{width:100%}
-  .rplist{position:absolute;top:100%;left:0;right:0;z-index:20;background:var(--panel2);
-    border:1px solid var(--line);border-radius:8px;max-height:230px;overflow:auto;
-    margin-top:4px;display:none;box-shadow:0 8px 24px rgba(0,0,0,.5)}
-  .rplist div{padding:7px 10px;cursor:pointer;font-size:12.5px}
-  .rplist div:hover{background:#1b2735}
-  .rplist .rpfile{color:var(--muted);font-family:var(--mono);font-size:11px}
-  .btnrow{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:12px}
-  .btnrow .sub{color:var(--muted);font-size:12px}
-  .btn:disabled{opacity:.45;cursor:default;filter:none}
-  .buildlog{background:#0a0e14;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
-    font-family:var(--mono);font-size:11.5px;color:#9fb0c0;max-height:260px;overflow:auto;
-    white-space:pre-wrap;margin-top:12px}
-  .spin{display:inline-block;width:12px;height:12px;border:2px solid var(--muted);
-    border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;
-    vertical-align:-2px;margin-right:6px}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  @media(max-width:900px){
-    .rail{width:150px}
-    .dsplit{flex-direction:column}
-    .pdfpane{flex:none;height:58vh;border-right:none;border-bottom:1px solid var(--line)}
-    .infopane{width:100%}
-  }
 </style>
 </head>
 <body>
@@ -189,6 +53,7 @@
 <div id="pv"><img alt=""><span class="cap"></span></div>
 
 <script src="../shared/bridge.js"></script>
+<script src="../shared/addmanuals.js"></script>
 <script src="data/data.js"></script>
 <script>
 "use strict";
@@ -316,7 +181,7 @@ function render(){
   syncRail(); hidePv();
   const c=document.getElementById("content");
   if(state.view==="torque"){ c.innerHTML=gridHTML(true); wireGrid(c); return; }
-  if(state.view==="add"){ c.innerHTML=addHTML(); wireAdd(c); return; }
+  if(state.view==="add"){ c.innerHTML=ADDP.html(); ADDP.wire(c); return; }
   if(state.view==="detail" && BY_ID[state.sel]){
     const p=state.page; state.page=null;
     c.innerHTML=detailHTML(BY_ID[state.sel],p); wireDetail(c); return;
@@ -466,302 +331,15 @@ function wireDetail(c){
 }
 
 // ---------- add manuals ----------
-const ADD={files:[],uploading:false,building:false,doneOk:false,poll:null,api:null};
-function fmtSize(n){
-  if(n>=1048576) return (n/1048576).toFixed(1)+" MB";
-  if(n>=1024) return (n/1024).toFixed(0)+" KB";
-  return n+" B";
-}
-function addHTML(){
-  let h='<div class="cbar"><span class="ttl">Add manuals</span>'+
-    '<span class="sub">Drop in extra PDF sections and rebuild the library</span></div>'+
-    '<div class="addwrap">';
-  h+='<div class="card" id="apinote" style="display:none"><h3>Heads up</h3><div class="inner">'+
-    '<p class="note">Adding manuals needs the app server. Close this window and run '+
-    '<b>CelicaManual.exe</b>, then open “+ Add manuals” again.</p></div></div>';
-  h+='<div class="card"><h3>1 · Add PDFs</h3><div class="inner">'+
-    '<div class="dropzone" id="drop">Drag &amp; drop PDF files here<br>or <b>click to browse</b></div>'+
-    '<input type="file" id="fpick" accept=".pdf,application/pdf" multiple style="display:none">'+
-    '<ul class="flist" id="flist"></ul>'+
-    '<div class="btnrow">'+
-      '<button class="btn" id="upbtn" disabled>Upload &amp; check</button>'+
-      '<button class="btn ghost" id="clrbtn" disabled>Clear list</button>'+
-      '<span class="sub" id="upmsg"></span>'+
-    '</div>'+
-    '<div id="conflicts"></div>'+
-    '<p class="hint" style="margin:10px 0 0">Uploads are checked against your library first: '+
-    'same filename or overlapping Toyota page codes trigger a comparison so you never '+
-    'silently lose a more complete section.</p>'+
-    '</div></div>';
-  h+='<div class="card"><h3>2 · Replace a single page (optional)</h3><div class="inner">'+
-    '<p class="hint">Fix one bad scan without re-uploading the whole section: pick the manual, '+
-    'the page number, and a one-page replacement PDF.</p>'+
-    '<div class="rp-row">'+
-      '<div class="rpsearchwrap">'+
-        '<input type="text" id="rpsearch" placeholder="Search manuals by title or filename…" autocomplete="off">'+
-        '<div class="rplist" id="rplist"></div>'+
-      '</div>'+
-      '<input type="number" id="rppage" min="1" placeholder="Page #" style="width:92px" disabled>'+
-      '<button class="btn ghost" id="rppick">Choose PDF…</button>'+
-      '<input type="file" id="rpfile" accept=".pdf,application/pdf" style="display:none">'+
-      '<button class="btn" id="rpgo" disabled>Replace page</button>'+
-    '</div>'+
-    '<div class="sub" id="rpsel" style="margin-top:8px"></div>'+
-    '<div class="sub" id="rpmsg" style="margin-top:6px"></div>'+
-    '</div></div>';
-  h+='<div class="card"><h3>3 · Rebuild library</h3><div class="inner">'+
-    '<p class="hint">Rebuilding re-scans every PDF and takes about 10–30 seconds. New sections get '+
-    'the full treatment: search, thumbnails, torque-table links and cross-references.</p>'+
-    '<div class="btnrow">'+
-      '<button class="btn" id="rbbtn">Rebuild library</button>'+
-      '<button class="btn" id="rlbtn" style="display:none;background:var(--accent2)">Reload app</button>'+
-      '<span class="sub" id="rbmsg"></span>'+
-    '</div>'+
-    '<div class="buildlog" id="blog" style="display:none"></div>'+
-    '</div></div>';
-  return h+'</div>';
-}
-function addFiles(list){
-  for(const f of list){
-    if(!/\.pdf$/i.test(f.name)) continue;
-    if(ADD.files.some(x=>x.file.name===f.name)) continue;
-    ADD.files.push({file:f,status:""});
-  }
-  drawFlist();
-}
-function fstClass(st){
-  if(!st||st==="…") return "";
-  if(st==="conflict") return "warn";
-  if(st==="added"||st==="overwritten"||st==="aborted"||st.startsWith("kept as ")) return "ok";
-  return "err";
-}
-function drawFlist(){
-  const ul=document.getElementById("flist"); if(!ul) return;
-  ul.innerHTML=ADD.files.map((x,i)=>
-    '<li><span class="fname">'+esc(x.file.name)+'</span>'+
-    '<span class="fsize">'+fmtSize(x.file.size)+'</span>'+
-    (x.status?'<span class="fst '+fstClass(x.status)+'">'+esc(x.status)+'</span>':'')+
-    '</li>').join("");
-  const pending=ADD.files.some(x=>!x.status);
-  document.getElementById("upbtn").disabled=
-    ADD.api===false||!ADD.files.length||!pending||ADD.uploading;
-  document.getElementById("clrbtn").disabled=!ADD.files.length||ADD.uploading;
-}
-async function commitFile(name,action){
-  const res=await fetch("/api/commit",{method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({files:[{name:name,action:action}]})});
-  const j=await res.json();
-  return {r:(j.results&&j.results[0])||{ok:false,error:"no result"},count:j.count};
-}
-async function uploadAll(){
-  ADD.uploading=true; drawFlist();
-  const msg=document.getElementById("upmsg");
-  let okCount=0,nconf=0,total=null;
-  for(const x of ADD.files){
-    if(x.status) continue;                       // only fresh files
-    x.status="…"; drawFlist();
-    try{
-      const res=await fetch("/api/upload",{method:"POST",
-        headers:{"X-Filename":x.file.name,"Content-Type":"application/pdf"},
-        body:x.file});
-      const j=await res.json();
-      if(!j.ok){x.status=j.error||"failed";}
-      else if(j.conflict){x.status="conflict"; x.conflict=j.conflict; nconf++;}
-      else{
-        const c=await commitFile(x.file.name,"add");
-        if(c.r.ok){x.status="added"; okCount++; total=c.count;}
-        else x.status=c.r.error||"failed";
-      }
-    }catch(e){x.status="failed — is CelicaManual.exe running?";}
-    drawFlist(); drawConflicts();
-  }
-  ADD.uploading=false; drawFlist();
-  msg.textContent=(okCount?okCount+" added":"")+
-    (nconf?(okCount?", ":"")+nconf+" conflict"+(nconf!==1?"s":"")+" — decide below":"")+
-    (total?" — library now has "+total+" PDFs":"");
-}
-function verdictLine(cf){
-  if(cf.verdict==="more_complete")
-    return {cls:"good",txt:"Existing: "+cf.existing_pages+" pages"+
-      (cf.existing_range?" ("+cf.existing_range+")":"")+
-      " · Your upload: "+cf.incoming_pages+" pages"+
-      (cf.incoming_range?" ("+cf.incoming_range+")":"")+
-      " → MORE complete (+"+(cf.incoming_pages-cf.existing_pages)+" pages)"};
-  if(cf.verdict==="less_complete")
-    return {cls:"bad",txt:"Your upload has "+cf.incoming_pages+" page"+
-      (cf.incoming_pages!==1?"s":"")+"; "+cf.pages_lost_if_overwrite+
-      " existing page"+(cf.pages_lost_if_overwrite!==1?"s":"")+
-      " would be LOST if you overwrite"};
-  return {cls:"warn",txt:"Similar coverage — "+cf.incoming_pages+" vs "+
-    cf.existing_pages+" pages, "+cf.overlap+" overlapping page codes"};
-}
-function drawConflicts(){
-  const box=document.getElementById("conflicts"); if(!box) return;
-  const items=ADD.files.filter(x=>x.status==="conflict");
-  box.innerHTML=items.map(x=>{
-    const cf=x.conflict, v=verdictLine(cf);
-    const lose=cf.pages_lost_if_overwrite;
-    return '<div class="conflict" data-name="'+esc(x.file.name)+'">'+
-      '<div class="cf-name">⚠ <b>'+esc(x.file.name)+'</b> conflicts with <b>'+esc(cf.existing)+'</b>'+
-        (cf.type==="content"?' (overlapping page codes)':' (same filename)')+'</div>'+
-      '<div class="cf-nums">existing: '+cf.existing_pages+'p'+
-        (cf.existing_range?' · '+esc(cf.existing_range):'')+' · '+cf.existing_codes+' codes'+
-        ' &nbsp;|&nbsp; upload: '+cf.incoming_pages+'p'+
-        (cf.incoming_range?' · '+esc(cf.incoming_range):'')+' · '+cf.incoming_codes+' codes'+
-        ' &nbsp;|&nbsp; overlap: '+cf.overlap+'</div>'+
-      '<div class="cf-verdict '+v.cls+'">'+esc(v.txt)+'</div>'+
-      '<div class="btnrow">'+
-        '<button class="btn ghost" data-act="abort">Abort</button>'+
-        '<button class="btn" data-act="overwrite">Overwrite'+
-          (lose?' — lose '+lose+' page'+(lose!==1?'s':''):'')+'</button>'+
-        '<button class="btn ghost" data-act="keep_both">Keep both</button>'+
-      '</div></div>';
-  }).join("");
-  box.querySelectorAll(".conflict").forEach(el=>{
-    el.querySelectorAll("[data-act]").forEach(b=>b.onclick=()=>
-      resolveConflict(el.dataset.name,b.dataset.act));
-  });
-}
-async function resolveConflict(name,action){
-  const x=ADD.files.find(f=>f.file.name===name); if(!x) return;
-  try{
-    const c=await commitFile(name,action);
-    if(c.r.ok){
-      x.conflict=null;
-      x.status=action==="abort"?"aborted":
-        action==="keep_both"?("kept as "+c.r.final):"overwritten";
-      document.getElementById("upmsg").textContent=
-        "Library now has "+c.count+" PDFs. Rebuild below when you're done.";
-    } else x.status=c.r.error||"failed";
-  }catch(e){x.status="failed";}
-  drawFlist(); drawConflicts();
-}
-function pollStatus(){
-  fetch("/api/status").then(r=>r.json()).then(s=>{
-    const log=document.getElementById("blog"), msg=document.getElementById("rbmsg");
-    if(!log) {clearInterval(ADD.poll); return;}
-    log.style.display="block";
-    log.textContent=(s.log||[]).join("\n")||"Starting…";
-    log.scrollTop=log.scrollHeight;
-    if(s.done){
-      clearInterval(ADD.poll); ADD.poll=null; ADD.building=false;
-      const rb=document.getElementById("rbbtn");
-      rb.disabled=false; rb.textContent="Rebuild library";
-      if(s.error){ msg.textContent="Build failed — see log"; log.textContent+="\n"+s.error; }
-      else{
-        ADD.doneOk=true;
-        msg.textContent="Done! Reload to see the new sections.";
-        document.getElementById("rlbtn").style.display="";
-      }
-    }
-  }).catch(()=>{});
-}
-function startRebuild(){
-  const rb=document.getElementById("rbbtn"), msg=document.getElementById("rbmsg");
-  fetch("/api/rebuild",{method:"POST"}).then(r=>r.json()).then(j=>{
-    ADD.building=true; ADD.doneOk=false;
-    rb.disabled=true; rb.innerHTML='<span class="spin"></span>Rebuilding…';
-    msg.textContent=j.started?"":"A rebuild was already running — showing its progress.";
-    document.getElementById("rlbtn").style.display="none";
-    if(ADD.poll) clearInterval(ADD.poll);
-    ADD.poll=setInterval(pollStatus,1500); pollStatus();
-  }).catch(()=>{msg.textContent="Could not reach the app server.";});
-}
-// ---------- replace a single page ----------
-const RP={rec:null,file:null};
-function drawRp(){
-  const sel=document.getElementById("rpsel"), pg=document.getElementById("rppage"),
-        go=document.getElementById("rpgo");
-  if(!sel) return;
-  sel.textContent=(RP.rec?"Selected: "+RP.rec.file+" · "+RP.rec.pages+" pages":"")+
-    (RP.file?(RP.rec?"  —  ":"")+"replacement: "+RP.file.name+" ("+fmtSize(RP.file.size)+")":"");
-  pg.disabled=!RP.rec; if(RP.rec) pg.max=RP.rec.pages;
-  const n=parseInt(pg.value,10);
-  go.disabled=ADD.api===false||!RP.rec||!RP.file||!(n>=1&&RP.rec&&n<=RP.rec.pages);
-}
-async function replacePage(){
-  const pg=document.getElementById("rppage"), msg=document.getElementById("rpmsg");
-  const n=parseInt(pg.value,10);
-  msg.style.color=""; msg.textContent="Replacing…";
-  try{
-    const res=await fetch("/api/replace-page",{method:"POST",
-      headers:{"X-Target":RP.rec.file,"X-Page":String(n),"Content-Type":"application/pdf"},
-      body:RP.file});
-    const j=await res.json();
-    if(j.ok){
-      msg.style.color="var(--accent2)";
-      msg.textContent="Replaced page "+n+" of "+RP.rec.file+" — page count unchanged ("+
-        j.pages+"). Rebuild the library below to refresh search and previews.";
-      RP.file=null; drawRp();
-    }else{
-      msg.style.color="var(--accent)";
-      msg.textContent=j.error||"Replace failed.";
-    }
-  }catch(e){
-    msg.style.color="var(--accent)";
-    msg.textContent="Could not reach the app server — is CelicaManual.exe running?";
-  }
-}
-function wireRp(c){
-  const rs=c.querySelector("#rpsearch"), rl=c.querySelector("#rplist"),
-        pg=c.querySelector("#rppage"), pick=c.querySelector("#rppick"),
-        rf=c.querySelector("#rpfile");
-  rs.oninput=()=>{
-    const q=rs.value.toLowerCase().trim();
-    if(!q){rl.style.display="none"; return;}
-    const hits=RECS.filter(r=>(r.title+" "+r.file).toLowerCase().includes(q)).slice(0,8);
-    rl.innerHTML=hits.length?hits.map(r=>
-      '<div data-id="'+esc(r.id)+'">'+esc(r.title)+
-      ' <span class="rpfile">'+esc(r.file)+' · '+r.pages+'p</span></div>').join("")
-      :'<div style="color:var(--muted);cursor:default">No match</div>';
-    rl.style.display="block";
-    rl.querySelectorAll("[data-id]").forEach(el=>el.onclick=()=>{
-      RP.rec=BY_ID[el.dataset.id]; rs.value=RP.rec.title;
-      rl.style.display="none"; pg.value=""; drawRp();
-    });
-  };
-  rs.addEventListener("blur",()=>setTimeout(()=>{rl.style.display="none";},200));
-  pg.oninput=drawRp;
-  pick.onclick=()=>rf.click();
-  rf.onchange=()=>{
-    const f=rf.files[0]; rf.value="";
-    if(f&&/\.pdf$/i.test(f.name)){RP.file=f;} drawRp();
-  };
-  c.querySelector("#rpgo").onclick=replacePage;
-}
-
-function wireAdd(c){
-  // detect the API (only available under CelicaManual.exe / app.py server)
-  fetch("/api/status").then(r=>r.json()).then(()=>{ADD.api=true;})
-    .catch(()=>{ADD.api=false;
-      const n=c.querySelector("#apinote"); if(n)n.style.display="";
-      ["upbtn","rbbtn","rpgo","rppick"].forEach(id=>{
-        const b=c.querySelector("#"+id); if(b)b.disabled=true;});
-    });
-  const drop=c.querySelector("#drop"), pick=c.querySelector("#fpick");
-  drop.onclick=()=>pick.click();
-  pick.onchange=()=>{addFiles(pick.files); pick.value="";};
-  drop.ondragover=e=>{e.preventDefault(); drop.classList.add("drag");};
-  drop.ondragleave=()=>drop.classList.remove("drag");
-  drop.ondrop=e=>{e.preventDefault(); drop.classList.remove("drag"); addFiles(e.dataTransfer.files);};
-  c.querySelector("#upbtn").onclick=uploadAll;
-  c.querySelector("#clrbtn").onclick=()=>{ADD.files=[]; drawFlist(); drawConflicts();
-    document.getElementById("upmsg").textContent="";};
-  c.querySelector("#rbbtn").onclick=startRebuild;
-  c.querySelector("#rlbtn").onclick=()=>location.reload();
-  wireRp(c);
-  drawFlist(); drawConflicts(); drawRp();
-  if(ADD.building){
-    const rb=c.querySelector("#rbbtn");
-    rb.disabled=true; rb.innerHTML='<span class="spin"></span>Rebuilding…';
-    if(!ADD.poll) ADD.poll=setInterval(pollStatus,1500);
-    pollStatus();
-  } else if(ADD.doneOk){
-    c.querySelector("#rlbtn").style.display="";
-    c.querySelector("#rbmsg").textContent="Done! Reload to see the new sections.";
-  }
-}
+const ADDP = AddManuals.create({
+  app: "repair",
+  files: () => RECS,
+  overlapNoun: "page codes",
+  checkHint: "Uploads are checked against your library first: same filename or overlapping "+
+    "Toyota page codes trigger a comparison so you never silently lose a more complete section.",
+  rebuildHint: "Rebuilding re-scans every PDF and takes about 10–30 seconds. New sections get "+
+    "the full treatment: search, thumbnails, torque-table links and cross-references.",
+});
 
 // ---------- events ----------
 let deb;

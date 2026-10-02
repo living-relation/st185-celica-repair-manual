@@ -442,6 +442,7 @@ def build():
         file_src[path.name] = sid
     for fname, sid in file_src.items():
         src_by_id[sid]["files"].append(fname)
+        src_by_id[sid].setdefault("file_pages", {})[fname] = len(analyzed[fname])
 
     # --- split into circuits ---------------------------------------------
     circuits = []
@@ -534,6 +535,12 @@ def build():
                                  "auto_ac": ("W/O AUTO A/C" not in head and "W/ AUTO A/C" in head)
                                  or None})
         page_tags = {}
+        for k, p in enumerate(cpages):
+            if "TYPE OF BLOWER CONTROL SW" in p["text"].upper() \
+                    and "TYPE OF BLOWER CONTROL SW" not in info["title"]:
+                page_tags[str(k + 1)] = {
+                    "label": "Wiring differs by blower control type (see * notes)",
+                    "blower": tx.blower_types(p["text"])}
         for k, sub in g["subtitles"].items():
             page_tags[str(k + 1)] = {"label": tx.pretty(sub.strip("()")),
                                      "blower": tx.blower_types(sub)}

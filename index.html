@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
 <title>ST185 Celica — Workshop Library</title>
 <link rel="stylesheet" href="shared/theme.css">
 <style>
@@ -21,13 +22,13 @@
   .tab .dot{width:8px;height:8px;border-radius:50%;background:var(--tabc,var(--blue))}
   .tab[data-app="repair"]{--tabc:var(--accent)}
   .tab[data-app="electrical"]{--tabc:var(--amber)}
-  .hint{margin-left:auto;color:var(--muted);font-size:11.5px;white-space:nowrap}
+  .kbdhint{margin-left:auto;color:var(--muted);font-size:11.5px;white-space:nowrap}
   .frames{flex:1;position:relative;min-height:0}
   .frames iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:var(--bg)}
   .frames iframe.active{display:block}
   #protowarn{display:none;background:#3a2b10;color:#ffd88a;border-bottom:1px solid #5a451c;
     padding:8px 16px;font-size:13px}
-  @media(max-width:760px){.hint{display:none}.shellbar h1 .full{display:none}}
+  @media(max-width:760px){.kbdhint{display:none}.shellbar h1 .full{display:none}}
 </style>
 </head>
 <body>
@@ -37,7 +38,7 @@
     <button class="tab" data-app="repair" title="Factory repair manual (Ctrl+1)"><span class="dot"></span>Repair Manual</button>
     <button class="tab" data-app="electrical" title="Electrical wiring diagrams (Ctrl+2)"><span class="dot"></span>Electrical</button>
   </nav>
-  <span class="hint">Ctrl+1 / Ctrl+2 to switch</span>
+  <span class="kbdhint">Ctrl+1 / Ctrl+2 to switch</span>
 </div>
 <div id="protowarn">⚠ Opened as a plain file — the in-app PDF viewer needs the local server.
   Run <b>CelicaManual.exe</b> instead.</div>
