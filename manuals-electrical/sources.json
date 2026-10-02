@@ -1,0 +1,48 @@
+{
+  "_comment": "Edition registry for the Electrical app. Each PDF in this folder belongs to one source (edition). Files not listed here are auto-detected at build time: year/publication from the foreword, or matched to a listed edition by printed page number + circuit title.",
+  "sources": [
+    {
+      "id": "ewd1990",
+      "year": 1990,
+      "pub": "1990 ST185 EWD",
+      "title": "1990 Celica All-Trac/4WD Electrical Wiring Diagram",
+      "models": ["ST185"],
+      "engines": ["3S-GTE"],
+      "kind": "book",
+      "files": ["1990 ST185 EWD.pdf"],
+      "note": "ST185 only. A/C chapters cover the push-button blower control only."
+    },
+    {
+      "id": "ewd1992",
+      "year": 1992,
+      "pub": "EWD132U",
+      "title": "1992 Celica Electrical Wiring Diagram",
+      "models": ["AT180", "ST184", "ST185"],
+      "engines": ["4A-FE", "5S-FE", "3S-GTE"],
+      "kind": "book",
+      "files": ["1992 Celica EWD (EWD132U).pdf"],
+      "note": "Transition year: covers both push-button and dial blower controls. Adds Convertible, Top Stack, Shift Lock, ECT and Electric Tension Reducer circuits."
+    },
+    {
+      "id": "tis1993",
+      "year": 1993,
+      "pub": "EWD160U (TIS)",
+      "title": "1993 Celica Electrical Wiring Diagram (per-circuit pulls)",
+      "models": ["AT180", "ST184", "ST185"],
+      "engines": ["4A-FE", "5S-FE", "3S-GTE"],
+      "kind": "pulls",
+      "partial": true,
+      "files": [
+        "ATAS.pdf", "Charging.pdf", "Combmeter.pdf", "Component_Location.pdf",
+        "Connector__Ground_and_Splice.pdf", "DoorLockCon.pdf", "Eng3S-GTE.pdf",
+        "FWW.pdf", "Ground_Points.pdf", "HdlitUSA.pdf", "Horn.pdf",
+        "Illumination.pdf", "Interiorlight.pdf", "Power_Source.pdf",
+        "PowrWind.pdf", "PwrSeat.pdf", "PwrSource.pdf", "RadAirAuto.pdf",
+        "RadAirMan.pdf", "RadioW.pdf", "RCM.pdf", "Relay_Locations.pdf",
+        "RWD.pdf", "StartAll4.pdf", "Stoplight.pdf", "Sunroof.pdf",
+        "Taillight.pdf", "TSHWL.pdf", "USBW.pdf"
+      ],
+      "note": "Individual circuits pulled from Toyota TIS. Edition inferred: no Convertible/Top Stack coverage (1993 dropped the convertible), dial blower control, and page numbering that differs from the 1990 and 1992 books."
+    }
+  ]
+}
