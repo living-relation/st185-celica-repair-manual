@@ -1,8 +1,8 @@
 # ST185 Celica GT-Four / All-Trac - Master Section Index
 
-Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
+Total section files: **256**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
 
-## Body  (117)
+## Body  (116)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -119,7 +119,6 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Auto Tilt Away Steering Column | Supplemental Restraint | SR | - | 15 | 8 |
 | Description | Supplemental Restraint | SR | - | 4 | 0 |
 | Gear Housing | Supplemental Restraint | SR | 3S-GTE + 5S-FE | 13 | 8 |
-| RCM | Supplemental Restraint | - | - | 2 | 0 |
 | Seat Belts Components | Supplemental Restraint | - | - | 2 | 0 |
 | Seatbelt | Supplemental Restraint | - | - | 2 | 0 |
 | Tilt Steering Column | Supplemental Restraint | SR | 5S-FE | 8 | 6 |
@@ -187,35 +186,14 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Transfer | Manual Transmission E150F (4WD) | MT | - | 24 | 15 |
 | Propeller Shaft | Propeller Shaft | PR | - | 15 | 9 |
 
-## Electrical  (23)
+## Electrical  (2)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
-| Combmeter | Body Electrical | - | 3S-GTE + 5S-FE | 4 | 0 |
-| DoorLockCon | Body Electrical | - | 3S-GTE + 5S-FE | 5 | 0 |
-| HdlitUSA | Body Electrical | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Horn | Body Electrical | - | 3S-GTE + 5S-FE | 1 | 0 |
-| Illumination | Body Electrical | - | 3S-GTE + 5S-FE | 4 | 0 |
-| Interiorlight | Body Electrical | - | - | 2 | 0 |
-| PowrWind | Body Electrical | - | 3S-GTE + 5S-FE | 5 | 0 |
-| PwrSeat | Body Electrical | - | 3S-GTE + 5S-FE | 2 | 0 |
-| RadioW | Body Electrical | - | - | 3 | 0 |
-| Stoplight | Body Electrical | - | - | 2 | 0 |
-| Sunroof | Body Electrical | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Taillight | Body Electrical | - | 3S-GTE + 5S-FE | 3 | 0 |
-| USBW | Body Electrical | - | - | 3 | 0 |
-| Component Location | Electrical / Wiring | - | 3S-GTE + 5S-FE | 8 | 0 |
-| Connector  Ground and Splice | Electrical / Wiring | - | 3S-GTE + 5S-FE | 14 | 0 |
 | Electric | Electrical / Wiring | - | - | 1 | 0 |
 | Electrical Wire Routing | Electrical / Wiring | - | - | 1 | 0 |
-| FWW | Electrical / Wiring | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Ground Points | Electrical / Wiring | - | 3S-GTE + 5S-FE | 6 | 0 |
-| Power Source | Electrical / Wiring | - | 3S-GTE + 5S-FE | 10 | 0 |
-| PwrSource | Electrical / Wiring | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Relay Locations | Electrical / Wiring | - | - | 10 | 0 |
-| TSHWL | Electrical / Wiring | - | 3S-GTE + 5S-FE | 2 | 0 |
 
-## Engine  (56)
+## Engine  (55)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -239,7 +217,6 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Cylinder Head 3sgte | Engine Mechanical | EM | 3S-GTE | 34 | 16 |
 | Description 3sgte | Engine Mechanical | EM | 3S-GTE | 2 | 0 |
 | Description 5sfe | Engine Mechanical | EM | 5S-FE | 2 | 0 |
-| Eng3S-GTE | Engine Mechanical | - | 3S-GTE | 10 | 0 |
 | Engine Mechanical 3sgte | Engine Mechanical | - | 3S-GTE | 4 | 0 |
 | Engine Mechanical 5sfe | Engine Mechanical | - | 5S-FE | 4 | 0 |
 | Engine Tuneup | Engine Mechanical | EM | 3S-GTE + 5S-FE | 16 | 0 |
@@ -276,11 +253,10 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Turbocharger | Turbocharger | TC | - | 12 | 8 |
 | Turbocharger System | Turbocharger | - | 3S-GTE + 5S-FE | 1 | 0 |
 
-## Engine Electrical  (14)
+## Engine Electrical  (12)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
-| Charging | Charging | - | 3S-GTE + 5S-FE | 2 | 0 |
 | Charging System | Charging | - | - | 1 | 0 |
 | Generator | Charging | CH | 3S-GTE + 5S-FE | 20 | 4 |
 | Distributor | Ignition | IG | 3S-GTE | 4 | 1 |
@@ -291,11 +267,10 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Clutch Start Switch Mt Only | Starting | ST | - | 1 | 0 |
 | Clutch Start Switch Mt Only | Starting | ST | - | 1 | 0 |
 | Clutch Start Switch Mt Only | Starting | ST | - | 1 | 0 |
-| StartAll4 | Starting | - | 3S-GTE | 4 | 0 |
 | Starting System | Starting | - | - | 1 | 0 |
 | Starting System | Starting | - | - | 1 | 0 |
 
-## General  (17)
+## General  (15)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -313,11 +288,9 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Vehicle Lift And Support Locati | Introduction | IN | - | 1 | 0 |
 | General Maintenance | Maintenance | MA | - | 2 | 0 |
 | Maintenance Operations | Maintenance | MA | 3S-GTE + 5S-FE | 13 | 5 |
-| ATAS | Reference | - | - | 2 | 0 |
-| RWD | Reference | - | - | 2 | 0 |
 | Theoryof | Reference | - | - | 1 | 0 |
 
-## HVAC  (8)
+## HVAC  (6)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -327,13 +300,10 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | T-AC005-92 | A/C Bulletin | - | - | 2 | 0 |
 | T-AC005-93 | A/C Bulletin | - | - | 1 | 0 |
 | TS-AC009-04 | A/C Bulletin | - | - | 13 | 0 |
-| RadAirAuto | Radiator / A/C Fan | - | 3S-GTE + 5S-FE | 11 | 0 |
-| RadAirMan | Radiator / A/C Fan | - | 3S-GTE + 5S-FE | 8 | 0 |
 
-## Other  (3)
+## Other  (2)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
 | 3SGE-workshop-manual-early | Uncategorized | - | - | 495 | 0 |
-| 90 ST185 Wiring Diagram | Uncategorized | - | 5S-FE | 168 | 0 |
 | Toyota - 3S-GTE - 1991 - Repair Manual (RM266E) | Uncategorized | - | 3S-GTE | 144 | 0 |
