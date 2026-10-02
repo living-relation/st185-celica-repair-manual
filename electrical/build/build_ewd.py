@@ -230,6 +230,11 @@ def circuits_from_overrides(file_name, pages, ov):
         for f in c.get("features", []):
             j = idx[min(max(f["page"], 1), len(idx)) - 1]
             pages[j]["features"].append((f["n"], f["title"].upper()))
+        if c["title"].startswith("(") and out:
+            prev = out[-1]
+            prev["subtitles"][len(prev["pages"])] = tx.normalize_title(c["title"])
+            prev["pages"] += idx
+            continue
         out.append({"file": file_name, "info": info, "gk": tx.group_key(info),
                     "pages": idx, "subtitles": {}})
     return out
@@ -409,8 +414,8 @@ def build():
         s = by_file.get(path.name.lower())
         if ov and ov.get("source"):
             sid = ov["source"].get("id") or "x-" + slug(path.stem)
-            src_by_id.setdefault(sid, dict({"kind": "book", "models": ["ST185"]},
-                                           **ov["source"], id=sid, files=[]))
+            src_by_id.setdefault(sid, {"kind": "book", "models": ["ST185"],
+                                       **ov["source"], "id": sid, "files": []})
             file_src[path.name] = sid
         elif s:
             file_src[path.name] = s["id"]
@@ -515,7 +520,8 @@ def build():
         ls = _lines(text)
         v = dict(info["variant"])
         if info["key"].startswith("hvac-"):
-            b = _hvac_blower(text + " " + " ".join(g["subtitles"].values()), info)
+            heads = " ".join(h for p in cpages for _n, h in p["features"])
+            b = _hvac_blower(" ".join([text, heads, *g["subtitles"].values()]), info)
             if b:
                 v["blower"] = b
             label = tx.variant_label(info["key"], info["paren"], v)
