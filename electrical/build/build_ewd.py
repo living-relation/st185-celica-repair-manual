@@ -704,7 +704,8 @@ def write_page_previews(records, analyzed):
     made_pdf = made_png = 0
     for fname, recs in by_file.items():
         st = (SRC_DIR / fname).stat()
-        stamp = f"{st.st_mtime_ns}:{st.st_size}"
+        # whole seconds: Windows and Linux report sub-second mtimes differently
+        stamp = f"{int(st.st_mtime)}:{st.st_size}"
         doc = None
         for r in recs:
             sig = f"{fname}|{r['src_pages'][0]}-{r['src_pages'][1]}|{stamp}"
@@ -722,7 +723,8 @@ def write_page_previews(records, analyzed):
             if not (fresh and out_pdf.exists()):
                 sub = fitz.open()
                 sub.insert_pdf(doc, from_page=a - 1, to_page=b - 1)
-                sub.save(str(out_pdf), garbage=3, deflate=True)
+                # no_new_id keeps output byte-identical across rebuilds
+                sub.save(str(out_pdf), garbage=3, deflate=True, no_new_id=True)
                 sub.close()
                 made_pdf += 1
             if not (fresh and out_png.exists()):
@@ -746,7 +748,7 @@ def write_page_previews(records, analyzed):
         if cid not in by_id or not pg.isdigit() or int(pg) not in targets.get(cid, ()):
             f.unlink()
             removed += 1
-    STATE_JSON.write_text(json.dumps(new_state, indent=1), encoding="utf-8")
+    STATE_JSON.write_text(json.dumps(new_state, indent=1), encoding="utf-8", newline="\n")
     print(f"Circuit PDFs written: {made_pdf} · images rendered: {made_png} · "
           f"stale files removed: {removed}")
 
@@ -764,17 +766,17 @@ def write_outputs(records, src_by_id, systems, locations, page_map, repair_rever
     }
     (DATA_DIR / "data.js").write_text(
         "window.EWD_DATA = " + json.dumps(payload, ensure_ascii=False) + ";",
-        encoding="utf-8")
+        encoding="utf-8", newline="\n")
     slim = dict(payload, circuits=[{k: v for k, v in r.items() if k != "text"}
                                    for r in records])
     gk = {r["id"]: tx.group_key(tx.classify(r["title"])) for r in records}
     slim["page_maps"] = {sid: {str(pr): gk[cid] for pr, (cid, _k) in m.items()}
                          for sid, m in page_map.items()}
     (DATA_DIR / "index.json").write_text(json.dumps(slim, indent=1, ensure_ascii=False),
-                                         encoding="utf-8")
+                                         encoding="utf-8", newline="\n")
     (DATA_DIR / "repair_links.js").write_text(
         "window.EWD_LINKS = " + json.dumps(repair_reverse, ensure_ascii=False) + ";",
-        encoding="utf-8")
+        encoding="utf-8", newline="\n")
 
     by_id = {r["id"]: r for r in records}
     lines = ["# ST185 Celica - Electrical Wiring Diagram System Index", "",
@@ -796,7 +798,8 @@ def write_outputs(records, src_by_id, systems, locations, page_map, repair_rever
                 lines.append(f"| {s['name']} | {r['source']} | {r['variant'] or '-'} | {pr} "
                              f"| {len(r['features'])} |")
         lines.append("")
-    (APP_DIR / "SYSTEM_INDEX.md").write_text("\n".join(lines), encoding="utf-8")
+    (APP_DIR / "SYSTEM_INDEX.md").write_text("\n".join(lines), encoding="utf-8",
+                                             newline="\n")
 
 
 def report(records, unsplit):
