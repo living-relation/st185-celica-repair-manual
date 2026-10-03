@@ -58,8 +58,9 @@ Celica Repair Manuals\
 ├── CelicaManual.exe        the app — double-click to run
 ├── index.html              shared shell: header + [Repair Manual | Electrical] tabs
 ├── shared\                 PDF.js viewer, theme, Add-manuals panel, tab messaging
-├── manuals\                repair-manual section PDFs
+├── manuals\                repair-manual section PDFs + library.json (imported-section metadata)
 ├── manuals-electrical\     wiring-diagram PDFs + sources.json (edition registry)
+├── tools\import_books.py   splits whole manuals from gt4.mwp.id.au into both libraries
 ├── celica-manual\          Repair Manual app
 │   ├── index.html          app UI
 │   ├── data\               generated search index (data.js, index.json)
