@@ -79,16 +79,20 @@ Celica Repair Manuals\
 
 ## The Electrical app
 
-**Editions.** The library currently holds three wiring-diagram editions:
+**Editions.** 1993 is the primary edition; earlier years stay alongside it:
 
 | Edition | Source | Notes |
 |---|---|---|
-| 1990 | 1990 Celica All-Trac/4WD EWD (ST185 only) | A/C chapters: push-button blower control only |
+| 1993 TIS | EWD160U — individual circuits pulled from Toyota TIS | Factory diagrams, partial (29 circuits); dial blower control; no convertible |
+| 1993 Mitchell | 1993 Celica Service Manual (aftermarket, from gt4.mwp.id.au) | 40 systems: each system's diagnosis/testing/removal article plus its system wiring diagram and the matching overall grid diagrams. Fills the 1993 circuits TIS lacks (ABS, SRS, cruise control, heater, cooling fan, column switches, component locator, …) |
 | 1992 | EWD132U (AT180 / ST184 / ST185) | Transition year: push-button **and** dial blower control; adds Convertible/Top Stack, Shift Lock, ECT, Electric Tension Reducer |
-| 1993 | EWD160U — individual circuits pulled from Toyota TIS | Partial (29 circuits); dial blower control; no convertible |
+| 1990 | 1990 Celica All-Trac/4WD EWD (ST185 only) | A/C chapters: push-button blower control only |
+| Ref | ECU pinouts, alternator guide, Toyota Wire Harness Repair Manual (RM1022E) | General references |
 
-The 1991 (EWD097U) and complete 1993 (EWD160U) books exist only in print as far
-as we could find — drop them in via **+ Add manuals** if you get scans.
+Each card opens the best match for your car: same year first, Toyota factory
+diagrams before the aftermarket manual. The 1991 (EWD097U) and complete 1993
+(EWD160U) Toyota books exist only in print as far as we could find — drop them
+in via **+ Add manuals** if you get scans.
 
 **Systems and variants.** Books are split automatically into one circuit per
 system using the title printed at the top of every EWD page. Each system card
@@ -105,9 +109,11 @@ which edition covers each combination, and the system-outline features
 operation) as jump links. Other circuits whose wiring changes with the blower
 control (e.g. 1992 engine control) are listed too.
 
-**My car.** Set your year, model, transmission, body, A/C type, blower control
-and options once; the **My car** toggle then hides circuits that don't apply,
-and every card opens the edition that best matches your car.
+**My car.** Preset to the owner's car — 1993 ST185, manual transmission,
+automatic A/C with the dial blower control — and switched on. Change year,
+model, transmission, body, A/C type, blower control and options under
+**My car**; the toggle hides circuits that don't apply, and every card opens
+the edition that best matches your car.
 
 **Locations index.** Every part code (A34 *Auto A/C Amplifier*), harness joint
 (IE1), junction block and relay block from each edition's routing pages, with
@@ -129,6 +135,29 @@ Uploads in the **Repair Manual** tab go to `manuals\`; uploads in the
 **Electrical** tab go to `manuals-electrical\`. New sections get full
 functionality automatically. You can also copy PDFs into those folders by
 hand and rebuild from the app.
+
+### Whole books from gt4.mwp.id.au
+
+`tools/import_books.py` splits the whole manuals published at
+<https://gt4.mwp.id.au/> into sections and keeps only what the library does
+not already have (matched by Toyota page code):
+
+| Book | Goes to | What is kept |
+|---|---|---|
+| 1993 ST185 Repair Manual vol. 1 (RM305U1) | Repair Manual | One section per chapter (page-header topic), skipping chapters already in the library and 4A-FE-only chapters |
+| 1990 ST185 All-Trac Repair Manual (RM176U) | Repair Manual | Clutch, E150F transaxle, propeller shaft, suspension & axle, brakes, steering, body electrical, body — tagged 1990 so its page codes never link into 1993 pages |
+| 1993 Celica Service Manual (aftermarket) | Electrical + Repair Manual | Electrical articles and wiring diagrams become the *1993 Mitchell* edition; ST185-relevant mechanical articles (2.0L turbo engine, engine performance/diagnostics, A/C servicing, axles, brakes, steering, suspension, alignment, maintenance) become repair sections |
+| Small references | either app | Specifications, chassis dimensions, E-series gearbox notes, ECU pinouts, alternator guide, Wire Harness Repair Manual |
+
+```powershell
+python tools\import_books.py C:\Users\<you>\Downloads    # folder with the MWP PDFs (original names)
+python "celica-manual\build\build.py"
+python "electrical\build\build_ewd.py"
+```
+
+Imported repair sections carry a source-book badge (e.g. *RM305U1 (1993)*);
+their titles, systems and editions are recorded in `manuals\library.json`.
+Re-running the importer replaces everything it imported before.
 
 ### Wiring-diagram editions and scanned manuals
 
@@ -152,9 +181,11 @@ unsplit until you add a page map `electrical\build\overrides\<file name>.json`:
  ]}
 ```
 
-`pages` are PDF pages, `printed_first` is the page number printed on the first
-page, and feature `page` counts from the start of the circuit. Titles are the
-circuit titles as printed in the manual.
+`pages` are PDF pages (or `page_list` for any set of pages), `printed_first`
+is the page number printed on the first page, and feature `page` counts from
+the start of the circuit. Titles are the circuit titles as printed in the
+manual. Page maps also work for text PDFs that aren't laid out like a Toyota
+EWD — the 1993 Mitchell edition is mapped this way.
 
 ### Duplicate / conflict protection
 

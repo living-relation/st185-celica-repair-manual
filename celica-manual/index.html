@@ -12,6 +12,7 @@
   .b-both{background:#2a1c3a;color:var(--purple);border-color:#43305f}
   .b-tq{background:#12251a;color:#7ee2a8;border-color:#1f4630}
   .b-ewd{background:#2b2410;color:var(--amber);border-color:#4a3d16}
+  .b-book{background:#14233a;color:#8fbfff;border-color:#25406a}
   .tqsrc{margin-bottom:11px}
   .tqsrc:last-child{margin-bottom:0}
   .tqsrc-name{display:block;font-size:12.5px;color:var(--txt);margin-bottom:7px}
@@ -222,6 +223,7 @@ function gridHTML(torqueOnly){
       (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
       (r.relevance==="ref"?'<span class="badge b-ref">REF</span>':'')+
       ((window.EWD_LINKS||{})[r.id]?'<span class="badge b-ewd" title="Has wiring diagrams in the Electrical app">⚡ WIRING</span>':'')+
+      (r.book?'<span class="badge b-book" title="Imported from '+esc(r.book)+'">'+esc(r.book.replace(" (aftermarket)",""))+'</span>':'')+
       (r.torque_table_pages.length?'<span class="badge b-tq">TORQUE TABLE</span>':
         (r.image_only?'<span class="badge b-img">DIAGRAM</span>':''))+'</div>';
     const sub=torqueOnly
@@ -322,6 +324,7 @@ function detailHTML(r,jumpPage){
         '<span class="badge b-code">'+esc(r.system)+(r.code?' · '+esc(r.code):'')+'</span>'+
         (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
         (r.relevance==="ref"?'<span class="badge b-ref">5S-FE reference</span>':'')+
+        (r.book?'<span class="badge b-book">From '+esc(r.book)+'</span>':'')+
         '<span>'+r.pages+' pages</span><span style="color:#63707d">'+esc(r.file)+'</span>'+
       '</div></div>'+
       '<div class="dsplit">'+

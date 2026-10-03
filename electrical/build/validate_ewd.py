@@ -23,13 +23,16 @@ for c in circ:
 for s in data["sources"]:
     for f, n in s.get("file_pages", {}).items():
         owner = [0] * (n + 1)
+        mapped = False
         for c in circ:
             if c["file"] == f:
-                a, b = c["src_pages"]
-                for p in range(a, b + 1):
+                mapped = mapped or c.get("mapped", False)
+                for p in c["src_pages"]:
                     owner[p] += 1
         gaps = [p for p in range(1, n + 1) if owner[p] == 0]
-        dupes = [p for p in range(1, n + 1) if owner[p] > 1]
+        # page-mapped manuals may show one page (e.g. an overall wiring
+        # figure) in several systems
+        dupes = [] if mapped else [p for p in range(1, n + 1) if owner[p] > 1]
         if gaps or dupes:
             problems.append(f"{f}: unassigned pages {gaps[:10]} / pages in 2+ circuits {dupes[:10]}")
 

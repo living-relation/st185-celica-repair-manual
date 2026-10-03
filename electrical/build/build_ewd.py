@@ -28,7 +28,9 @@ Scanned (image-only) PDFs are split from build/overrides/<file stem>.json:
      "circuits": [{"title": "<printed circuit title>", "pages": [first, last],
                    "printed_first": 210,
                    "features": [{"n": 1, "title": "...", "page": 3}]}]}
-(pages are 1-based PDF pages; "page" in features is 1-based within the circuit)
+(pages are 1-based PDF pages; "page_list": [..] instead of "pages" takes any
+pages in any order; "page" in features is 1-based within the circuit)
+Page maps also work for text PDFs that are not laid out like a Toyota EWD.
 
 Run:  python build_ewd.py [--thumbs]     (--thumbs forces re-rendering)
 """
@@ -218,8 +220,11 @@ def group_circuits(file_name, pages):
 def circuits_from_overrides(file_name, pages, ov):
     out = []
     for c in ov.get("circuits", []):
-        a, b = c["pages"]
-        idx = list(range(a - 1, min(b, len(pages))))
+        if "page_list" in c:
+            idx = [p - 1 for p in c["page_list"] if 1 <= p <= len(pages)]
+        else:
+            a, b = c["pages"]
+            idx = list(range(a - 1, min(b, len(pages))))
         if not idx:
             continue
         info = tx.classify(c["title"])
@@ -227,16 +232,18 @@ def circuits_from_overrides(file_name, pages, ov):
             for k, i in enumerate(idx):
                 if pages[i]["printed"] is None:
                     pages[i]["printed"] = c["printed_first"] + k
-        for f in c.get("features", []):
-            j = idx[min(max(f["page"], 1), len(idx)) - 1]
-            pages[j]["features"].append((f["n"], f["title"].upper()))
+        # kept per circuit: one page may be mapped into several circuits
+        feats = [(min(max(f["page"], 1), len(idx)), f["n"], f["title"].upper())
+                 for f in c.get("features", [])]
         if c["title"].startswith("(") and out:
             prev = out[-1]
-            prev["subtitles"][len(prev["pages"])] = tx.normalize_title(c["title"])
+            offset = len(prev["pages"])
+            prev["subtitles"][offset] = tx.normalize_title(c["title"])
             prev["pages"] += idx
+            prev["features"] += [(pg + offset, n, t) for pg, n, t in feats]
             continue
         out.append({"file": file_name, "info": info, "gk": tx.group_key(info),
-                    "pages": idx, "subtitles": {}})
+                    "pages": idx, "subtitles": {}, "mapped": True, "features": feats})
     return out
 
 
@@ -520,7 +527,8 @@ def build():
         ls = _lines(text)
         v = dict(info["variant"])
         if info["key"].startswith("hvac-"):
-            heads = " ".join(h for p in cpages for _n, h in p["features"])
+            heads = " ".join(h for _pg, _n, h in g["features"]) if "features" in g \
+                else " ".join(h for p in cpages for _n, h in p["features"])
             b = _hvac_blower(" ".join([text, heads, *g["subtitles"].values()]), info)
             if b:
                 v["blower"] = b
@@ -533,13 +541,15 @@ def build():
                 and src.get("models") == ["ST185"]:
             v["drive"] = ["ALL-TRAC/4WD"]
 
-        features = []
-        for k, p in enumerate(cpages):
-            for num, head in p["features"]:
-                features.append({"n": num, "title": tx.pretty(head), "page": k + 1,
-                                 "blower": tx.blower_types(head),
-                                 "auto_ac": ("W/O AUTO A/C" not in head and "W/ AUTO A/C" in head)
-                                 or None})
+        if "features" in g:
+            raw_feats = g["features"]
+        else:
+            raw_feats = [(k + 1, num, head) for k, p in enumerate(cpages)
+                         for num, head in p["features"]]
+        features = [{"n": num, "title": tx.pretty(head), "page": pg,
+                     "blower": tx.blower_types(head),
+                     "auto_ac": ("W/O AUTO A/C" not in head and "W/ AUTO A/C" in head) or None}
+                    for pg, num, head in raw_feats]
         page_tags = {}
         for k, p in enumerate(cpages):
             if "TYPE OF BLOWER CONTROL SW" in p["text"].upper() \
@@ -594,7 +604,8 @@ def build():
             "variant": label,
             "applies": v,
             "option": info.get("option"),
-            "src_pages": [g["pages"][0] + 1, g["pages"][-1] + 1],
+            "src_pages": [i + 1 for i in g["pages"]],
+            "mapped": bool(g.get("mapped")),
             "printed": [min(printed), max(printed)] if printed else None,
             "pages": len(g["pages"]),
             "features": features,
@@ -657,10 +668,23 @@ def cross_links(systems):
         return {}, {}
     recs = json.loads(REPAIR_INDEX.read_text(encoding="utf-8")).get("records", [])
     titles = {r["id"]: r["title"] for r in recs}
-    fwd, rev = {}, defaultdict(list)
+    wanted = defaultdict(list)
     for key, ids in tx.REPAIR_LINKS.items():
+        wanted[key] += ids
+    for r in sorted(recs, key=lambda r: r["title"]):
+        if r.get("relevance") != "car":
+            continue
+        for key, prefixes in tx.REPAIR_CODE_LINKS.items():
+            if r.get("code") in prefixes:
+                wanted[key].append(r["id"])
+        for key, names in tx.REPAIR_SYSTEM_LINKS.items():
+            if r.get("system") in names:
+                wanted[key].append(r["id"])
+    fwd, rev = {}, defaultdict(list)
+    for key, ids in wanted.items():
         if key not in systems:
             continue
+        ids = list(dict.fromkeys(ids))[:24]
         links = [{"id": i, "title": titles[i]} for i in ids if i in titles]
         if links:
             fwd[key] = links
@@ -708,7 +732,10 @@ def write_page_previews(records, analyzed):
         stamp = f"{int(st.st_mtime)}:{st.st_size}"
         doc = None
         for r in recs:
-            sig = f"{fname}|{r['src_pages'][0]}-{r['src_pages'][1]}|{stamp}"
+            src = r["src_pages"]
+            span = f"{src[0]}-{src[-1]}" if src == list(range(src[0], src[-1] + 1)) \
+                else ",".join(map(str, src))
+            sig = f"{fname}|{span}|{stamp}"
             new_state[r["id"]] = sig
             fresh = state.get(r["id"]) == sig and not FORCE_THUMBS
             out_pdf = CIRCUIT_DIR / (r["id"] + ".pdf")
@@ -719,20 +746,20 @@ def write_page_previews(records, analyzed):
                 continue
             if doc is None:
                 doc = fitz.open(SRC_DIR / fname)
-            a, b = r["src_pages"]
             if not (fresh and out_pdf.exists()):
                 sub = fitz.open()
-                sub.insert_pdf(doc, from_page=a - 1, to_page=b - 1)
+                for p in src:
+                    sub.insert_pdf(doc, from_page=p - 1, to_page=p - 1)
                 # no_new_id keeps output byte-identical across rebuilds
                 sub.save(str(out_pdf), garbage=3, deflate=True, no_new_id=True)
                 sub.close()
                 made_pdf += 1
             if not (fresh and out_png.exists()):
-                _render(doc.load_page(a - 1), out_png)
+                _render(doc.load_page(src[0] - 1), out_png)
                 made_png += 1
             for p in need_pages:
                 if 1 <= p <= r["pages"]:
-                    _render(doc.load_page(a - 2 + p), PAGES_DIR / f"{r['id']}_p{p}.png")
+                    _render(doc.load_page(src[p - 1] - 1), PAGES_DIR / f"{r['id']}_p{p}.png")
                     made_png += 1
         if doc is not None:
             doc.close()

@@ -1,0 +1,3179 @@
+{
+ "circuits": [
+  {
+   "title": "RADIATOR FAN AND AIR CONDITIONER (MANUAL AIR CONDITIONER, FOR DIAL TYPE OF BLOWER CONTROL SW)",
+   "page_list": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    375,
+    376
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "A/C SYSTEM SPECIFICATIONS",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "OPERATION",
+     "page": 2
+    },
+    {
+     "n": 4,
+     "title": "SYSTEM CONTROLS",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "SYSTEM COMPONENTS",
+     "page": 3
+    },
+    {
+     "n": 6,
+     "title": "ADJUSTMENTS",
+     "page": 4
+    },
+    {
+     "n": 7,
+     "title": "AIR MIX DAMPER",
+     "page": 4
+    },
+    {
+     "n": 8,
+     "title": "HEATER VALVE",
+     "page": 4
+    },
+    {
+     "n": 9,
+     "title": "TROUBLE SHOOTING",
+     "page": 5
+    },
+    {
+     "n": 10,
+     "title": "NO BLOWER OPERATION",
+     "page": 5
+    },
+    {
+     "n": 11,
+     "title": "NO COOL AIR",
+     "page": 5
+    },
+    {
+     "n": 12,
+     "title": "INTERMITTENT COOL AIR",
+     "page": 5
+    },
+    {
+     "n": 13,
+     "title": "COOL AIR ONLY AT HIGH SPEED",
+     "page": 6
+    },
+    {
+     "n": 14,
+     "title": "INSUFFICIENT COOLING",
+     "page": 6
+    },
+    {
+     "n": 15,
+     "title": "INSUFFICIENT COOL AIR VELOCITY",
+     "page": 6
+    },
+    {
+     "n": 16,
+     "title": "TESTING",
+     "page": 6
+    },
+    {
+     "n": 17,
+     "title": "A/C SYSTEM PERFORMANCE",
+     "page": 6
+    },
+    {
+     "n": 18,
+     "title": "A/C SWITCH",
+     "page": 6
+    },
+    {
+     "n": 19,
+     "title": "A/C AMPLIFIER",
+     "page": 6
+    },
+    {
+     "n": 20,
+     "title": "COOLANT TEMPERATURE SWITCH",
+     "page": 8
+    },
+    {
+     "n": 21,
+     "title": "CONDENSER FAN MOTOR",
+     "page": 8
+    },
+    {
+     "n": 22,
+     "title": "INDICATOR & ILLUMINATION LIGHTS",
+     "page": 8
+    },
+    {
+     "n": 23,
+     "title": "MAGNETIC CLUTCH",
+     "page": 9
+    },
+    {
+     "n": 24,
+     "title": "RELAYS",
+     "page": 9
+    },
+    {
+     "n": 25,
+     "title": "SERVOMOTORS",
+     "page": 13
+    },
+    {
+     "n": 26,
+     "title": "SWITCHES",
+     "page": 15
+    },
+    {
+     "n": 27,
+     "title": "TRIPLE-PRESSURE SWITCH",
+     "page": 16
+    },
+    {
+     "n": 28,
+     "title": "VACUUM SWITCHING VALVE (VSV)",
+     "page": 17
+    },
+    {
+     "n": 29,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 17
+    },
+    {
+     "n": 30,
+     "title": "COMPRESSOR",
+     "page": 18
+    },
+    {
+     "n": 31,
+     "title": "EVAPORATOR ASSEMBLY",
+     "page": 18
+    },
+    {
+     "n": 32,
+     "title": "CONDENSER",
+     "page": 19
+    },
+    {
+     "n": 33,
+     "title": "RECEIVER-DRIER",
+     "page": 19
+    },
+    {
+     "n": 34,
+     "title": "TORQUE SPECIFICATIONS",
+     "page": 19
+    },
+    {
+     "n": 35,
+     "title": "WIRING DIAGRAM - MANUAL A/C & HEATER SYSTEM (GRID 36-39)",
+     "page": 22
+    },
+    {
+     "n": 36,
+     "title": "WIRING DIAGRAM - FAN RELAYS, COURTESY LIGHTS, HEATER RELAY (GRID 40-43)",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "title": "RADIATOR FAN AND AIR CONDITIONER (AUTOMATIC AIR CONDITIONER, FOR DIAL TYPE OF BLOWER CONTROL SW)",
+   "page_list": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    374,
+    376
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "SPECIFICATIONS",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "OPERATION",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "AMPLIFIERS & SENSORS",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "ENGINE IDLE-UP CONTROL",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "TESTING",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "A/C SYSTEM PERFORMANCE",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "A/C COMPRESSOR CLUTCH TEST",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "A/C-HEATER CONTROL PANEL ILLUMINATION",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "A/C-HEATER CONTROL PANEL INDICATORS",
+     "page": 3
+    },
+    {
+     "n": 11,
+     "title": "A/C SWITCH TEST",
+     "page": 4
+    },
+    {
+     "n": 12,
+     "title": "AIR INLET SWITCHES TEST",
+     "page": 4
+    },
+    {
+     "n": 13,
+     "title": "AIRFLOW MODE CONTROL SWITCHES TEST",
+     "page": 4
+    },
+    {
+     "n": 14,
+     "title": "AIR MIX CONTROL SERVOMOTOR",
+     "page": 7
+    },
+    {
+     "n": 15,
+     "title": "AUTO A/C AMPLIFIER TEST",
+     "page": 7
+    },
+    {
+     "n": 16,
+     "title": "BLOWER SPEED CONTROL SWITCH TEST",
+     "page": 8
+    },
+    {
+     "n": 17,
+     "title": "AMBIENT TEMPERATURE SENSOR TEST",
+     "page": 8
+    },
+    {
+     "n": 18,
+     "title": "POWER TRANSISTOR TEST",
+     "page": 9
+    },
+    {
+     "n": 19,
+     "title": "SOLAR (SUNLOAD) SENSOR TEST",
+     "page": 9
+    },
+    {
+     "n": 20,
+     "title": "SYSTEM AMPLIFIER TEST",
+     "page": 10
+    },
+    {
+     "n": 21,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 10
+    },
+    {
+     "n": 22,
+     "title": "COMPRESSOR",
+     "page": 11
+    },
+    {
+     "n": 23,
+     "title": "EVAPORATOR, EXPANSION VALVE & THERMISTOR",
+     "page": 11
+    },
+    {
+     "n": 24,
+     "title": "CONDENSER",
+     "page": 12
+    },
+    {
+     "n": 25,
+     "title": "RECEIVER-DRIER",
+     "page": 12
+    },
+    {
+     "n": 26,
+     "title": "TORQUE SPECIFICATIONS",
+     "page": 13
+    },
+    {
+     "n": 27,
+     "title": "WIRING DIAGRAM - AUTO A/C & HEATER SYSTEM (GRID 32-35)",
+     "page": 16
+    },
+    {
+     "n": 28,
+     "title": "WIRING DIAGRAM - FAN RELAYS, COURTESY LIGHTS, HEATER RELAY (GRID 40-43)",
+     "page": 17
+    }
+   ]
+  },
+  {
+   "title": "SRS AIRBAG",
+   "page_list": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "SYSTEM OPERATION CHECK",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "SERVICE PRECAUTIONS",
+     "page": 2
+    },
+    {
+     "n": 4,
+     "title": "ACTIVATING AIR BAG SYSTEM.",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "OPERATION CHECK.",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "DISABLING & ACTIVATING AIR BAG SYSTEM",
+     "page": 3
+    },
+    {
+     "n": 7,
+     "title": "DISPOSAL PROCEDURES",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "DEPLOYED AIR BAG",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "SCRAPPED VEHICLE",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "UNDEPLOYED AIR BAG.",
+     "page": 3
+    },
+    {
+     "n": 11,
+     "title": "UNDEPLOYED AIR BAG",
+     "page": 3
+    },
+    {
+     "n": 12,
+     "title": "INSTALLATION.",
+     "page": 3
+    },
+    {
+     "n": 13,
+     "title": "POST-COLLISION INSPECTION",
+     "page": 5
+    },
+    {
+     "n": 14,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 5
+    },
+    {
+     "n": 15,
+     "title": "SYSTEM OPERATION CHECK.",
+     "page": 5
+    },
+    {
+     "n": 16,
+     "title": "CENTER AIR BAG SENSOR",
+     "page": 5
+    },
+    {
+     "n": 17,
+     "title": "SYSTEM.",
+     "page": 6
+    },
+    {
+     "n": 18,
+     "title": "FRONT AIR BAG SENSORS",
+     "page": 6
+    },
+    {
+     "n": 19,
+     "title": "STEERING WHEEL PAD & SPIRAL CABLE",
+     "page": 7
+    },
+    {
+     "n": 20,
+     "title": "CHECK.",
+     "page": 7
+    },
+    {
+     "n": 21,
+     "title": "ADJUSTMENTS",
+     "page": 8
+    },
+    {
+     "n": 22,
+     "title": "SPIRAL CABLE",
+     "page": 8
+    },
+    {
+     "n": 23,
+     "title": "WIRE REPAIR",
+     "page": 9
+    },
+    {
+     "n": 24,
+     "title": "HERE.",
+     "page": 9
+    },
+    {
+     "n": 25,
+     "title": "TORQUE SPECIFICATIONS",
+     "page": 9
+    },
+    {
+     "n": 26,
+     "title": "SELF-DIAGNOSTIC SYSTEM",
+     "page": 10
+    },
+    {
+     "n": 27,
+     "title": "DIAGNOSTIC CODE CHECK.",
+     "page": 10
+    },
+    {
+     "n": 28,
+     "title": "SHOOTING.",
+     "page": 10
+    },
+    {
+     "n": 29,
+     "title": "TROUBLE SHOOTING",
+     "page": 13
+    },
+    {
+     "n": 30,
+     "title": "AIR BAG/SRS WARNING LIGHT REMAINS ILLUMINATED",
+     "page": 13
+    },
+    {
+     "n": 31,
+     "title": "AIR BAG/SRS WARNING LIGHT INTERMITTENT",
+     "page": 13
+    },
+    {
+     "n": 32,
+     "title": "DIAGNOSTIC CODE NOT DISPLAYED",
+     "page": 13
+    },
+    {
+     "n": 33,
+     "title": "DIAGNOSTIC CODE CONTINUOUSLY DISPLAYED",
+     "page": 13
+    },
+    {
+     "n": 34,
+     "title": "DIAGNOSTIC CODE NORMAL, SOURCE VOLTAGE DROP",
+     "page": 14
+    },
+    {
+     "n": 35,
+     "title": "FRONT AIR BAG SENSOR CIRCUIT.",
+     "page": 17
+    },
+    {
+     "n": 36,
+     "title": "DIAGNOSTIC CODE 14, OPEN IN SQUIB CIRCUIT",
+     "page": 18
+    },
+    {
+     "n": 37,
+     "title": "DIAGNOSTIC CODE 22, AIR BAG/SRS WARNING LIGHT SYS MALFUNCTION",
+     "page": 20
+    },
+    {
+     "n": 38,
+     "title": "DIAGNOSTIC CODE 31, CENTER AIR BAG SENS ASSEMBLY MALFUNCTION",
+     "page": 20
+    },
+    {
+     "n": 39,
+     "title": "DIAGNOSTIC CODE 41, MALFUNCTION STORED IN MEMORY",
+     "page": 21
+    },
+    {
+     "n": 40,
+     "title": "POST-COLLISION AIR BAG SAFETY INSPECTION",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "title": "CHARGING",
+   "page_list": [
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    285
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "ADJUSTMENTS",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "BELT TENSION",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "NO-LOAD TEST",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "ALTERNATOR REGULATED OUTPUT SPECIFICATIONS (1)",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "LOAD TEST",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "ALTERNATOR RATED AMPERE OUTPUT SPECIFICATIONS",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "BRUSHES",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "ROTOR",
+     "page": 4
+    },
+    {
+     "n": 11,
+     "title": "STATOR",
+     "page": 4
+    },
+    {
+     "n": 12,
+     "title": "DIODES",
+     "page": 4
+    },
+    {
+     "n": 13,
+     "title": "OVERHAUL",
+     "page": 4
+    },
+    {
+     "n": 14,
+     "title": "DISASSEMBLY",
+     "page": 4
+    },
+    {
+     "n": 15,
+     "title": "REASSEMBLY",
+     "page": 4
+    },
+    {
+     "n": 16,
+     "title": "WIRING DIAGRAMS",
+     "page": 9
+    },
+    {
+     "n": 17,
+     "title": "WIRING DIAGRAM - CHARGING CIRCUIT",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "title": "ABS (ANTI-LOCK BRAKE SYSTEM)",
+   "page_list": [
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    378
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "OPERATION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "ANTI-LOCK BRAKE SAFETY PRECAUTIONS",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "BLEEDING BRAKE SYSTEM",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "ADJUSTMENTS",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "MASTER CYLINDER PUSH ROD",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "BRAKE PEDAL HEIGHT",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "PEDAL FREE PLAY.",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "BRAKE PEDAL FREE PLAY",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "BRAKE PEDAL RESERVE",
+     "page": 4
+    },
+    {
+     "n": 11,
+     "title": "STOPLIGHT SWITCH",
+     "page": 4
+    },
+    {
+     "n": 12,
+     "title": "PARKING BRAKE SHOES",
+     "page": 4
+    },
+    {
+     "n": 13,
+     "title": "PARKING BRAKE",
+     "page": 4
+    },
+    {
+     "n": 14,
+     "title": "TROUBLE SHOOTING",
+     "page": 4
+    },
+    {
+     "n": 15,
+     "title": "ANTI-LOCK WARNING LIGHT",
+     "page": 4
+    },
+    {
+     "n": 16,
+     "title": "SYMPTOM DIAGNOSIS",
+     "page": 8
+    },
+    {
+     "n": 17,
+     "title": "DIAGNOSIS & TESTING.",
+     "page": 8
+    },
+    {
+     "n": 18,
+     "title": "DIAGNOSIS & TESTING",
+     "page": 9
+    },
+    {
+     "n": 19,
+     "title": "RETRIEVING CODES",
+     "page": 9
+    },
+    {
+     "n": 20,
+     "title": "DIAGNOSTIC CODES",
+     "page": 9
+    },
+    {
+     "n": 21,
+     "title": "COMPONENT TESTING.",
+     "page": 9
+    },
+    {
+     "n": 22,
+     "title": "CLEARING CODES",
+     "page": 11
+    },
+    {
+     "n": 23,
+     "title": "ACTUATOR CHECK",
+     "page": 11
+    },
+    {
+     "n": 24,
+     "title": "SPEED SENSOR DIAGNOSTICS",
+     "page": 11
+    },
+    {
+     "n": 25,
+     "title": "SPEED SENSOR DIAGNOSTIC CODES",
+     "page": 12
+    },
+    {
+     "n": 26,
+     "title": "DECELERATION SENSOR DIAGNOSTICS (ALL-TRAC)",
+     "page": 12
+    },
+    {
+     "n": 27,
+     "title": "COMPONENT TESTING",
+     "page": 13
+    },
+    {
+     "n": 28,
+     "title": "STEP 1",
+     "page": 13
+    },
+    {
+     "n": 29,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 17
+    },
+    {
+     "n": 30,
+     "title": "ABS ECU",
+     "page": 17
+    },
+    {
+     "n": 31,
+     "title": "ABS CONTROL RELAY",
+     "page": 17
+    },
+    {
+     "n": 32,
+     "title": "ACTUATOR",
+     "page": 17
+    },
+    {
+     "n": 33,
+     "title": "FRONT SENSOR ROTOR",
+     "page": 17
+    },
+    {
+     "n": 34,
+     "title": "FRONT WHEEL SPEED SENSORS",
+     "page": 17
+    },
+    {
+     "n": 35,
+     "title": "REAR SENSOR ROTOR (ALL TRAC)",
+     "page": 18
+    },
+    {
+     "n": 36,
+     "title": "REAR SENSOR ROTOR (FWD)",
+     "page": 18
+    },
+    {
+     "n": 37,
+     "title": "REAR WHEEL SPEED SENSORS",
+     "page": 18
+    },
+    {
+     "n": 38,
+     "title": "OVERHAUL",
+     "page": 18
+    },
+    {
+     "n": 39,
+     "title": "TORQUE SPECIFICATIONS",
+     "page": 19
+    },
+    {
+     "n": 40,
+     "title": "GENERAL INFORMATION",
+     "page": 20
+    },
+    {
+     "n": 41,
+     "title": "WIRING DIAGRAM - ABS SYSTEM (2WD, 4WD) (GRID 48-51)",
+     "page": 21
+    }
+   ]
+  },
+  {
+   "title": "CRUISE CONTROL",
+   "page_list": [
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    377
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "OPERATION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "ACTUATOR (MOTOR)",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "ACTUATOR (VACUUM)",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "CRUISE CONTROL SWITCH",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "CRUISE CONTROL ELECTRONIC CONTROL UNIT (CC ECU)",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "SPEED SENSOR",
+     "page": 2
+    },
+    {
+     "n": 8,
+     "title": "SELF-DIAGNOSTIC SYSTEM",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "SELF-DIAGNOSTICS",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "READING TROUBLE CODES",
+     "page": 4
+    },
+    {
+     "n": 11,
+     "title": "RETRIEVING TROUBLE CODES",
+     "page": 4
+    },
+    {
+     "n": 12,
+     "title": "CC ECU FAULT CODE DEFINITION",
+     "page": 5
+    },
+    {
+     "n": 13,
+     "title": "TROUBLE SHOOTING",
+     "page": 7
+    },
+    {
+     "n": 14,
+     "title": "CRUISE CONTROL CIRCUIT FUNCTION TEST",
+     "page": 7
+    },
+    {
+     "n": 15,
+     "title": "CLEARING FUNCTION CODES",
+     "page": 7
+    },
+    {
+     "n": 16,
+     "title": "TROUBLE SHOOTING BY SYMPTOM",
+     "page": 8
+    },
+    {
+     "n": 17,
+     "title": "SET/COAST",
+     "page": 8
+    },
+    {
+     "n": 18,
+     "title": "RES/ACC",
+     "page": 8
+    },
+    {
+     "n": 19,
+     "title": "TESTING & DIAGNOSIS",
+     "page": 9
+    },
+    {
+     "n": 20,
+     "title": "ACTUATOR.",
+     "page": 12
+    },
+    {
+     "n": 21,
+     "title": "COMPONENT TESTING",
+     "page": 18
+    },
+    {
+     "n": 22,
+     "title": "CRUISE CONTROL ECU CIRCUIT TESTING CHARTS",
+     "page": 19
+    },
+    {
+     "n": 23,
+     "title": "WIRING DIAGRAMS",
+     "page": 22
+    },
+    {
+     "n": 24,
+     "title": "WIRING DIAGRAM - CRUISE CONTROL SYSTEM, TOP STACK SYSTEM (GRID 44-47)",
+     "page": 23
+    }
+   ]
+  },
+  {
+   "title": "REAR WINDOW DEFOGGER",
+   "page_list": [
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    276,
+    379
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "DEFOGGER DOES NOT WORK",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "INDICATOR LIGHT DOES NOT WORK",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "TESTING",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "SYSTEM TESTING",
+     "page": 1
+    },
+    {
+     "n": 7,
+     "title": "SWITCH TEST",
+     "page": 1
+    },
+    {
+     "n": 8,
+     "title": "RELAY TEST",
+     "page": 7
+    },
+    {
+     "n": 9,
+     "title": "OUTSIDE REARVIEW MIRROR DEFOGGER TEST",
+     "page": 8
+    },
+    {
+     "n": 10,
+     "title": "POWER WINDOW LIMIT SWITCH",
+     "page": 8
+    },
+    {
+     "n": 11,
+     "title": "GRID FILAMENT TESTING",
+     "page": 9
+    },
+    {
+     "n": 12,
+     "title": "ON-VEHICLE SERVICE",
+     "page": 11
+    },
+    {
+     "n": 13,
+     "title": "GRID FILAMENT REPAIR",
+     "page": 11
+    },
+    {
+     "n": 14,
+     "title": "WIRING DIAGRAMS",
+     "page": 11
+    },
+    {
+     "n": 15,
+     "title": "WIRING DIAGRAM - DEFOGGER CIRCUIT",
+     "page": 12
+    },
+    {
+     "n": 16,
+     "title": "WIRING DIAGRAM - JUNCTION BLOCK #3, A/T CONTROL, DEFOGGER (GRID 52-55)",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "title": "DOOR LOCK",
+   "page_list": [
+    122,
+    123,
+    124,
+    125,
+    126,
+    279,
+    381
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "RELAY CIRCUIT TESTING CHARTS.",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "TESTING",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "COMPONENT TESTING",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "DOOR LOCK SWITCH SIGNAL TEST",
+     "page": 3
+    },
+    {
+     "n": 7,
+     "title": "LOCKS CIRCUIT TESTING CHARTS.",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "POWER DOOR LOCK CONTROL RELAY CIRCUIT TESTING CHARTS",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "WIRING DIAGRAMS",
+     "page": 5
+    },
+    {
+     "n": 10,
+     "title": "WIRING DIAGRAM - POWER DOOR LOCK CIRCUIT",
+     "page": 6
+    },
+    {
+     "n": 11,
+     "title": "WIRING DIAGRAM - POWER ACCESSORIES, TAILLIGHTS (GRID 60-63)",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "title": "ELECTRICAL COMPONENT LOCATOR",
+   "page_list": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "SAFETY PRECAUTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "BUZZERS, RELAYS & TIMERS",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "MISCELLANEOUS",
+     "page": 27
+    }
+   ]
+  },
+  {
+   "title": "ENGINE COOLING FAN",
+   "page_list": [
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    376
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "SPECIFICATIONS",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "BELT ADJUSTMENT",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "COOLING SYSTEM BLEEDING",
+     "page": 2
+    },
+    {
+     "n": 4,
+     "title": "ELECTRIC COOLING FAN",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "DIAGRAMS.",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "COMPONENT TESTING.",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "COMPONENT TESTING",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "WIRING DIAGRAM - FAN RELAYS, COURTESY LIGHTS, HEATER RELAY (GRID 40-43)",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "title": "POWER SOURCE",
+   "page_list": [
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    367,
+    372,
+    373,
+    379
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "IDENTIFICATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "FUSE PANEL LOCATION (1983-85)",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "PASSENGER COMPARTMENT FUSE BOX IDENTIFICATION (1983-85)",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "ENGINE COMPARTMENT MAIN BLOCK IDENTIFICATION (1983-85)",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "FUSE PANEL LOCATION (1986-89)",
+     "page": 3
+    },
+    {
+     "n": 6,
+     "title": "PASSENGER COMPARTMENT FUSE BOX IDENTIFICATION (1986-89)",
+     "page": 3
+    },
+    {
+     "n": 7,
+     "title": "PASSENGER COMPARTMENT RELAY IDENTIFICATION (1986-89)",
+     "page": 4
+    },
+    {
+     "n": 8,
+     "title": "ENGINE COMPARTMENT BLOCK IDENTIFICATION (1986-89)",
+     "page": 4
+    },
+    {
+     "n": 9,
+     "title": "ENGINE COMPARTMENT RELAY IDENTIFICATION (1986-89)",
+     "page": 5
+    },
+    {
+     "n": 10,
+     "title": "FUSE PANEL LOCATION (1990-93)",
+     "page": 5
+    },
+    {
+     "n": 11,
+     "title": "PASSENGER COMPARTMENT FUSE BOX IDENTIFICATION (1990-93)",
+     "page": 6
+    },
+    {
+     "n": 12,
+     "title": "PASSENGER COMPARTMENT RELAY IDENTIFICATION (1990-93)",
+     "page": 7
+    },
+    {
+     "n": 13,
+     "title": "ENGINE COMPARTMENT MAIN BLOCK IDENTIFICATION (1990-93)",
+     "page": 7
+    },
+    {
+     "n": 14,
+     "title": "ENGINE COMPARTMENT MAIN BLOCK RELAY IDENTIFICATION (1990-93)",
+     "page": 8
+    },
+    {
+     "n": 15,
+     "title": "CAUTIONS & WARNINGS",
+     "page": 8
+    },
+    {
+     "n": 16,
+     "title": "SUPPLEMENTAL RESTRAINT SYSTEM (AIR BAG SYSTEM)",
+     "page": 8
+    },
+    {
+     "n": 17,
+     "title": "RADIATOR FAN & CAP",
+     "page": 8
+    },
+    {
+     "n": 18,
+     "title": "WIRING DIAGRAM - JUNCTION BLOCK #2, RELAY BLOCK #5 (GRID 4-7)",
+     "page": 9
+    },
+    {
+     "n": 19,
+     "title": "WIRING DIAGRAM - JUNCTION BLOCK #1 (PARTIAL), IGNITION SW (GRID 24-27)",
+     "page": 10
+    },
+    {
+     "n": 20,
+     "title": "WIRING DIAGRAM - JUNCTION BLOCK # 1 (CONT.), RELAY BLOCK #2 & #4 (GRID 28-31)",
+     "page": 11
+    },
+    {
+     "n": 21,
+     "title": "WIRING DIAGRAM - JUNCTION BLOCK #3, A/T CONTROL, DEFOGGER (GRID 52-55)",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "title": "HEATER",
+   "page_list": [
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "OPERATION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "BLOWER SWITCH",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "CONTROL PANEL",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "HEATER RELAY",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "AIR INLET DAMPER CABLE",
+     "page": 1
+    },
+    {
+     "n": 7,
+     "title": "AIR MIX DAMPER CABLE",
+     "page": 2
+    },
+    {
+     "n": 8,
+     "title": "AIRFLOW MODE DAMPER CABLE",
+     "page": 2
+    },
+    {
+     "n": 9,
+     "title": "WATER VALVE CONTROL CABLE",
+     "page": 2
+    },
+    {
+     "n": 10,
+     "title": "TROUBLE SHOOTING",
+     "page": 2
+    },
+    {
+     "n": 11,
+     "title": "BLOWER DOES NOT WORK",
+     "page": 2
+    },
+    {
+     "n": 12,
+     "title": "INCORRECT TEMPERATURE OUTPUT",
+     "page": 2
+    },
+    {
+     "n": 13,
+     "title": "TESTING",
+     "page": 2
+    },
+    {
+     "n": 14,
+     "title": "AIR INLET CONTROL SERVOMOTOR",
+     "page": 2
+    },
+    {
+     "n": 15,
+     "title": "AIR INLET CONTROL SWITCH",
+     "page": 3
+    },
+    {
+     "n": 16,
+     "title": "AIRFLOW MODE CONTROL SWITCH",
+     "page": 4
+    },
+    {
+     "n": 17,
+     "title": "BLOWER FAN RELAY",
+     "page": 5
+    },
+    {
+     "n": 18,
+     "title": "BLOWER MOTOR",
+     "page": 6
+    },
+    {
+     "n": 19,
+     "title": "BLOWER RESISTOR",
+     "page": 7
+    },
+    {
+     "n": 20,
+     "title": "BLOWER SPEED CONTROL SWITCH",
+     "page": 7
+    },
+    {
+     "n": 21,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 8
+    },
+    {
+     "n": 22,
+     "title": "HEATER ASSEMBLY",
+     "page": 8
+    },
+    {
+     "n": 23,
+     "title": "WIRING DIAGRAM",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "title": "HOW TO USE SYSTEM WIRING DIAGRAMS",
+   "page_list": [
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "GENERAL INFORMATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "INTRODUCTION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "COLOR ABBREVIATIONS",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "IDENTIFYING WIRING DIAGRAM SYMBOLS",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "WIRING DIAGRAM COMPONENT LOCATIONS",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "title": "COMBINATION METER",
+   "page_list": [
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    380
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "GAUGES",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "SWITCHES",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "TESTING - GAUGES",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "FUEL GAUGE & WARNING LIGHT",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "FUEL SENDING UNIT TESTS",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "TEMPERATURE GAUGE & SENDER",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "TEMPERATURE GAUGE RESISTANCE TEST.",
+     "page": 4
+    },
+    {
+     "n": 9,
+     "title": "TESTING - SWITCHES",
+     "page": 6
+    },
+    {
+     "n": 10,
+     "title": "HAZARD WARNING SWITCH",
+     "page": 7
+    },
+    {
+     "n": 11,
+     "title": "INSTRUMENT CLUSTER",
+     "page": 8
+    },
+    {
+     "n": 12,
+     "title": "STEERING WHEEL",
+     "page": 9
+    },
+    {
+     "n": 13,
+     "title": "WIRING DIAGRAMS",
+     "page": 10
+    },
+    {
+     "n": 14,
+     "title": "WIRING DIAGRAM - INSTRUMENT CLUSTER, COMBINATION SWITCH (GRID 56-59)",
+     "page": 12
+    }
+   ]
+  },
+  {
+   "title": "REMOTE CONTROL MIRROR",
+   "page_list": [
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    280,
+    381
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "POWER MIRROR",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "TESTING",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "POWER MIRROR SWITCH TEST",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "POWER MIRROR SWITCH CONTINUITY TEST (CAMRY)",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "POWER MIRROR SWITCH",
+     "page": 6
+    },
+    {
+     "n": 8,
+     "title": "POWER MIRROR ASSEMBLY",
+     "page": 7
+    },
+    {
+     "n": 9,
+     "title": "WIRING DIAGRAMS",
+     "page": 7
+    },
+    {
+     "n": 10,
+     "title": "WIRING DIAGRAM - POWER MIRROR CIRCUIT",
+     "page": 8
+    },
+    {
+     "n": 11,
+     "title": "WIRING DIAGRAM - POWER ACCESSORIES, TAILLIGHTS (GRID 60-63)",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "title": "ENGINE CONTROL (3S-GTE)",
+   "page_list": [
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    224,
+    225,
+    226,
+    227,
+    369,
+    383
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "INTRODUCTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "ECM LOCATION & IDENTIFICATION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "ECM PIN VOLTAGE TEST",
+     "page": 3
+    },
+    {
+     "n": 4,
+     "title": "ECM WIRING HARNESS RESISTANCE TEST",
+     "page": 6
+    },
+    {
+     "n": 5,
+     "title": "ECM TERMINAL IDENTIFICATION",
+     "page": 8
+    },
+    {
+     "n": 6,
+     "title": "INTRODUCTION",
+     "page": 10
+    },
+    {
+     "n": 7,
+     "title": "AIRFLOW METER",
+     "page": 10
+    },
+    {
+     "n": 8,
+     "title": "E2-THA",
+     "page": 10
+    },
+    {
+     "n": 9,
+     "title": "E2-VS",
+     "page": 10
+    },
+    {
+     "n": 10,
+     "title": "COLD START INJECTOR TIME SWITCH",
+     "page": 11
+    },
+    {
+     "n": 11,
+     "title": "EGR GAS TEMPERATURE SENSOR",
+     "page": 11
+    },
+    {
+     "n": 12,
+     "title": "MANIFOLD ABSOLUTE PRESSURE SENSOR",
+     "page": 12
+    },
+    {
+     "n": 13,
+     "title": "OXYGEN SENSOR HEATER",
+     "page": 12
+    },
+    {
+     "n": 14,
+     "title": "WIRING DIAGRAM - ECM ECU & ENGINE SENSORS (2.0L TURBO) (GRID 12-15)",
+     "page": 14
+    },
+    {
+     "n": 15,
+     "title": "WIRING DIAGRAM - WIRING DIAGRAM (CELICA 2.0L TURBO)",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "title": "POWER WINDOW",
+   "page_list": [
+    214,
+    215,
+    216,
+    217,
+    282,
+    381
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "ALL WINDOWS INOPERATIVE & LOCK-OUT IS INOPERATIVE",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "ALL WINDOWS INOPERATIVE & LOCK-OUT OPERATES NORMAL",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "LOCK SWITCH INOPERATIVE",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "WINDOW LOCK ILLUMINATION DOES NOT OPERATE",
+     "page": 1
+    },
+    {
+     "n": 7,
+     "title": "ONE-TOUCH FEATURE IS INOPERATIVE",
+     "page": 1
+    },
+    {
+     "n": 8,
+     "title": "ONE WINDOW DOES NOT OPERATE",
+     "page": 1
+    },
+    {
+     "n": 9,
+     "title": "TESTING",
+     "page": 1
+    },
+    {
+     "n": 10,
+     "title": "POWER WINDOW SWITCH ILLUMINATION TEST (DRIVER'S SIDE SWITCH)",
+     "page": 2
+    },
+    {
+     "n": 11,
+     "title": "POWER WINDOW SYSTEM CURRENT TEST",
+     "page": 2
+    },
+    {
+     "n": 12,
+     "title": "POWER WINDOW SWITCH CONTINUITY TEST (DRIVER'S SIDE SWITCH)",
+     "page": 2
+    },
+    {
+     "n": 13,
+     "title": "POWER WINDOW MAIN RELAY",
+     "page": 3
+    },
+    {
+     "n": 14,
+     "title": "POWER WINDOW MOTOR TEST",
+     "page": 3
+    },
+    {
+     "n": 15,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 4
+    },
+    {
+     "n": 16,
+     "title": "POWER WINDOW MOTOR",
+     "page": 4
+    },
+    {
+     "n": 17,
+     "title": "POWER WINDOW SWITCH",
+     "page": 4
+    },
+    {
+     "n": 18,
+     "title": "WIRING DIAGRAMS",
+     "page": 4
+    },
+    {
+     "n": 19,
+     "title": "WIRING DIAGRAM - POWER WINDOW CIRCUIT",
+     "page": 5
+    },
+    {
+     "n": 20,
+     "title": "WIRING DIAGRAM - POWER ACCESSORIES, TAILLIGHTS (GRID 60-63)",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "title": "POWER SEAT",
+   "page_list": [
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    281
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "CAMRY",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "CELICA",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "LAND CRUISER",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "SUPRA",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "TROUBLE SHOOTING",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "CELICA (LUMBAR SEAT DOES NOT MOVE IN ANY DIRECTION)",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "CELICA (LUMBAR SEAT MOVES IN AT LEAST ONE DIRECTION)",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "TESTING",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "POWER MAIN RELAY TEST",
+     "page": 3
+    },
+    {
+     "n": 11,
+     "title": "POWER SEAT MOTOR TEST",
+     "page": 3
+    },
+    {
+     "n": 12,
+     "title": "POWER SEAT SWITCH TEST",
+     "page": 4
+    },
+    {
+     "n": 13,
+     "title": "WIRING DIAGRAMS",
+     "page": 6
+    },
+    {
+     "n": 14,
+     "title": "WIRING DIAGRAM - POWER SEAT CIRCUIT",
+     "page": 7
+    }
+   ]
+  },
+  {
+   "title": "SHIFT LOCK",
+   "page_list": [
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    379
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "AUTOMATIC TRANSMISSIONS",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "APPLICATION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "OPERATION",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "KEY LOCK SYSTEM",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "TESTING",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "ELECTRONIC CONTROL UNIT (ECU)",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "SHIFT LOCK SYSTEM PIN VOLTAGES",
+     "page": 2
+    },
+    {
+     "n": 8,
+     "title": "SHIFT LOCK SYSTEM PIN VOLTAGES (CAMRY, CELICA, COROLLA,",
+     "page": 2
+    },
+    {
+     "n": 9,
+     "title": "SHIFT LOCK SOLENOID RESISTANCE SPECIFICATIONS",
+     "page": 4
+    },
+    {
+     "n": 10,
+     "title": "SHIFT LOCK CONTROL SWITCH",
+     "page": 4
+    },
+    {
+     "n": 11,
+     "title": "SHIFT LOCK CONTROL SWITCH CONTINUITY",
+     "page": 5
+    },
+    {
+     "n": 12,
+     "title": "WIRING DIAGRAM - JUNCTION BLOCK #3, A/T CONTROL, DEFOGGER (GRID 52-55)",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "title": "STARTING AND IGNITION",
+   "page_list": [
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    286,
+    366
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "ON-VEHICLE TESTING",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "CLUTCH START SWITCH TEST",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "IGNITION SWITCH CONTINUITY TEST",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "PARK/NEUTRAL SWITCH",
+     "page": 2
+    },
+    {
+     "n": 7,
+     "title": "PARK/NEUTRAL SWITCH CONTINUITY",
+     "page": 3
+    },
+    {
+     "n": 8,
+     "title": "STARTER RELAY TEST",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "BENCH TESTING",
+     "page": 6
+    },
+    {
+     "n": 10,
+     "title": "NO-LOAD TEST",
+     "page": 6
+    },
+    {
+     "n": 11,
+     "title": "NO-LOAD TEST SPECIFICATIONS",
+     "page": 6
+    },
+    {
+     "n": 12,
+     "title": "SOLENOID TESTS",
+     "page": 6
+    },
+    {
+     "n": 13,
+     "title": "STARTER COMPONENT INSPECTION",
+     "page": 8
+    },
+    {
+     "n": 14,
+     "title": "STARTER SPECIFICATIONS.",
+     "page": 9
+    },
+    {
+     "n": 15,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 9
+    },
+    {
+     "n": 16,
+     "title": "STARTER MOTOR",
+     "page": 9
+    },
+    {
+     "n": 17,
+     "title": "TORQUE SPECIFICATIONS.",
+     "page": 9
+    },
+    {
+     "n": 18,
+     "title": "OVERHAUL",
+     "page": 10
+    },
+    {
+     "n": 19,
+     "title": "STARTER SPECIFICATIONS",
+     "page": 10
+    },
+    {
+     "n": 20,
+     "title": "NIPPONDENSO STARTER SPECIFICATIONS",
+     "page": 11
+    },
+    {
+     "n": 21,
+     "title": "TORQUE SPECIFICATIONS",
+     "page": 11
+    },
+    {
+     "n": 22,
+     "title": "WIRING DIAGRAM - STARTING CIRCUIT",
+     "page": 12
+    },
+    {
+     "n": 23,
+     "title": "WIRING DIAGRAM - ENGINE COMPARTMENT, HEADLIGHTS, STARTER (GRID 1-3)",
+     "page": 13
+    }
+   ]
+  },
+  {
+   "title": "STEERING COLUMN SWITCHES",
+   "page_list": [
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    380
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TESTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "COMBINATION SWITCH",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "HEADLIGHT, DIMMER & PASSING SWITCHES",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "TAILLIGHT CONTROL RELAY",
+     "page": 2
+    },
+    {
+     "n": 6,
+     "title": "HORN SWITCH",
+     "page": 3
+    },
+    {
+     "n": 7,
+     "title": "TURN SIGNAL SWITCH",
+     "page": 4
+    },
+    {
+     "n": 8,
+     "title": "WIPER/WASHER SWITCH",
+     "page": 5
+    },
+    {
+     "n": 9,
+     "title": "REMOVAL & INSTALLATION",
+     "page": 5
+    },
+    {
+     "n": 10,
+     "title": "IGNITION SWITCH",
+     "page": 6
+    },
+    {
+     "n": 11,
+     "title": "STEERING WHEEL",
+     "page": 7
+    },
+    {
+     "n": 12,
+     "title": "TORQUE SPECIFICATIONS.",
+     "page": 7
+    },
+    {
+     "n": 13,
+     "title": "TURN SIGNAL/DIMMER SWITCH",
+     "page": 7
+    },
+    {
+     "n": 14,
+     "title": "TORQUE SPECIFICATIONS",
+     "page": 8
+    },
+    {
+     "n": 15,
+     "title": "WIRING DIAGRAM - INSTRUMENT CLUSTER, COMBINATION SWITCH (GRID 56-59)",
+     "page": 9
+    }
+   ]
+  },
+  {
+   "title": "AUTO TILT AWAY STEERING",
+   "page_list": [
+    266,
+    267,
+    268,
+    269
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "TESTING",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "COMPONENT TESTING",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "SYSTEM TESTING",
+     "page": 3
+    },
+    {
+     "n": 5,
+     "title": "WIRING DIAGRAMS",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "title": "SUN ROOF",
+   "page_list": [
+    270,
+    271,
+    272,
+    273,
+    274,
+    381
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "ADJUSTMENTS",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "SUN ROOF HEIGHT",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "SUN ROOF CLEARANCE & ALIGNMENT",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "TESTING",
+     "page": 1
+    },
+    {
+     "n": 7,
+     "title": "CONTROL RELAY",
+     "page": 2
+    },
+    {
+     "n": 8,
+     "title": "LIMIT SWITCH",
+     "page": 3
+    },
+    {
+     "n": 9,
+     "title": "SUN ROOF SWITCH",
+     "page": 3
+    },
+    {
+     "n": 10,
+     "title": "DRIVE CABLES",
+     "page": 4
+    },
+    {
+     "n": 11,
+     "title": "DRIVE MOTOR",
+     "page": 4
+    },
+    {
+     "n": 12,
+     "title": "SUN ROOF",
+     "page": 4
+    },
+    {
+     "n": 13,
+     "title": "WIND DEFLECTOR",
+     "page": 5
+    },
+    {
+     "n": 14,
+     "title": "WIRING DIAGRAMS",
+     "page": 5
+    },
+    {
+     "n": 15,
+     "title": "WIRING DIAGRAM - POWER ACCESSORIES, TAILLIGHTS (GRID 60-63)",
+     "page": 6
+    }
+   ]
+  },
+  {
+   "title": "OVERALL WIRING DIAGRAM",
+   "page_list": [
+    275,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "IDENTIFICATION",
+     "page": 2
+    },
+    {
+     "n": 2,
+     "title": "COMPONENT LOCATION MENU",
+     "page": 2
+    },
+    {
+     "n": 3,
+     "title": "AUTOMATIC TRANSMISSION",
+     "page": 2
+    },
+    {
+     "n": 4,
+     "title": "ELECTRONICALLY CONTROLLED",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "title": "HORN",
+   "page_list": [
+    277
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - HORN CIRCUIT",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "AUTO ANTENNA",
+   "page_list": [
+    278
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - POWER ANTENNA CIRCUIT",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "RADIO AND PLAYER (W/ CD PLAYER)",
+   "page_list": [
+    283
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - RADIO CIRCUITS, W/ CD",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "RADIO AND PLAYER (W/O CD PLAYER)",
+   "page_list": [
+    284
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - RADIO CIRCUITS, W/O CD",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "ECT (4A-FE)",
+   "page_list": [
+    287
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - 1.6L, TRANSMISSION CIRCUIT",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "ECT (5S-FE)",
+   "page_list": [
+    288
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - 2.2L, TRANSMISSION CIRCUIT",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "FRONT WIPER AND WASHER",
+   "page_list": [
+    289,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - FRONT WASHER/WIPER CIRCUIT",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "DESCRIPTION & OPERATION",
+     "page": 2
+    },
+    {
+     "n": 3,
+     "title": "TESTING",
+     "page": 2
+    },
+    {
+     "n": 4,
+     "title": "FRONT WIPER MOTOR TEST",
+     "page": 2
+    },
+    {
+     "n": 5,
+     "title": "FRONT WIPER RELAY TEST",
+     "page": 3
+    },
+    {
+     "n": 6,
+     "title": "FRONT WIPER SWITCH TEST",
+     "page": 4
+    },
+    {
+     "n": 7,
+     "title": "FRONT WASHER SWITCH TEST",
+     "page": 5
+    },
+    {
+     "n": 8,
+     "title": "REAR WIPER RELAY TEST",
+     "page": 7
+    },
+    {
+     "n": 9,
+     "title": "FRONT WIPER SWITCH",
+     "page": 8
+    },
+    {
+     "n": 10,
+     "title": "REAR WIPER SWITCH",
+     "page": 10
+    },
+    {
+     "n": 11,
+     "title": "REMOVAL & INSTALLATION.",
+     "page": 10
+    },
+    {
+     "n": 12,
+     "title": "STEERING WHEEL",
+     "page": 10
+    },
+    {
+     "n": 13,
+     "title": "WIRING DIAGRAMS",
+     "page": 11
+    }
+   ]
+  },
+  {
+   "title": "REAR WIPER AND WASHER",
+   "page_list": [
+    290
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - REAR WIPER/WASHER CIRCUIT",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "TROUBLESHOOTING",
+   "page_list": [
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "GENERAL TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "ACCESSORIES & ELECTRICAL",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "CHARGING SYSTEM TROUBLE SHOOTING",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "BASIC CHARGING SYSTEM TROUBLE SHOOTING CHART",
+     "page": 1
+    },
+    {
+     "n": 5,
+     "title": "ACCESSORIES &",
+     "page": 1
+    },
+    {
+     "n": 6,
+     "title": "STARTER TROUBLE SHOOTING",
+     "page": 5
+    },
+    {
+     "n": 7,
+     "title": "BASIC STARTER TROUBLE SHOOTING CHART",
+     "page": 5
+    },
+    {
+     "n": 8,
+     "title": "AIR CONDITIONING TROUBLE SHOOTING",
+     "page": 9
+    },
+    {
+     "n": 9,
+     "title": "BASIC AIR CONDITIONING TROUBLE SHOOTING CHART",
+     "page": 9
+    },
+    {
+     "n": 10,
+     "title": "BASIC HEATER SYSTEM TROUBLE SHOOTING CHART",
+     "page": 10
+    },
+    {
+     "n": 11,
+     "title": "BRAKE SYSTEM TROUBLE SHOOTING",
+     "page": 10
+    },
+    {
+     "n": 12,
+     "title": "BRAKE SYSTEM TROUBLE SHOOTING CHART",
+     "page": 11
+    },
+    {
+     "n": 13,
+     "title": "BRAKE SYSTEM",
+     "page": 11
+    },
+    {
+     "n": 14,
+     "title": "COOLING SYSTEM TROUBLE SHOOTING",
+     "page": 13
+    },
+    {
+     "n": 15,
+     "title": "BASIC GASOLINE ENGINE  - MECHANICAL TROUBLE SHOOTING CHART",
+     "page": 15
+    },
+    {
+     "n": 16,
+     "title": "ENGINES",
+     "page": 15
+    },
+    {
+     "n": 17,
+     "title": "BASIC COLD START SYMPTOMS TROUBLE SHOOTING CHART",
+     "page": 20
+    },
+    {
+     "n": 18,
+     "title": "FUEL SYSTEMS",
+     "page": 20
+    },
+    {
+     "n": 19,
+     "title": "FUEL SYSTEM",
+     "page": 20
+    },
+    {
+     "n": 20,
+     "title": "SYSTEMS",
+     "page": 20
+    },
+    {
+     "n": 21,
+     "title": "SYSTEM",
+     "page": 20
+    },
+    {
+     "n": 22,
+     "title": "CONDITION          POSSIBLE CAUSE                 CORRECTION",
+     "page": 22
+    },
+    {
+     "n": 23,
+     "title": "BASIC DIESEL ENGINE TROUBLE SHOOTING CHART",
+     "page": 22
+    },
+    {
+     "n": 24,
+     "title": "ENGINE COOLING",
+     "page": 25
+    },
+    {
+     "n": 25,
+     "title": "BASIC FUEL INJECTION TROUBLE SHOOTING CHART",
+     "page": 25
+    },
+    {
+     "n": 26,
+     "title": "IGNITION SYSTEM TROUBLE SHOOTING",
+     "page": 27
+    },
+    {
+     "n": 27,
+     "title": "BASIC SPARK PLUG TROUBLE SHOOTING CHARTS",
+     "page": 33
+    },
+    {
+     "n": 28,
+     "title": "ENGINE PERFORMANCE",
+     "page": 34
+    },
+    {
+     "n": 29,
+     "title": "BASIC ELECTRONIC IGNITION TROUBLE SHOOTING CHARTS",
+     "page": 34
+    },
+    {
+     "n": 30,
+     "title": "CHARTS - USING OSCILLOSCOPE PATTERNS",
+     "page": 35
+    },
+    {
+     "n": 31,
+     "title": "PERFORMANCE",
+     "page": 37
+    },
+    {
+     "n": 32,
+     "title": "VACUUM PUMP (DIESEL) TROUBLE SHOOTING CHART",
+     "page": 41
+    },
+    {
+     "n": 33,
+     "title": "MANUAL TRANSMISSION TROUBLE SHOOTING",
+     "page": 42
+    },
+    {
+     "n": 34,
+     "title": "MANUAL TRANSMISSION/TRANSAXLE TROUBLE SHOOTING",
+     "page": 42
+    },
+    {
+     "n": 35,
+     "title": "CLUTCH TROUBLE SHOOTING",
+     "page": 43
+    },
+    {
+     "n": 36,
+     "title": "BASIC CLUTCH TROUBLE SHOOTING CHART",
+     "page": 43
+    },
+    {
+     "n": 37,
+     "title": "DRIVE AXLE - RWD TROUBLE SHOOTING",
+     "page": 48
+    },
+    {
+     "n": 38,
+     "title": "DRIVE AXLE (RWD) TROUBLE SHOOTING",
+     "page": 48
+    },
+    {
+     "n": 39,
+     "title": "MANUAL STEERING GEAR TROUBLE SHOOTING",
+     "page": 50
+    },
+    {
+     "n": 40,
+     "title": "BASIC MANUAL STEERING GEAR TROUBLE SHOOTING CHART",
+     "page": 50
+    }
+   ]
+  },
+  {
+   "title": "HEADLIGHT (FOR USA)",
+   "page_list": [
+    366
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - ENGINE COMPARTMENT, HEADLIGHTS, STARTER (GRID 1-3)",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "ENGINE CONTROL (4A-FE)",
+   "page_list": [
+    368,
+    382
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - ECM ECU & ENGINE SENSORS (1.6L 4A-FE) (GRID 8-11)",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "WIRING DIAGRAM - WIRING DIAGRAM (CELICA 1.6L)",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "title": "ENGINE CONTROL (5S-FE A/T)",
+   "page_list": [
+    370,
+    384
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - ECM ECU & ENGINE SENSORS (2.2L A/T) (GRID 16-19)",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "WIRING DIAGRAM - WIRING DIAGRAM (CELICA 2.2L A/T)",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "title": "ENGINE CONTROL (5S-FE M/T)",
+   "page_list": [
+    371,
+    385
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - ECM ECU & ENGINE SENSORS (2.2L M/T) (GRID 20-23)",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "WIRING DIAGRAM - WIRING DIAGRAM (CELICA 2.2L M/T)",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "title": "INTERIOR LIGHT",
+   "page_list": [
+    376
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - FAN RELAYS, COURTESY LIGHTS, HEATER RELAY (GRID 40-43)",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "TAILLIGHT",
+   "page_list": [
+    381
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAM - POWER ACCESSORIES, TAILLIGHTS (GRID 60-63)",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "title": "GLOSSARY OF TERMS AND SYMBOLS",
+   "page_list": [
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393
+   ],
+   "features": [
+    {
+     "n": 1,
+     "title": "WIRING DIAGRAMS",
+     "page": 1
+    },
+    {
+     "n": 2,
+     "title": "INTRODUCTION",
+     "page": 1
+    },
+    {
+     "n": 3,
+     "title": "HOW TO USE THE WIRING DIAGRAMS",
+     "page": 1
+    },
+    {
+     "n": 4,
+     "title": "COLOR ABBREVIATIONS IDENTIFICATION",
+     "page": 3
+    },
+    {
+     "n": 5,
+     "title": "COLOR ABBREVIATIONS",
+     "page": 3
+    }
+   ]
+  }
+ ]
+}

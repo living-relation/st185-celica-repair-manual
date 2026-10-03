@@ -38,6 +38,11 @@ RULES = [
     ("abbreviations", "Abbreviations", "reference", r"ABBREVIATIONS?", {}),
     ("glossary", "Glossary of Terms and Symbols", "reference", r"GLOSSARY.*", {}),
     ("index", "Index", "reference", r"INDEX", {}),
+    ("wire-harness-repair", "Wire Harness & Connector Repair", "reference",
+     r"WIRE HARNESS REPAIR.*", {}),
+
+    ("component-locator", "Electrical Component Locator", "locations",
+     r"ELECTRICAL COMPONENT LOCAT(?:OR|ION)", {}),
 
     ("relay-locations", "Relay Locations", "locations", r"RELAY LOCATIONS?", {}),
     ("wiring-routing", "Electrical Wiring Routing", "locations",
@@ -51,6 +56,7 @@ RULES = [
 
     ("starting-ignition", "Starting & Ignition", "engine", r"STARTING AND IGNITION", {}),
     ("charging", "Charging", "engine", r"CHARGING", {}),
+    ("cooling-fan", "Engine Cooling Fan", "engine", r"ENGINE COOLING FAN", {}),
     ("engine-control", "Engine Control (ECU)", "engine", r"ENGINE CONTROL", {}),
     ("ect", "ECT (Electronic Controlled Transmission)", "engine",
      r"ECT(?: ELECTRONIC(?:ALLY)? CONTROLLED TRANSMISSION)?", {"trans": ["A/T"]}),
@@ -87,6 +93,8 @@ RULES = [
     ("top-stack", "Top Stack (Convertible Top)", "body", r"TOP STACK",
      {"body": ["CONVERTIBLE"]}),
     ("horn", "Horn", "body", r"HORNS?", {}),
+    ("column-switches", "Combination Switch (Steering Column)", "body",
+     r"(?:STEERING COLUMN|COMBINATION) SWITCH(?:ES)?", {}),
     ("lighter-clock", "Cigarette Lighter & Clock", "body",
      r"CIGARETTE LIGHTER AND CLOCK", {}),
     ("theft-deterrent", "Theft Deterrent", "body", r"THEFT DETERRENT.*", {}),
@@ -142,6 +150,24 @@ REPAIR_LINKS = {
     "wiring-routing": ["Electrical_Wire_Routing", "electric"],
 }
 
+# Repair-manual sections linked by Toyota section code (all sections with that
+# prefix) or by repair-app system name, so newly imported chapters link too.
+REPAIR_CODE_LINKS = {
+    "charging": ["CH"],
+    "starting-ignition": ["ST", "IG"],
+    "abs": ["AB"],
+    "srs": ["SR"],
+    "hvac-auto": ["AC"],
+    "hvac-manual": ["AC"],
+    "heater": ["AC"],
+    "cooling-fan": ["CO"],
+}
+REPAIR_SYSTEM_LINKS = {
+    "engine-control": ["Engine Diagnostics", "Engine Control (ECM)", "Engine Performance"],
+    "hvac-auto": ["Air Conditioning"],
+    "hvac-manual": ["Air Conditioning"],
+}
+
 # ---------------------------------------------------------------------------
 # Normalization
 # ---------------------------------------------------------------------------
@@ -179,7 +205,9 @@ ENGINES = ["3S-GTE", "5S-FE", "4A-FE"]
 ENGINE_MODEL = {"3S-GTE": "ST185", "5S-FE": "ST184", "4A-FE": "AT180"}
 
 _ACRONYMS = {"USA", "ABS", "CD", "ECT", "ECU", "EFI", "SRS", "SW", "LH", "RH", "A/C",
-             "A/T", "M/T", "O/D", "VSV", "IG", "ACC", "INT", "J/B", "R/B", "LED"}
+             "A/T", "M/T", "O/D", "VSV", "IG", "ACC", "INT", "J/B", "R/B", "LED",
+             "CC", "ECM", "EGR", "VIN", "SST", "TDC", "ISC", "IAC", "PCV", "TCCS",
+             "DLC", "OBD", "LO", "HI", "MED", "RES", "ACCY"}
 _SMALL = {"OF", "AND", "FOR", "AT", "TO", "IN", "THE", "WITH", "BY", "ON", "OR"}
 
 
@@ -261,7 +289,7 @@ _NAME_ONLY_PAREN = {"ect", "abs", "power-flow", "srs"}
 
 def variant_label(key: str, paren: str, v: dict) -> str:
     """Short human label for a circuit variant (shown on chips)."""
-    if key in _NAME_ONLY_PAREN:
+    if key in _NAME_ONLY_PAREN and not v.get("engines"):
         return ""
     if key.startswith("hvac-"):
         b = v.get("blower", [])

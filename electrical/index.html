@@ -130,8 +130,9 @@ const MODELS = {
   ST184:{label:"ST184 GT / GT-S (5S-FE)", engine:"5S-FE", drive:"2WD"},
   AT180:{label:"AT180 ST (4A-FE)", engine:"4A-FE", drive:"2WD"},
 };
+// The owner's car: 1993 ST185, automatic A/C with the dial blower control.
 const PROFILE_DEFAULT = {year:1993, model:"ST185", trans:"M/T", body:"LIFTBACK", market:"USA",
-  ac:"", blower:"", cd:"", power_seat:"", sunroof:"", cruise:"", abs:"", configured:false};
+  ac:"auto", blower:"dial", cd:"", power_seat:"", sunroof:"", cruise:"", abs:"", configured:true};
 function loadProfile(){
   try{ return Object.assign({}, PROFILE_DEFAULT, JSON.parse(localStorage.getItem("ewd.profile")||"{}")); }
   catch(e){ return Object.assign({}, PROFILE_DEFAULT); }
@@ -162,8 +163,9 @@ function misfit(c, p){
 function fits(c){ return misfit(c).length===0; }
 
 // ---------- state ----------
-const state = {cat:"all", q:"", edition:"", carOnly:false, view:"grid", sel:null, page:null,
+const state = {cat:"all", q:"", edition:"", carOnly:PROFILE.configured, view:"grid", sel:null, page:null,
                hvacBlower:null};
+if(state.carOnly) document.getElementById("fcar").classList.add("on");
 document.getElementById("stats").textContent =
   D.systems.length+" systems · "+CIRC.length+" circuits · "+D.sources.length+" editions";
 if(location.protocol==="file:") document.getElementById("protowarn").style.display="block";
@@ -175,7 +177,7 @@ if(location.protocol==="file:") document.getElementById("protowarn").style.displ
 
 // ---------- helpers ----------
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
-function edLabel(s){ return (s.year||"?")+" · "+s.pub+(s.partial?" (partial)":""); }
+function edLabel(s){ return (s.year||"Ref")+" · "+s.pub+(s.partial?" (partial)":""); }
 function terms(){return state.q.toLowerCase().split(/\s+/).filter(Boolean);}
 function hi(text){
   let out=esc(text);
@@ -211,7 +213,10 @@ function rankOf(c){ const t=terms(); return !t.length||t.every(w=>c._titleBlob.i
 function score(c){
   let s = fits(c) ? 1000 : 0;
   if(c.year) s -= Math.abs(c.year-PROFILE.year)*10;
+  // same year: Toyota factory diagrams before partial pulls before aftermarket manuals
   if(SRC[c.source] && SRC[c.source].partial) s -= 1;
+  if(SRC[c.source] && SRC[c.source].aftermarket) s -= 2;
+  if(SRC[c.source] && SRC[c.source].reference) s -= 50;
   return s;
 }
 function bestOf(list){ return list.slice().sort((a,b)=>score(b)-score(a))[0]; }
@@ -411,7 +416,7 @@ function detailHTML(c, jumpPage){
     const s=SRC[sid]||{id:sid};
     const target=bestOf(all.filter(x=>x.source===sid));
     return '<span class="chip'+(sid===c.source?' on':'')+'" data-open="'+esc(target.id)+'">'+
-      esc(s.year||"?")+'<span class="yr">'+esc(s.pub||"")+(s.partial?" · partial":"")+'</span></span>';
+      esc(s.year||"Ref")+'<span class="yr">'+esc(s.pub||"")+(s.partial?" · partial":"")+'</span></span>';
   }).join("");
   const sib=all.filter(x=>x.source===c.source);
   const varChips=sib.length>1?sib.map(x=>
@@ -546,14 +551,16 @@ function hvacCard(c){
     '<button data-hvac-bl="'+b+'" class="'+(b===curBl?'on':'')+'">'+l+'</button>').join("")+'</div>';
   // coverage matrix
   const eds=D.sources.filter(s=>CIRC.some(x=>x.source===s.id && x.category==="hvac"));
-  h+='<table class="matrix"><tr><th></th>'+eds.map(s=>'<th>'+esc(s.year||s.pub)+'</th>').join("")+'</tr>';
+  h+='<table class="matrix"><tr><th></th>'+eds.map(s=>'<th title="'+esc(s.title)+'">'+esc(s.year||s.pub)+
+    (s.aftermarket?'<br><span style="font-weight:400">Mitchell</span>':s.partial?'<br><span style="font-weight:400">TIS</span>':'')+
+    '</th>').join("")+'</tr>';
   acKeys.forEach(([k,l])=>{
     [["PUSH","push"],["DIAL","dial"]].forEach(([b,bl])=>{
       h+='<tr><th>'+l+' · '+bl+'</th>'+eds.map(s=>{
         const hit=CIRC.find(x=>x.source===s.id && x.system===k && (x.applies.blower||[]).includes(b));
         if(!hit) return '<td class="miss">—</td>';
         return '<td class="hit'+(hit.id===c.id&&b===curBl?' cur':'')+'" data-open="'+esc(hit.id)+'" data-bl="'+b+'" '+
-          'title="'+esc(hit.title)+'">✓ p.'+(hit.printed?hit.printed[0]:"")+'</td>';
+          'title="'+esc(hit.title)+'">✓'+(hit.printed?' p.'+hit.printed[0]:'')+'</td>';
       }).join("")+'</tr>';
     });
   });
