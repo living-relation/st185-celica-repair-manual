@@ -45,6 +45,32 @@
    }
   },
   {
+   "id": "mitchell1993",
+   "year": 1993,
+   "pub": "Mitchell 1993",
+   "title": "1993 Celica Service Manual — electrical articles and wiring diagrams (aftermarket)",
+   "models": [
+    "AT180",
+    "ST184",
+    "ST185"
+   ],
+   "engines": [
+    "4A-FE",
+    "5S-FE",
+    "3S-GTE"
+   ],
+   "kind": "book",
+   "aftermarket": true,
+   "imported": true,
+   "files": [
+    "1993 Celica Service Manual (Mitchell) - Electrical.pdf"
+   ],
+   "note": "Mitchell-style aftermarket manual for all 1993 Celicas: diagnosis, testing and removal for each electrical system plus system and overall wiring diagrams. Fills the circuits missing from the 1993 TIS pulls.",
+   "file_pages": {
+    "1993 Celica Service Manual (Mitchell) - Electrical.pdf": 393
+   }
+  },
+  {
    "id": "tis1993",
    "year": 1993,
    "pub": "EWD160U (TIS)",
@@ -123,6 +149,30 @@
     "Taillight.pdf": 3,
     "TSHWL.pdf": 2,
     "USBW.pdf": 3
+   }
+  },
+  {
+   "id": "refdocs",
+   "year": null,
+   "pub": "Reference",
+   "title": "Reference documents (gt4.mwp.id.au)",
+   "models": [
+    "ST185"
+   ],
+   "engines": [],
+   "kind": "refs",
+   "reference": true,
+   "imported": true,
+   "files": [
+    "3SGTE ECU Pinouts.pdf",
+    "Alternator Guide.pdf",
+    "Toyota - Wire Harness Repair Manual (RM1022E).pdf"
+   ],
+   "note": "Enthusiast and Toyota general references: 3S-GTE ECU pinouts, alternator theory, and Toyota's Wire Harness Repair Manual (connector and terminal repair).",
+   "file_pages": {
+    "3SGTE ECU Pinouts.pdf": 1,
+    "Alternator Guide.pdf": 32,
+    "Toyota - Wire Harness Repair Manual (RM1022E).pdf": 418
    }
   }
  ],
@@ -207,11 +257,13 @@
    "category": "reference",
    "circuits": [
     "ewd1990-how-to-use",
-    "ewd1992-how-to-use"
+    "ewd1992-how-to-use",
+    "mitchell1993-how-to-use"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
    "order": 2
   },
@@ -221,11 +273,13 @@
    "category": "reference",
    "circuits": [
     "ewd1990-troubleshooting",
-    "ewd1992-troubleshooting"
+    "ewd1992-troubleshooting",
+    "mitchell1993-troubleshooting"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
    "order": 3
   },
@@ -249,13 +303,37 @@
    "category": "reference",
    "circuits": [
     "ewd1990-glossary",
-    "ewd1992-glossary"
+    "ewd1992-glossary",
+    "mitchell1993-glossary"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
    "order": 5
+  },
+  {
+   "key": "wire-harness-repair",
+   "name": "Wire Harness & Connector Repair",
+   "category": "reference",
+   "circuits": [
+    "refdocs-wire-harness-repair-rm1022e"
+   ],
+   "years": [],
+   "order": 7
+  },
+  {
+   "key": "component-locator",
+   "name": "Electrical Component Locator",
+   "category": "locations",
+   "circuits": [
+    "mitchell1993-component-locator"
+   ],
+   "years": [
+    1993
+   ],
+   "order": 8
   },
   {
    "key": "relay-locations",
@@ -271,7 +349,7 @@
     1992,
     1993
    ],
-   "order": 7
+   "order": 9
   },
   {
    "key": "wiring-routing",
@@ -288,7 +366,7 @@
     1992,
     1993
    ],
-   "order": 8,
+   "order": 10,
    "repair": [
     {
      "id": "Electrical_Wire_Routing",
@@ -314,7 +392,7 @@
     1992,
     1993
    ],
-   "order": 9
+   "order": 11
   },
   {
    "key": "power-flow",
@@ -330,7 +408,7 @@
     1992,
     1993
    ],
-   "order": 10
+   "order": 12
   },
   {
    "key": "power-source",
@@ -339,6 +417,7 @@
    "circuits": [
     "ewd1990-power-source",
     "ewd1992-power-source",
+    "mitchell1993-power-source",
     "tis1993-power-source"
    ],
    "years": [
@@ -346,7 +425,7 @@
     1992,
     1993
    ],
-   "order": 11
+   "order": 13
   },
   {
    "key": "starting-ignition",
@@ -356,6 +435,7 @@
     "ewd1990-starting-ignition",
     "ewd1992-starting-ignition-all-trac-4wd",
     "ewd1992-starting-ignition-2wd",
+    "mitchell1993-starting-ignition",
     "tis1993-starting-ignition-all-trac-4wd"
    ],
    "years": [
@@ -363,7 +443,7 @@
     1992,
     1993
    ],
-   "order": 12,
+   "order": 14,
    "repair": [
     {
      "id": "Starting_System",
@@ -396,6 +476,30 @@
     {
      "id": "Onvehicle_Inspection_3sgte",
      "title": "Onvehicle Inspection 3sgte"
+    },
+    {
+     "id": "Clutch_Start_Switch_Mt_Only (1)",
+     "title": "Clutch Start Switch Mt Only"
+    },
+    {
+     "id": "Clutch_Start_Switch_Mt_Only (2)",
+     "title": "Clutch Start Switch Mt Only"
+    },
+    {
+     "id": "RM305U1 - Ignition System - Precautions",
+     "title": "Precautions — Ignition System"
+    },
+    {
+     "id": "RM305U1 - Starting System - Starter",
+     "title": "Starter — Starting System"
+    },
+    {
+     "id": "RM305U1 - Ignition System - Troubleshooting",
+     "title": "Troubleshooting — Ignition System"
+    },
+    {
+     "id": "RM305U1 - Starting System - Troubleshooting",
+     "title": "Troubleshooting — Starting System"
     }
    ]
   },
@@ -406,6 +510,8 @@
    "circuits": [
     "ewd1990-charging",
     "ewd1992-charging",
+    "mitchell1993-charging",
+    "refdocs-charging-alternator-guide",
     "tis1993-charging"
    ],
    "years": [
@@ -413,7 +519,7 @@
     1992,
     1993
    ],
-   "order": 13,
+   "order": 15,
    "repair": [
     {
      "id": "Charging_System",
@@ -422,6 +528,52 @@
     {
      "id": "Generator",
      "title": "Generator"
+    },
+    {
+     "id": "RM305U1 - Charging System - On-Vehicle Inspection",
+     "title": "On-Vehicle Inspection — Charging System"
+    },
+    {
+     "id": "RM305U1 - Charging System - Precautions",
+     "title": "Precautions — Charging System"
+    }
+   ]
+  },
+  {
+   "key": "cooling-fan",
+   "name": "Engine Cooling Fan",
+   "category": "engine",
+   "circuits": [
+    "mitchell1993-cooling-fan"
+   ],
+   "years": [
+    1993
+   ],
+   "order": 16,
+   "repair": [
+    {
+     "id": "RM305U1 - Cooling System - Check and Replacement of Engine Coolant",
+     "title": "Check and Replacement of Engine Coolant — Cooling System"
+    },
+    {
+     "id": "RM305U1 - Cooling System - Description",
+     "title": "Description — Cooling System"
+    },
+    {
+     "id": "RM305U1 - Cooling System - Electric Cooling Fan",
+     "title": "Electric Cooling Fan — Cooling System"
+    },
+    {
+     "id": "RM305U1 - Cooling System - Radiator",
+     "title": "Radiator — Cooling System"
+    },
+    {
+     "id": "RM305U1 - Cooling System - Thermostat",
+     "title": "Thermostat — Cooling System"
+    },
+    {
+     "id": "Water_Pump_3sgte_And_5sfe",
+     "title": "Water Pump 3sgte And 5sfe"
     }
    ]
   },
@@ -436,6 +588,11 @@
     "ewd1992-engine-control-5s-fe-a-t",
     "ewd1992-engine-control-5s-fe-m-t",
     "ewd1992-engine-control-4a-fe",
+    "mitchell1993-engine-control-3s-gte",
+    "mitchell1993-engine-control-4a-fe",
+    "mitchell1993-engine-control-5s-fe-a-t",
+    "mitchell1993-engine-control-5s-fe-m-t",
+    "refdocs-engine-control-3s-gte-ecu-pinouts",
     "tis1993-engine-control-3s-gte"
    ],
    "years": [
@@ -443,7 +600,7 @@
     1992,
     1993
    ],
-   "order": 14,
+   "order": 17,
    "repair": [
     {
      "id": "Electronic_Control_Module_Ecm",
@@ -500,6 +657,46 @@
     {
      "id": "Throttle_Body_3sgte",
      "title": "Throttle Body 3sgte"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance A — Engine-VIN ID",
+     "title": "Engine Performance A — Engine/VIN ID"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance B — Emission Application",
+     "title": "Engine Performance B — Emission Application"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance C — Specifications",
+     "title": "Engine Performance C — Specifications"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance D — Adjustments",
+     "title": "Engine Performance D — Adjustments"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance E — Theory & Operation",
+     "title": "Engine Performance E — Theory & Operation"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance F — Basic Testing",
+     "title": "Engine Performance F — Basic Testing"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance G — Tests With Trouble Codes",
+     "title": "Engine Performance G — Tests With Trouble Codes"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance H — Tests Without Codes",
+     "title": "Engine Performance H — Tests Without Codes"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance I — System & Component Tests",
+     "title": "Engine Performance I — System & Component Tests"
+    },
+    {
+     "id": "Mitchell 1993 - Engine Performance J — ECU Pin Voltage Charts",
+     "title": "Engine Performance J — ECU Pin Voltage Charts"
     }
    ]
   },
@@ -508,12 +705,15 @@
    "name": "ECT (Electronic Controlled Transmission)",
    "category": "engine",
    "circuits": [
-    "ewd1992-ect-electronic-controlled-transmission"
+    "ewd1992-ect-electronic-controlled-transmission",
+    "mitchell1993-ect-4a-fe",
+    "mitchell1993-ect-5s-fe"
    ],
    "years": [
-    1992
+    1992,
+    1993
    ],
-   "order": 15
+   "order": 18
   },
   {
    "key": "overdrive",
@@ -525,19 +725,21 @@
    "years": [
     1992
    ],
-   "order": 16
+   "order": 19
   },
   {
    "key": "shift-lock",
    "name": "Shift Lock",
    "category": "engine",
    "circuits": [
-    "ewd1992-shift-lock"
+    "ewd1992-shift-lock",
+    "mitchell1993-shift-lock"
    ],
    "years": [
-    1992
+    1992,
+    1993
    ],
-   "order": 17
+   "order": 20
   },
   {
    "key": "illumination",
@@ -553,7 +755,7 @@
     1992,
     1993
    ],
-   "order": 18
+   "order": 21
   },
   {
    "key": "taillight",
@@ -562,6 +764,7 @@
    "circuits": [
     "ewd1990-taillight",
     "ewd1992-taillight",
+    "mitchell1993-taillight",
     "tis1993-taillight"
    ],
    "years": [
@@ -569,7 +772,7 @@
     1992,
     1993
    ],
-   "order": 19
+   "order": 22
   },
   {
    "key": "headlight-canada",
@@ -583,7 +786,7 @@
     1990,
     1992
    ],
-   "order": 20
+   "order": 23
   },
   {
    "key": "headlight-usa",
@@ -592,6 +795,7 @@
    "circuits": [
     "ewd1990-headlight-usa-for-usa",
     "ewd1992-headlight-usa-for-usa",
+    "mitchell1993-headlight-usa-for-usa",
     "tis1993-headlight-usa-for-usa"
    ],
    "years": [
@@ -599,7 +803,7 @@
     1992,
     1993
    ],
-   "order": 21
+   "order": 24
   },
   {
    "key": "fog-light",
@@ -613,7 +817,7 @@
     1990,
     1992
    ],
-   "order": 22
+   "order": 25
   },
   {
    "key": "stop-light",
@@ -629,7 +833,7 @@
     1992,
     1993
    ],
-   "order": 23
+   "order": 26
   },
   {
    "key": "back-up-light",
@@ -643,7 +847,7 @@
     1990,
     1992
    ],
-   "order": 24
+   "order": 27
   },
   {
    "key": "turn-hazard",
@@ -659,7 +863,7 @@
     1992,
     1993
    ],
-   "order": 25
+   "order": 28
   },
   {
    "key": "interior-light",
@@ -668,6 +872,7 @@
    "circuits": [
     "ewd1990-interior-light",
     "ewd1992-interior-light",
+    "mitchell1993-interior-light",
     "tis1993-interior-light"
    ],
    "years": [
@@ -675,7 +880,7 @@
     1992,
     1993
    ],
-   "order": 26
+   "order": 29
   },
   {
    "key": "light-reminder",
@@ -689,7 +894,7 @@
     1990,
     1992
    ],
-   "order": 27
+   "order": 30
   },
   {
    "key": "power-window",
@@ -698,6 +903,7 @@
    "circuits": [
     "ewd1990-power-window",
     "ewd1992-power-window",
+    "mitchell1993-power-window",
     "tis1993-power-window"
    ],
    "years": [
@@ -705,7 +911,7 @@
     1992,
     1993
    ],
-   "order": 28
+   "order": 31
   },
   {
    "key": "door-lock",
@@ -714,6 +920,7 @@
    "circuits": [
     "ewd1990-door-lock",
     "ewd1992-door-lock",
+    "mitchell1993-door-lock",
     "tis1993-door-lock"
    ],
    "years": [
@@ -721,7 +928,7 @@
     1992,
     1993
    ],
-   "order": 29
+   "order": 32
   },
   {
    "key": "rear-wiper",
@@ -729,13 +936,15 @@
    "category": "body",
    "circuits": [
     "ewd1990-rear-wiper",
-    "ewd1992-rear-wiper"
+    "ewd1992-rear-wiper",
+    "mitchell1993-rear-wiper"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
-   "order": 30
+   "order": 33
   },
   {
    "key": "front-wiper",
@@ -744,6 +953,7 @@
    "circuits": [
     "ewd1990-front-wiper",
     "ewd1992-front-wiper",
+    "mitchell1993-front-wiper",
     "tis1993-front-wiper"
    ],
    "years": [
@@ -751,7 +961,7 @@
     1992,
     1993
    ],
-   "order": 31
+   "order": 34
   },
   {
    "key": "unlock-seatbelt-warning",
@@ -767,7 +977,7 @@
     1992,
     1993
    ],
-   "order": 32,
+   "order": 35,
    "repair": [
     {
      "id": "Seat_Belts_Components",
@@ -789,7 +999,7 @@
    "years": [
     1992
    ],
-   "order": 33
+   "order": 36
   },
   {
    "key": "rear-defogger",
@@ -798,55 +1008,8 @@
    "circuits": [
     "ewd1990-rear-defogger",
     "ewd1992-rear-defogger",
+    "mitchell1993-rear-defogger",
     "tis1993-rear-defogger"
-   ],
-   "years": [
-    1990,
-    1992,
-    1993
-   ],
-   "order": 34
-  },
-  {
-   "key": "power-seat",
-   "name": "Power Seat",
-   "category": "body",
-   "circuits": [
-    "ewd1990-power-seat",
-    "ewd1992-power-seat",
-    "tis1993-power-seat"
-   ],
-   "years": [
-    1990,
-    1992,
-    1993
-   ],
-   "order": 35
-  },
-  {
-   "key": "remote-mirror",
-   "name": "Remote Control Mirror",
-   "category": "body",
-   "circuits": [
-    "ewd1990-remote-mirror",
-    "ewd1992-remote-mirror",
-    "tis1993-remote-mirror"
-   ],
-   "years": [
-    1990,
-    1992,
-    1993
-   ],
-   "order": 36
-  },
-  {
-   "key": "sun-roof",
-   "name": "Sun Roof",
-   "category": "body",
-   "circuits": [
-    "ewd1990-sun-roof",
-    "ewd1992-sun-roof",
-    "tis1993-sun-roof"
    ],
    "years": [
     1990,
@@ -856,12 +1019,64 @@
    "order": 37
   },
   {
+   "key": "power-seat",
+   "name": "Power Seat",
+   "category": "body",
+   "circuits": [
+    "ewd1990-power-seat",
+    "ewd1992-power-seat",
+    "mitchell1993-power-seat",
+    "tis1993-power-seat"
+   ],
+   "years": [
+    1990,
+    1992,
+    1993
+   ],
+   "order": 38
+  },
+  {
+   "key": "remote-mirror",
+   "name": "Remote Control Mirror",
+   "category": "body",
+   "circuits": [
+    "ewd1990-remote-mirror",
+    "ewd1992-remote-mirror",
+    "mitchell1993-remote-mirror",
+    "tis1993-remote-mirror"
+   ],
+   "years": [
+    1990,
+    1992,
+    1993
+   ],
+   "order": 39
+  },
+  {
+   "key": "sun-roof",
+   "name": "Sun Roof",
+   "category": "body",
+   "circuits": [
+    "ewd1990-sun-roof",
+    "ewd1992-sun-roof",
+    "mitchell1993-sun-roof",
+    "tis1993-sun-roof"
+   ],
+   "years": [
+    1990,
+    1992,
+    1993
+   ],
+   "order": 40
+  },
+  {
    "key": "auto-tilt",
    "name": "Auto Tilt-Away Steering",
    "category": "body",
    "circuits": [
     "ewd1990-auto-tilt",
     "ewd1992-auto-tilt",
+    "mitchell1993-auto-tilt",
     "tis1993-auto-tilt"
    ],
    "years": [
@@ -869,7 +1084,7 @@
     1992,
     1993
    ],
-   "order": 38,
+   "order": 41,
    "repair": [
     {
      "id": "Auto_Tilt_Away_Steering_Column",
@@ -891,7 +1106,7 @@
    "years": [
     1992
    ],
-   "order": 39,
+   "order": 42,
    "repair": [
     {
      "id": "theoryof",
@@ -906,6 +1121,7 @@
    "circuits": [
     "ewd1990-horn",
     "ewd1992-horn",
+    "mitchell1993-horn",
     "tis1993-horn"
    ],
    "years": [
@@ -913,7 +1129,19 @@
     1992,
     1993
    ],
-   "order": 40
+   "order": 43
+  },
+  {
+   "key": "column-switches",
+   "name": "Combination Switch (Steering Column)",
+   "category": "body",
+   "circuits": [
+    "mitchell1993-column-switches"
+   ],
+   "years": [
+    1993
+   ],
+   "order": 44
   },
   {
    "key": "lighter-clock",
@@ -927,7 +1155,7 @@
     1990,
     1992
    ],
-   "order": 41
+   "order": 45
   },
   {
    "key": "combination-meter",
@@ -936,6 +1164,7 @@
    "circuits": [
     "ewd1990-combination-meter",
     "ewd1992-combination-meter",
+    "mitchell1993-combination-meter",
     "tis1993-combination-meter"
    ],
    "years": [
@@ -943,7 +1172,7 @@
     1992,
     1993
    ],
-   "order": 43
+   "order": 47
   },
   {
    "key": "auto-antenna",
@@ -951,13 +1180,15 @@
    "category": "instruments",
    "circuits": [
     "ewd1990-auto-antenna",
-    "ewd1992-auto-antenna"
+    "ewd1992-auto-antenna",
+    "mitchell1993-auto-antenna"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
-   "order": 44
+   "order": 48
   },
   {
    "key": "radio",
@@ -968,6 +1199,8 @@
     "ewd1990-radio-w-o-cd-player",
     "ewd1992-radio-w-cd-player",
     "ewd1992-radio-w-o-cd-player",
+    "mitchell1993-radio-w-cd-player",
+    "mitchell1993-radio-w-o-cd-player",
     "tis1993-radio-w-cd-player"
    ],
    "years": [
@@ -975,7 +1208,7 @@
     1992,
     1993
    ],
-   "order": 45
+   "order": 49
   },
   {
    "key": "cruise-control",
@@ -984,13 +1217,15 @@
    "circuits": [
     "ewd1990-cruise-control",
     "ewd1992-cruise-control-motor-type",
-    "ewd1992-cruise-control-vacuum-type"
+    "ewd1992-cruise-control-vacuum-type",
+    "mitchell1993-cruise-control"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
-   "order": 46
+   "order": 50
   },
   {
    "key": "abs",
@@ -998,13 +1233,15 @@
    "category": "chassis",
    "circuits": [
     "ewd1990-abs-anti-lock-brake-system",
-    "ewd1992-abs-anti-lock-brake-system"
+    "ewd1992-abs-anti-lock-brake-system",
+    "mitchell1993-abs-anti-lock-brake-system"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
-   "order": 47,
+   "order": 51,
    "repair": [
     {
      "id": "Antilock_Brake_System_Circuit",
@@ -1030,13 +1267,15 @@
    "category": "chassis",
    "circuits": [
     "ewd1990-srs",
-    "ewd1992-srs"
+    "ewd1992-srs",
+    "mitchell1993-srs"
    ],
    "years": [
     1990,
-    1992
+    1992,
+    1993
    ],
-   "order": 48,
+   "order": 52,
    "repair": [
     {
      "id": "Seat_Belts_Components",
@@ -1045,6 +1284,22 @@
     {
      "id": "seatbelt",
      "title": "Seatbelt"
+    },
+    {
+     "id": "Auto_Tilt_Away_Steering_Column",
+     "title": "Auto Tilt Away Steering Column"
+    },
+    {
+     "id": "Description (3)",
+     "title": "Description"
+    },
+    {
+     "id": "Gear_Housing",
+     "title": "Gear Housing"
+    },
+    {
+     "id": "RM176U 1990 - Steering",
+     "title": "Steering (1990 All-Trac)"
     }
    ]
   },
@@ -1055,6 +1310,7 @@
    "circuits": [
     "ewd1990-hvac-auto-automatic-air-conditioner-for-push-type-of-blower-control-sw",
     "ewd1992-hvac-auto-automatic-air-conditioner",
+    "mitchell1993-hvac-auto-automatic-air-conditioner-for-dial-type-of-blower-control-sw",
     "tis1993-hvac-auto-automatic-air-conditioner"
    ],
    "years": [
@@ -1062,7 +1318,7 @@
     1992,
     1993
    ],
-   "order": 49,
+   "order": 53,
    "repair": [
     {
      "id": "Ac_Idleup_Vsv_5sfe",
@@ -1095,6 +1351,22 @@
     {
      "id": "TS-AC009-04",
      "title": "TS-AC009-04"
+    },
+    {
+     "id": "Mitchell 1993 - A-C Compressor Oil Checking",
+     "title": "A/C Compressor Oil Checking"
+    },
+    {
+     "id": "Mitchell 1993 - A-C Compressor Servicing",
+     "title": "A/C Compressor Servicing"
+    },
+    {
+     "id": "Mitchell 1993 - A-C System General Diagnostic Procedures",
+     "title": "A/C System General Diagnostic Procedures"
+    },
+    {
+     "id": "Mitchell 1993 - A-C System General Servicing",
+     "title": "A/C System General Servicing"
     }
    ]
   },
@@ -1105,6 +1377,7 @@
    "circuits": [
     "ewd1990-hvac-manual-manual-air-conditioner-for-push-type-of-blower-control-sw",
     "ewd1992-hvac-manual-manual-air-conditioner",
+    "mitchell1993-hvac-manual-manual-air-conditioner-for-dial-type-of-blower-control-sw",
     "tis1993-hvac-manual-manual-air-conditioner"
    ],
    "years": [
@@ -1112,7 +1385,7 @@
     1992,
     1993
    ],
-   "order": 50,
+   "order": 54,
    "repair": [
     {
      "id": "Ac_Idleup_Vsv_5sfe",
@@ -1145,8 +1418,48 @@
     {
      "id": "TS-AC009-04",
      "title": "TS-AC009-04"
+    },
+    {
+     "id": "Mitchell 1993 - A-C Compressor Oil Checking",
+     "title": "A/C Compressor Oil Checking"
+    },
+    {
+     "id": "Mitchell 1993 - A-C Compressor Servicing",
+     "title": "A/C Compressor Servicing"
+    },
+    {
+     "id": "Mitchell 1993 - A-C System General Diagnostic Procedures",
+     "title": "A/C System General Diagnostic Procedures"
+    },
+    {
+     "id": "Mitchell 1993 - A-C System General Servicing",
+     "title": "A/C System General Servicing"
     }
    ]
+  },
+  {
+   "key": "heater",
+   "name": "Heater (w/o A/C)",
+   "category": "hvac",
+   "circuits": [
+    "mitchell1993-heater"
+   ],
+   "years": [
+    1993
+   ],
+   "order": 55
+  },
+  {
+   "key": "overall-wiring",
+   "name": "Overall Wiring Diagram",
+   "category": "overall",
+   "circuits": [
+    "mitchell1993-overall-wiring"
+   ],
+   "years": [
+    1993
+   ],
+   "order": 57
   }
  ],
  "circuits": [
@@ -1169,9 +1482,9 @@
    },
    "option": null,
    "src_pages": [
-    1,
     1
    ],
+   "mapped": false,
    "printed": null,
    "pages": 1,
    "features": [],
@@ -1204,9 +1517,9 @@
    },
    "option": null,
    "src_pages": [
-    2,
     2
    ],
+   "mapped": false,
    "printed": [
     2,
     2
@@ -1243,8 +1556,14 @@
    "option": null,
    "src_pages": [
     3,
+    4,
+    5,
+    6,
+    7,
+    8,
     9
    ],
+   "mapped": false,
    "printed": [
     3,
     9
@@ -1389,8 +1708,10 @@
    "option": null,
    "src_pages": [
     10,
+    11,
     12
    ],
+   "mapped": false,
    "printed": [
     10,
     12
@@ -1426,9 +1747,9 @@
    },
    "option": null,
    "src_pages": [
-    13,
     13
    ],
+   "mapped": false,
    "printed": [
     13,
     13
@@ -1467,6 +1788,7 @@
     14,
     15
    ],
+   "mapped": false,
    "printed": [
     14,
     15
@@ -1503,8 +1825,16 @@
    "option": null,
    "src_pages": [
     16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
     24
    ],
+   "mapped": false,
    "printed": [
     16,
     24
@@ -1541,8 +1871,18 @@
    "option": null,
    "src_pages": [
     25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
     35
    ],
+   "mapped": false,
    "printed": [
     25,
     35
@@ -1586,8 +1926,15 @@
    "option": null,
    "src_pages": [
     36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
     43
    ],
+   "mapped": false,
    "printed": [
     36,
     43
@@ -1656,6 +2003,7 @@
     44,
     45
    ],
+   "mapped": false,
    "printed": [
     46,
     47
@@ -1877,8 +2225,11 @@
    "option": null,
    "src_pages": [
     46,
+    47,
+    48,
     49
    ],
+   "mapped": false,
    "printed": [
     48,
     51
@@ -2133,6 +2484,7 @@
     50,
     51
    ],
+   "mapped": false,
    "printed": [
     52,
     53
@@ -2267,8 +2619,17 @@
    "option": null,
    "src_pages": [
     52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
     61
    ],
+   "mapped": false,
    "printed": [
     54,
     63
@@ -2942,8 +3303,11 @@
    "option": null,
    "src_pages": [
     62,
+    63,
+    64,
     65
    ],
+   "mapped": false,
    "printed": [
     64,
     67
@@ -3267,8 +3631,10 @@
    "option": null,
    "src_pages": [
     66,
+    67,
     68
    ],
+   "mapped": false,
    "printed": [
     68,
     70
@@ -3512,8 +3878,10 @@
    "option": null,
    "src_pages": [
     69,
+    70,
     71
    ],
+   "mapped": false,
    "printed": [
     71,
     73
@@ -3744,6 +4112,7 @@
     72,
     73
    ],
+   "mapped": false,
    "printed": [
     74,
     75
@@ -3972,8 +4341,11 @@
    "option": null,
    "src_pages": [
     74,
+    75,
+    76,
     77
    ],
+   "mapped": false,
    "printed": [
     76,
     79
@@ -4334,6 +4706,7 @@
     78,
     79
    ],
+   "mapped": false,
    "printed": [
     80,
     81
@@ -4503,6 +4876,7 @@
     80,
     81
    ],
+   "mapped": false,
    "printed": [
     82,
     83
@@ -4643,6 +5017,7 @@
     82,
     83
    ],
+   "mapped": false,
    "printed": [
     84,
     85
@@ -4929,6 +5304,7 @@
     84,
     85
    ],
+   "mapped": false,
    "printed": [
     86,
     87
@@ -5273,6 +5649,7 @@
     86,
     87
    ],
+   "mapped": false,
    "printed": [
     88,
     89
@@ -5395,8 +5772,10 @@
    "option": "power_window",
    "src_pages": [
     88,
+    89,
     90
    ],
+   "mapped": false,
    "printed": [
     90,
     92
@@ -5656,8 +6035,12 @@
    "option": "door_lock",
    "src_pages": [
     91,
+    92,
+    93,
+    94,
     95
    ],
+   "mapped": false,
    "printed": [
     93,
     97
@@ -5947,6 +6330,7 @@
     96,
     97
    ],
+   "mapped": false,
    "printed": [
     98,
     99
@@ -6124,8 +6508,10 @@
    "option": null,
    "src_pages": [
     98,
+    99,
     100
    ],
+   "mapped": false,
    "printed": [
     100,
     102
@@ -6295,8 +6681,10 @@
    "option": null,
    "src_pages": [
     101,
+    102,
     103
    ],
+   "mapped": false,
    "printed": [
     103,
     105
@@ -6546,6 +6934,7 @@
     104,
     105
    ],
+   "mapped": false,
    "printed": [
     106,
     107
@@ -6740,6 +7129,7 @@
     106,
     107
    ],
+   "mapped": false,
    "printed": [
     108,
     109
@@ -6923,6 +7313,7 @@
     108,
     109
    ],
+   "mapped": false,
    "printed": [
     110,
     111
@@ -7078,8 +7469,10 @@
    "option": "sunroof",
    "src_pages": [
     110,
+    111,
     112
    ],
+   "mapped": false,
    "printed": [
     112,
     114
@@ -7255,9 +7648,9 @@
    },
    "option": null,
    "src_pages": [
-    113,
     113
    ],
+   "mapped": false,
    "printed": [
     115,
     115
@@ -7377,6 +7770,7 @@
     114,
     115
    ],
+   "mapped": false,
    "printed": [
     116,
     117
@@ -7549,8 +7943,13 @@
    "option": "cruise",
    "src_pages": [
     116,
+    117,
+    118,
+    119,
+    120,
     121
    ],
+   "mapped": false,
    "printed": [
     118,
     123
@@ -7893,8 +8292,12 @@
    "option": "abs",
    "src_pages": [
     122,
+    123,
+    124,
+    125,
     126
    ],
+   "mapped": false,
    "printed": [
     124,
     128
@@ -8169,8 +8572,13 @@
    "option": null,
    "src_pages": [
     127,
+    128,
+    129,
+    130,
+    131,
     132
    ],
+   "mapped": false,
    "printed": [
     129,
     134
@@ -8325,9 +8733,9 @@
    },
    "option": null,
    "src_pages": [
-    133,
     133
    ],
+   "mapped": false,
    "printed": [
     135,
     135
@@ -8474,6 +8882,7 @@
     134,
     135
    ],
+   "mapped": false,
    "printed": [
     136,
     137
@@ -8651,8 +9060,10 @@
    "option": null,
    "src_pages": [
     136,
+    137,
     138
    ],
+   "mapped": false,
    "printed": [
     138,
     140
@@ -8969,6 +9380,7 @@
     139,
     140
    ],
+   "mapped": false,
    "printed": [
     142,
     143
@@ -9196,8 +9608,11 @@
    "option": null,
    "src_pages": [
     141,
+    142,
+    143,
     144
    ],
+   "mapped": false,
    "printed": [
     144,
     147
@@ -9555,8 +9970,18 @@
    "option": null,
    "src_pages": [
     145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
     155
    ],
+   "mapped": false,
    "printed": [
     148,
     158
@@ -10162,8 +10587,16 @@
    "option": null,
    "src_pages": [
     156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
     164
    ],
+   "mapped": false,
    "printed": [
     159,
     167
@@ -10674,8 +11107,11 @@
    "option": null,
    "src_pages": [
     165,
+    166,
+    167,
     168
    ],
+   "mapped": false,
    "printed": [
     168,
     171
@@ -10998,9 +11434,9 @@
    "applies": {},
    "option": null,
    "src_pages": [
-    1,
     1
    ],
+   "mapped": false,
    "printed": null,
    "pages": 1,
    "features": [],
@@ -11029,9 +11465,9 @@
    "applies": {},
    "option": null,
    "src_pages": [
-    2,
     2
    ],
+   "mapped": false,
    "printed": [
     2,
     2
@@ -11064,8 +11500,14 @@
    "option": null,
    "src_pages": [
     3,
+    4,
+    5,
+    6,
+    7,
+    8,
     9
    ],
+   "mapped": false,
    "printed": [
     3,
     9
@@ -11206,8 +11648,12 @@
    "option": null,
    "src_pages": [
     10,
+    11,
+    12,
+    13,
     14
    ],
+   "mapped": false,
    "printed": [
     10,
     14
@@ -11239,9 +11685,9 @@
    "applies": {},
    "option": null,
    "src_pages": [
-    15,
     15
    ],
+   "mapped": false,
    "printed": [
     15,
     15
@@ -11276,6 +11722,7 @@
     16,
     17
    ],
+   "mapped": false,
    "printed": [
     16,
     17
@@ -11308,8 +11755,17 @@
    "option": null,
    "src_pages": [
     18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
     27
    ],
+   "mapped": false,
    "printed": [
     18,
     27
@@ -11342,8 +11798,33 @@
    "option": null,
    "src_pages": [
     28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
     53
    ],
+   "mapped": false,
    "printed": [
     28,
     53
@@ -11388,8 +11869,19 @@
    "option": null,
    "src_pages": [
     54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
     65
    ],
+   "mapped": false,
    "printed": [
     54,
     65
@@ -11455,8 +11947,11 @@
    "option": null,
    "src_pages": [
     66,
+    67,
+    68,
     69
    ],
+   "mapped": false,
    "printed": [
     66,
     69
@@ -11776,8 +12271,11 @@
    "option": null,
    "src_pages": [
     70,
+    71,
+    72,
     73
    ],
+   "mapped": false,
    "printed": [
     70,
     73
@@ -12042,8 +12540,11 @@
    "option": null,
    "src_pages": [
     74,
+    75,
+    76,
     77
    ],
+   "mapped": false,
    "printed": [
     74,
     77
@@ -12333,6 +12834,7 @@
     78,
     79
    ],
+   "mapped": false,
    "printed": [
     78,
     79
@@ -12460,8 +12962,17 @@
    "option": null,
    "src_pages": [
     80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
     89
    ],
+   "mapped": false,
    "printed": [
     80,
     89
@@ -13148,6 +13659,7 @@
     90,
     91
    ],
+   "mapped": false,
    "printed": [
     90,
     91
@@ -13216,8 +13728,13 @@
    "option": null,
    "src_pages": [
     92,
+    93,
+    94,
+    95,
+    96,
     97
    ],
+   "mapped": false,
    "printed": [
     92,
     97
@@ -13801,8 +14318,13 @@
    "option": null,
    "src_pages": [
     98,
+    99,
+    100,
+    101,
+    102,
     103
    ],
+   "mapped": false,
    "printed": [
     98,
     103
@@ -14386,8 +14908,15 @@
    "option": null,
    "src_pages": [
     104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
     111
    ],
+   "mapped": false,
    "printed": [
     104,
     111
@@ -14898,8 +15427,11 @@
    "option": null,
    "src_pages": [
     112,
+    113,
+    114,
     115
    ],
+   "mapped": false,
    "printed": [
     112,
     115
@@ -15265,8 +15797,10 @@
    "option": null,
    "src_pages": [
     116,
+    117,
     118
    ],
+   "mapped": false,
    "printed": [
     116,
     118
@@ -15605,8 +16139,10 @@
    "option": null,
    "src_pages": [
     119,
+    120,
     121
    ],
+   "mapped": false,
    "printed": [
     119,
     121
@@ -15958,8 +16494,13 @@
    "option": null,
    "src_pages": [
     122,
+    123,
+    124,
+    125,
+    126,
     127
    ],
+   "mapped": false,
    "printed": [
     122,
     127
@@ -16518,6 +17059,7 @@
     128,
     129
    ],
+   "mapped": false,
    "printed": [
     128,
     129
@@ -16824,6 +17366,7 @@
     130,
     131
    ],
+   "mapped": false,
    "printed": [
     130,
     131
@@ -17044,6 +17587,7 @@
     132,
     133
    ],
+   "mapped": false,
    "printed": [
     132,
     133
@@ -17213,6 +17757,7 @@
     134,
     135
    ],
+   "mapped": false,
    "printed": [
     134,
     135
@@ -17536,6 +18081,7 @@
     136,
     137
    ],
+   "mapped": false,
    "printed": [
     136,
     137
@@ -17962,6 +18508,7 @@
     138,
     139
    ],
+   "mapped": false,
    "printed": [
     138,
     139
@@ -18095,8 +18642,12 @@
    "option": "power_window",
    "src_pages": [
     140,
+    141,
+    142,
+    143,
     144
    ],
+   "mapped": false,
    "printed": [
     140,
     144
@@ -18423,8 +18974,12 @@
    "option": "door_lock",
    "src_pages": [
     145,
+    146,
+    147,
+    148,
     149
    ],
+   "mapped": false,
    "printed": [
     145,
     149
@@ -18781,6 +19336,7 @@
     150,
     151
    ],
+   "mapped": false,
    "printed": [
     150,
     151
@@ -18959,8 +19515,10 @@
    "option": null,
    "src_pages": [
     152,
+    153,
     154
    ],
+   "mapped": false,
    "printed": [
     152,
     154
@@ -19160,8 +19718,10 @@
    "option": null,
    "src_pages": [
     155,
+    156,
     157
    ],
+   "mapped": false,
    "printed": [
     155,
     157
@@ -19444,6 +20004,7 @@
     158,
     159
    ],
+   "mapped": false,
    "printed": [
     158,
     159
@@ -19559,6 +20120,7 @@
     160,
     161
    ],
+   "mapped": false,
    "printed": [
     160,
     161
@@ -19759,6 +20321,7 @@
     162,
     163
    ],
+   "mapped": false,
    "printed": [
     162,
     163
@@ -19975,6 +20538,7 @@
     164,
     165
    ],
+   "mapped": false,
    "printed": [
     164,
     165
@@ -20136,8 +20700,10 @@
    "option": "sunroof",
    "src_pages": [
     166,
+    167,
     168
    ],
+   "mapped": false,
    "printed": [
     166,
     168
@@ -20378,8 +20944,12 @@
    "option": null,
    "src_pages": [
     169,
+    170,
+    171,
+    172,
     173
    ],
+   "mapped": false,
    "printed": [
     169,
     173
@@ -20748,6 +21318,7 @@
     174,
     175
    ],
+   "mapped": false,
    "printed": [
     174,
     175
@@ -20901,6 +21472,7 @@
     176,
     177
    ],
+   "mapped": false,
    "printed": [
     176,
     177
@@ -21076,6 +21648,7 @@
     178,
     179
    ],
+   "mapped": false,
    "printed": [
     178,
     179
@@ -21268,8 +21841,13 @@
    "option": "cruise",
    "src_pages": [
     180,
+    181,
+    182,
+    183,
+    184,
     185
    ],
+   "mapped": false,
    "printed": [
     180,
     185
@@ -21645,8 +22223,12 @@
    "option": "cruise",
    "src_pages": [
     186,
+    187,
+    188,
+    189,
     190
    ],
+   "mapped": false,
    "printed": [
     186,
     190
@@ -21960,9 +22542,9 @@
    "applies": {},
    "option": null,
    "src_pages": [
-    191,
     191
    ],
+   "mapped": false,
    "printed": [
     191,
     191
@@ -22115,8 +22697,12 @@
    "option": "abs",
    "src_pages": [
     192,
+    193,
+    194,
+    195,
     196
    ],
+   "mapped": false,
    "printed": [
     192,
     196
@@ -22425,8 +23011,13 @@
    "option": null,
    "src_pages": [
     197,
+    198,
+    199,
+    200,
+    201,
     202
    ],
+   "mapped": false,
    "printed": [
     197,
     202
@@ -22628,9 +23219,9 @@
    "applies": {},
    "option": null,
    "src_pages": [
-    203,
     203
    ],
+   "mapped": false,
    "printed": [
     203,
     203
@@ -22782,6 +23373,7 @@
     204,
     205
    ],
+   "mapped": false,
    "printed": [
     204,
     205
@@ -22961,6 +23553,7 @@
     206,
     207
    ],
+   "mapped": false,
    "printed": [
     206,
     207
@@ -23135,8 +23728,11 @@
    "option": null,
    "src_pages": [
     208,
+    209,
+    210,
     211
    ],
+   "mapped": false,
    "printed": [
     208,
     211
@@ -23527,6 +24123,7 @@
     212,
     213
    ],
+   "mapped": false,
    "printed": [
     212,
     213
@@ -23796,8 +24393,11 @@
    "option": null,
    "src_pages": [
     214,
+    215,
+    216,
     217
    ],
+   "mapped": false,
    "printed": [
     214,
     217
@@ -24197,8 +24797,19 @@
    "option": null,
    "src_pages": [
     218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
     229
    ],
+   "mapped": false,
    "printed": [
     218,
     229
@@ -24840,8 +25451,15 @@
    "option": null,
    "src_pages": [
     230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
     237
    ],
+   "mapped": false,
    "printed": [
     230,
     237
@@ -25346,8 +25964,13 @@
    "option": null,
    "src_pages": [
     238,
+    239,
+    240,
+    241,
+    242,
     243
    ],
+   "mapped": false,
    "printed": [
     238,
     243
@@ -25791,6 +26414,5306 @@
    "image_only": false
   },
   {
+   "id": "mitchell1993-hvac-manual-manual-air-conditioner-for-dial-type-of-blower-control-sw",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-hvac-manual-manual-air-conditioner-for-dial-type-of-blower-control-sw.pdf",
+   "thumb": "thumbs/mitchell1993-hvac-manual-manual-air-conditioner-for-dial-type-of-blower-control-sw.png",
+   "system": "hvac-manual",
+   "name": "A/C & Radiator Fan — Manual A/C",
+   "category": "hvac",
+   "title": "RADIATOR FAN AND AIR CONDITIONER (MANUAL AIR CONDITIONER, FOR DIAL TYPE OF BLOWER CONTROL SW)",
+   "variant": "Dial blower control",
+   "applies": {
+    "ac": [
+     "MANUAL"
+    ],
+    "blower": [
+     "DIAL"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    375,
+    376
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 23,
+   "features": [
+    {
+     "n": 1,
+     "title": "A/C System Specifications",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Operation",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "System Controls",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "System Components",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Adjustments",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Air Mix Damper",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Heater Valve",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Trouble Shooting",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "No Blower Operation",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "No Cool Air",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Intermittent Cool Air",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Cool Air Only at High Speed",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Insufficient Cooling",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Insufficient Cool Air Velocity",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Testing",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "A/C System Performance",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "A/C Switch",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "A/C Amplifier",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Coolant Temperature Switch",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Condenser Fan Motor",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Indicator & Illumination Lights",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Magnetic Clutch",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 24,
+     "title": "Relays",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 25,
+     "title": "Servomotors",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 26,
+     "title": "Switches",
+     "page": 15,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 27,
+     "title": "Triple-Pressure Switch",
+     "page": 16,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 28,
+     "title": "Vacuum Switching Valve (VSV)",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 29,
+     "title": "Removal & Installation",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 30,
+     "title": "Compressor",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 31,
+     "title": "Evaporator Assembly",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 32,
+     "title": "Condenser",
+     "page": 19,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 33,
+     "title": "Receiver-Drier",
+     "page": 19,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 34,
+     "title": "Torque Specifications",
+     "page": 19,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 35,
+     "title": "Wiring Diagram - Manual A/C & Heater System (Grid 36-39)",
+     "page": 22,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 36,
+     "title": "Wiring Diagram - Fan Relays, Courtesy Lights, Heater Relay (Grid 40-43)",
+     "page": 23,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-hvac-auto-automatic-air-conditioner-for-dial-type-of-blower-control-sw",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-hvac-auto-automatic-air-conditioner-for-dial-type-of-blower-control-sw.pdf",
+   "thumb": "thumbs/mitchell1993-hvac-auto-automatic-air-conditioner-for-dial-type-of-blower-control-sw.png",
+   "system": "hvac-auto",
+   "name": "A/C & Radiator Fan — Automatic A/C",
+   "category": "hvac",
+   "title": "RADIATOR FAN AND AIR CONDITIONER (AUTOMATIC AIR CONDITIONER, FOR DIAL TYPE OF BLOWER CONTROL SW)",
+   "variant": "Dial blower control",
+   "applies": {
+    "ac": [
+     "AUTO"
+    ],
+    "blower": [
+     "DIAL"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    374,
+    376
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 17,
+   "features": [
+    {
+     "n": 1,
+     "title": "Specifications",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Amplifiers & Sensors",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Engine Idle-Up Control",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Testing",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "A/C System Performance",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "A/C Compressor Clutch Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "A/C-Heater Control Panel Illumination",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "A/C-Heater Control Panel Indicators",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "A/C Switch Test",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Air Inlet Switches Test",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Airflow Mode Control Switches Test",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Air Mix Control Servomotor",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Auto A/C Amplifier Test",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Blower Speed Control Switch Test",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Ambient Temperature Sensor Test",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Power Transistor Test",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Solar (Sunload) Sensor Test",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "System Amplifier Test",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Removal & Installation",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Compressor",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Evaporator, Expansion Valve & Thermistor",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 24,
+     "title": "Condenser",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 25,
+     "title": "Receiver-Drier",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 26,
+     "title": "Torque Specifications",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 27,
+     "title": "Wiring Diagram - Auto A/C & Heater System (Grid 32-35)",
+     "page": 16,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 28,
+     "title": "Wiring Diagram - Fan Relays, Courtesy Lights, Heater Relay (Grid 40-43)",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-srs",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-srs.pdf",
+   "thumb": "thumbs/mitchell1993-srs.png",
+   "system": "srs",
+   "name": "SRS Airbag",
+   "category": "chassis",
+   "title": "SRS AIRBAG",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 22,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "System Operation Check",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Service Precautions",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Activating Air Bag System.",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Operation Check.",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Disabling & Activating Air Bag System",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Disposal Procedures",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Deployed Air Bag",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Scrapped Vehicle",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Undeployed Air Bag.",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Undeployed Air Bag",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Installation.",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Post-Collision Inspection",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Removal & Installation",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "System Operation Check.",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Center Air Bag Sensor",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "System.",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Front Air Bag Sensors",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Steering Wheel Pad & Spiral Cable",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Check.",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Adjustments",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Spiral Cable",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Wire Repair",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 24,
+     "title": "Here.",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 25,
+     "title": "Torque Specifications",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 26,
+     "title": "Self-Diagnostic System",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 27,
+     "title": "Diagnostic Code Check.",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 28,
+     "title": "Shooting.",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 29,
+     "title": "Trouble Shooting",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 30,
+     "title": "Air Bag/SRS Warning Light Remains Illuminated",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 31,
+     "title": "Air Bag/SRS Warning Light Intermittent",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 32,
+     "title": "Diagnostic Code Not Displayed",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 33,
+     "title": "Diagnostic Code Continuously Displayed",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 34,
+     "title": "Diagnostic Code Normal, Source Voltage Drop",
+     "page": 14,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 35,
+     "title": "Front Air Bag Sensor Circuit.",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 36,
+     "title": "Diagnostic Code 14, Open in Squib Circuit",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 37,
+     "title": "Diagnostic Code 22, Air Bag/SRS Warning Light Sys Malfunction",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 38,
+     "title": "Diagnostic Code 31, Center Air Bag Sens Assembly Malfunction",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 39,
+     "title": "Diagnostic Code 41, Malfunction Stored in Memory",
+     "page": 21,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 40,
+     "title": "Post-Collision Air Bag Safety Inspection",
+     "page": 21,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-charging",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-charging.pdf",
+   "thumb": "thumbs/mitchell1993-charging.png",
+   "system": "charging",
+   "name": "Charging",
+   "category": "engine",
+   "title": "CHARGING",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    285
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 11,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Adjustments",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Belt Tension",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "No-Load Test",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Alternator Regulated Output Specifications (1)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Load Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Alternator Rated Ampere Output Specifications",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Brushes",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Rotor",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Stator",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Diodes",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Overhaul",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Disassembly",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Reassembly",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Wiring Diagrams",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Wiring Diagram - Charging Circuit",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-abs-anti-lock-brake-system",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-abs-anti-lock-brake-system.pdf",
+   "thumb": "thumbs/mitchell1993-abs-anti-lock-brake-system.png",
+   "system": "abs",
+   "name": "ABS (Anti-Lock Brakes)",
+   "category": "chassis",
+   "title": "ABS (ANTI-LOCK BRAKE SYSTEM)",
+   "variant": "",
+   "applies": {},
+   "option": "abs",
+   "src_pages": [
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    378
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 21,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Anti-Lock Brake Safety Precautions",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Bleeding Brake System",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Adjustments",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Master Cylinder Push Rod",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Brake Pedal Height",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Pedal Free Play.",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Brake Pedal Free Play",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Brake Pedal Reserve",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Stoplight Switch",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Parking Brake Shoes",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Parking Brake",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Trouble Shooting",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Anti-Lock Warning Light",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Symptom Diagnosis",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Diagnosis & Testing.",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Diagnosis & Testing",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Retrieving Codes",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Diagnostic Codes",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Component Testing.",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Clearing Codes",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Actuator Check",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 24,
+     "title": "Speed Sensor Diagnostics",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 25,
+     "title": "Speed Sensor Diagnostic Codes",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 26,
+     "title": "Deceleration Sensor Diagnostics (All-Trac)",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 27,
+     "title": "Component Testing",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 28,
+     "title": "Step 1",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 29,
+     "title": "Removal & Installation",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 30,
+     "title": "ABS ECU",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 31,
+     "title": "ABS Control Relay",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 32,
+     "title": "Actuator",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 33,
+     "title": "Front Sensor Rotor",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 34,
+     "title": "Front Wheel Speed Sensors",
+     "page": 17,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 35,
+     "title": "Rear Sensor Rotor (All Trac)",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 36,
+     "title": "Rear Sensor Rotor (Fwd)",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 37,
+     "title": "Rear Wheel Speed Sensors",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 38,
+     "title": "Overhaul",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 39,
+     "title": "Torque Specifications",
+     "page": 19,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 40,
+     "title": "General Information",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 41,
+     "title": "Wiring Diagram - ABS System (2WD, 4WD) (Grid 48-51)",
+     "page": 21,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-cruise-control",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-cruise-control.pdf",
+   "thumb": "thumbs/mitchell1993-cruise-control.png",
+   "system": "cruise-control",
+   "name": "Cruise Control",
+   "category": "chassis",
+   "title": "CRUISE CONTROL",
+   "variant": "",
+   "applies": {},
+   "option": "cruise",
+   "src_pages": [
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    377
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 23,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Actuator (Motor)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Actuator (Vacuum)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Cruise Control Switch",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Cruise Control Electronic Control Unit (CC ECU)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Speed Sensor",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Self-Diagnostic System",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Self-Diagnostics",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Reading Trouble Codes",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Retrieving Trouble Codes",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "CC ECU Fault Code Definition",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Trouble Shooting",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Cruise Control Circuit Function Test",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Clearing Function Codes",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Trouble Shooting by Symptom",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Set/Coast",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "RES/ACC",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Testing & Diagnosis",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Actuator.",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Component Testing",
+     "page": 18,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Cruise Control ECU Circuit Testing Charts",
+     "page": 19,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Wiring Diagrams",
+     "page": 22,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 24,
+     "title": "Wiring Diagram - Cruise Control System, Top Stack System (Grid 44-47)",
+     "page": 23,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [
+    "W/ MOTOR ACTUATOR -",
+    "W/ SRS",
+    "W/ VAC ACTUATOR",
+    "W/ VACUUM ACTUATOR -",
+    "W/O SRS"
+   ],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-rear-defogger",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-rear-defogger.pdf",
+   "thumb": "thumbs/mitchell1993-rear-defogger.png",
+   "system": "rear-defogger",
+   "name": "Rear Window Defogger",
+   "category": "body",
+   "title": "REAR WINDOW DEFOGGER",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    276,
+    379
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 13,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Defogger Does Not Work",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Indicator Light Does Not Work",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "System Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Switch Test",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Relay Test",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Outside Rearview Mirror Defogger Test",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Power Window Limit Switch",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Grid Filament Testing",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "On-Vehicle Service",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Grid Filament Repair",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Wiring Diagrams",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Wiring Diagram - Defogger Circuit",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Wiring Diagram - Junction Block #3, A/T Control, Defogger (Grid 52-55)",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [
+    "W/ TIMER"
+   ],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-door-lock",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-door-lock.pdf",
+   "thumb": "thumbs/mitchell1993-door-lock.png",
+   "system": "door-lock",
+   "name": "Door Lock",
+   "category": "body",
+   "title": "DOOR LOCK",
+   "variant": "",
+   "applies": {},
+   "option": "door_lock",
+   "src_pages": [
+    122,
+    123,
+    124,
+    125,
+    126,
+    279,
+    381
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 7,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Relay Circuit Testing Charts.",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Testing",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Component Testing",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Door Lock Switch Signal Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Locks Circuit Testing Charts.",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Power Door Lock Control Relay Circuit Testing Charts",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Wiring Diagrams",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Wiring Diagram - Power Door Lock Circuit",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Wiring Diagram - Power Accessories, Taillights (Grid 60-63)",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-component-locator",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-component-locator.pdf",
+   "thumb": "thumbs/mitchell1993-component-locator.png",
+   "system": "component-locator",
+   "name": "Electrical Component Locator",
+   "category": "locations",
+   "title": "ELECTRICAL COMPONENT LOCATOR",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 29,
+   "features": [
+    {
+     "n": 1,
+     "title": "Safety Precaution",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Buzzers, Relays & Timers",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Miscellaneous",
+     "page": 27,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-cooling-fan",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-cooling-fan.pdf",
+   "thumb": "thumbs/mitchell1993-cooling-fan.png",
+   "system": "cooling-fan",
+   "name": "Engine Cooling Fan",
+   "category": "engine",
+   "title": "ENGINE COOLING FAN",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    376
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 7,
+   "features": [
+    {
+     "n": 1,
+     "title": "Specifications",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Belt Adjustment",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Cooling System Bleeding",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Electric Cooling Fan",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Diagrams.",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Component Testing.",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Component Testing",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Wiring Diagram - Fan Relays, Courtesy Lights, Heater Relay (Grid 40-43)",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-power-source",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-power-source.pdf",
+   "thumb": "thumbs/mitchell1993-power-source.png",
+   "system": "power-source",
+   "name": "Power Source (Fuses & Fusible Links)",
+   "category": "power",
+   "title": "POWER SOURCE",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    367,
+    372,
+    373,
+    379
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 12,
+   "features": [
+    {
+     "n": 1,
+     "title": "Identification",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Fuse Panel Location (1983-85)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Passenger Compartment Fuse Box Identification (1983-85)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Engine Compartment Main Block Identification (1983-85)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Fuse Panel Location (1986-89)",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Passenger Compartment Fuse Box Identification (1986-89)",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Passenger Compartment Relay Identification (1986-89)",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Engine Compartment Block Identification (1986-89)",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Engine Compartment Relay Identification (1986-89)",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Fuse Panel Location (1990-93)",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Passenger Compartment Fuse Box Identification (1990-93)",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Passenger Compartment Relay Identification (1990-93)",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Engine Compartment Main Block Identification (1990-93)",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Engine Compartment Main Block Relay Identification (1990-93)",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Cautions & Warnings",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Supplemental Restraint System (Air Bag System)",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Radiator Fan & Cap",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Wiring Diagram - Junction Block #2, Relay Block #5 (Grid 4-7)",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Wiring Diagram - Junction Block #1 (Partial), Ignition SW (Grid 24-27)",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Wiring Diagram - Junction Block # 1 (Cont.), Relay Block #2 & #4 (Grid 28-31)",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Wiring Diagram - Junction Block #3, A/T Control, Defogger (Grid 52-55)",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-heater",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-heater.pdf",
+   "thumb": "thumbs/mitchell1993-heater.png",
+   "system": "heater",
+   "name": "Heater (w/o A/C)",
+   "category": "hvac",
+   "title": "HEATER",
+   "variant": "",
+   "applies": {
+    "ac": [
+     "NONE"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 10,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Blower Switch",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Control Panel",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Heater Relay",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Air Inlet Damper Cable",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Air Mix Damper Cable",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Airflow Mode Damper Cable",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Water Valve Control Cable",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Trouble Shooting",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Blower Does Not Work",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Incorrect Temperature Output",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Testing",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Air Inlet Control Servomotor",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Air Inlet Control Switch",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Airflow Mode Control Switch",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Blower Fan Relay",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Blower Motor",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Blower Resistor",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Blower Speed Control Switch",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Removal & Installation",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Heater Assembly",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Wiring Diagram",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-how-to-use",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-how-to-use.pdf",
+   "thumb": "thumbs/mitchell1993-how-to-use.png",
+   "system": "how-to-use",
+   "name": "How to Use This Manual",
+   "category": "reference",
+   "title": "HOW TO USE SYSTEM WIRING DIAGRAMS",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 7,
+   "features": [
+    {
+     "n": 1,
+     "title": "General Information",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Introduction",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Color Abbreviations",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Identifying Wiring Diagram Symbols",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Wiring Diagram Component Locations",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-combination-meter",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-combination-meter.pdf",
+   "thumb": "thumbs/mitchell1993-combination-meter.png",
+   "system": "combination-meter",
+   "name": "Combination Meter",
+   "category": "instruments",
+   "title": "COMBINATION METER",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    380
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 12,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Gauges",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Switches",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Testing - Gauges",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Fuel Gauge & Warning Light",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Fuel Sending Unit Tests",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Temperature Gauge & Sender",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Temperature Gauge Resistance Test.",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Testing - Switches",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Hazard Warning Switch",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Instrument Cluster",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Steering Wheel",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Wiring Diagrams",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Wiring Diagram - Instrument Cluster, Combination Switch (Grid 56-59)",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-remote-mirror",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-remote-mirror.pdf",
+   "thumb": "thumbs/mitchell1993-remote-mirror.png",
+   "system": "remote-mirror",
+   "name": "Remote Control Mirror",
+   "category": "body",
+   "title": "REMOTE CONTROL MIRROR",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    280,
+    381
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 9,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Power Mirror",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Power Mirror Switch Test",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Power Mirror Switch Continuity Test (Camry)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Power Mirror Switch",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Power Mirror Assembly",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Wiring Diagrams",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Wiring Diagram - Power Mirror Circuit",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Wiring Diagram - Power Accessories, Taillights (Grid 60-63)",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-engine-control-3s-gte",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-engine-control-3s-gte.pdf",
+   "thumb": "thumbs/mitchell1993-engine-control-3s-gte.png",
+   "system": "engine-control",
+   "name": "Engine Control (ECU)",
+   "category": "engine",
+   "title": "ENGINE CONTROL (3S-GTE)",
+   "variant": "3S-GTE",
+   "applies": {
+    "engines": [
+     "3S-GTE"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    224,
+    225,
+    226,
+    227,
+    369,
+    383
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 15,
+   "features": [
+    {
+     "n": 1,
+     "title": "Introduction",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "ECM Location & Identification",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "ECM Pin Voltage Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "ECM Wiring Harness Resistance Test",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "ECM Terminal Identification",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Introduction",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Airflow Meter",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "E2-THA",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "E2-VS",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Cold Start Injector Time Switch",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "EGR Gas Temperature Sensor",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Manifold Absolute Pressure Sensor",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Oxygen Sensor Heater",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Wiring Diagram - ECM ECU & Engine Sensors (2.0L Turbo) (Grid 12-15)",
+     "page": 14,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Wiring Diagram - Wiring Diagram (Celica 2.0L Turbo)",
+     "page": 15,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-power-window",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-power-window.pdf",
+   "thumb": "thumbs/mitchell1993-power-window.png",
+   "system": "power-window",
+   "name": "Power Window",
+   "category": "body",
+   "title": "POWER WINDOW",
+   "variant": "",
+   "applies": {},
+   "option": "power_window",
+   "src_pages": [
+    214,
+    215,
+    216,
+    217,
+    282,
+    381
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 6,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "All Windows Inoperative & Lock-Out Is Inoperative",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "All Windows Inoperative & Lock-Out Operates Normal",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Lock Switch Inoperative",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Window Lock Illumination Does Not Operate",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "One-Touch Feature Is Inoperative",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "One Window Does Not Operate",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Power Window Switch Illumination Test (Driver's Side Switch)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Power Window System Current Test",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Power Window Switch Continuity Test (Driver's Side Switch)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Power Window Main Relay",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Power Window Motor Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Removal & Installation",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Power Window Motor",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Power Window Switch",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Wiring Diagrams",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Wiring Diagram - Power Window Circuit",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Wiring Diagram - Power Accessories, Taillights (Grid 60-63)",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-power-seat",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-power-seat.pdf",
+   "thumb": "thumbs/mitchell1993-power-seat.png",
+   "system": "power-seat",
+   "name": "Power Seat",
+   "category": "body",
+   "title": "POWER SEAT",
+   "variant": "",
+   "applies": {},
+   "option": "power_seat",
+   "src_pages": [
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    281
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 7,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Camry",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Celica",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Land Cruiser",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Supra",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Trouble Shooting",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Celica (Lumbar Seat Does Not Move in Any Direction)",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Celica (Lumbar Seat Moves in at Least One Direction)",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Testing",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Power Main Relay Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Power Seat Motor Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Power Seat Switch Test",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Wiring Diagrams",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Wiring Diagram - Power Seat Circuit",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-shift-lock",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-shift-lock.pdf",
+   "thumb": "thumbs/mitchell1993-shift-lock.png",
+   "system": "shift-lock",
+   "name": "Shift Lock",
+   "category": "engine",
+   "title": "SHIFT LOCK",
+   "variant": "",
+   "applies": {
+    "trans": [
+     "A/T"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    379
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 20,
+   "features": [
+    {
+     "n": 1,
+     "title": "Automatic Transmissions",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Application",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Key Lock System",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Testing",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Electronic Control Unit (ECU)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Shift Lock System Pin Voltages",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Shift Lock System Pin Voltages (Camry, Celica, Corolla,",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Shift Lock Solenoid Resistance Specifications",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Shift Lock Control Switch",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Shift Lock Control Switch Continuity",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Wiring Diagram - Junction Block #3, A/T Control, Defogger (Grid 52-55)",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-starting-ignition",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-starting-ignition.pdf",
+   "thumb": "thumbs/mitchell1993-starting-ignition.png",
+   "system": "starting-ignition",
+   "name": "Starting & Ignition",
+   "category": "engine",
+   "title": "STARTING AND IGNITION",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    286,
+    366
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 13,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "On-Vehicle Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Clutch Start Switch Test",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Ignition Switch Continuity Test",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Park/Neutral Switch",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Park/Neutral Switch Continuity",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Starter Relay Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Bench Testing",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "No-Load Test",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "No-Load Test Specifications",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Solenoid Tests",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Starter Component Inspection",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Starter Specifications.",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Removal & Installation",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Starter Motor",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Torque Specifications.",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Overhaul",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Starter Specifications",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Nippondenso Starter Specifications",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "Torque Specifications",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Wiring Diagram - Starting Circuit",
+     "page": 12,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Wiring Diagram - Engine Compartment, Headlights, Starter (Grid 1-3)",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-column-switches",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-column-switches.pdf",
+   "thumb": "thumbs/mitchell1993-column-switches.png",
+   "system": "column-switches",
+   "name": "Combination Switch (Steering Column)",
+   "category": "body",
+   "title": "STEERING COLUMN SWITCHES",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    380
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 9,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Combination Switch",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Headlight, Dimmer & Passing Switches",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Taillight Control Relay",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Horn Switch",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Turn Signal Switch",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Wiper/Washer Switch",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Removal & Installation",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Ignition Switch",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Steering Wheel",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Torque Specifications.",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Turn Signal/Dimmer Switch",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Torque Specifications",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Wiring Diagram - Instrument Cluster, Combination Switch (Grid 56-59)",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-auto-tilt",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-auto-tilt.pdf",
+   "thumb": "thumbs/mitchell1993-auto-tilt.png",
+   "system": "auto-tilt",
+   "name": "Auto Tilt-Away Steering",
+   "category": "body",
+   "title": "AUTO TILT AWAY STEERING",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    266,
+    267,
+    268,
+    269
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 4,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Component Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "System Testing",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Wiring Diagrams",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-sun-roof",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-sun-roof.pdf",
+   "thumb": "thumbs/mitchell1993-sun-roof.png",
+   "system": "sun-roof",
+   "name": "Sun Roof",
+   "category": "body",
+   "title": "SUN ROOF",
+   "variant": "",
+   "applies": {},
+   "option": "sunroof",
+   "src_pages": [
+    270,
+    271,
+    272,
+    273,
+    274,
+    381
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 6,
+   "features": [
+    {
+     "n": 1,
+     "title": "Description & Operation",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Adjustments",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Sun Roof Height",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Sun Roof Clearance & Alignment",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Testing",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Control Relay",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Limit Switch",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Sun Roof Switch",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Drive Cables",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Drive Motor",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Sun Roof",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Wind Deflector",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Wiring Diagrams",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Wiring Diagram - Power Accessories, Taillights (Grid 60-63)",
+     "page": 6,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-overall-wiring",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-overall-wiring.pdf",
+   "thumb": "thumbs/mitchell1993-overall-wiring.png",
+   "system": "overall-wiring",
+   "name": "Overall Wiring Diagram",
+   "category": "overall",
+   "title": "OVERALL WIRING DIAGRAM",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    275,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 19,
+   "features": [
+    {
+     "n": 1,
+     "title": "Identification",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Component Location Menu",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Automatic Transmission",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Electronically Controlled",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-horn",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-horn.pdf",
+   "thumb": "thumbs/mitchell1993-horn.png",
+   "system": "horn",
+   "name": "Horn",
+   "category": "body",
+   "title": "HORN",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    277
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Horn Circuit",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-auto-antenna",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-auto-antenna.pdf",
+   "thumb": "thumbs/mitchell1993-auto-antenna.png",
+   "system": "auto-antenna",
+   "name": "Auto Antenna",
+   "category": "instruments",
+   "title": "AUTO ANTENNA",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    278
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Power Antenna Circuit",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-radio-w-cd-player",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-radio-w-cd-player.pdf",
+   "thumb": "thumbs/mitchell1993-radio-w-cd-player.png",
+   "system": "radio",
+   "name": "Radio & Player",
+   "category": "instruments",
+   "title": "RADIO AND PLAYER (W/ CD PLAYER)",
+   "variant": "w/ CD Player",
+   "applies": {
+    "cd": true
+   },
+   "option": null,
+   "src_pages": [
+    283
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Radio Circuits, w/ CD",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [
+    "W/ CD PLAYER"
+   ],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-radio-w-o-cd-player",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-radio-w-o-cd-player.pdf",
+   "thumb": "thumbs/mitchell1993-radio-w-o-cd-player.png",
+   "system": "radio",
+   "name": "Radio & Player",
+   "category": "instruments",
+   "title": "RADIO AND PLAYER (W/O CD PLAYER)",
+   "variant": "w/o CD Player",
+   "applies": {
+    "cd": false
+   },
+   "option": null,
+   "src_pages": [
+    284
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Radio Circuits, w/o CD",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [
+    "W/O CD PLAYER"
+   ],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-ect-4a-fe",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-ect-4a-fe.pdf",
+   "thumb": "thumbs/mitchell1993-ect-4a-fe.png",
+   "system": "ect",
+   "name": "ECT (Electronic Controlled Transmission)",
+   "category": "engine",
+   "title": "ECT (4A-FE)",
+   "variant": "4A-FE",
+   "applies": {
+    "engines": [
+     "4A-FE"
+    ],
+    "trans": [
+     "A/T"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    287
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - 1.6L, Transmission Circuit",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-ect-5s-fe",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-ect-5s-fe.pdf",
+   "thumb": "thumbs/mitchell1993-ect-5s-fe.png",
+   "system": "ect",
+   "name": "ECT (Electronic Controlled Transmission)",
+   "category": "engine",
+   "title": "ECT (5S-FE)",
+   "variant": "5S-FE",
+   "applies": {
+    "engines": [
+     "5S-FE"
+    ],
+    "trans": [
+     "A/T"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    288
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - 2.2L, Transmission Circuit",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-front-wiper",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-front-wiper.pdf",
+   "thumb": "thumbs/mitchell1993-front-wiper.png",
+   "system": "front-wiper",
+   "name": "Front Wiper & Washer",
+   "category": "body",
+   "title": "FRONT WIPER AND WASHER",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    289,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 11,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Front Washer/Wiper Circuit",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Description & Operation",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Testing",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Front Wiper Motor Test",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Front Wiper Relay Test",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Front Wiper Switch Test",
+     "page": 4,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Front Washer Switch Test",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Rear Wiper Relay Test",
+     "page": 7,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Front Wiper Switch",
+     "page": 8,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Rear Wiper Switch",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Removal & Installation.",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Steering Wheel",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Wiring Diagrams",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-rear-wiper",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-rear-wiper.pdf",
+   "thumb": "thumbs/mitchell1993-rear-wiper.png",
+   "system": "rear-wiper",
+   "name": "Rear Wiper & Washer",
+   "category": "body",
+   "title": "REAR WIPER AND WASHER",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    290
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Rear Wiper/Washer Circuit",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-troubleshooting",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-troubleshooting.pdf",
+   "thumb": "thumbs/mitchell1993-troubleshooting.png",
+   "system": "troubleshooting",
+   "name": "Troubleshooting",
+   "category": "reference",
+   "title": "TROUBLESHOOTING",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 63,
+   "features": [
+    {
+     "n": 1,
+     "title": "General Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Accessories & Electrical",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "Charging System Trouble Shooting",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Basic Charging System Trouble Shooting Chart",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Accessories &",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 6,
+     "title": "Starter Trouble Shooting",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 7,
+     "title": "Basic Starter Trouble Shooting Chart",
+     "page": 5,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 8,
+     "title": "Air Conditioning Trouble Shooting",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 9,
+     "title": "Basic Air Conditioning Trouble Shooting Chart",
+     "page": 9,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 10,
+     "title": "Basic Heater System Trouble Shooting Chart",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 11,
+     "title": "Brake System Trouble Shooting",
+     "page": 10,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 12,
+     "title": "Brake System Trouble Shooting Chart",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 13,
+     "title": "Brake System",
+     "page": 11,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 14,
+     "title": "Cooling System Trouble Shooting",
+     "page": 13,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 15,
+     "title": "Basic Gasoline Engine  - Mechanical Trouble Shooting Chart",
+     "page": 15,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 16,
+     "title": "Engines",
+     "page": 15,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 17,
+     "title": "Basic Cold Start Symptoms Trouble Shooting Chart",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 18,
+     "title": "Fuel Systems",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 19,
+     "title": "Fuel System",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 20,
+     "title": "Systems",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 21,
+     "title": "System",
+     "page": 20,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 22,
+     "title": "Condition          Possible Cause                 Correction",
+     "page": 22,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 23,
+     "title": "Basic Diesel Engine Trouble Shooting Chart",
+     "page": 22,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 24,
+     "title": "Engine Cooling",
+     "page": 25,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 25,
+     "title": "Basic Fuel Injection Trouble Shooting Chart",
+     "page": 25,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 26,
+     "title": "Ignition System Trouble Shooting",
+     "page": 27,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 27,
+     "title": "Basic Spark Plug Trouble Shooting Charts",
+     "page": 33,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 28,
+     "title": "Engine Performance",
+     "page": 34,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 29,
+     "title": "Basic Electronic Ignition Trouble Shooting Charts",
+     "page": 34,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 30,
+     "title": "Charts - Using Oscilloscope Patterns",
+     "page": 35,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 31,
+     "title": "Performance",
+     "page": 37,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 32,
+     "title": "Vacuum Pump (Diesel) Trouble Shooting Chart",
+     "page": 41,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 33,
+     "title": "Manual Transmission Trouble Shooting",
+     "page": 42,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 34,
+     "title": "Manual Transmission/Transaxle Trouble Shooting",
+     "page": 42,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 35,
+     "title": "Clutch Trouble Shooting",
+     "page": 43,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 36,
+     "title": "Basic Clutch Trouble Shooting Chart",
+     "page": 43,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 37,
+     "title": "Drive Axle - Rwd Trouble Shooting",
+     "page": 48,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 38,
+     "title": "Drive Axle (Rwd) Trouble Shooting",
+     "page": 48,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 39,
+     "title": "Manual Steering Gear Trouble Shooting",
+     "page": 50,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 40,
+     "title": "Basic Manual Steering Gear Trouble Shooting Chart",
+     "page": 50,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-headlight-usa-for-usa",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-headlight-usa-for-usa.pdf",
+   "thumb": "thumbs/mitchell1993-headlight-usa-for-usa.png",
+   "system": "headlight-usa",
+   "name": "Headlight (USA)",
+   "category": "lighting",
+   "title": "HEADLIGHT (FOR USA)",
+   "variant": "USA",
+   "applies": {
+    "market": [
+     "USA"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    366
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Engine Compartment, Headlights, Starter (Grid 1-3)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-engine-control-4a-fe",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-engine-control-4a-fe.pdf",
+   "thumb": "thumbs/mitchell1993-engine-control-4a-fe.png",
+   "system": "engine-control",
+   "name": "Engine Control (ECU)",
+   "category": "engine",
+   "title": "ENGINE CONTROL (4A-FE)",
+   "variant": "4A-FE",
+   "applies": {
+    "engines": [
+     "4A-FE"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    368,
+    382
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 2,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - ECM ECU & Engine Sensors (1.6L 4A-FE) (Grid 8-11)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Wiring Diagram - Wiring Diagram (Celica 1.6L)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-engine-control-5s-fe-a-t",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-engine-control-5s-fe-a-t.pdf",
+   "thumb": "thumbs/mitchell1993-engine-control-5s-fe-a-t.png",
+   "system": "engine-control",
+   "name": "Engine Control (ECU)",
+   "category": "engine",
+   "title": "ENGINE CONTROL (5S-FE A/T)",
+   "variant": "5S-FE A/T",
+   "applies": {
+    "engines": [
+     "5S-FE"
+    ],
+    "trans": [
+     "A/T"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    370,
+    384
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 2,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - ECM ECU & Engine Sensors (2.2L A/T) (Grid 16-19)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Wiring Diagram - Wiring Diagram (Celica 2.2L A/T)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-engine-control-5s-fe-m-t",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-engine-control-5s-fe-m-t.pdf",
+   "thumb": "thumbs/mitchell1993-engine-control-5s-fe-m-t.png",
+   "system": "engine-control",
+   "name": "Engine Control (ECU)",
+   "category": "engine",
+   "title": "ENGINE CONTROL (5S-FE M/T)",
+   "variant": "5S-FE M/T",
+   "applies": {
+    "engines": [
+     "5S-FE"
+    ],
+    "trans": [
+     "M/T"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    371,
+    385
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 2,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - ECM ECU & Engine Sensors (2.2L M/T) (Grid 20-23)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Wiring Diagram - Wiring Diagram (Celica 2.2L M/T)",
+     "page": 2,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-interior-light",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-interior-light.pdf",
+   "thumb": "thumbs/mitchell1993-interior-light.png",
+   "system": "interior-light",
+   "name": "Interior Light",
+   "category": "lighting",
+   "title": "INTERIOR LIGHT",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    376
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Fan Relays, Courtesy Lights, Heater Relay (Grid 40-43)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-taillight",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-taillight.pdf",
+   "thumb": "thumbs/mitchell1993-taillight.png",
+   "system": "taillight",
+   "name": "Taillight",
+   "category": "lighting",
+   "title": "TAILLIGHT",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    381
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagram - Power Accessories, Taillights (Grid 60-63)",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "mitchell1993-glossary",
+   "source": "mitchell1993",
+   "year": 1993,
+   "file": "1993 Celica Service Manual (Mitchell) - Electrical.pdf",
+   "pdf": "circuits/mitchell1993-glossary.pdf",
+   "thumb": "thumbs/mitchell1993-glossary.png",
+   "system": "glossary",
+   "name": "Glossary of Terms and Symbols",
+   "category": "reference",
+   "title": "GLOSSARY OF TERMS AND SYMBOLS",
+   "variant": "",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 8,
+   "features": [
+    {
+     "n": 1,
+     "title": "Wiring Diagrams",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 2,
+     "title": "Introduction",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 3,
+     "title": "How to Use the Wiring Diagrams",
+     "page": 1,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 4,
+     "title": "Color Abbreviations Identification",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    },
+    {
+     "n": 5,
+     "title": "Color Abbreviations",
+     "page": 3,
+     "blower": [],
+     "auto_ac": null
+    }
+   ],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "refdocs-engine-control-3s-gte-ecu-pinouts",
+   "source": "refdocs",
+   "year": null,
+   "file": "3SGTE ECU Pinouts.pdf",
+   "pdf": "circuits/refdocs-engine-control-3s-gte-ecu-pinouts.pdf",
+   "thumb": "thumbs/refdocs-engine-control-3s-gte-ecu-pinouts.png",
+   "system": "engine-control",
+   "name": "Engine Control (ECU)",
+   "category": "engine",
+   "title": "ENGINE CONTROL (3S-GTE, ECU PINOUTS)",
+   "variant": "3S-GTE, ECU Pinouts",
+   "applies": {
+    "engines": [
+     "3S-GTE"
+    ]
+   },
+   "option": null,
+   "src_pages": [
+    1
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 1,
+   "features": [],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
+   "id": "refdocs-charging-alternator-guide",
+   "source": "refdocs",
+   "year": null,
+   "file": "Alternator Guide.pdf",
+   "pdf": "circuits/refdocs-charging-alternator-guide.pdf",
+   "thumb": "thumbs/refdocs-charging-alternator-guide.png",
+   "system": "charging",
+   "name": "Charging",
+   "category": "engine",
+   "title": "CHARGING (ALTERNATOR GUIDE)",
+   "variant": "Alternator Guide",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "mapped": true,
+   "printed": null,
+   "pages": 32,
+   "features": [],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [],
+   "refs": [],
+   "image_only": false
+  },
+  {
    "id": "tis1993-auto-tilt",
    "source": "tis1993",
    "year": 1993,
@@ -25808,6 +31731,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     170,
     171
@@ -25974,6 +31898,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     74,
     75
@@ -26087,8 +32012,11 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
     4
    ],
+   "mapped": false,
    "printed": [
     206,
     209
@@ -26457,8 +32385,15 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
     8
    ],
+   "mapped": false,
    "printed": [
     28,
     35
@@ -26502,8 +32437,21 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
     14
    ],
+   "mapped": false,
    "printed": [
     36,
     49
@@ -26536,8 +32484,12 @@
    "option": "door_lock",
    "src_pages": [
     1,
+    2,
+    3,
+    4,
     5
    ],
+   "mapped": false,
    "printed": [
     141,
     145
@@ -26875,8 +32827,17 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
     10
    ],
+   "mapped": false,
    "printed": [
     76,
     85
@@ -27557,8 +33518,10 @@
    "option": null,
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     148,
     150
@@ -27746,8 +33709,13 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
     6
    ],
+   "mapped": false,
    "printed": [
     230,
     235
@@ -28089,8 +34057,10 @@
    "option": null,
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     115,
     117
@@ -28349,9 +34319,9 @@
    "applies": {},
    "option": null,
    "src_pages": [
-    1,
     1
    ],
+   "mapped": false,
    "printed": [
     185,
     185
@@ -28499,8 +34469,11 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
     4
    ],
+   "mapped": false,
    "printed": [
     108,
     111
@@ -28846,6 +34819,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     132,
     133
@@ -29259,8 +35233,17 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
     10
    ],
+   "mapped": false,
    "printed": [
     50,
     59
@@ -29325,8 +35308,12 @@
    "option": "power_window",
    "src_pages": [
     1,
+    2,
+    3,
+    4,
     5
    ],
+   "mapped": false,
    "printed": [
     136,
     140
@@ -29595,6 +35582,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     156,
     157
@@ -29790,8 +35778,10 @@
    "option": null,
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     62,
     64
@@ -30037,8 +36027,18 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
     11
    ],
+   "mapped": false,
    "printed": [
     210,
     220
@@ -30664,8 +36664,15 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
     8
    ],
+   "mapped": false,
    "printed": [
     222,
     229
@@ -31174,8 +37181,10 @@
    "option": null,
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     200,
     202
@@ -31511,6 +37520,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     158,
     159
@@ -31667,8 +37677,17 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
     10
    ],
+   "mapped": false,
    "printed": [
     18,
     27
@@ -31703,6 +37722,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     154,
     155
@@ -31900,8 +37920,11 @@
    "option": null,
    "src_pages": [
     1,
+    2,
+    3,
     4
    ],
+   "mapped": false,
    "printed": [
     66,
     69
@@ -32164,6 +38187,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     126,
     127
@@ -32331,8 +38355,10 @@
    "option": "sunroof",
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     160,
     162
@@ -32579,8 +38605,10 @@
    "option": null,
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     112,
     114
@@ -32850,6 +38878,463 @@
    "image_only": false
   },
   {
+   "id": "refdocs-wire-harness-repair-rm1022e",
+   "source": "refdocs",
+   "year": null,
+   "file": "Toyota - Wire Harness Repair Manual (RM1022E).pdf",
+   "pdf": "circuits/refdocs-wire-harness-repair-rm1022e.pdf",
+   "thumb": "thumbs/refdocs-wire-harness-repair-rm1022e.png",
+   "system": "wire-harness-repair",
+   "name": "Wire Harness & Connector Repair",
+   "category": "reference",
+   "title": "WIRE HARNESS REPAIR MANUAL (RM1022E)",
+   "variant": "RM1022E",
+   "applies": {},
+   "option": null,
+   "src_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418
+   ],
+   "mapped": true,
+   "printed": [
+    2,
+    414
+   ],
+   "pages": 418,
+   "features": [],
+   "page_tags": {},
+   "components": [],
+   "joints": [],
+   "junction_blocks": [],
+   "relay_blocks": [],
+   "fuses": [],
+   "options": [
+    "W/ CLAMP",
+    "W/ COVER",
+    "W/ FLANGE",
+    "W/O CLAMP",
+    "W/O FLANGE"
+   ],
+   "refs": [],
+   "image_only": false
+  },
+  {
    "id": "tis1993-turn-hazard",
    "source": "tis1993",
    "year": 1993,
@@ -32867,6 +39352,7 @@
     1,
     2
    ],
+   "mapped": false,
    "printed": [
     130,
     131
@@ -33177,8 +39663,10 @@
    "option": null,
    "src_pages": [
     1,
+    2,
     3
    ],
+   "mapped": false,
    "printed": [
     151,
     153
@@ -45238,6 +51726,416 @@
    "151": "unlock-seatbelt-warning|",
    "152": "unlock-seatbelt-warning|",
    "153": "unlock-seatbelt-warning|"
+  },
+  "refdocs": {
+   "2": "wire-harness-repair|RM1022E",
+   "3": "wire-harness-repair|RM1022E",
+   "4": "wire-harness-repair|RM1022E",
+   "5": "wire-harness-repair|RM1022E",
+   "6": "wire-harness-repair|RM1022E",
+   "7": "wire-harness-repair|RM1022E",
+   "8": "wire-harness-repair|RM1022E",
+   "9": "wire-harness-repair|RM1022E",
+   "10": "wire-harness-repair|RM1022E",
+   "11": "wire-harness-repair|RM1022E",
+   "12": "wire-harness-repair|RM1022E",
+   "13": "wire-harness-repair|RM1022E",
+   "14": "wire-harness-repair|RM1022E",
+   "15": "wire-harness-repair|RM1022E",
+   "16": "wire-harness-repair|RM1022E",
+   "17": "wire-harness-repair|RM1022E",
+   "18": "wire-harness-repair|RM1022E",
+   "19": "wire-harness-repair|RM1022E",
+   "20": "wire-harness-repair|RM1022E",
+   "21": "wire-harness-repair|RM1022E",
+   "22": "wire-harness-repair|RM1022E",
+   "23": "wire-harness-repair|RM1022E",
+   "24": "wire-harness-repair|RM1022E",
+   "25": "wire-harness-repair|RM1022E",
+   "26": "wire-harness-repair|RM1022E",
+   "27": "wire-harness-repair|RM1022E",
+   "28": "wire-harness-repair|RM1022E",
+   "29": "wire-harness-repair|RM1022E",
+   "30": "wire-harness-repair|RM1022E",
+   "31": "wire-harness-repair|RM1022E",
+   "32": "wire-harness-repair|RM1022E",
+   "33": "wire-harness-repair|RM1022E",
+   "34": "wire-harness-repair|RM1022E",
+   "35": "wire-harness-repair|RM1022E",
+   "36": "wire-harness-repair|RM1022E",
+   "37": "wire-harness-repair|RM1022E",
+   "38": "wire-harness-repair|RM1022E",
+   "39": "wire-harness-repair|RM1022E",
+   "40": "wire-harness-repair|RM1022E",
+   "41": "wire-harness-repair|RM1022E",
+   "42": "wire-harness-repair|RM1022E",
+   "43": "wire-harness-repair|RM1022E",
+   "44": "wire-harness-repair|RM1022E",
+   "45": "wire-harness-repair|RM1022E",
+   "46": "wire-harness-repair|RM1022E",
+   "47": "wire-harness-repair|RM1022E",
+   "48": "wire-harness-repair|RM1022E",
+   "49": "wire-harness-repair|RM1022E",
+   "50": "wire-harness-repair|RM1022E",
+   "51": "wire-harness-repair|RM1022E",
+   "52": "wire-harness-repair|RM1022E",
+   "53": "wire-harness-repair|RM1022E",
+   "54": "wire-harness-repair|RM1022E",
+   "55": "wire-harness-repair|RM1022E",
+   "56": "wire-harness-repair|RM1022E",
+   "57": "wire-harness-repair|RM1022E",
+   "58": "wire-harness-repair|RM1022E",
+   "59": "wire-harness-repair|RM1022E",
+   "60": "wire-harness-repair|RM1022E",
+   "61": "wire-harness-repair|RM1022E",
+   "62": "wire-harness-repair|RM1022E",
+   "63": "wire-harness-repair|RM1022E",
+   "64": "wire-harness-repair|RM1022E",
+   "65": "wire-harness-repair|RM1022E",
+   "66": "wire-harness-repair|RM1022E",
+   "67": "wire-harness-repair|RM1022E",
+   "68": "wire-harness-repair|RM1022E",
+   "69": "wire-harness-repair|RM1022E",
+   "70": "wire-harness-repair|RM1022E",
+   "71": "wire-harness-repair|RM1022E",
+   "72": "wire-harness-repair|RM1022E",
+   "73": "wire-harness-repair|RM1022E",
+   "74": "wire-harness-repair|RM1022E",
+   "75": "wire-harness-repair|RM1022E",
+   "76": "wire-harness-repair|RM1022E",
+   "77": "wire-harness-repair|RM1022E",
+   "78": "wire-harness-repair|RM1022E",
+   "79": "wire-harness-repair|RM1022E",
+   "80": "wire-harness-repair|RM1022E",
+   "81": "wire-harness-repair|RM1022E",
+   "82": "wire-harness-repair|RM1022E",
+   "83": "wire-harness-repair|RM1022E",
+   "84": "wire-harness-repair|RM1022E",
+   "85": "wire-harness-repair|RM1022E",
+   "86": "wire-harness-repair|RM1022E",
+   "87": "wire-harness-repair|RM1022E",
+   "88": "wire-harness-repair|RM1022E",
+   "89": "wire-harness-repair|RM1022E",
+   "90": "wire-harness-repair|RM1022E",
+   "91": "wire-harness-repair|RM1022E",
+   "92": "wire-harness-repair|RM1022E",
+   "93": "wire-harness-repair|RM1022E",
+   "94": "wire-harness-repair|RM1022E",
+   "95": "wire-harness-repair|RM1022E",
+   "96": "wire-harness-repair|RM1022E",
+   "97": "wire-harness-repair|RM1022E",
+   "98": "wire-harness-repair|RM1022E",
+   "99": "wire-harness-repair|RM1022E",
+   "100": "wire-harness-repair|RM1022E",
+   "101": "wire-harness-repair|RM1022E",
+   "102": "wire-harness-repair|RM1022E",
+   "103": "wire-harness-repair|RM1022E",
+   "104": "wire-harness-repair|RM1022E",
+   "105": "wire-harness-repair|RM1022E",
+   "106": "wire-harness-repair|RM1022E",
+   "107": "wire-harness-repair|RM1022E",
+   "108": "wire-harness-repair|RM1022E",
+   "109": "wire-harness-repair|RM1022E",
+   "110": "wire-harness-repair|RM1022E",
+   "111": "wire-harness-repair|RM1022E",
+   "112": "wire-harness-repair|RM1022E",
+   "113": "wire-harness-repair|RM1022E",
+   "114": "wire-harness-repair|RM1022E",
+   "115": "wire-harness-repair|RM1022E",
+   "116": "wire-harness-repair|RM1022E",
+   "117": "wire-harness-repair|RM1022E",
+   "118": "wire-harness-repair|RM1022E",
+   "119": "wire-harness-repair|RM1022E",
+   "120": "wire-harness-repair|RM1022E",
+   "121": "wire-harness-repair|RM1022E",
+   "122": "wire-harness-repair|RM1022E",
+   "123": "wire-harness-repair|RM1022E",
+   "124": "wire-harness-repair|RM1022E",
+   "125": "wire-harness-repair|RM1022E",
+   "126": "wire-harness-repair|RM1022E",
+   "127": "wire-harness-repair|RM1022E",
+   "128": "wire-harness-repair|RM1022E",
+   "129": "wire-harness-repair|RM1022E",
+   "130": "wire-harness-repair|RM1022E",
+   "131": "wire-harness-repair|RM1022E",
+   "132": "wire-harness-repair|RM1022E",
+   "133": "wire-harness-repair|RM1022E",
+   "134": "wire-harness-repair|RM1022E",
+   "135": "wire-harness-repair|RM1022E",
+   "136": "wire-harness-repair|RM1022E",
+   "137": "wire-harness-repair|RM1022E",
+   "138": "wire-harness-repair|RM1022E",
+   "139": "wire-harness-repair|RM1022E",
+   "140": "wire-harness-repair|RM1022E",
+   "141": "wire-harness-repair|RM1022E",
+   "142": "wire-harness-repair|RM1022E",
+   "143": "wire-harness-repair|RM1022E",
+   "144": "wire-harness-repair|RM1022E",
+   "145": "wire-harness-repair|RM1022E",
+   "146": "wire-harness-repair|RM1022E",
+   "147": "wire-harness-repair|RM1022E",
+   "148": "wire-harness-repair|RM1022E",
+   "149": "wire-harness-repair|RM1022E",
+   "150": "wire-harness-repair|RM1022E",
+   "151": "wire-harness-repair|RM1022E",
+   "152": "wire-harness-repair|RM1022E",
+   "153": "wire-harness-repair|RM1022E",
+   "154": "wire-harness-repair|RM1022E",
+   "155": "wire-harness-repair|RM1022E",
+   "156": "wire-harness-repair|RM1022E",
+   "157": "wire-harness-repair|RM1022E",
+   "158": "wire-harness-repair|RM1022E",
+   "159": "wire-harness-repair|RM1022E",
+   "160": "wire-harness-repair|RM1022E",
+   "161": "wire-harness-repair|RM1022E",
+   "162": "wire-harness-repair|RM1022E",
+   "163": "wire-harness-repair|RM1022E",
+   "164": "wire-harness-repair|RM1022E",
+   "165": "wire-harness-repair|RM1022E",
+   "166": "wire-harness-repair|RM1022E",
+   "167": "wire-harness-repair|RM1022E",
+   "168": "wire-harness-repair|RM1022E",
+   "169": "wire-harness-repair|RM1022E",
+   "170": "wire-harness-repair|RM1022E",
+   "171": "wire-harness-repair|RM1022E",
+   "172": "wire-harness-repair|RM1022E",
+   "173": "wire-harness-repair|RM1022E",
+   "174": "wire-harness-repair|RM1022E",
+   "175": "wire-harness-repair|RM1022E",
+   "176": "wire-harness-repair|RM1022E",
+   "177": "wire-harness-repair|RM1022E",
+   "178": "wire-harness-repair|RM1022E",
+   "179": "wire-harness-repair|RM1022E",
+   "180": "wire-harness-repair|RM1022E",
+   "181": "wire-harness-repair|RM1022E",
+   "182": "wire-harness-repair|RM1022E",
+   "183": "wire-harness-repair|RM1022E",
+   "184": "wire-harness-repair|RM1022E",
+   "185": "wire-harness-repair|RM1022E",
+   "186": "wire-harness-repair|RM1022E",
+   "187": "wire-harness-repair|RM1022E",
+   "188": "wire-harness-repair|RM1022E",
+   "189": "wire-harness-repair|RM1022E",
+   "190": "wire-harness-repair|RM1022E",
+   "191": "wire-harness-repair|RM1022E",
+   "192": "wire-harness-repair|RM1022E",
+   "193": "wire-harness-repair|RM1022E",
+   "194": "wire-harness-repair|RM1022E",
+   "195": "wire-harness-repair|RM1022E",
+   "196": "wire-harness-repair|RM1022E",
+   "197": "wire-harness-repair|RM1022E",
+   "198": "wire-harness-repair|RM1022E",
+   "199": "wire-harness-repair|RM1022E",
+   "200": "wire-harness-repair|RM1022E",
+   "201": "wire-harness-repair|RM1022E",
+   "202": "wire-harness-repair|RM1022E",
+   "203": "wire-harness-repair|RM1022E",
+   "204": "wire-harness-repair|RM1022E",
+   "205": "wire-harness-repair|RM1022E",
+   "206": "wire-harness-repair|RM1022E",
+   "207": "wire-harness-repair|RM1022E",
+   "208": "wire-harness-repair|RM1022E",
+   "209": "wire-harness-repair|RM1022E",
+   "210": "wire-harness-repair|RM1022E",
+   "211": "wire-harness-repair|RM1022E",
+   "212": "wire-harness-repair|RM1022E",
+   "213": "wire-harness-repair|RM1022E",
+   "214": "wire-harness-repair|RM1022E",
+   "215": "wire-harness-repair|RM1022E",
+   "216": "wire-harness-repair|RM1022E",
+   "217": "wire-harness-repair|RM1022E",
+   "218": "wire-harness-repair|RM1022E",
+   "219": "wire-harness-repair|RM1022E",
+   "220": "wire-harness-repair|RM1022E",
+   "221": "wire-harness-repair|RM1022E",
+   "222": "wire-harness-repair|RM1022E",
+   "223": "wire-harness-repair|RM1022E",
+   "224": "wire-harness-repair|RM1022E",
+   "225": "wire-harness-repair|RM1022E",
+   "226": "wire-harness-repair|RM1022E",
+   "227": "wire-harness-repair|RM1022E",
+   "228": "wire-harness-repair|RM1022E",
+   "229": "wire-harness-repair|RM1022E",
+   "230": "wire-harness-repair|RM1022E",
+   "231": "wire-harness-repair|RM1022E",
+   "232": "wire-harness-repair|RM1022E",
+   "233": "wire-harness-repair|RM1022E",
+   "234": "wire-harness-repair|RM1022E",
+   "235": "wire-harness-repair|RM1022E",
+   "236": "wire-harness-repair|RM1022E",
+   "237": "wire-harness-repair|RM1022E",
+   "238": "wire-harness-repair|RM1022E",
+   "239": "wire-harness-repair|RM1022E",
+   "240": "wire-harness-repair|RM1022E",
+   "241": "wire-harness-repair|RM1022E",
+   "242": "wire-harness-repair|RM1022E",
+   "243": "wire-harness-repair|RM1022E",
+   "244": "wire-harness-repair|RM1022E",
+   "245": "wire-harness-repair|RM1022E",
+   "246": "wire-harness-repair|RM1022E",
+   "247": "wire-harness-repair|RM1022E",
+   "248": "wire-harness-repair|RM1022E",
+   "249": "wire-harness-repair|RM1022E",
+   "250": "wire-harness-repair|RM1022E",
+   "251": "wire-harness-repair|RM1022E",
+   "252": "wire-harness-repair|RM1022E",
+   "253": "wire-harness-repair|RM1022E",
+   "254": "wire-harness-repair|RM1022E",
+   "255": "wire-harness-repair|RM1022E",
+   "256": "wire-harness-repair|RM1022E",
+   "257": "wire-harness-repair|RM1022E",
+   "258": "wire-harness-repair|RM1022E",
+   "259": "wire-harness-repair|RM1022E",
+   "260": "wire-harness-repair|RM1022E",
+   "261": "wire-harness-repair|RM1022E",
+   "262": "wire-harness-repair|RM1022E",
+   "263": "wire-harness-repair|RM1022E",
+   "264": "wire-harness-repair|RM1022E",
+   "265": "wire-harness-repair|RM1022E",
+   "266": "wire-harness-repair|RM1022E",
+   "267": "wire-harness-repair|RM1022E",
+   "268": "wire-harness-repair|RM1022E",
+   "269": "wire-harness-repair|RM1022E",
+   "270": "wire-harness-repair|RM1022E",
+   "271": "wire-harness-repair|RM1022E",
+   "272": "wire-harness-repair|RM1022E",
+   "273": "wire-harness-repair|RM1022E",
+   "274": "wire-harness-repair|RM1022E",
+   "275": "wire-harness-repair|RM1022E",
+   "276": "wire-harness-repair|RM1022E",
+   "277": "wire-harness-repair|RM1022E",
+   "278": "wire-harness-repair|RM1022E",
+   "279": "wire-harness-repair|RM1022E",
+   "280": "wire-harness-repair|RM1022E",
+   "281": "wire-harness-repair|RM1022E",
+   "282": "wire-harness-repair|RM1022E",
+   "283": "wire-harness-repair|RM1022E",
+   "284": "wire-harness-repair|RM1022E",
+   "285": "wire-harness-repair|RM1022E",
+   "286": "wire-harness-repair|RM1022E",
+   "287": "wire-harness-repair|RM1022E",
+   "288": "wire-harness-repair|RM1022E",
+   "289": "wire-harness-repair|RM1022E",
+   "290": "wire-harness-repair|RM1022E",
+   "291": "wire-harness-repair|RM1022E",
+   "292": "wire-harness-repair|RM1022E",
+   "293": "wire-harness-repair|RM1022E",
+   "294": "wire-harness-repair|RM1022E",
+   "295": "wire-harness-repair|RM1022E",
+   "296": "wire-harness-repair|RM1022E",
+   "297": "wire-harness-repair|RM1022E",
+   "298": "wire-harness-repair|RM1022E",
+   "299": "wire-harness-repair|RM1022E",
+   "300": "wire-harness-repair|RM1022E",
+   "301": "wire-harness-repair|RM1022E",
+   "302": "wire-harness-repair|RM1022E",
+   "303": "wire-harness-repair|RM1022E",
+   "304": "wire-harness-repair|RM1022E",
+   "305": "wire-harness-repair|RM1022E",
+   "306": "wire-harness-repair|RM1022E",
+   "307": "wire-harness-repair|RM1022E",
+   "308": "wire-harness-repair|RM1022E",
+   "309": "wire-harness-repair|RM1022E",
+   "310": "wire-harness-repair|RM1022E",
+   "311": "wire-harness-repair|RM1022E",
+   "312": "wire-harness-repair|RM1022E",
+   "313": "wire-harness-repair|RM1022E",
+   "314": "wire-harness-repair|RM1022E",
+   "315": "wire-harness-repair|RM1022E",
+   "316": "wire-harness-repair|RM1022E",
+   "317": "wire-harness-repair|RM1022E",
+   "318": "wire-harness-repair|RM1022E",
+   "319": "wire-harness-repair|RM1022E",
+   "320": "wire-harness-repair|RM1022E",
+   "321": "wire-harness-repair|RM1022E",
+   "322": "wire-harness-repair|RM1022E",
+   "323": "wire-harness-repair|RM1022E",
+   "324": "wire-harness-repair|RM1022E",
+   "325": "wire-harness-repair|RM1022E",
+   "326": "wire-harness-repair|RM1022E",
+   "327": "wire-harness-repair|RM1022E",
+   "328": "wire-harness-repair|RM1022E",
+   "329": "wire-harness-repair|RM1022E",
+   "330": "wire-harness-repair|RM1022E",
+   "331": "wire-harness-repair|RM1022E",
+   "332": "wire-harness-repair|RM1022E",
+   "333": "wire-harness-repair|RM1022E",
+   "334": "wire-harness-repair|RM1022E",
+   "335": "wire-harness-repair|RM1022E",
+   "336": "wire-harness-repair|RM1022E",
+   "337": "wire-harness-repair|RM1022E",
+   "338": "wire-harness-repair|RM1022E",
+   "339": "wire-harness-repair|RM1022E",
+   "340": "wire-harness-repair|RM1022E",
+   "341": "wire-harness-repair|RM1022E",
+   "342": "wire-harness-repair|RM1022E",
+   "343": "wire-harness-repair|RM1022E",
+   "344": "wire-harness-repair|RM1022E",
+   "345": "wire-harness-repair|RM1022E",
+   "346": "wire-harness-repair|RM1022E",
+   "347": "wire-harness-repair|RM1022E",
+   "348": "wire-harness-repair|RM1022E",
+   "349": "wire-harness-repair|RM1022E",
+   "350": "wire-harness-repair|RM1022E",
+   "351": "wire-harness-repair|RM1022E",
+   "352": "wire-harness-repair|RM1022E",
+   "353": "wire-harness-repair|RM1022E",
+   "354": "wire-harness-repair|RM1022E",
+   "355": "wire-harness-repair|RM1022E",
+   "356": "wire-harness-repair|RM1022E",
+   "357": "wire-harness-repair|RM1022E",
+   "358": "wire-harness-repair|RM1022E",
+   "359": "wire-harness-repair|RM1022E",
+   "360": "wire-harness-repair|RM1022E",
+   "361": "wire-harness-repair|RM1022E",
+   "362": "wire-harness-repair|RM1022E",
+   "363": "wire-harness-repair|RM1022E",
+   "364": "wire-harness-repair|RM1022E",
+   "365": "wire-harness-repair|RM1022E",
+   "366": "wire-harness-repair|RM1022E",
+   "367": "wire-harness-repair|RM1022E",
+   "368": "wire-harness-repair|RM1022E",
+   "369": "wire-harness-repair|RM1022E",
+   "370": "wire-harness-repair|RM1022E",
+   "371": "wire-harness-repair|RM1022E",
+   "372": "wire-harness-repair|RM1022E",
+   "373": "wire-harness-repair|RM1022E",
+   "374": "wire-harness-repair|RM1022E",
+   "375": "wire-harness-repair|RM1022E",
+   "376": "wire-harness-repair|RM1022E",
+   "377": "wire-harness-repair|RM1022E",
+   "378": "wire-harness-repair|RM1022E",
+   "379": "wire-harness-repair|RM1022E",
+   "380": "wire-harness-repair|RM1022E",
+   "381": "wire-harness-repair|RM1022E",
+   "382": "wire-harness-repair|RM1022E",
+   "383": "wire-harness-repair|RM1022E",
+   "384": "wire-harness-repair|RM1022E",
+   "385": "wire-harness-repair|RM1022E",
+   "386": "wire-harness-repair|RM1022E",
+   "387": "wire-harness-repair|RM1022E",
+   "388": "wire-harness-repair|RM1022E",
+   "389": "wire-harness-repair|RM1022E",
+   "390": "wire-harness-repair|RM1022E",
+   "391": "wire-harness-repair|RM1022E",
+   "392": "wire-harness-repair|RM1022E",
+   "393": "wire-harness-repair|RM1022E",
+   "394": "wire-harness-repair|RM1022E",
+   "395": "wire-harness-repair|RM1022E",
+   "396": "wire-harness-repair|RM1022E",
+   "397": "wire-harness-repair|RM1022E",
+   "398": "wire-harness-repair|RM1022E",
+   "399": "wire-harness-repair|RM1022E",
+   "400": "wire-harness-repair|RM1022E",
+   "401": "wire-harness-repair|RM1022E",
+   "403": "wire-harness-repair|RM1022E",
+   "405": "wire-harness-repair|RM1022E",
+   "407": "wire-harness-repair|RM1022E",
+   "409": "wire-harness-repair|RM1022E",
+   "411": "wire-harness-repair|RM1022E",
+   "412": "wire-harness-repair|RM1022E",
+   "413": "wire-harness-repair|RM1022E",
+   "414": "wire-harness-repair|RM1022E"
   }
  }
 }
