@@ -10,6 +10,7 @@ cm-build/
 
 # Upload staging area (managed by the app at runtime)
 manuals/.staging/
+manuals-electrical/.staging/
 
 # Build-time downloads / verification artifacts
 celica-manual/build/pdfjs-dist.zip

@@ -1,11 +1,12 @@
 # ST185 Celica GT-Four / All-Trac - Master Section Index
 
-Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
+Total section files: **363**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
 
-## Body  (117)
+## Body  (118)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
+| Body (1990 All-Trac) | Body | BO | - | 73 | 0 |
 | Doorg | Body / Collision | - | - | 1 | 0 |
 | Doorglas | Body / Collision | - | - | 2 | 0 |
 | Quartert | Body / Collision | - | - | 2 | 0 |
@@ -15,6 +16,7 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Body Dimensions-Engine Compartm | Body Dimensions | DI | - | 1 | 0 |
 | Body Opening Areas  Side View | Body Dimensions | DI | - | 1 | 0 |
 | Luggage Compartment  Liftback | Body Dimensions | DI | - | 1 | 0 |
+| ST185 Chassis Dimensions | Body Dimensions | TO | - | 2 | 0 |
 | Under Body  All Trac 4WD | Body Dimensions | DI | - | 2 | 0 |
 | Body Lower Back Panel  Assy  Li | Body Repair (panels) | RE | - | 2 | 0 |
 | Body Lower Back Panel  Assy  Li | Body Repair (panels) | RE | - | 2 | 0 |
@@ -119,17 +121,18 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Auto Tilt Away Steering Column | Supplemental Restraint | SR | - | 15 | 8 |
 | Description | Supplemental Restraint | SR | - | 4 | 0 |
 | Gear Housing | Supplemental Restraint | SR | 3S-GTE + 5S-FE | 13 | 8 |
-| RCM | Supplemental Restraint | - | - | 2 | 0 |
 | Seat Belts Components | Supplemental Restraint | - | - | 2 | 0 |
 | Seatbelt | Supplemental Restraint | - | - | 2 | 0 |
 | Tilt Steering Column | Supplemental Restraint | SR | 5S-FE | 8 | 6 |
 
-## Brakes  (11)
+## Brakes  (13)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
 | Antilock Brake System Circuit | Brakes | BR | - | 4 | 0 |
 | Brake Booster | Brakes | BR | - | 4 | 4 |
+| Brake System | Brakes | - | 3S-GTE + 5S-FE | 15 | 0 |
+| Brakes (1990 All-Trac) | Brakes | BR | - | 32 | 5 |
 | Control Relay | Brakes | BR | - | 1 | 0 |
 | Description | Brakes | BR | - | 6 | 0 |
 | Disc Brake | Brakes | BR | - | 8 | 5 |
@@ -140,26 +143,44 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Proportioning Valve P Valve | Brakes | BR | 5S-FE | 1 | 0 |
 | Speed Sensor And Decelerationse | Brakes | BR | - | 5 | 0 |
 
-## Chassis  (5)
+## Chassis  (16)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
+| Steering (1990 All-Trac) | Steering | SR | - | 9 | 3 |
+| Steering Column - Standard | Steering | - | - | 5 | 0 |
+| Steering Column - Tilt | Steering | - | - | 7 | 0 |
+| Steering System - Power Rack & Pinion | Steering | - | - | 10 | 0 |
 | Differential 4wd | Suspension & Axle | SA | - | 26 | 13 |
 | Front Axle Hub | Suspension & Axle | SA | - | 9 | 12 |
 | Front Drive Shaft 4wd | Suspension & Axle | SA | - | 13 | 5 |
 | Rear Axle Hub And Carrier 4wd | Suspension & Axle | SA | - | 11 | 14 |
 | Rear Drive Shaft 4wd | Suspension & Axle | SA | - | 8 | 2 |
+| Suspension - Front | Suspension & Axle | - | - | 6 | 0 |
+| Suspension - Rear | Suspension & Axle | - | - | 6 | 0 |
+| Suspension and Axle (1990 All-Trac) | Suspension & Axle | SA | - | 70 | 43 |
+| Pre-alignment Checks | Wheel Alignment | - | - | 1 | 0 |
+| Riding Height Adjustment | Wheel Alignment | - | - | 1 | 0 |
+| Wheel Alignment Specifications & Procedures | Wheel Alignment | - | - | 3 | 0 |
+| Wheel Alignment Theory/operation | Wheel Alignment | - | - | 5 | 0 |
 
-## Drivetrain  (32)
+## Drivetrain  (43)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
 | Operation | Automatic Transaxle | AT | - | 5 | 0 |
 | Bleeding Of Clutch System | Clutch | CL | - | 1 | 0 |
 | Check And Adjustment Of Clutch | Clutch | CL | - | 1 | 0 |
+| Clutch | Clutch | - | 3S-GTE + 5S-FE | 7 | 0 |
+| Clutch (1990 All-Trac) | Clutch | CL | - | 4 | 1 |
 | Clutch Master Cylinder | Clutch | CL | - | 2 | 0 |
 | Clutch Release Cylinder | Clutch | CL | - | 1 | 0 |
 | Clutch Unit | Clutch | CL | - | 4 | 1 |
+| Axle Shafts - Front | Drivetrain (4WD) | - | 5S-FE | 7 | 0 |
+| Drive Axle - Integral Housing | Drivetrain (4WD) | - | - | 7 | 0 |
+| Drive Axle - Rear | Drivetrain (4WD) | - | - | 7 | 0 |
+| Transmission Removal & Installation - M/T | Manual Transaxle | - | 3S-GTE + 5S-FE | 4 | 0 |
+| Transmission Servicing - M/T | Manual Transaxle | - | - | 2 | 0 |
 | Assembly Removal And Installati | Manual Transaxle S53 (FWD) | MX | - | 9 | 14 |
 | Component Parts Installation | Manual Transaxle S53 (FWD) | MX | - | 9 | 16 |
 | Component Parts Removal | Manual Transaxle S53 (FWD) | MX | - | 13 | 3 |
@@ -173,8 +194,11 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Shift Lever And Control Cable | Manual Transaxle S53 (FWD) | MX | - | 1 | 0 |
 | Description | Manual Transmission E150F (4WD) | MT | - | 3 | 0 |
 | Differential Case | Manual Transmission E150F (4WD) | MT | - | 16 | 5 |
+| E-Series Gearbox Identification | Manual Transmission E150F (4WD) | - | - | 2 | 0 |
+| E-Series Gearbox Information | Manual Transmission E150F (4WD) | - | - | 4 | 0 |
 | Input Shaft Assembly | Manual Transmission E150F (4WD) | MT | - | 5 | 0 |
 | Installation Of Component Parts | Manual Transmission E150F (4WD) | MT | - | 14 | 18 |
+| Manual Transaxle E150F (1990 All-Trac) | Manual Transmission E150F (4WD) | MT | - | 97 | 40 |
 | Output Shaft Assembly | Manual Transmission E150F (4WD) | MT | - | 6 | 0 |
 | Precautions | Manual Transmission E150F (4WD) | MT | - | 1 | 0 |
 | Removal And Installation Of Oil | Manual Transmission E150F (4WD) | MT | - | 3 | 0 |
@@ -186,49 +210,43 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Shift Lever And Control Cable | Manual Transmission E150F (4WD) | MT | - | 1 | 0 |
 | Transfer | Manual Transmission E150F (4WD) | MT | - | 24 | 15 |
 | Propeller Shaft | Propeller Shaft | PR | - | 15 | 9 |
+| Propeller Shaft (1990 All-Trac) | Propeller Shaft | PR | - | 17 | 9 |
 
-## Electrical  (23)
+## Electrical  (3)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
-| Combmeter | Body Electrical | - | 3S-GTE + 5S-FE | 4 | 0 |
-| DoorLockCon | Body Electrical | - | 3S-GTE + 5S-FE | 5 | 0 |
-| HdlitUSA | Body Electrical | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Horn | Body Electrical | - | 3S-GTE + 5S-FE | 1 | 0 |
-| Illumination | Body Electrical | - | 3S-GTE + 5S-FE | 4 | 0 |
-| Interiorlight | Body Electrical | - | - | 2 | 0 |
-| PowrWind | Body Electrical | - | 3S-GTE + 5S-FE | 5 | 0 |
-| PwrSeat | Body Electrical | - | 3S-GTE + 5S-FE | 2 | 0 |
-| RadioW | Body Electrical | - | - | 3 | 0 |
-| Stoplight | Body Electrical | - | - | 2 | 0 |
-| Sunroof | Body Electrical | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Taillight | Body Electrical | - | 3S-GTE + 5S-FE | 3 | 0 |
-| USBW | Body Electrical | - | - | 3 | 0 |
-| Component Location | Electrical / Wiring | - | 3S-GTE + 5S-FE | 8 | 0 |
-| Connector  Ground and Splice | Electrical / Wiring | - | 3S-GTE + 5S-FE | 14 | 0 |
+| Body Electrical (1990 All-Trac) | Body Electrical | BE | - | 8 | 0 |
 | Electric | Electrical / Wiring | - | - | 1 | 0 |
 | Electrical Wire Routing | Electrical / Wiring | - | - | 1 | 0 |
-| FWW | Electrical / Wiring | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Ground Points | Electrical / Wiring | - | 3S-GTE + 5S-FE | 6 | 0 |
-| Power Source | Electrical / Wiring | - | 3S-GTE + 5S-FE | 10 | 0 |
-| PwrSource | Electrical / Wiring | - | 3S-GTE + 5S-FE | 3 | 0 |
-| Relay Locations | Electrical / Wiring | - | - | 10 | 0 |
-| TSHWL | Electrical / Wiring | - | 3S-GTE + 5S-FE | 2 | 0 |
 
-## Engine  (56)
+## Engine  (110)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
+| Check and Replacement of Engine Coolant — Cooling System | Cooling | CO | 3S-GTE + 5S-FE | 2 | 1 |
 | Cooling System | Cooling | - | 3S-GTE + 5S-FE | 1 | 0 |
+| Description — Cooling System | Cooling | CO | 3S-GTE + 5S-FE | 3 | 0 |
+| Electric Cooling Fan — Cooling System | Cooling | CO | 3S-GTE + 5S-FE | 8 | 0 |
+| General Cooling System Servicing | Cooling | - | - | 3 | 0 |
+| Radiator — Cooling System | Cooling | CO | 3S-GTE + 5S-FE | 6 | 0 |
+| Thermostat — Cooling System | Cooling | CO | 3S-GTE + 5S-FE | 3 | 2 |
 | Water Pump 3sgte And 5sfe | Cooling | CO | 3S-GTE + 5S-FE | 6 | 5 |
 | Component Layout And Schematic | Emission Control | EC | - | 1 | 0 |
 | Component Layout And Schematic | Emission Control | EC | - | 1 | 0 |
 | Component Layout And Schematic | Emission Control | EC | - | 1 | 0 |
+| Evaporative Emission Control (EVAP) System (3S-GTE) — Emission Control Systems | Emission Control | EC | 3S-GTE | 3 | 0 |
+| Evaporative Emission Control (EVAP) System (5S-FE) — Emission Control Systems | Emission Control | EC | 5S-FE | 4 | 0 |
+| Exhaust Gas Recirculation (EGR) System (3S-GTE) — Emission Control Systems | Emission Control | EC | 3S-GTE | 4 | 0 |
+| Exhaust Gas Recirculation (EGR) System (5S-FE) — Emission Control Systems | Emission Control | EC | 5S-FE | 4 | 0 |
 | Positive Crankcase Ventilation | Emission Control | EC | - | 1 | 0 |
 | Positive Crankcase Ventilation | Emission Control | EC | - | 2 | 0 |
 | Positive Crankcase Ventilation | Emission Control | EC | - | 2 | 0 |
 | System Purpose | Emission Control | EC | 3S-GTE | 1 | 0 |
 | System Purpose | Emission Control | EC | - | 2 | 0 |
+| System Purpose (5S-FE) — Emission Control Systems | Emission Control | EC | 5S-FE | 1 | 0 |
+| Three-Way Catalytic Converter (TWC) System (3S-GTE) — Emission Control Systems | Emission Control | EC | 3S-GTE | 5 | 5 |
+| Three-Way Catalytic Converter (TWC) System (5S-FE) — Emission Control Systems | Emission Control | EC | 5S-FE | 4 | 4 |
 | T-EG002-95 | Engine Bulletin | - | 3S-GTE + 5S-FE | 1 | 0 |
 | T-EG003-96 | Engine Bulletin | - | - | 1 | 0 |
 | T-EG007-02 | Engine Bulletin | - | - | 1 | 0 |
@@ -236,88 +254,146 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Compression Check | Engine Mechanical | EM | 3S-GTE + 5S-FE | 2 | 1 |
 | Cylinder Block 3sgte | Engine Mechanical | EM | 3S-GTE | 45 | 32 |
 | Cylinder Block 5sfe | Engine Mechanical | EM | 5S-FE | 44 | 30 |
+| Cylinder Head (5S-FE) — Engine Mechanical | Engine Mechanical | EM | 5S-FE | 34 | 17 |
 | Cylinder Head 3sgte | Engine Mechanical | EM | 3S-GTE | 34 | 16 |
 | Description 3sgte | Engine Mechanical | EM | 3S-GTE | 2 | 0 |
 | Description 5sfe | Engine Mechanical | EM | 5S-FE | 2 | 0 |
-| Eng3S-GTE | Engine Mechanical | - | 3S-GTE | 10 | 0 |
 | Engine Mechanical 3sgte | Engine Mechanical | - | 3S-GTE | 4 | 0 |
 | Engine Mechanical 5sfe | Engine Mechanical | - | 5S-FE | 4 | 0 |
+| Engine Overhaul Procedures - General Information | Engine Mechanical | - | - | 40 | 0 |
+| Engine Overhaul — 2.0L Turbo (3S-GTE) | Engine Mechanical | - | 3S-GTE | 56 | 0 |
+| Engine Overhaul — 2.2L (5S-FE) | Engine Mechanical | - | 5S-FE | 71 | 0 |
 | Engine Tuneup | Engine Mechanical | EM | 3S-GTE + 5S-FE | 16 | 0 |
 | Idle And Or 2500 Rpm Co Hccheck | Engine Mechanical | EM | 3S-GTE + 5S-FE | 2 | 0 |
+| TOYOTA-Variable Induction System (T-VIS) (3S-GTE) — Engine Mechanical | Engine Mechanical | EM | 3S-GTE | 1 | 0 |
 | Timing Belt 3sgte | Engine Mechanical | EM | 3S-GTE | 21 | 14 |
 | Timing Belt 5sfe | Engine Mechanical | EM | 5S-FE | 14 | 9 |
+| Troubleshooting — Engine Mechanical | Engine Mechanical | EM | 3S-GTE + 5S-FE | 4 | 0 |
+| Engine Performance A — Engine/VIN ID | Engine Performance | - | 3S-GTE + 5S-FE | 6 | 0 |
+| Engine Performance B — Emission Application | Engine Performance | - | 3S-GTE + 5S-FE | 4 | 0 |
+| Engine Performance C — Specifications | Engine Performance | - | 3S-GTE + 5S-FE | 7 | 0 |
+| Engine Performance D — Adjustments | Engine Performance | - | 3S-GTE + 5S-FE | 7 | 0 |
+| Engine Performance E — Theory & Operation | Engine Performance | - | 3S-GTE + 5S-FE | 13 | 0 |
+| Engine Performance F — Basic Testing | Engine Performance | - | 3S-GTE + 5S-FE | 10 | 0 |
+| Engine Performance G — Tests With Trouble Codes | Engine Performance | - | 3S-GTE + 5S-FE | 40 | 0 |
+| Engine Performance H — Tests Without Codes | Engine Performance | - | 3S-GTE + 5S-FE | 7 | 0 |
+| Engine Performance I — System & Component Tests | Engine Performance | - | 3S-GTE + 5S-FE | 44 | 0 |
+| Engine Performance J — ECU Pin Voltage Charts | Engine Performance | - | 3S-GTE + 5S-FE | 9 | 0 |
+| Engine Performance K — Sensor Range Charts | Engine Performance | - | 3S-GTE + 5S-FE | 4 | 0 |
+| Engine Performance M — Vacuum Diagrams | Engine Performance | - | 3S-GTE + 5S-FE | 14 | 0 |
+| Engine Performance N — Remove/Install/Overhaul | Engine Performance | - | 3S-GTE + 5S-FE | 13 | 0 |
+| Engine Performance P — EGR Function Testing | Engine Performance | - | 3S-GTE + 5S-FE | 1 | 0 |
 | Exhaust Pipes And Heat Insulato | Exhaust | EX | - | 6 | 0 |
 | Mfi And Sfi Systems 3sgte | Fuel / EFI | - | 3S-GTE | 4 | 0 |
 | Ac Idleup Vsv 5sfe | Fuel / EFI (MFI-SFI) | FI | 5S-FE | 2 | 0 |
+| Air Induction System (Throttle Body (5S-FE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 5S-FE | 7 | 1 |
+| Air Induction System (Volume Air Flow Meter (3S-GTE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 2 | 0 |
 | Circuit Opening Relay 3sgte | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 1 | 0 |
 | Cold Start Injector Time Switch | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 1 | 0 |
+| Description — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 4 | 0 |
 | Electronic Control Module Ecm | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 7 | 0 |
+| Electronic Control System (EGR VSV) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 7 | 0 |
+| Electronic Control System (MFl and SFI Main Relay) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 4 | 0 |
+| Electronic Control System (Oxygen Sensor (Main)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 10 | 0 |
+| Electronic Control System (Solenoid Resistor (3S-GTE) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 5 | 0 |
 | Engine Coolant Temperature Sens | Fuel / EFI (MFI-SFI) | FI | - | 1 | 0 |
 | Fuel Cut Rpm 3sgte And 5sfe | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 1 | 0 |
 | Fuel Pump 3sgte | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 11 | 9 |
 | Fuel Pump Relay And Resistor 3s | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 1 | 0 |
+| Fuel System (Cold Start Injection (3S-GTE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 1 | 0 |
+| Fuel System (Cold Start Injector (3S-GTE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 2 | 3 |
+| Fuel System (Fuel Pressure Regulator (3S-GTE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 2 | 1 |
+| Fuel System (Fuel Pressure Regulator (5S-FE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 5S-FE | 2 | 2 |
+| Fuel System (Fuel Pump (4A-FE and 5S-FE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 5S-FE | 11 | 6 |
+| Fuel System (Injectors (3S-GTE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 9 | 6 |
+| Fuel System (Injectors (5S-FE)) — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 5S-FE | 11 | 9 |
 | Fuel Tank And Lines | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 3 | 0 |
 | Idle Air Control Iac Valve 3sgt | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 3 | 0 |
 | Idle Air Control Iac Valve 5sfe | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 3 | 0 |
+| Inspection Precautions — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 5 | 2 |
 | Intake Air Temperature Sensor | Fuel / EFI (MFI-SFI) | FI | 5S-FE | 1 | 0 |
 | Location Of Electronic Control | Fuel / EFI (MFI-SFI) | FI | - | 2 | 0 |
 | Mfi And Sfi Main Relay | Fuel / EFI (MFI-SFI) | FI | - | 1 | 0 |
+| Precautions, Inspection Precautions — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | - | 1 | 0 |
 | Throttle Body 3sgte | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 7 | 3 |
+| Troubleshooting with Volt Ohmmeter — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 66 | 0 |
+| Troubleshooting — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 16 | 0 |
 | Turbocharging Pressure Sensor | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 1 | 0 |
 | Turbocharging Pressure Vsv 3sgt | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 2 | 0 |
 | Tvis Vsv 3sgte | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 2 | 0 |
+| Description — Lubrication System | Lubrication | LU | - | 3 | 0 |
 | Lubrication System | Lubrication | - | 3S-GTE + 5S-FE | 2 | 0 |
 | Oil Cooler 3sgte | Lubrication | LU | 3S-GTE | 4 | 4 |
 | Oil Cooler 5sfe | Lubrication | LU | 5S-FE | 3 | 2 |
 | Oil Nozzles 3sgte | Lubrication | LU | 3S-GTE | 1 | 1 |
 | Oil Pressure Check | Lubrication | LU | 3S-GTE | 2 | 0 |
 | Oil Pump 3sgte And 5sfe | Lubrication | LU | 3S-GTE + 5S-FE | 8 | 5 |
+| Replacement of Engine Oil and Oil Filter — Lubrication System | Lubrication | LU | 3S-GTE + 5S-FE | 2 | 1 |
 | Description | Turbocharger | TC | 3S-GTE | 3 | 0 |
+| Precautions — Turbocharger | Turbocharger | TC | - | 1 | 0 |
+| Troubleshooting — Turbocharger | Turbocharger | TC | - | 2 | 0 |
 | Turbocharger | Turbocharger | TC | - | 12 | 8 |
 | Turbocharger System | Turbocharger | - | 3S-GTE + 5S-FE | 1 | 0 |
 
-## Engine Electrical  (14)
+## Engine Electrical  (20)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
-| Charging | Charging | - | 3S-GTE + 5S-FE | 2 | 0 |
 | Charging System | Charging | - | - | 1 | 0 |
 | Generator | Charging | CH | 3S-GTE + 5S-FE | 20 | 4 |
+| On-Vehicle Inspection — Charging System | Charging | CH | 3S-GTE + 5S-FE | 3 | 0 |
+| Precautions — Charging System | Charging | CH | - | 1 | 0 |
 | Distributor | Ignition | IG | 3S-GTE | 4 | 1 |
+| Distributor (5S-FE) — Ignition System | Ignition | IG | 5S-FE | 8 | 1 |
 | Ignition System | Ignition | - | 3S-GTE + 5S-FE | 1 | 0 |
 | Ignition System Circuit | Ignition | IG | - | 2 | 0 |
 | Integrated Ignition Assembly | Ignition | IG | - | 6 | 1 |
+| On-Vehicle Inspection (5S-FE) — Ignition System | Ignition | IG | 5S-FE | 5 | 1 |
 | Onvehicle Inspection 3sgte | Ignition | IG | 3S-GTE | 5 | 1 |
+| Precautions — Ignition System | Ignition | IG | - | 1 | 0 |
+| Troubleshooting — Ignition System | Ignition | IG | - | 1 | 0 |
 | Clutch Start Switch Mt Only | Starting | ST | - | 1 | 0 |
 | Clutch Start Switch Mt Only | Starting | ST | - | 1 | 0 |
 | Clutch Start Switch Mt Only | Starting | ST | - | 1 | 0 |
-| StartAll4 | Starting | - | 3S-GTE | 4 | 0 |
+| Starter — Starting System | Starting | ST | 3S-GTE + 5S-FE | 21 | 3 |
 | Starting System | Starting | - | - | 1 | 0 |
 | Starting System | Starting | - | - | 1 | 0 |
+| Troubleshooting — Starting System | Starting | ST | - | 1 | 0 |
 
-## General  (17)
+## General  (28)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
 | Fit Standards | Appendix | AP | - | 1 | 0 |
+| Computer Relearn Procedures | General Info | - | - | 2 | 0 |
 | Foreword | General Info | - | - | 1 | 0 |
+| Jacking & Hoisting | General Info | - | - | 1 | 0 |
 | Male Waterproof Type | General Info | - | - | 15 | 0 |
 | Part Number List | General Info | - | - | 9 | 0 |
 | General Information | General Information | DI | - | 1 | 0 |
 | Abbreviations Used In This Manu | Introduction | IN | - | 1 | 0 |
+| Abbreviations Used in This Manual — Introduction | Introduction | IN | - | 2 | 0 |
 | General Repair Instructions | Introduction | IN | - | 3 | 0 |
 | General Repair Instructions | Introduction | IN | - | 5 | 0 |
+| Glossary of SAE and Toyota Terms — Introduction | Introduction | IN | - | 3 | 0 |
 | How To Use This Manual | Introduction | IN | - | 2 | 0 |
 | Identification Information | Introduction | IN | - | 1 | 0 |
+| Precaution — Introduction | Introduction | IN | - | 15 | 0 |
+| Standard Bolt Torque Specifications — Introduction | Introduction | IN | - | 2 | 0 |
 | Symbols | Introduction | IN | - | 2 | 0 |
 | Vehicle Lift And Support Locati | Introduction | IN | - | 1 | 0 |
+| Vehicle Lift and Support Locations — Introduction | Introduction | IN | - | 1 | 0 |
 | General Maintenance | Maintenance | MA | - | 2 | 0 |
+| Maintenance Information | Maintenance | - | 3S-GTE + 5S-FE | 21 | 0 |
 | Maintenance Operations | Maintenance | MA | 3S-GTE + 5S-FE | 13 | 5 |
-| ATAS | Reference | - | - | 2 | 0 |
-| RWD | Reference | - | - | 2 | 0 |
+| Maintenance Schedule — Maintenance | Maintenance | MA | 3S-GTE | 2 | 0 |
+| Scheduled Services - Turbo | Maintenance | - | 3S-GTE | 22 | 0 |
 | Theoryof | Reference | - | - | 1 | 0 |
+| Service Specifications — Service Specifications | Service Specifications | - | 3S-GTE + 5S-FE | 32 | 1 |
+| ST185 Data Sheet (Haynes) | Specifications | - | 3S-GTE | 1 | 0 |
+| ST185 Specifications (Toyota brochure) | Specifications | - | 3S-GTE | 6 | 0 |
 
-## HVAC  (8)
+## HVAC  (10)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -327,13 +403,14 @@ Total section files: **286**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | T-AC005-92 | A/C Bulletin | - | - | 2 | 0 |
 | T-AC005-93 | A/C Bulletin | - | - | 1 | 0 |
 | TS-AC009-04 | A/C Bulletin | - | - | 13 | 0 |
-| RadAirAuto | Radiator / A/C Fan | - | 3S-GTE + 5S-FE | 11 | 0 |
-| RadAirMan | Radiator / A/C Fan | - | 3S-GTE + 5S-FE | 8 | 0 |
+| A/C Compressor Oil Checking | Air Conditioning | - | 3S-GTE + 5S-FE | 19 | 0 |
+| A/C Compressor Servicing | Air Conditioning | - | - | 25 | 0 |
+| A/C System General Diagnostic Procedures | Air Conditioning | - | - | 6 | 0 |
+| A/C System General Servicing | Air Conditioning | - | - | 7 | 0 |
 
-## Other  (3)
+## Other  (2)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
 | 3SGE-workshop-manual-early | Uncategorized | - | - | 495 | 0 |
-| 90 ST185 Wiring Diagram | Uncategorized | - | 5S-FE | 168 | 0 |
 | Toyota - 3S-GTE - 1991 - Repair Manual (RM266E) | Uncategorized | - | 3S-GTE | 144 | 0 |

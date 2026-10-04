@@ -1,0 +1,600 @@
+{
+ "files": {
+  "E Gearbox Identification.pdf": {
+   "title": "E-Series Gearbox Identification",
+   "system": "Manual Transmission E150F (4WD)",
+   "group": "Drivetrain",
+   "book": "gt4.mwp.id.au"
+  },
+  "E Gearbox Information.pdf": {
+   "title": "E-Series Gearbox Information",
+   "system": "Manual Transmission E150F (4WD)",
+   "group": "Drivetrain",
+   "book": "gt4.mwp.id.au"
+  },
+  "Haynes ST185 Info.pdf": {
+   "title": "ST185 Data Sheet (Haynes)",
+   "system": "Specifications",
+   "group": "General",
+   "book": "gt4.mwp.id.au"
+  },
+  "Mitchell 1993 - A-C Compressor Oil Checking.pdf": {
+   "title": "A/C Compressor Oil Checking",
+   "system": "Air Conditioning",
+   "group": "HVAC",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - A-C Compressor Servicing.pdf": {
+   "title": "A/C Compressor Servicing",
+   "system": "Air Conditioning",
+   "group": "HVAC",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - A-C System General Diagnostic Procedures.pdf": {
+   "title": "A/C System General Diagnostic Procedures",
+   "system": "Air Conditioning",
+   "group": "HVAC",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - A-C System General Servicing.pdf": {
+   "title": "A/C System General Servicing",
+   "system": "Air Conditioning",
+   "group": "HVAC",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Axle Shafts - Front.pdf": {
+   "title": "Axle Shafts - Front",
+   "system": "Drivetrain (4WD)",
+   "group": "Drivetrain",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Brake System.pdf": {
+   "title": "Brake System",
+   "system": "Brakes",
+   "group": "Brakes",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Clutch.pdf": {
+   "title": "Clutch",
+   "system": "Clutch",
+   "group": "Drivetrain",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Computer Relearn Procedures.pdf": {
+   "title": "Computer Relearn Procedures",
+   "system": "General Info",
+   "group": "General",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Drive Axle - Integral Housing.pdf": {
+   "title": "Drive Axle - Integral Housing",
+   "system": "Drivetrain (4WD)",
+   "group": "Drivetrain",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Drive Axle - Rear.pdf": {
+   "title": "Drive Axle - Rear",
+   "system": "Drivetrain (4WD)",
+   "group": "Drivetrain",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Engine Overhaul Procedures - General Information.pdf": {
+   "title": "Engine Overhaul Procedures - General Information",
+   "system": "Engine Mechanical",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Engine Overhaul — 2.0L Turbo (3S-GTE).pdf": {
+   "title": "Engine Overhaul — 2.0L Turbo (3S-GTE)",
+   "system": "Engine Mechanical",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "3sgte"
+  },
+  "Mitchell 1993 - Engine Overhaul — 2.2L (5S-FE).pdf": {
+   "title": "Engine Overhaul — 2.2L (5S-FE)",
+   "system": "Engine Mechanical",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "5sfe"
+  },
+  "Mitchell 1993 - Engine Performance A — Engine-VIN ID.pdf": {
+   "title": "Engine Performance A — Engine/VIN ID",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance B — Emission Application.pdf": {
+   "title": "Engine Performance B — Emission Application",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance C — Specifications.pdf": {
+   "title": "Engine Performance C — Specifications",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance D — Adjustments.pdf": {
+   "title": "Engine Performance D — Adjustments",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance E — Theory & Operation.pdf": {
+   "title": "Engine Performance E — Theory & Operation",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance F — Basic Testing.pdf": {
+   "title": "Engine Performance F — Basic Testing",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance G — Tests With Trouble Codes.pdf": {
+   "title": "Engine Performance G — Tests With Trouble Codes",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance H — Tests Without Codes.pdf": {
+   "title": "Engine Performance H — Tests Without Codes",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance I — System & Component Tests.pdf": {
+   "title": "Engine Performance I — System & Component Tests",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance J — ECU Pin Voltage Charts.pdf": {
+   "title": "Engine Performance J — ECU Pin Voltage Charts",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance K — Sensor Range Charts.pdf": {
+   "title": "Engine Performance K — Sensor Range Charts",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance M — Vacuum Diagrams.pdf": {
+   "title": "Engine Performance M — Vacuum Diagrams",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance N — Remove-Install-Overhaul.pdf": {
+   "title": "Engine Performance N — Remove/Install/Overhaul",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - Engine Performance P — EGR Function Testing.pdf": {
+   "title": "Engine Performance P — EGR Function Testing",
+   "system": "Engine Performance",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "both"
+  },
+  "Mitchell 1993 - General Cooling System Servicing.pdf": {
+   "title": "General Cooling System Servicing",
+   "system": "Cooling",
+   "group": "Engine",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Jacking & Hoisting.pdf": {
+   "title": "Jacking & Hoisting",
+   "system": "General Info",
+   "group": "General",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Maintenance Information.pdf": {
+   "title": "Maintenance Information",
+   "system": "Maintenance",
+   "group": "General",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Pre-alignment Checks.pdf": {
+   "title": "Pre-alignment Checks",
+   "system": "Wheel Alignment",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Riding Height Adjustment.pdf": {
+   "title": "Riding Height Adjustment",
+   "system": "Wheel Alignment",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Scheduled Services - Turbo.pdf": {
+   "title": "Scheduled Services - Turbo",
+   "system": "Maintenance",
+   "group": "General",
+   "book": "Mitchell 1993 (aftermarket)",
+   "engine": "3sgte"
+  },
+  "Mitchell 1993 - Steering Column - Standard.pdf": {
+   "title": "Steering Column - Standard",
+   "system": "Steering",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Steering Column - Tilt.pdf": {
+   "title": "Steering Column - Tilt",
+   "system": "Steering",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Steering System - Power Rack & Pinion.pdf": {
+   "title": "Steering System - Power Rack & Pinion",
+   "system": "Steering",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Suspension - Front.pdf": {
+   "title": "Suspension - Front",
+   "system": "Suspension & Axle",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Suspension - Rear.pdf": {
+   "title": "Suspension - Rear",
+   "system": "Suspension & Axle",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Transmission Removal & Installation - M-T.pdf": {
+   "title": "Transmission Removal & Installation - M/T",
+   "system": "Manual Transaxle",
+   "group": "Drivetrain",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Transmission Servicing - M-T.pdf": {
+   "title": "Transmission Servicing - M/T",
+   "system": "Manual Transaxle",
+   "group": "Drivetrain",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Wheel Alignment Specifications & Procedures.pdf": {
+   "title": "Wheel Alignment Specifications & Procedures",
+   "system": "Wheel Alignment",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "Mitchell 1993 - Wheel Alignment Theory-operation.pdf": {
+   "title": "Wheel Alignment Theory/operation",
+   "system": "Wheel Alignment",
+   "group": "Chassis",
+   "book": "Mitchell 1993 (aftermarket)"
+  },
+  "RM176U 1990 - Body Electrical.pdf": {
+   "title": "Body Electrical (1990 All-Trac)",
+   "system": "Body Electrical",
+   "group": "Electrical",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "BE"
+  },
+  "RM176U 1990 - Body.pdf": {
+   "title": "Body (1990 All-Trac)",
+   "system": "Body",
+   "group": "Body",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "BO"
+  },
+  "RM176U 1990 - Brakes.pdf": {
+   "title": "Brakes (1990 All-Trac)",
+   "system": "Brakes",
+   "group": "Brakes",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "BR"
+  },
+  "RM176U 1990 - Clutch.pdf": {
+   "title": "Clutch (1990 All-Trac)",
+   "system": "Clutch",
+   "group": "Drivetrain",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "CL"
+  },
+  "RM176U 1990 - Manual Transaxle E150F.pdf": {
+   "title": "Manual Transaxle E150F (1990 All-Trac)",
+   "system": "Manual Transmission E150F (4WD)",
+   "group": "Drivetrain",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "MT"
+  },
+  "RM176U 1990 - Propeller Shaft.pdf": {
+   "title": "Propeller Shaft (1990 All-Trac)",
+   "system": "Propeller Shaft",
+   "group": "Drivetrain",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "PR"
+  },
+  "RM176U 1990 - Steering.pdf": {
+   "title": "Steering (1990 All-Trac)",
+   "system": "Steering",
+   "group": "Chassis",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "SR"
+  },
+  "RM176U 1990 - Suspension and Axle.pdf": {
+   "title": "Suspension and Axle (1990 All-Trac)",
+   "system": "Suspension & Axle",
+   "group": "Chassis",
+   "book": "RM176U (1990)",
+   "edition": "1990",
+   "code": "SA"
+  },
+  "RM305U1 - Charging System - On-Vehicle Inspection.pdf": {
+   "title": "On-Vehicle Inspection — Charging System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Charging System - Precautions.pdf": {
+   "title": "Precautions — Charging System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Cooling System - Check and Replacement of Engine Coolant.pdf": {
+   "title": "Check and Replacement of Engine Coolant — Cooling System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Cooling System - Description.pdf": {
+   "title": "Description — Cooling System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Cooling System - Electric Cooling Fan.pdf": {
+   "title": "Electric Cooling Fan — Cooling System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Cooling System - Radiator.pdf": {
+   "title": "Radiator — Cooling System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Cooling System - Thermostat.pdf": {
+   "title": "Thermostat — Cooling System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Emission Control Systems - Evaporative Emission Control (EVAP) System (3S-GTE).pdf": {
+   "title": "Evaporative Emission Control (EVAP) System (3S-GTE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - Emission Control Systems - Evaporative Emission Control (EVAP) System (5S-FE).pdf": {
+   "title": "Evaporative Emission Control (EVAP) System (5S-FE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Emission Control Systems - Exhaust Gas Recirculation (EGR) System (3S-GTE).pdf": {
+   "title": "Exhaust Gas Recirculation (EGR) System (3S-GTE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - Emission Control Systems - Exhaust Gas Recirculation (EGR) System (5S-FE).pdf": {
+   "title": "Exhaust Gas Recirculation (EGR) System (5S-FE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Emission Control Systems - System Purpose (5S-FE).pdf": {
+   "title": "System Purpose (5S-FE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Emission Control Systems - Three-Way Catalytic Converter (TWC) System (3S-GTE).pdf": {
+   "title": "Three-Way Catalytic Converter (TWC) System (3S-GTE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - Emission Control Systems - Three-Way Catalytic Converter (TWC) System (5S-FE).pdf": {
+   "title": "Three-Way Catalytic Converter (TWC) System (5S-FE) — Emission Control Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE).pdf": {
+   "title": "Cylinder Head (5S-FE) — Engine Mechanical",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Engine Mechanical - TOYOTA-Variable Induction System (T-VIS) (3S-GTE).pdf": {
+   "title": "TOYOTA-Variable Induction System (T-VIS) (3S-GTE) — Engine Mechanical",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - Engine Mechanical - Troubleshooting.pdf": {
+   "title": "Troubleshooting — Engine Mechanical",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Ignition System - Distributor (5S-FE).pdf": {
+   "title": "Distributor (5S-FE) — Ignition System",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Ignition System - On-Vehicle Inspection (5S-FE).pdf": {
+   "title": "On-Vehicle Inspection (5S-FE) — Ignition System",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - Ignition System - Precautions.pdf": {
+   "title": "Precautions — Ignition System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Ignition System - Troubleshooting.pdf": {
+   "title": "Troubleshooting — Ignition System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Introduction - Abbreviations Used in This Manual.pdf": {
+   "title": "Abbreviations Used in This Manual — Introduction",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Introduction - Glossary of SAE and Toyota Terms.pdf": {
+   "title": "Glossary of SAE and Toyota Terms — Introduction",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Introduction - Precaution.pdf": {
+   "title": "Precaution — Introduction",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Introduction - Standard Bolt Torque Specifications.pdf": {
+   "title": "Standard Bolt Torque Specifications — Introduction",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Introduction - Vehicle Lift and Support Locations.pdf": {
+   "title": "Vehicle Lift and Support Locations — Introduction",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Lubrication System - Description.pdf": {
+   "title": "Description — Lubrication System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Lubrication System - Replacement of Engine Oil and Oil Filter.pdf": {
+   "title": "Replacement of Engine Oil and Oil Filter — Lubrication System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Air Induction System (Throttle Body (5S-FE)).pdf": {
+   "title": "Air Induction System (Throttle Body (5S-FE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - MFI and SFI Systems - Air Induction System (Volume Air Flow Meter (3S-GTE)).pdf": {
+   "title": "Air Induction System (Volume Air Flow Meter (3S-GTE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - MFI and SFI Systems - Description.pdf": {
+   "title": "Description — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Electronic Control System (EGR VSV).pdf": {
+   "title": "Electronic Control System (EGR VSV) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Electronic Control System (MFl and SFI Main Relay).pdf": {
+   "title": "Electronic Control System (MFl and SFI Main Relay) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Electronic Control System (Oxygen Sensor (Main)).pdf": {
+   "title": "Electronic Control System (Oxygen Sensor (Main)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Electronic Control System (Solenoid Resistor (3S-GTE).pdf": {
+   "title": "Electronic Control System (Solenoid Resistor (3S-GTE) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Cold Start Injection (3S-GTE)).pdf": {
+   "title": "Fuel System (Cold Start Injection (3S-GTE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Cold Start Injector (3S-GTE)).pdf": {
+   "title": "Fuel System (Cold Start Injector (3S-GTE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Fuel Pressure Regulator (3S-GTE)).pdf": {
+   "title": "Fuel System (Fuel Pressure Regulator (3S-GTE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Fuel Pressure Regulator (5S-FE)).pdf": {
+   "title": "Fuel System (Fuel Pressure Regulator (5S-FE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Fuel Pump (4A-FE and 5S-FE)).pdf": {
+   "title": "Fuel System (Fuel Pump (4A-FE and 5S-FE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Injectors (3S-GTE)).pdf": {
+   "title": "Fuel System (Injectors (3S-GTE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "3sgte"
+  },
+  "RM305U1 - MFI and SFI Systems - Fuel System (Injectors (5S-FE)).pdf": {
+   "title": "Fuel System (Injectors (5S-FE)) — MFI and SFI Systems",
+   "book": "RM305U1 (1993)",
+   "engine": "5sfe"
+  },
+  "RM305U1 - MFI and SFI Systems - Inspection Precautions.pdf": {
+   "title": "Inspection Precautions — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Precautions, Inspection Precautions.pdf": {
+   "title": "Precautions, Inspection Precautions — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Troubleshooting with Volt Ohmmeter.pdf": {
+   "title": "Troubleshooting with Volt Ohmmeter — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - MFI and SFI Systems - Troubleshooting.pdf": {
+   "title": "Troubleshooting — MFI and SFI Systems",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Maintenance - Maintenance Schedule.pdf": {
+   "title": "Maintenance Schedule — Maintenance",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Service Specifications - Service Specifications.pdf": {
+   "title": "Service Specifications — Service Specifications",
+   "book": "RM305U1 (1993)",
+   "system": "Service Specifications",
+   "group": "General",
+   "engine": "both"
+  },
+  "RM305U1 - Starting System - Starter.pdf": {
+   "title": "Starter — Starting System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Starting System - Troubleshooting.pdf": {
+   "title": "Troubleshooting — Starting System",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Turbocharger - Precautions.pdf": {
+   "title": "Precautions — Turbocharger",
+   "book": "RM305U1 (1993)"
+  },
+  "RM305U1 - Turbocharger - Troubleshooting.pdf": {
+   "title": "Troubleshooting — Turbocharger",
+   "book": "RM305U1 (1993)"
+  },
+  "Toyota Celica ST185 Specifications.pdf": {
+   "title": "ST185 Specifications (Toyota brochure)",
+   "system": "Specifications",
+   "group": "General",
+   "book": "gt4.mwp.id.au"
+  },
+  "Toyota ST185 Chassis Dimensions.pdf": {
+   "title": "ST185 Chassis Dimensions",
+   "system": "Body Dimensions",
+   "group": "Body",
+   "book": "gt4.mwp.id.au"
+  }
+ },
+ "_comment": "Sections split out of whole manuals by tools/import_books.py: title, system/group, engine, source book and edition per file."
+}

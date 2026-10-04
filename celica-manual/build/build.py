@@ -39,6 +39,7 @@ def _find_app_dir() -> Path:
 
 APP_DIR = _find_app_dir()                          # ...\celica-manual
 MANUALS_DIR = APP_DIR.parent / "manuals"           # ...\<root>\manuals
+LIBRARY_JSON = MANUALS_DIR / "library.json"
 DATA_DIR = APP_DIR / "data"
 THUMB_DIR = APP_DIR / "thumbs"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -245,16 +246,30 @@ def extract_pdf(path: Path, thumb_path: Path):
     return pages
 
 
+def load_library() -> dict:
+    """Per-file metadata for sections split out of whole books
+    (manuals/library.json, written by tools/import_books.py):
+    title, system, group, engine, code, book (source manual), edition
+    (year of a manual whose page codes differ from the main library)."""
+    try:
+        return json.loads(LIBRARY_JSON.read_text(encoding="utf-8")).get("files", {})
+    except (OSError, ValueError):
+        return {}
+
+
 def build():
     pdfs = sorted(MANUALS_DIR.glob("*.pdf"), key=lambda p: p.name.lower())
     print(f"Found {len(pdfs)} PDFs in {MANUALS_DIR}")
+    library = load_library()
 
     records = []
-    page_index = {}            # "EM-46" -> file id
+    page_index = {}            # "EM-46" -> file id   (main library)
+    ed_index = defaultdict(dict)   # other editions: edition -> code -> file id
     unmapped = []
 
     for path in pdfs:
         stem = path.stem
+        meta = library.get(path.name, {})
         thumb_name = stem + ".png"
         pages = extract_pdf(path, THUMB_DIR / thumb_name)
         n = len(pages)
@@ -288,12 +303,12 @@ def build():
                 code_pages[c] = idx + 1
 
         prefixes = Counter(c.split("-")[0] for c in own_codes)
-        code = prefixes.most_common(1)[0][0] if prefixes else None
+        code = prefixes.most_common(1)[0][0] if prefixes else meta.get("code")
 
-        # --- classification (forced filename overrides win) ---
-        system = group = None
+        # --- classification (library metadata, then forced filename overrides) ---
+        system, group = meta.get("system"), meta.get("group")
         low0 = stem.lower()
-        for key, (sysn, grp) in FORCE_RULES:
+        for key, (sysn, grp) in ([] if system else FORCE_RULES):
             if key in low0:
                 system, group = sysn, grp
                 break
@@ -313,7 +328,7 @@ def build():
             system, group = ("Uncategorized", "Other")
             unmapped.append(stem)
 
-        engine = detect_engine(stem, full)
+        engine = meta.get("engine") or detect_engine(stem, full)
         image_only = len(full.strip()) < 200
         relevance = "ref" if engine == "5sfe" else "car"
 
@@ -325,7 +340,8 @@ def build():
                and not t.startswith("--") and not t.startswith("====="):
                 first_heading = t
                 break
-        title = prettify(stem)
+        title = meta.get("title") or prettify(stem)
+        edition = meta.get("edition", "")
 
         # --- torque specs ---
         torques = []
@@ -379,11 +395,14 @@ def build():
             "torques": torques,
             "has_torque_table": bool(torque_table_pages),
             "refs": refs,
+            "book": meta.get("book", ""),
+            "edition": edition,
             "text": full,
         }
         records.append(rec)
+        index = ed_index[edition] if edition else page_index
         for c, pno in code_pages.items():
-            page_index.setdefault(c, {"file": stem, "page": pno})
+            index.setdefault(c, {"file": stem, "page": pno})
 
     # --- resolve cross references to target file + page ---
     # Toyota page codes are sequential within a file, so a code whose footer
@@ -391,14 +410,18 @@ def build():
     # code sharing its prefix (nearest-page fallback, max jump NEAR_MAX).
     NEAR_MAX = 6
 
-    def resolve_near(rc):
-        """Estimate (file id, pdf page) for an undetected code, or None."""
+    def resolve_near(rc, edition):
+        """Estimate (file id, pdf page) for an undetected code, or None.
+        Only searches sections of the same edition: page codes are
+        renumbered between model years."""
         m = re.match(r"^([A-Z]{2})-(\d+)$", rc)
         if not m:
             return None
         prefix, nn = m.group(1), int(m.group(2))
         best = None                      # (sort key, file id, est page)
         for rec in records:
+            if rec["edition"] != edition:
+                continue
             nums = []                    # (code number, pdf page) with prefix
             for c, pno in rec["code_pages"].items():
                 cm = re.match(r"^" + prefix + r"-(\d+)", c)
@@ -419,13 +442,14 @@ def build():
 
     for rec in records:
         resolved = []
+        own = ed_index[rec["edition"]] if rec["edition"] else page_index
         for rc in rec["refs"]:
-            tgt = page_index.get(rc)
+            tgt = own.get(rc)
             if tgt and tgt["file"] != rec["id"]:
                 resolved.append({"code": rc, "target": tgt["file"],
                                  "page": tgt["page"]})
             elif not tgt:
-                near = resolve_near(rc)
+                near = resolve_near(rc, rec["edition"])
                 if near and near[0] != rec["id"]:
                     resolved.append({"code": rc, "target": near[0],
                                      "page": near[1], "approx": True})
@@ -441,6 +465,7 @@ def build():
     compute_master_torque(records)
     n_prev, n_pairs = render_page_previews(records)
     print(f"Page previews: {n_pairs} link-target pages, {n_prev} newly rendered")
+    print(f"Stale thumbnails removed: {prune_thumbs(records)}")
 
     write_outputs(records, page_index, unmapped)
     return records, unmapped
@@ -496,6 +521,8 @@ def compute_master_torque(records):
                 if sid == r["id"]:
                     continue
                 s = by_id[sid]
+                if s["edition"] != r["edition"]:
+                    continue
                 # don't offer the wrong engine's spec table
                 if (r["engine"] == "3sgte" and s["engine"] == "5sfe") or \
                    (r["engine"] == "5sfe" and s["engine"] == "3sgte"):
@@ -551,6 +578,23 @@ def render_page_previews(records):
                 print(f"  preview fail {fid} p{p}: {e}")
         doc.close()
     return rendered, len(pairs)
+
+
+def prune_thumbs(records):
+    """Delete thumbnails / page previews of sections no longer in manuals\\."""
+    ids = {r["id"] for r in records}
+    removed = 0
+    for f in THUMB_DIR.glob("*.png"):
+        if f.stem not in ids:
+            f.unlink()
+            removed += 1
+    pages_dir = THUMB_DIR / "pages"
+    if pages_dir.is_dir():
+        for f in pages_dir.glob("*.png"):
+            if f.stem.rpartition("_p")[0] not in ids:
+                f.unlink()
+                removed += 1
+    return removed
 
 
 def write_outputs(records, page_index, unmapped):
