@@ -24,17 +24,48 @@
     return out;
   };
 
-  // Find the earliest term in `text` and the catalog page it sits on.
+  function positionsOf(low, word) {
+    const found = [];
+    let from = 0;
+    while (found.length < 30) {
+      const at = low.indexOf(word, from);
+      if (at < 0) break;
+      found.push(at);
+      from = at + Math.max(1, word.length);
+    }
+    return found;
+  }
+
+  // Prefer the spot where the most search words sit together, then the
+  // earliest such spot. A lone early word should not beat a real sentence.
   Lib.findHit = function (text, terms) {
     const empty = {page: null, snippet: ""};
     if (!text || !terms || !terms.length) return empty;
     const low = text.toLowerCase();
-    let at = -1;
-    for (let i = 0; i < terms.length; i++) {
-      const p = low.indexOf(terms[i]);
-      if (p >= 0 && (at < 0 || p < at)) at = p;
-    }
-    if (at < 0) return empty;
+    const lists = terms.map(function (word) { return positionsOf(low, word); })
+      .filter(function (list) { return list.length; });
+    if (!lists.length) return empty;
+    let best = null;
+    lists.forEach(function (list) {
+      list.forEach(function (at) {
+        const end = at + 500;
+        let score = 0;
+        let far = at;
+        for (let i = 0; i < lists.length; i++) {
+          const hit = lists[i].find(function (p) { return p >= at && p <= end; });
+          if (hit != null) {
+            score++;
+            if (hit > far) far = hit;
+          }
+        }
+        const span = far - at;
+        if (!best || score > best.score ||
+            (score === best.score && span < best.span) ||
+            (score === best.score && span === best.span && at < best.at))
+          best = {score: score, span: span, at: at};
+      });
+    });
+    const at = best.at;
     let page = null;
     const head = low.lastIndexOf("===== page ", at);
     if (head >= 0) {

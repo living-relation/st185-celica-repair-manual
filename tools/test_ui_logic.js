@@ -25,6 +25,10 @@ const hit = Lib.findHit(
   ["head", "bolts"]);
 check("search finds the catalog page", hit.page === 4 && hit.snippet.includes("head"));
 check("search misses cleanly", Lib.findHit("nope", ["zz"]).page === null);
+const clustered = Lib.findHit(
+  "===== PAGE 2 of 9 =====\nblock only\n===== PAGE 8 of 9 =====\ncylinder block main journal bore",
+  ["cylinder", "block", "journal"]);
+check("search prefers words that sit together", clustered.page === 8);
 
 const st185 = {id: "a", name: "All-Trac", year: 1993, model: "ST185", trans: "M/T",
   body: "LIFTBACK", market: "USA", ac: "auto", blower: "dial"};
@@ -52,6 +56,8 @@ check("5S-FE section stays out", !Garage.repairFits(recs[3], recs, car));
 check("shared brakes stay", Garage.repairFits(recs[4], recs, car));
 check("1990 engine pages hide when 1993 has that system", !Garage.repairFits(recs[1], recs, car));
 check("1990 clutch stays when that year is the only copy", Garage.repairFits(recs[5], recs, car));
+const side = {id: "gebook", system: "Engine Mechanical", engine: "na", edition: "3sge"};
+check("a side book is not treated as the 1993 shelf", Garage.repairFits(side, recs.concat([side]), car));
 
 const circuit = {applies: {engines: ["5S-FE"], drive: ["2WD"]}, option: ""};
 check("wiring circuit fits the other tab's car",

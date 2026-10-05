@@ -33,6 +33,7 @@ Sections containing a factory TORQUE SPECIFICATIONS table, with the PDF page(s) 
 
 ## Engine
 
+- **3SGE-workshop-manual-early** [Engine Mechanical] — torque table page(s): p.419, p.439, p.463, p.493 — `3SGE-workshop-manual-early.pdf`
 - **Cooling System** [Cooling] — torque table page(s): p.1 — `Cooling_System.pdf`
 - **Cylinder Head (5S-FE) — Engine Mechanical** [Engine Mechanical] — torque table page(s): p.24 — `RM305U1 - Engine Mechanical - Cylinder Head (5S-FE).pdf`
 - **Cylinder Head 3sgte** [Engine Mechanical] — torque table page(s): p.25 — `Cylinder_Head_3sgte.pdf`
@@ -43,6 +44,7 @@ Sections containing a factory TORQUE SPECIFICATIONS table, with the PDF page(s) 
 - **Engine Performance N — Remove/Install/Overhaul** [Engine Performance] — torque table page(s): p.1, p.2, p.8, p.9, p.11, p.12, p.13 — `Mitchell 1993 - Engine Performance N — Remove-Install-Overhaul.pdf`
 - **Lubrication System** [Lubrication] — torque table page(s): p.1, p.2 — `Lubrication_System.pdf`
 - **Mfi And Sfi Systems 3sgte** [Fuel / EFI] — torque table page(s): p.1, p.4 — `Mfi_And_Sfi_Systems_3sgte.pdf`
+- **Toyota - 3S-GTE - 1991 - Repair Manual (RM266E)** [Fuel / EFI (MFI-SFI)] — torque table page(s): p.128, p.129, p.131, p.133, p.135 — `Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf`
 - **Turbocharger System** [Turbocharger] — torque table page(s): p.1 — `Turbocharger_System.pdf`
 
 ## Engine Electrical

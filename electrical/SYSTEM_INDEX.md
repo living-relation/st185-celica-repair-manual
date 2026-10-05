@@ -16,7 +16,7 @@ Editions:
 | Foreword | ewd1992 | - | - | 0 |
 | Introduction | ewd1990 | - | 2–2 | 0 |
 | Introduction | ewd1992 | - | 2–2 | 0 |
-| How to Use This Manual | ewd1990 | - | 3–9 | 0 |
+| How to Use This Manual | ewd1990 | - | 3–50 | 0 |
 | How to Use This Manual | ewd1992 | - | 3–9 | 0 |
 | How to Use This Manual | mitchell1993 | - | - | 5 |
 | Troubleshooting | ewd1990 | - | 10–12 | 0 |

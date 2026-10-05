@@ -1566,7 +1566,7 @@
    "mapped": false,
    "printed": [
     3,
-    9
+    50
    ],
    "pages": 7,
    "features": [],
@@ -1846,7 +1846,9 @@
    "joints": [],
    "junction_blocks": [],
    "relay_blocks": [],
-   "fuses": [],
+   "fuses": [
+    "20A WIPER"
+   ],
    "options": [],
    "refs": [],
    "image_only": false
@@ -11777,7 +11779,11 @@
    "joints": [],
    "junction_blocks": [],
    "relay_blocks": [],
-   "fuses": [],
+   "fuses": [
+    "30A RDI FAN",
+    "30A CDS",
+    "15A HAZ-HORN"
+   ],
    "options": [],
    "refs": [],
    "image_only": false
@@ -19311,6 +19317,11 @@
    "options": [],
    "refs": [
     {
+     "circuit": "ewd1992-how-to-use",
+     "page": 5,
+     "printed": 7
+    },
+    {
      "circuit": "ewd1992-power-source",
      "page": 1,
      "printed": 66
@@ -22201,6 +22212,11 @@
      "circuit": "ewd1992-power-source",
      "page": 1,
      "printed": 66
+    },
+    {
+     "circuit": "ewd1992-how-to-use",
+     "page": 5,
+     "printed": 7
     }
    ],
    "image_only": false
@@ -22523,6 +22539,11 @@
      "circuit": "ewd1992-power-source",
      "page": 1,
      "printed": 66
+    },
+    {
+     "circuit": "ewd1992-how-to-use",
+     "page": 5,
+     "printed": 7
     }
    ],
    "image_only": false
@@ -37699,7 +37720,12 @@
    "joints": [],
    "junction_blocks": [],
    "relay_blocks": [],
-   "fuses": [],
+   "fuses": [
+    "15A CIG&RADIO",
+    "30A RDI FAN",
+    "30A CDS",
+    "30A RTR"
+   ],
    "options": [],
    "refs": [],
    "image_only": false
@@ -51178,7 +51204,7 @@
   "ewd1990": {
    "2": "introduction|",
    "3": "how-to-use|",
-   "4": "how-to-use|",
+   "50": "how-to-use|",
    "5": "how-to-use|",
    "6": "how-to-use|",
    "7": "how-to-use|",
@@ -51222,7 +51248,6 @@
    "47": "power-source|",
    "48": "starting-ignition|",
    "49": "starting-ignition|",
-   "50": "starting-ignition|",
    "51": "starting-ignition|",
    "52": "charging|",
    "53": "charging|",

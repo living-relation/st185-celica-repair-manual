@@ -5,26 +5,1414 @@
       "file": "3SGE-workshop-manual-early.pdf",
       "thumb": "3SGE-workshop-manual-early.png",
       "title": "3SGE-workshop-manual-early",
-      "heading": "",
-      "code": "",
-      "system": "Uncategorized",
-      "group": "Other",
-      "engine": "na",
-      "relevance": "car",
+      "heading": "TOYOTA",
+      "code": "EG",
+      "system": "Engine Mechanical",
+      "group": "Engine",
+      "engine": "3sge",
+      "relevance": "ref",
       "image_only": false,
       "pages": 495,
-      "own_codes": [],
-      "code_pages": {},
-      "torque_pages": [],
-      "torque_table_pages": [],
-      "torques": [],
-      "has_torque_table": false,
-      "refs": [],
+      "own_codes": [
+        "IN-2",
+        "IN-3",
+        "IN-4",
+        "IN-5",
+        "IN-7",
+        "IN-8",
+        "IN-9",
+        "IN-10",
+        "IN-11",
+        "IN-12",
+        "EG-294",
+        "EG-4",
+        "EG-5",
+        "EG-6",
+        "EG-7",
+        "EG-12",
+        "EG-13",
+        "EG-14",
+        "EG-18",
+        "EG-16",
+        "EG-17",
+        "EG-18",
+        "EG-19",
+        "EG-20",
+        "EG-21",
+        "EG-22",
+        "EG-24",
+        "EG-25",
+        "EG-26",
+        "EG-27",
+        "EG-28",
+        "EG-29",
+        "EG-30",
+        "EG-31",
+        "EG-32",
+        "EG-33",
+        "EG-34",
+        "EG-35",
+        "EG-36",
+        "EG-37",
+        "EG-38",
+        "EG-39",
+        "EG-40",
+        "EG-41",
+        "EG-42",
+        "EG-43",
+        "EG-44",
+        "EG-45",
+        "EG-46",
+        "EG-47",
+        "FG-48",
+        "EG-49",
+        "EG-50",
+        "EG-52",
+        "EG-83",
+        "EG-54",
+        "EG-55",
+        "EG-56",
+        "EG-57",
+        "EG-58",
+        "EG-59",
+        "EG-60",
+        "EG-61",
+        "EG-62",
+        "EG-63",
+        "EG-64",
+        "EG-65",
+        "EG-66",
+        "EG-106",
+        "EG-69",
+        "EG-70",
+        "EG-71",
+        "EG-72",
+        "EG-73",
+        "EG-74",
+        "EG-76",
+        "EG-78",
+        "EG-79",
+        "EG-60",
+        "EG-81",
+        "EG-82",
+        "EG-83",
+        "EG-84",
+        "EG-85",
+        "EG-50",
+        "EG-87",
+        "EG-88",
+        "EG-89",
+        "EG-90",
+        "EG-91",
+        "EG-92",
+        "EG-93",
+        "EG-94",
+        "EG-95",
+        "EG-96",
+        "EG-97",
+        "EG-98",
+        "EG-99",
+        "EG-100",
+        "EG-101",
+        "EG-102",
+        "EG-103",
+        "EG-104",
+        "EG-105",
+        "EG-106",
+        "EG-107",
+        "EG-108",
+        "EG-109",
+        "EG-110",
+        "EG-111",
+        "EG-112",
+        "EG-113",
+        "EG-114",
+        "EG-115",
+        "EG-116",
+        "EG-117",
+        "EG-118",
+        "EG-119",
+        "EG-120",
+        "EG-121",
+        "EG-122",
+        "EG-123",
+        "EG-124",
+        "EG-128",
+        "EG-12",
+        "EG-127",
+        "EG-128",
+        "EG-386",
+        "EG-131",
+        "EG-132",
+        "EG-133",
+        "EG-134",
+        "EG-135",
+        "EG-136",
+        "EG-137",
+        "EG-138",
+        "EG-139",
+        "EG-140",
+        "EG-141",
+        "EG-142",
+        "EG-143",
+        "EG-144",
+        "EG-145",
+        "EG-131",
+        "EG-147",
+        "EG-148",
+        "EG-149",
+        "EG-151",
+        "EG-152",
+        "EG-153",
+        "EG-154",
+        "EG-155",
+        "EG-58",
+        "EG-157",
+        "EG-158",
+        "EG-159",
+        "EG-160",
+        "EG-161",
+        "EG-162",
+        "EG-1",
+        "EG-164",
+        "EG-165",
+        "EG-166",
+        "EG-167",
+        "EG-1",
+        "EG-169",
+        "EG-170",
+        "EG-174",
+        "EG-172",
+        "EG-173",
+        "EG-174",
+        "EG-176",
+        "EG-177",
+        "EG-178",
+        "EG-179",
+        "EG-180",
+        "EG-181",
+        "EG-196",
+        "EG-194",
+        "EG-184",
+        "EG-185",
+        "EG-186",
+        "EG-187",
+        "EG-186",
+        "EG-189",
+        "EG-190",
+        "EG-201",
+        "EG-262",
+        "EG-193",
+        "EG-194",
+        "EG-195",
+        "EG-196",
+        "EG-197",
+        "EG-198",
+        "EG-199",
+        "EG-200",
+        "EG-20",
+        "EG-202G",
+        "EG-204",
+        "EG-205",
+        "EG-206",
+        "EG-207",
+        "EG-208",
+        "EG-209",
+        "EG-210",
+        "EG-211",
+        "EG-212",
+        "EG-213",
+        "EG-214",
+        "EG-215",
+        "EG-216",
+        "EG-217",
+        "EG-218",
+        "EG-219",
+        "EG-220",
+        "EG-221",
+        "EG-222",
+        "EG-224",
+        "EG-225",
+        "EG-226",
+        "EG-227",
+        "EG-228",
+        "EG-229",
+        "EG-230",
+        "EG-231",
+        "EG-232",
+        "EG-233",
+        "EG-234",
+        "EG-247",
+        "EG-238",
+        "EG-239",
+        "EG-240",
+        "EG-241",
+        "EG-242",
+        "EG-243",
+        "EG-244",
+        "EG-245",
+        "EG-246",
+        "EG-247",
+        "EG-249",
+        "EG-250",
+        "EG-251",
+        "EG-253",
+        "EG-254",
+        "EG-255",
+        "EG-256",
+        "EG-257",
+        "EG-259",
+        "EG-260",
+        "EG-261",
+        "EG-262",
+        "EG-263",
+        "EG-264",
+        "EG-265",
+        "EG-266",
+        "EG-267",
+        "EG-268",
+        "EG-270",
+        "EG-271",
+        "EG-274",
+        "EG-275",
+        "EG-276",
+        "EG-277",
+        "EG-278",
+        "EG-279",
+        "EG-282",
+        "EG-263",
+        "EG-284",
+        "EG-285",
+        "EG-287",
+        "EG-287",
+        "EG-287",
+        "EG-289",
+        "EG-290",
+        "EG-291",
+        "EG-202",
+        "EG-293",
+        "EG-294",
+        "EG-205",
+        "EG-296",
+        "EG-298",
+        "EG-299",
+        "EG-300",
+        "EG-301",
+        "EG-302",
+        "EG-303",
+        "EG-304",
+        "EG-305",
+        "EG-306",
+        "EG-307",
+        "EG-308",
+        "EG-309",
+        "EG-310",
+        "EG-311",
+        "EG-312",
+        "EG-314",
+        "EG-315",
+        "EG-316",
+        "EG-317",
+        "EG-318",
+        "EG-319",
+        "EG-320",
+        "EG-321",
+        "EG-323",
+        "EG-324",
+        "EG-325",
+        "EG-326",
+        "EG-327",
+        "EG-328",
+        "EG-330",
+        "EG-331",
+        "EG-332",
+        "EG-333",
+        "EG-335",
+        "EG-336",
+        "EG-337",
+        "EG-338",
+        "EG-339",
+        "EG-340",
+        "EG-341",
+        "EG-343",
+        "EG-345",
+        "EG-346",
+        "EG-347",
+        "EG-348",
+        "EG-349",
+        "EG-350",
+        "EG-351",
+        "EG-352",
+        "EG-353",
+        "EG-354",
+        "EG-355",
+        "EG-366",
+        "EG-358",
+        "EG-359",
+        "EG-360",
+        "EG-361",
+        "EG-362",
+        "EG-364",
+        "EG-365",
+        "EG-366",
+        "EG-367",
+        "EG-368",
+        "EG-369",
+        "EG-370",
+        "EG-371",
+        "EG-372",
+        "EG-373",
+        "EG-374",
+        "EG-375",
+        "EG-376",
+        "EG-377",
+        "EG-379",
+        "EG-380",
+        "EG-381",
+        "EG-382",
+        "EG-383",
+        "EG-384",
+        "EG-386",
+        "EG-387",
+        "EG-388",
+        "EG-389",
+        "EG-390",
+        "EG-391",
+        "EG-392",
+        "EG-393",
+        "EG-394",
+        "EG-395",
+        "EG-397",
+        "EG-398",
+        "EG-399",
+        "EG-400",
+        "EG-401",
+        "EG-402",
+        "EG-129",
+        "EG-151",
+        "EG-405",
+        "EG-406",
+        "IG-1",
+        "IG-3",
+        "IG-6",
+        "IG-6",
+        "IG-8",
+        "IG-9",
+        "IG-10",
+        "IG-11",
+        "IG-12",
+        "IG-13",
+        "IG-14",
+        "IG-15",
+        "IG-16",
+        "IG-17",
+        "IG-18",
+        "IG-19",
+        "IG-20",
+        "ST-1",
+        "ST-2",
+        "ST-4",
+        "ST-5",
+        "ST-6",
+        "ST-7",
+        "ST-9",
+        "ST-10",
+        "ST-12",
+        "ST-13",
+        "ST-14",
+        "ST-15",
+        "ST-16",
+        "ST-17",
+        "ST-18",
+        "ST-19",
+        "ST-22",
+        "ST-23",
+        "ST-24",
+        "CH-29",
+        "CH-2",
+        "CH-3",
+        "CH-4",
+        "CH-6",
+        "CH-7",
+        "CH-6",
+        "CH-10",
+        "CH-11",
+        "GH-12",
+        "CH-13",
+        "CH-14",
+        "CH-15",
+        "CH-16",
+        "CH-17",
+        "CH-19",
+        "CH-20",
+        "CH-21",
+        "CH-22",
+        "GH-24",
+        "CH-25",
+        "CH-26",
+        "CH-27",
+        "CH-28",
+        "CH-29",
+        "GH-30"
+      ],
+      "code_pages": {
+        "IN-2": 4,
+        "IN-3": 5,
+        "IN-4": 6,
+        "IN-5": 7,
+        "IN-7": 9,
+        "IN-8": 10,
+        "IN-9": 11,
+        "IN-10": 12,
+        "IN-11": 13,
+        "IN-12": 14,
+        "EG-294": 15,
+        "EG-4": 18,
+        "EG-5": 19,
+        "EG-6": 20,
+        "EG-7": 21,
+        "EG-12": 26,
+        "EG-13": 27,
+        "EG-14": 28,
+        "EG-18": 29,
+        "EG-16": 30,
+        "EG-17": 31,
+        "EG-19": 33,
+        "EG-20": 34,
+        "EG-21": 35,
+        "EG-22": 36,
+        "EG-24": 38,
+        "EG-25": 39,
+        "EG-26": 40,
+        "EG-27": 41,
+        "EG-28": 42,
+        "EG-29": 43,
+        "EG-30": 44,
+        "EG-31": 45,
+        "EG-32": 46,
+        "EG-33": 47,
+        "EG-34": 48,
+        "EG-35": 49,
+        "EG-36": 50,
+        "EG-37": 51,
+        "EG-38": 52,
+        "EG-39": 53,
+        "EG-40": 54,
+        "EG-41": 55,
+        "EG-42": 56,
+        "EG-43": 57,
+        "EG-44": 58,
+        "EG-45": 59,
+        "EG-46": 60,
+        "EG-47": 61,
+        "FG-48": 62,
+        "EG-49": 63,
+        "EG-50": 64,
+        "EG-52": 66,
+        "EG-83": 67,
+        "EG-54": 68,
+        "EG-55": 69,
+        "EG-56": 70,
+        "EG-57": 71,
+        "EG-58": 72,
+        "EG-59": 73,
+        "EG-60": 74,
+        "EG-61": 75,
+        "EG-62": 76,
+        "EG-63": 77,
+        "EG-64": 78,
+        "EG-65": 79,
+        "EG-66": 80,
+        "EG-106": 82,
+        "EG-69": 83,
+        "EG-70": 84,
+        "EG-71": 85,
+        "EG-72": 86,
+        "EG-73": 87,
+        "EG-74": 88,
+        "EG-76": 90,
+        "EG-78": 92,
+        "EG-79": 93,
+        "EG-81": 95,
+        "EG-82": 96,
+        "EG-84": 98,
+        "EG-85": 99,
+        "EG-87": 101,
+        "EG-88": 102,
+        "EG-89": 103,
+        "EG-90": 104,
+        "EG-91": 105,
+        "EG-92": 106,
+        "EG-93": 107,
+        "EG-94": 108,
+        "EG-95": 109,
+        "EG-96": 110,
+        "EG-97": 111,
+        "EG-98": 112,
+        "EG-99": 113,
+        "EG-100": 114,
+        "EG-101": 115,
+        "EG-102": 116,
+        "EG-103": 117,
+        "EG-104": 118,
+        "EG-105": 119,
+        "EG-107": 121,
+        "EG-108": 122,
+        "EG-109": 123,
+        "EG-110": 124,
+        "EG-111": 125,
+        "EG-112": 126,
+        "EG-113": 127,
+        "EG-114": 128,
+        "EG-115": 129,
+        "EG-116": 130,
+        "EG-117": 131,
+        "EG-118": 132,
+        "EG-119": 133,
+        "EG-120": 134,
+        "EG-121": 135,
+        "EG-122": 136,
+        "EG-123": 137,
+        "EG-124": 138,
+        "EG-128": 139,
+        "EG-127": 141,
+        "EG-386": 143,
+        "EG-131": 145,
+        "EG-132": 146,
+        "EG-133": 147,
+        "EG-134": 148,
+        "EG-135": 149,
+        "EG-136": 150,
+        "EG-137": 151,
+        "EG-138": 152,
+        "EG-139": 153,
+        "EG-140": 154,
+        "EG-141": 155,
+        "EG-142": 156,
+        "EG-143": 157,
+        "EG-144": 158,
+        "EG-145": 159,
+        "EG-147": 161,
+        "EG-148": 162,
+        "EG-149": 163,
+        "EG-151": 165,
+        "EG-152": 166,
+        "EG-153": 167,
+        "EG-154": 168,
+        "EG-155": 169,
+        "EG-157": 171,
+        "EG-158": 172,
+        "EG-159": 173,
+        "EG-160": 174,
+        "EG-161": 175,
+        "EG-162": 176,
+        "EG-1": 177,
+        "EG-164": 178,
+        "EG-165": 179,
+        "EG-166": 180,
+        "EG-167": 181,
+        "EG-169": 183,
+        "EG-170": 184,
+        "EG-174": 185,
+        "EG-172": 186,
+        "EG-173": 187,
+        "EG-176": 190,
+        "EG-177": 191,
+        "EG-178": 192,
+        "EG-179": 193,
+        "EG-180": 194,
+        "EG-181": 195,
+        "EG-196": 196,
+        "EG-194": 197,
+        "EG-184": 198,
+        "EG-185": 199,
+        "EG-186": 200,
+        "EG-187": 201,
+        "EG-189": 203,
+        "EG-190": 204,
+        "EG-201": 205,
+        "EG-262": 206,
+        "EG-193": 207,
+        "EG-195": 209,
+        "EG-197": 211,
+        "EG-198": 212,
+        "EG-199": 213,
+        "EG-200": 214,
+        "EG-202G": 216,
+        "EG-204": 218,
+        "EG-205": 219,
+        "EG-206": 220,
+        "EG-207": 221,
+        "EG-208": 222,
+        "EG-209": 223,
+        "EG-210": 224,
+        "EG-211": 225,
+        "EG-212": 226,
+        "EG-213": 227,
+        "EG-214": 228,
+        "EG-215": 229,
+        "EG-216": 230,
+        "EG-217": 231,
+        "EG-218": 232,
+        "EG-219": 233,
+        "EG-220": 234,
+        "EG-221": 235,
+        "EG-222": 236,
+        "EG-224": 238,
+        "EG-225": 239,
+        "EG-226": 240,
+        "EG-227": 241,
+        "EG-228": 242,
+        "EG-229": 243,
+        "EG-230": 244,
+        "EG-231": 245,
+        "EG-232": 246,
+        "EG-233": 247,
+        "EG-234": 248,
+        "EG-247": 250,
+        "EG-238": 252,
+        "EG-239": 253,
+        "EG-240": 254,
+        "EG-241": 255,
+        "EG-242": 256,
+        "EG-243": 257,
+        "EG-244": 258,
+        "EG-245": 259,
+        "EG-246": 260,
+        "EG-249": 263,
+        "EG-250": 264,
+        "EG-251": 265,
+        "EG-253": 267,
+        "EG-254": 268,
+        "EG-255": 269,
+        "EG-256": 270,
+        "EG-257": 271,
+        "EG-259": 273,
+        "EG-260": 274,
+        "EG-261": 275,
+        "EG-263": 277,
+        "EG-264": 278,
+        "EG-265": 279,
+        "EG-266": 280,
+        "EG-267": 281,
+        "EG-268": 282,
+        "EG-270": 284,
+        "EG-271": 285,
+        "EG-274": 288,
+        "EG-275": 289,
+        "EG-276": 290,
+        "EG-277": 291,
+        "EG-278": 292,
+        "EG-279": 293,
+        "EG-282": 296,
+        "EG-284": 298,
+        "EG-285": 299,
+        "EG-287": 300,
+        "EG-289": 303,
+        "EG-290": 304,
+        "EG-291": 305,
+        "EG-202": 306,
+        "EG-293": 307,
+        "EG-296": 310,
+        "EG-298": 312,
+        "EG-299": 313,
+        "EG-300": 314,
+        "EG-301": 315,
+        "EG-302": 316,
+        "EG-303": 317,
+        "EG-304": 318,
+        "EG-305": 319,
+        "EG-306": 320,
+        "EG-307": 321,
+        "EG-308": 322,
+        "EG-309": 323,
+        "EG-310": 324,
+        "EG-311": 325,
+        "EG-312": 326,
+        "EG-314": 328,
+        "EG-315": 329,
+        "EG-316": 330,
+        "EG-317": 331,
+        "EG-318": 332,
+        "EG-319": 333,
+        "EG-320": 334,
+        "EG-321": 335,
+        "EG-323": 337,
+        "EG-324": 338,
+        "EG-325": 339,
+        "EG-326": 340,
+        "EG-327": 341,
+        "EG-328": 342,
+        "EG-330": 344,
+        "EG-331": 345,
+        "EG-332": 346,
+        "EG-333": 347,
+        "EG-335": 349,
+        "EG-336": 350,
+        "EG-337": 351,
+        "EG-338": 352,
+        "EG-339": 353,
+        "EG-340": 354,
+        "EG-341": 355,
+        "EG-343": 357,
+        "EG-345": 359,
+        "EG-346": 360,
+        "EG-347": 361,
+        "EG-348": 362,
+        "EG-349": 363,
+        "EG-350": 364,
+        "EG-351": 365,
+        "EG-352": 366,
+        "EG-353": 367,
+        "EG-354": 368,
+        "EG-355": 369,
+        "EG-366": 370,
+        "EG-358": 372,
+        "EG-359": 373,
+        "EG-360": 374,
+        "EG-361": 375,
+        "EG-362": 376,
+        "EG-364": 378,
+        "EG-365": 379,
+        "EG-367": 381,
+        "EG-368": 382,
+        "EG-369": 383,
+        "EG-370": 384,
+        "EG-371": 385,
+        "EG-372": 386,
+        "EG-373": 387,
+        "EG-374": 388,
+        "EG-375": 389,
+        "EG-376": 390,
+        "EG-377": 391,
+        "EG-379": 393,
+        "EG-380": 394,
+        "EG-381": 395,
+        "EG-382": 396,
+        "EG-383": 397,
+        "EG-384": 398,
+        "EG-387": 401,
+        "EG-388": 402,
+        "EG-389": 403,
+        "EG-390": 404,
+        "EG-391": 405,
+        "EG-392": 406,
+        "EG-393": 407,
+        "EG-394": 408,
+        "EG-395": 409,
+        "EG-397": 411,
+        "EG-398": 412,
+        "EG-399": 413,
+        "EG-400": 414,
+        "EG-401": 415,
+        "EG-402": 416,
+        "EG-129": 417,
+        "EG-405": 419,
+        "EG-406": 420,
+        "IG-1": 421,
+        "IG-3": 423,
+        "IG-6": 425,
+        "IG-8": 428,
+        "IG-9": 429,
+        "IG-10": 430,
+        "IG-11": 431,
+        "IG-12": 432,
+        "IG-13": 433,
+        "IG-14": 434,
+        "IG-15": 435,
+        "IG-16": 436,
+        "IG-17": 437,
+        "IG-18": 438,
+        "IG-19": 439,
+        "IG-20": 440,
+        "ST-1": 441,
+        "ST-2": 442,
+        "ST-4": 444,
+        "ST-5": 445,
+        "ST-6": 446,
+        "ST-7": 447,
+        "ST-9": 449,
+        "ST-10": 450,
+        "ST-12": 452,
+        "ST-13": 453,
+        "ST-14": 454,
+        "ST-15": 455,
+        "ST-16": 456,
+        "ST-17": 457,
+        "ST-18": 458,
+        "ST-19": 459,
+        "ST-22": 462,
+        "ST-23": 463,
+        "ST-24": 464,
+        "CH-29": 465,
+        "CH-2": 466,
+        "CH-3": 467,
+        "CH-4": 468,
+        "CH-6": 470,
+        "CH-7": 471,
+        "CH-10": 474,
+        "CH-11": 475,
+        "GH-12": 476,
+        "CH-13": 477,
+        "CH-14": 478,
+        "CH-15": 479,
+        "CH-16": 480,
+        "CH-17": 481,
+        "CH-19": 483,
+        "CH-20": 484,
+        "CH-21": 485,
+        "CH-22": 486,
+        "GH-24": 488,
+        "CH-25": 489,
+        "CH-26": 490,
+        "CH-27": 491,
+        "CH-28": 492,
+        "GH-30": 494
+      },
+      "torque_pages": [
+        5,
+        6,
+        8,
+        10,
+        13,
+        23,
+        29,
+        30,
+        31,
+        38,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        54,
+        58,
+        60,
+        61,
+        62,
+        65,
+        68,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        81,
+        82,
+        83,
+        84,
+        90,
+        100,
+        103,
+        105,
+        106,
+        108,
+        110,
+        111,
+        112,
+        113,
+        114,
+        118,
+        120,
+        121,
+        123,
+        124,
+        125,
+        127,
+        128,
+        129,
+        130,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        141,
+        142,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        152,
+        153,
+        156,
+        157,
+        158,
+        160,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        176,
+        178,
+        179,
+        181,
+        182,
+        187,
+        188,
+        190,
+        193,
+        195,
+        197,
+        199,
+        202,
+        205,
+        206,
+        217,
+        221,
+        222,
+        223,
+        227,
+        229,
+        230,
+        233,
+        234,
+        235,
+        237,
+        244,
+        249,
+        250,
+        253,
+        258,
+        259,
+        261,
+        262,
+        263,
+        264,
+        265,
+        271,
+        296,
+        299,
+        307,
+        308,
+        310,
+        312,
+        317,
+        320,
+        325,
+        327,
+        329,
+        332,
+        333,
+        334,
+        335,
+        338,
+        339,
+        340,
+        341,
+        342,
+        344,
+        346,
+        347,
+        349,
+        350,
+        351,
+        354,
+        357,
+        358,
+        361,
+        362,
+        367,
+        371,
+        372,
+        376,
+        377,
+        378,
+        380,
+        381,
+        382,
+        386,
+        388,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        402,
+        403,
+        405,
+        407,
+        408,
+        409,
+        411,
+        415,
+        416,
+        417,
+        418,
+        421,
+        423,
+        428,
+        430,
+        438,
+        449,
+        450,
+        451,
+        456,
+        457,
+        458,
+        460,
+        465,
+        467,
+        469,
+        473,
+        474,
+        481,
+        483,
+        484,
+        486,
+        488,
+        489,
+        490,
+        491,
+        492
+      ],
+      "torque_table_pages": [
+        419,
+        439,
+        463,
+        493
+      ],
+      "torques": [
+        {
+          "context": "(b)_ Installthe wort~~",
+          "value": "30N-m(310ans"
+        },
+        {
+          "context": "\\ e x: Ww(9)",
+          "value": "39 N-m"
+        },
+        {
+          "context": "Spon",
+          "value": "N-m"
+        },
+        {
+          "context": "\\ ANDES",
+          "value": "52 N-m"
+        },
+        {
+          "context": "JN YY -A Sy g",
+          "value": "39 N-m"
+        },
+        {
+          "context": "wras 3",
+          "value": "19 N-m"
+        },
+        {
+          "context": "Ses CFR",
+          "value": "6.0N-m(61kgf-cm,53in.-Ibf)"
+        },
+        {
+          "context": "AU).",
+          "value": "8.0 N-m"
+        },
+        {
+          "context": "Ae=6) $NG",
+          "value": "8.0 N-m"
+        },
+        {
+          "context": "Install thetimingbelt cover with the6 bolts.",
+          "value": "8.0 N-m(82 kgf-cm,"
+        },
+        {
+          "context": "bolt.",
+          "value": "52 N-m"
+        },
+        {
+          "context": "SST09155-16100",
+          "value": "18 N-m(180kgf-cm,13ft-Ibf)"
+        },
+        {
+          "context": "A | 6,",
+          "value": "15 N-m(150kgf-cm,11ft-Ibf)"
+        },
+        {
+          "context": "cylinderhead.",
+          "value": "29N-m(300kgf-cm,21 ft-Ibf)"
+        },
+        {
+          "context": "oN Ko) oA",
+          "value": "21N-m(210kgf-cm,15ft-Ibf)"
+        },
+        {
+          "context": "and theunionbolt.",
+          "value": "32 N-m"
+        },
+        {
+          "context": "i ks",
+          "value": "9.0 N-m"
+        },
+        {
+          "context": "Fee SRE Ao-Cable",
+          "value": "19 N-m (190kgf-cm,14ftibf)"
+        },
+        {
+          "context": "SasBxe-",
+          "value": "39 N-m"
+        },
+        {
+          "context": "Capes",
+          "value": "20 N-m"
+        },
+        {
+          "context": "NSAG{ _f/ yp",
+          "value": "9.0 N-m"
+        },
+        {
+          "context": "yy Sa",
+          "value": "9.0 N-m(92 kgf-cm,80in.-Ibf)"
+        },
+        {
+          "context": "(b) Installthegasketandthrottlebody withthe 4bolts.",
+          "value": "N-m"
+        },
+        {
+          "context": "S A) BS",
+          "value": "58 N-m(590 kgf-cm,43ft-Ibf)"
+        },
+        {
+          "context": "nut.",
+          "value": "58 N-m(590 kgf-cm, 43 ft-Ibf)"
+        },
+        {
+          "context": "NE S,",
+          "value": "20 N-m"
+        },
+        {
+          "context": "[4 ZBSS G5,",
+          "value": "20 N-m"
+        },
+        {
+          "context": "(See step 5 on page EG-152)",
+          "value": "59 N-m (600 kgf-cm,"
+        },
+        {
+          "context": "Passes.",
+          "value": "67 N-m"
+        },
+        {
+          "context": "©) ~",
+          "value": "6.5 N-m"
+        },
+        {
+          "context": "*D)heL?",
+          "value": "59 N-m"
+        },
+        {
+          "context": "Rvce-",
+          "value": "43 N-m"
+        },
+        {
+          "context": "DwNe oe",
+          "value": "9.3 N-m"
+        },
+        {
+          "context": "in the sequence shown.",
+          "value": "107 N-m(1,090 kgf-cm, 79 ft-Ibf)"
+        },
+        {
+          "context": "Tightenthe unionbolt to the specifiedtorque.",
+          "value": "29 N-m(300 kgf-cm, 22 ft-Ibf)"
+        },
+        {
+          "context": "[\\é mA7Gasket",
+          "value": "29 N-m"
+        },
+        {
+          "context": "and theunionbolt.",
+          "value": "29N-m(300kgf-cm,22 ft-Ibf)"
+        },
+        {
+          "context": "Install the fuel pumpbracket with the 8 bolts.",
+          "value": "4.0 N-m (40 kgf-cm, 35 in.-Ibf)"
+        },
+        {
+          "context": "A ao)",
+          "value": "29 N-m(300 kgf-cm,"
+        },
+        {
+          "context": "SoA IN",
+          "value": "29 N-m"
+        },
+        {
+          "context": "( ( Keoage",
+          "value": "29 N-m"
+        },
+        {
+          "context": "(Seesteps1 and2 onpageEG-236)",
+          "value": "29 N-m"
+        },
+        {
+          "context": "with2 newgasketsandtheunionbolt.",
+          "value": "29N-m(300kgf-cm,22 ft-Ibf)"
+        },
+        {
+          "context": "valveassembly.",
+          "value": "19 N-m (195 kgf-cm, 14 ft-Ibf)"
+        },
+        {
+          "context": "Install the throttle bodywith the 4 bolts.",
+          "value": "21N-m"
+        },
+        {
+          "context": "body with the 4 bolts.",
+          "value": "N-m"
+        },
+        {
+          "context": "Pr isD",
+          "value": "44 N-m"
+        },
+        {
+          "context": "Soe ON",
+          "value": "(Engine):25 N-m(250 kgf-cm, 18 ft-Ibf)"
+        },
+        {
+          "context": "DUG!",
+          "value": "7.5 N-m(76 kgf-cm,"
+        },
+        {
+          "context": "ae<are SSSW206(K-",
+          "value": "19N-m(190kgf-cm,14ft-Ibf)"
+        },
+        {
+          "context": "er 7 Oy",
+          "value": "10 N-m"
+        },
+        {
+          "context": "-FS alotae VRS",
+          "value": "8.0 N-m(82 kgf-cm,71in.-Ibf)"
+        },
+        {
+          "context": "Install the plate washerand pulley with the pivot bolt.",
+          "value": "52 N-m"
+        },
+        {
+          "context": "gasket.",
+          "value": "37 N-m (380 kgf-cm,"
+        },
+        {
+          "context": "S7S>=",
+          "value": "8.8 N-m(90 kgf-cm, 78 in.-Ibf)"
+        },
+        {
+          "context": "09963-00500)",
+          "value": "35N-m(360kgf-em,26ft-Ibf)"
+        },
+        {
+          "context": "i) 5",
+          "value": "44 N-m(450kgf-cm,32ft-Ibf)"
+        },
+        {
+          "context": "5 Po",
+          "value": "59 N-m"
+        },
+        {
+          "context": "ra Ga",
+          "value": "50 N-m"
+        },
+        {
+          "context": "{] Sy",
+          "value": "58 N-m"
+        },
+        {
+          "context": "tightentheboltsandnut.",
+          "value": "58 N-m"
+        },
+        {
+          "context": "2 screws.",
+          "value": "5.9 N-m (60 kgf-cm,"
+        },
+        {
+          "context": "GSR wun-sst(A)",
+          "value": "39 N-m"
+        },
+        {
+          "context": "Ca ¥",
+          "value": "39N-m(400kgf-cm,29ft-Ibf)"
+        },
+        {
+          "context": "Sst(C)",
+          "value": "110N-m"
+        },
+        {
+          "context": "eiessOe",
+          "value": "4.4N-m(45kgf-cm,39in.-Ibf)"
+        }
+      ],
+      "has_torque_table": true,
+      "refs": [
+        "EG-39",
+        "EG-339",
+        "EG-286",
+        "EG-106",
+        "EG-50",
+        "EG-107",
+        "EG-22",
+        "EG-61",
+        "EG-12",
+        "EG-49",
+        "EG-72",
+        "EG-386",
+        "EG-153",
+        "EG-152",
+        "EG-139",
+        "EG-131",
+        "EG-391",
+        "EG-58",
+        "EG-182",
+        "EG-179",
+        "EG-178",
+        "EG-262",
+        "EG-192",
+        "EG-253",
+        "EG-280",
+        "EG-278",
+        "EG-275",
+        "IG-13",
+        "IG-7",
+        "EG-237",
+        "EG-173",
+        "EG-225",
+        "EG-231",
+        "EG-206",
+        "EG-240",
+        "EG-247",
+        "EG-254",
+        "EG-59",
+        "EG-347",
+        "EG-348",
+        "EG-353",
+        "EG-354",
+        "EG-129",
+        "EG-151",
+        "IG-8",
+        "IG-11",
+        "IG-12",
+        "EG-201",
+        "IG-16"
+      ],
       "book": "",
-      "edition": "",
+      "edition": "3sge",
       "refs_resolved": [],
       "master_torque": [],
-      "torque_count": 0
+      "torque_count": 66
     },
     {
       "id": "Abbreviations_Used_In_This_Manu_1",
@@ -85,7 +1473,15 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 0
     },
     {
@@ -989,7 +2385,7 @@
       "group": "Engine",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "EC-17"
@@ -1019,7 +2415,7 @@
       "group": "Engine",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "EC-32"
@@ -1049,7 +2445,7 @@
       "group": "Engine",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "EC-3"
@@ -1293,7 +2689,7 @@
       "code": "EM",
       "system": "Engine Mechanical",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -1435,7 +2831,7 @@
       "group": "Body",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 2,
       "own_codes": [
         "RE-16",
@@ -1890,6 +3286,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 32
@@ -2307,6 +3716,20 @@
       ],
       "master_torque": [
         {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
             3,
@@ -2705,6 +4128,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 16
@@ -2859,14 +4295,7 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Turbocharger_System",
-          "pages": [
-            1
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -2912,6 +4341,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 0
@@ -2946,6 +4388,20 @@
       "edition": "",
       "refs_resolved": [],
       "master_torque": [
+        {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
         {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
@@ -3582,7 +5038,7 @@
       "group": "Body",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 2,
       "own_codes": [],
       "code_pages": {},
@@ -3606,7 +5062,7 @@
       "code": "",
       "system": "Manual Transmission E150F (4WD)",
       "group": "Drivetrain",
-      "engine": "na",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -3634,7 +5090,7 @@
       "code": "",
       "system": "Manual Transmission E150F (4WD)",
       "group": "Drivetrain",
-      "engine": "na",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 4,
@@ -3665,7 +5121,7 @@
       "group": "Electrical",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [],
       "code_pages": {},
@@ -3691,7 +5147,7 @@
       "group": "Electrical",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [],
       "code_pages": {},
@@ -3827,6 +5283,19 @@
           "pages": [
             25
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 0
@@ -3860,6 +5329,20 @@
       "edition": "",
       "refs_resolved": [],
       "master_torque": [
+        {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
         {
           "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
           "pages": [
@@ -5595,8 +7078,8 @@
       "code": "FI",
       "system": "Fuel / EFI (MFI-SFI)",
       "group": "Engine",
-      "engine": "both",
-      "relevance": "car",
+      "engine": "5sfe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 3,
       "own_codes": [
@@ -5651,7 +7134,7 @@
       "code": "EM",
       "system": "Engine Mechanical",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -6051,7 +7534,15 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 0
     },
     {
@@ -6063,8 +7554,8 @@
       "code": "IG",
       "system": "Ignition",
       "group": "Engine Electrical",
-      "engine": "na",
-      "relevance": "car",
+      "engine": "4afe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 6,
       "own_codes": [
@@ -6109,14 +7600,7 @@
           "approx": true
         }
       ],
-      "master_torque": [
-        {
-          "target": "Ignition_System",
-          "pages": [
-            1
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 1
     },
     {
@@ -6474,6 +7958,7 @@
         "BR-14": 6
       },
       "torque_pages": [
+        2,
         4,
         5,
         6
@@ -6610,7 +8095,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6643,7 +8128,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6672,7 +8157,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6700,7 +8185,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6732,7 +8217,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6769,7 +8254,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6800,7 +8285,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6828,7 +8313,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6861,7 +8346,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6892,7 +8377,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6935,37 +8420,9 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Cylinder_Head_3sgte",
-          "pages": [
-            25
-          ]
-        },
-        {
-          "target": "Engine_Mechanical_3sgte",
-          "pages": [
-            1,
-            3,
-            4
-          ]
-        },
-        {
-          "target": "Engine_Mechanical_5sfe",
-          "pages": [
-            3,
-            4
-          ]
-        },
-        {
-          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
-          "pages": [
-            24
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7017,24 +8474,9 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Cylinder_Head_3sgte",
-          "pages": [
-            25
-          ]
-        },
-        {
-          "target": "Engine_Mechanical_3sgte",
-          "pages": [
-            1,
-            3,
-            4
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7091,23 +8533,9 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Engine_Mechanical_5sfe",
-          "pages": [
-            3,
-            4
-          ]
-        },
-        {
-          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
-          "pages": [
-            24
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7131,7 +8559,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7157,7 +8585,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7186,7 +8614,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7212,7 +8640,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7245,7 +8673,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7276,7 +8704,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7308,7 +8736,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7336,7 +8764,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7370,7 +8798,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7398,7 +8826,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7424,7 +8852,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7450,7 +8878,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7484,7 +8912,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7510,7 +8938,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7538,16 +8966,9 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Cooling_System",
-          "pages": [
-            1
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7573,7 +8994,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7605,7 +9026,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7633,7 +9054,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7661,7 +9082,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7691,7 +9112,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7722,7 +9143,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7754,7 +9175,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7786,7 +9207,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7818,7 +9239,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7849,7 +9270,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7879,16 +9300,9 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Service_Specifications",
-          "pages": [
-            4
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7914,16 +9328,9 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Service_Specifications",
-          "pages": [
-            4
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7952,7 +9359,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7982,7 +9389,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -8262,8 +9669,8 @@
       "code": "LU",
       "system": "Lubrication",
       "group": "Engine",
-      "engine": "3sgte",
-      "relevance": "car",
+      "engine": "4afe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 2,
       "own_codes": [
@@ -8284,15 +9691,7 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Lubrication_System",
-          "pages": [
-            1,
-            2
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -8649,7 +10048,7 @@
       "group": "Drivetrain",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "MX-3"
@@ -9276,7 +10675,7 @@
       "group": "Body",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 2,
       "own_codes": [],
       "code_pages": {},
@@ -11902,7 +13301,7 @@
       "code": "CO",
       "system": "Cooling",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 3,
@@ -12621,6 +14020,20 @@
       ],
       "master_torque": [
         {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
             3,
@@ -12678,6 +14091,19 @@
             1,
             3,
             4
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
           ]
         }
       ],
@@ -13197,7 +14623,7 @@
       "group": "General",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "IN-24"
@@ -13267,7 +14693,7 @@
       "code": "LU",
       "system": "Lubrication",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -13335,7 +14761,7 @@
       "code": "MA",
       "system": "Maintenance",
       "group": "General",
-      "engine": "3sgte",
+      "engine": "both",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -13416,7 +14842,15 @@
           "page": 2
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 1
     },
     {
@@ -13486,6 +14920,8 @@
       },
       "torque_pages": [
         1,
+        2,
+        3,
         4
       ],
       "torque_table_pages": [],
@@ -13595,7 +15031,7 @@
       "code": "FI",
       "system": "Fuel / EFI (MFI-SFI)",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 4,
@@ -14020,7 +15456,15 @@
           "page": 4
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 2
     },
     {
@@ -14111,7 +15555,15 @@
           "page": 4
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 6
     },
     {
@@ -14363,7 +15815,15 @@
           "page": 2
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 9
     },
     {
@@ -15787,7 +17247,7 @@
       "group": "Drivetrain",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "MT-172"
@@ -15817,7 +17277,7 @@
       "group": "Drivetrain",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "MX-67"
@@ -18367,6 +19827,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 14
@@ -18499,6 +19972,20 @@
       ],
       "master_torque": [
         {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
             3,
@@ -18519,28 +20006,318 @@
       "file": "Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf",
       "thumb": "Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).png",
       "title": "Toyota - 3S-GTE - 1991 - Repair Manual (RM266E)",
-      "heading": "",
-      "code": "",
-      "system": "Uncategorized",
-      "group": "Other",
+      "heading": "TOYOTA",
+      "code": "FI",
+      "system": "Fuel / EFI (MFI-SFI)",
+      "group": "Engine",
       "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 144,
-      "own_codes": [],
-      "code_pages": {},
-      "torque_pages": [
-        111
+      "own_codes": [
+        "IN-8",
+        "IN-2",
+        "IN-3",
+        "IN-5",
+        "IN-6",
+        "IN-7",
+        "IN-8",
+        "EM-3",
+        "EM-4",
+        "EM-5",
+        "EM-6",
+        "EM-7",
+        "EM-8",
+        "EM-9",
+        "EM-10",
+        "EM-71",
+        "EM-12",
+        "EM-13",
+        "EM-14",
+        "EM-15",
+        "TC-1",
+        "TC-2",
+        "TC-3",
+        "TC-4",
+        "TC-5",
+        "TC-6",
+        "TC-8",
+        "TC-9",
+        "TC-10",
+        "TC-12",
+        "TC-13",
+        "TC-14",
+        "TC-15",
+        "TC-16",
+        "TC-17",
+        "TC-18",
+        "TC-19",
+        "TC-20",
+        "TC-22",
+        "TC-23",
+        "TC-24",
+        "TC-25",
+        "TC-26",
+        "TC-27",
+        "FI-2",
+        "FI-3",
+        "FI-5",
+        "FI-6",
+        "FI-7",
+        "FI-29",
+        "FI-9",
+        "FI-10",
+        "FI-11",
+        "FI-12",
+        "FI-14",
+        "FI-15",
+        "FI-16",
+        "FI-17",
+        "FI-18",
+        "FI-20",
+        "FI-21",
+        "FI-22",
+        "FI-23",
+        "FI-24",
+        "FI-26",
+        "FI-28",
+        "FI-29",
+        "FI-30",
+        "FI-32",
+        "FI-34",
+        "FI-36",
+        "FI-40",
+        "FI-42",
+        "FI-44",
+        "FI-46",
+        "CO-4"
       ],
-      "torque_table_pages": [],
-      "torques": [],
-      "has_torque_table": false,
-      "refs": [],
+      "code_pages": {
+        "IN-8": 7,
+        "IN-2": 8,
+        "IN-3": 9,
+        "IN-5": 11,
+        "IN-6": 12,
+        "IN-7": 13,
+        "EM-3": 17,
+        "EM-4": 18,
+        "EM-5": 19,
+        "EM-6": 20,
+        "EM-7": 21,
+        "EM-8": 22,
+        "EM-9": 23,
+        "EM-10": 24,
+        "EM-71": 25,
+        "EM-12": 26,
+        "EM-13": 27,
+        "EM-14": 28,
+        "EM-15": 29,
+        "TC-1": 31,
+        "TC-2": 32,
+        "TC-3": 33,
+        "TC-4": 34,
+        "TC-5": 35,
+        "TC-6": 36,
+        "TC-8": 38,
+        "TC-9": 39,
+        "TC-10": 40,
+        "TC-12": 42,
+        "TC-13": 43,
+        "TC-14": 44,
+        "TC-15": 45,
+        "TC-16": 46,
+        "TC-17": 47,
+        "TC-18": 48,
+        "TC-19": 49,
+        "TC-20": 50,
+        "TC-22": 52,
+        "TC-23": 53,
+        "TC-24": 54,
+        "TC-25": 55,
+        "TC-26": 56,
+        "TC-27": 57,
+        "FI-2": 60,
+        "FI-3": 61,
+        "FI-5": 63,
+        "FI-6": 64,
+        "FI-7": 65,
+        "FI-29": 66,
+        "FI-9": 67,
+        "FI-10": 68,
+        "FI-11": 69,
+        "FI-12": 70,
+        "FI-14": 72,
+        "FI-15": 73,
+        "FI-16": 74,
+        "FI-17": 75,
+        "FI-18": 76,
+        "FI-20": 78,
+        "FI-21": 79,
+        "FI-22": 80,
+        "FI-23": 81,
+        "FI-24": 82,
+        "FI-26": 84,
+        "FI-28": 86,
+        "FI-30": 88,
+        "FI-32": 90,
+        "FI-34": 92,
+        "FI-36": 94,
+        "FI-40": 98,
+        "FI-42": 100,
+        "FI-44": 102,
+        "FI-46": 104,
+        "CO-4": 107
+      },
+      "torque_pages": [
+        8,
+        13,
+        14,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29,
+        35,
+        36,
+        37,
+        38,
+        40,
+        47,
+        48,
+        49,
+        51,
+        52,
+        55,
+        60,
+        64,
+        66,
+        69,
+        75,
+        76,
+        77,
+        82,
+        83,
+        84,
+        89,
+        92,
+        95,
+        96,
+        109,
+        110,
+        111,
+        117,
+        119,
+        125,
+        130,
+        137
+      ],
+      "torque_table_pages": [
+        128,
+        129,
+        131,
+        133,
+        135
+      ],
+      "torques": [
+        {
+          "context": "KOK ey",
+          "value": "25 N-m"
+        },
+        {
+          "context": "od a",
+          "value": "26 N-m (260 kgf-cm, 19 ft-Ibf)"
+        },
+        {
+          "context": "tion timing.",
+          "value": "39 N-m (400 kgf-cm, 29 ft-lbf)"
+        },
+        {
+          "context": "BSB AS) )",
+          "value": "64 N-m"
+        },
+        {
+          "context": "BR ~",
+          "value": "11N-m(120 kgf-cm,9ft-ibf)"
+        },
+        {
+          "context": "bolts.",
+          "value": "11 N-m"
+        },
+        {
+          "context": "bocharger.",
+          "value": "17 N-m(175 kgf-cm,13 ft-lbf)"
+        },
+        {
+          "context": "cia \\ \\ \\ oe",
+          "value": "51 N-m"
+        },
+        {
+          "context": "J) ---",
+          "value": "43 N-m"
+        },
+        {
+          "context": "ZIP oar",
+          "value": "44N-m(450kgf-cm,33ft-lbf}"
+        },
+        {
+          "context": "é Ww",
+          "value": "22N-m(300kgf-cm,22 ft-Ibf)"
+        },
+        {
+          "context": "\\ Yat",
+          "value": "59 N-m(600kgf-em,43ftlbf}"
+        },
+        {
+          "context": "\\\\ a3 Sy}",
+          "value": "59 N-m"
+        },
+        {
+          "context": "bolts.",
+          "value": "19 N-m (195 kgf-cm,"
+        },
+        {
+          "context": "Install the air connectorwith the four bolts.",
+          "value": "19 N-m"
+        }
+      ],
+      "has_torque_table": true,
+      "refs": [
+        "TC-12",
+        "FI-35",
+        "FI-36",
+        "TC-20",
+        "TC-8",
+        "TC-16",
+        "TC-10",
+        "FI-5",
+        "FI-4",
+        "FI-33",
+        "FI-16",
+        "FI-14",
+        "TC-14",
+        "TC-21",
+        "IG-3",
+        "IG-7"
+      ],
       "book": "",
-      "edition": "",
-      "refs_resolved": [],
+      "edition": "1991",
+      "refs_resolved": [
+        {
+          "code": "IG-3",
+          "target": null,
+          "page": null,
+          "system": "Ignition"
+        },
+        {
+          "code": "IG-7",
+          "target": null,
+          "page": null,
+          "system": "Ignition"
+        }
+      ],
       "master_torque": [],
-      "torque_count": 0
+      "torque_count": 15
     },
     {
       "id": "Toyota Celica ST185 Specifications",
@@ -18791,8 +20568,8 @@
       "code": "",
       "system": "A/C Bulletin",
       "group": "HVAC",
-      "engine": "na",
-      "relevance": "car",
+      "engine": "5sfe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 13,
       "own_codes": [],
@@ -19427,8 +21204,8 @@
       "code": "",
       "system": "Turbocharger",
       "group": "Engine",
-      "engine": "both",
-      "relevance": "car",
+      "engine": "4afe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 1,
       "own_codes": [],

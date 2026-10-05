@@ -127,7 +127,8 @@
   function sectionYear(rec) {
     const edition = String(rec.edition || "");
     if (/^(1990|1991|1992|1993)$/.test(edition)) return Number(edition);
-    return 1993;
+    if (!edition) return 1993;
+    return null;
   }
 
   function engineFits(engine, car) {
@@ -141,7 +142,7 @@
   function yearFits(rec, records, car) {
     const year = sectionYear(rec);
     const want = Number(car.year);
-    if (!want || year === want) return true;
+    if (year == null || !want || year === want) return true;
     const covered = (records || []).some(function (other) {
       return other !== rec && other.system === rec.system &&
         sectionYear(other) === want && engineFits(other.engine, car);
