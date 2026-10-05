@@ -12,6 +12,9 @@ cm-build/
 manuals/.staging/
 manuals-electrical/.staging/
 
+# Half-written OCR output
+*.ocr-tmp
+
 # Build-time downloads / verification artifacts
 celica-manual/build/pdfjs-dist.zip
 celica-manual/build/*.png

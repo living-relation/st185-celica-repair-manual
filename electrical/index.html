@@ -95,7 +95,7 @@
   <div class="toolbar">
     <input id="q" placeholder="Search systems, components (A34), connectors (IE1), fuses (HAZ-HORN)…  (press /)">
     <select id="fed" title="Limit to one wiring-diagram edition"></select>
-    <button class="tglbtn" id="fcar" title="Show only circuits that apply to your car">My car</button>
+    <button class="tglbtn" id="fcar" title="Show only circuits that fit the car picked in this tab">Pick a car</button>
   </div>
 </header>
 <div id="protowarn">⚠ Opened as a plain file — the in-app PDF viewer needs the local server.
@@ -106,6 +106,11 @@
 </main>
 <div id="pv"><img alt=""><span class="cap"></span></div>
 
+<script src="../shared/search.js"></script>
+<script src="../shared/preview.js"></script>
+<script src="../shared/pdfnav.js"></script>
+<script src="../shared/memory.js"></script>
+<script src="../shared/garage.js"></script>
 <script src="../shared/bridge.js"></script>
 <script src="../shared/addmanuals.js"></script>
 <script src="data/data.js"></script>
@@ -124,48 +129,17 @@ CIRC.forEach(c=>{
 });
 const CAT_NAME = {}; D.categories.forEach(c=>CAT_NAME[c.key]=c.name);
 
-// ---------- My car profile ----------
-const MODELS = {
-  ST185:{label:"ST185 GT-Four / All-Trac (3S-GTE turbo)", engine:"3S-GTE", drive:"ALL-TRAC/4WD"},
-  ST184:{label:"ST184 GT / GT-S (5S-FE)", engine:"5S-FE", drive:"2WD"},
-  AT180:{label:"AT180 ST (4A-FE)", engine:"4A-FE", drive:"2WD"},
-};
-// The owner's car: 1993 ST185, automatic A/C with the dial blower control.
-const PROFILE_DEFAULT = {year:1993, model:"ST185", trans:"M/T", body:"LIFTBACK", market:"USA",
-  ac:"auto", blower:"dial", cd:"", power_seat:"", sunroof:"", cruise:"", abs:"", configured:true};
-function loadProfile(){
-  try{ return Object.assign({}, PROFILE_DEFAULT, JSON.parse(localStorage.getItem("ewd.profile")||"{}")); }
-  catch(e){ return Object.assign({}, PROFILE_DEFAULT); }
-}
-let PROFILE = loadProfile();
-function saveProfile(){ try{ localStorage.setItem("ewd.profile", JSON.stringify(PROFILE)); }catch(e){} }
-function suggestedBlower(year){ return year<=1991 ? "push" : year>=1993 ? "dial" : ""; }
-function profBlower(){ return PROFILE.blower || suggestedBlower(PROFILE.year); }
-
-// Does circuit c apply to the profile? Returns [] when it fits, else reasons.
-function misfit(c, p){
-  p = p || PROFILE;
-  const a = c.applies||{}, m = MODELS[p.model]||MODELS.ST185, why=[];
-  if(a.engines && a.engines.length && !a.engines.includes(m.engine)) why.push(a.engines.join("/")+" engine");
-  if(a.drive && !a.drive.includes(m.drive)) why.push(a.drive.join("/").toLowerCase().replace("all-trac","All-Trac"));
-  if(a.market && p.market && !a.market.includes(p.market)) why.push(a.market.join("/")+" market");
-  if(a.trans && p.trans && !a.trans.includes(p.trans)) why.push(a.trans.join("/")+" only");
-  if(a.body && p.body && !a.body.includes(p.body)) why.push(a.body.join("/").toLowerCase()+" only");
-  const ac = {auto:"AUTO", manual:"MANUAL", none:"NONE"}[p.ac];
-  if(a.ac && ac && !a.ac.includes(ac)) why.push({AUTO:"automatic A/C",MANUAL:"manual A/C",NONE:"no A/C"}[a.ac[0]]);
-  const bl = profBlower();
-  if(a.blower && a.blower.length && bl && !a.blower.includes(bl.toUpperCase()))
-    why.push(a.blower.map(b=>b==="PUSH"?"push-button":"dial").join("/")+" blower control");
-  if(a.cd!==undefined && p.cd && a.cd!==(p.cd==="yes")) why.push(a.cd?"with CD player":"without CD player");
-  if(c.option && p[c.option]==="no") why.push("option not fitted");
-  return why;
-}
+const APP = "electrical";
+function carNow(){ return Garage.selected(APP); }
+function profBlower(){ return Garage.blowerOf(carNow()); }
+function misfit(c){ return Garage.misfit(c, carNow()); }
 function fits(c){ return misfit(c).length===0; }
 
 // ---------- state ----------
-const state = {cat:"all", q:"", edition:"", carOnly:PROFILE.configured, view:"grid", sel:null, page:null,
-               hvacBlower:null};
-if(state.carOnly) document.getElementById("fcar").classList.add("on");
+const state = {cat:"all", q:Memory.flag(APP, "q", ""), edition:Memory.flag(APP, "edition", ""),
+  carOnly:Memory.flag(APP, "carOnly", "0")==="1", view:"grid", sel:null, page:null,
+  hvacBlower:null, infoOpen:Memory.flag(APP, "infoOpen", "1")==="1"};
+if(!carNow()) state.carOnly=false;
 document.getElementById("stats").textContent =
   D.systems.length+" systems · "+CIRC.length+" circuits · "+D.sources.length+" editions";
 if(location.protocol==="file:") document.getElementById("protowarn").style.display="block";
@@ -176,24 +150,11 @@ if(location.protocol==="file:") document.getElementById("protowarn").style.displ
 })();
 
 // ---------- helpers ----------
-function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function esc(s){return Lib.esc(s);}
 function edLabel(s){ return (s.year||"Ref")+" · "+s.pub+(s.partial?" (partial)":""); }
-function terms(){return state.q.toLowerCase().split(/\s+/).filter(Boolean);}
-function hi(text){
-  let out=esc(text);
-  terms().forEach(w=>{
-    const re=new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");
-    out=out.replace(re,"<mark>$1</mark>"); });
-  return out;
-}
-function snippet(c){
-  const t=terms(); if(!t.length) return "";
-  const low=c.text.toLowerCase(); let i=-1;
-  for(const w of t){const p=low.indexOf(w); if(p>=0&&(i<0||p<i))i=p;}
-  if(i<0) return "";
-  const s=Math.max(0,i-50), e=Math.min(c.text.length,i+90);
-  return (s>0?"…":"")+hi(c.text.slice(s,e).replace(/\s+/g," "))+(e<c.text.length?"…":"");
-}
+function terms(){return Lib.terms(state.q);}
+function hi(text){return Lib.hi(text, terms());}
+function hitFor(c){return Lib.findHit(c.text, terms());}
 function pageThumb(id,page){return "thumbs/pages/"+encodeURIComponent(id)+"_p"+page+".png";}
 function viewerSrc(c,page){
   const abs=new URL(c.pdf,location.href).href;
@@ -211,8 +172,9 @@ function matches(c){ return terms().every(w=>c._blob.includes(w)); }
 function rankOf(c){ const t=terms(); return !t.length||t.every(w=>c._titleBlob.includes(w)) ? 0 : 1; }
 // Best circuit of a system for the profile: fits first, then closest edition year.
 function score(c){
-  let s = fits(c) ? 1000 : 0;
-  if(c.year) s -= Math.abs(c.year-PROFILE.year)*10;
+  const car=carNow();
+  let s = car && fits(c) ? 1000 : 0;
+  if(c.year) s -= Math.abs(c.year-(car?car.year:1993))*10;
   // same year: Toyota factory diagrams before partial pulls before aftermarket manuals
   if(SRC[c.source] && SRC[c.source].partial) s -= 1;
   if(SRC[c.source] && SRC[c.source].aftermarket) s -= 2;
@@ -226,31 +188,15 @@ function bestCircuit(sysKey){
 }
 function openCircuit(id,page){
   if(!BY_ID[id]) return;
-  state.sel=id; state.view="detail"; state.page=page||null; hidePv(); render();
+  state.sel=id; state.view="detail"; state.page=page||null;
+  Lib.hidePreview();
+  const c=BY_ID[id];
+  Memory.pushRecent(APP, {id:id, title:c.name+(c.variant?" — "+c.variant:""), page:page||null});
+  render();
 }
 function openSystem(key){ if(SYS[key]) openCircuit(bestCircuit(key).id); }
 
-// ---------- hover preview ----------
-const pv=document.getElementById("pv");
-function hidePv(){pv.style.display="none";}
-function movePv(e){
-  const w=274,h=380; let x=e.clientX+18,y=e.clientY+14;
-  if(x+w>innerWidth)x=e.clientX-w-18;
-  if(y+h>innerHeight)y=Math.max(8,innerHeight-h-8);
-  pv.style.left=x+"px"; pv.style.top=y+"px";
-}
-function bindPreviews(root){
-  root.querySelectorAll("[data-pv]").forEach(el=>{
-    el.addEventListener("mouseenter",e=>{
-      const img=pv.querySelector("img");
-      img.onerror=hidePv; img.src=el.dataset.pv;
-      pv.querySelector(".cap").textContent=el.dataset.pvcap||"";
-      pv.style.display="block"; movePv(e);
-    });
-    el.addEventListener("mousemove",movePv);
-    el.addEventListener("mouseleave",hidePv);
-  });
-}
+// Hover previews live in shared/preview.js.
 // link to a resolved location {circuit, page, printed}
 function locLink(loc, label){
   if(!loc.circuit||!BY_ID[loc.circuit]) return '<span class="loclink" style="color:var(--muted);cursor:default">p.'+loc.printed+'</span>';
@@ -267,7 +213,9 @@ function buildRail(){
   D.categories.filter(c=>counts[c.key]).forEach(c=>{ h+=railBtn(c.key,c.name,counts[c.key]); });
   h+='<div class="railsec">Tools</div>'+
     '<button class="railbtn" data-view="locations"><span>📍 Locations index</span><span class="cnt">'+D.locations.length+'</span></button>'+
-    '<button class="railbtn" data-view="profile"><span>🚗 My car</span></button>'+
+    '<button class="railbtn" data-view="garage"><span>🚗 Garage</span><span class="cnt">'+Garage.cars().length+'</span></button>'+
+    placeRail("pins", "Pinned", Memory.pins(APP))+
+    placeRail("recent", "Recent", Memory.recent(APP))+
     '<button class="railbtn" data-view="editions"><span>📚 Editions</span><span class="cnt">'+D.sources.length+'</span></button>'+
     '<button class="railbtn" data-view="add"><span>+ Add manuals</span></button>';
   const rail=document.getElementById("rail");
@@ -275,6 +223,18 @@ function buildRail(){
   rail.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{
     state.cat=b.dataset.cat; state.view="grid"; state.sel=null; render(); });
   rail.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{ state.view=b.dataset.view; render(); });
+  rail.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{
+    openCircuit(b.dataset.open, b.dataset.page?parseInt(b.dataset.page,10):null);
+  });
+}
+function placeRail(view, label, items){
+  let h='<button class="railbtn" data-view="'+view+'"><span>'+label+'</span><span class="cnt">'+items.length+'</span></button>';
+  items.slice(0,5).forEach(item=>{
+    if(!BY_ID[item.id]) return;
+    h+='<button class="railbtn" data-open="'+esc(item.id)+'" data-page="'+(item.page||'')+'"><span>'+
+      esc(item.title)+(item.page?' p.'+item.page:'')+'</span></button>';
+  });
+  return h;
 }
 function railBtn(cat,label,count){
   return '<button class="railbtn" data-cat="'+esc(cat)+'"><span>'+esc(label)+'</span><span class="cnt">'+count+'</span></button>';
@@ -289,19 +249,51 @@ function syncRail(){
 
 // ---------- render ----------
 function render(){
-  syncRail(); hidePv();
+  syncRail(); Lib.hidePreview(); syncCarButton();
   const c=document.getElementById("content");
   const v=state.view;
   if(v==="detail" && BY_ID[state.sel]){
-    const p=state.page; state.page=null;
-    c.innerHTML=detailHTML(BY_ID[state.sel],p); wireDetail(c); return;
+    const p=state.page;
+    c.innerHTML=detailHTML(BY_ID[state.sel],p); wireDetail(c, p); remember(); return;
   }
-  if(v==="locations"){ c.innerHTML=locationsHTML(); wireLocations(c); return; }
-  if(v==="profile"){ c.innerHTML=profileHTML(); wireProfile(c); return; }
-  if(v==="editions"){ c.innerHTML=editionsHTML(); wireGeneric(c); return; }
+  if(v==="locations"){ c.innerHTML=locationsHTML(); wireLocations(c); remember(); return; }
+  if(v==="garage"){ c.innerHTML=Garage.panelHTML(APP); Garage.wire(c, APP, (action)=>{
+    if(action==="use" || action==="save") state.carOnly=!!carNow();
+    if(!carNow()) state.carOnly=false;
+    if(action==="use" || action==="save"){ state.hvacBlower=null; state.view="grid"; state.cat="all"; }
+    Memory.setFlag(APP, "carOnly", state.carOnly?"1":"0");
+    render();
+  }); return; }
+  if(v==="pins" || v==="recent"){ c.innerHTML=placeHTML(v); wireGrid(c); remember(); return; }
+  if(v==="editions"){ c.innerHTML=editionsHTML(); wireGeneric(c); remember(); return; }
   if(v==="add"){ c.innerHTML=ADDP.html(); ADDP.wire(c); return; }
   state.view="grid";
-  c.innerHTML=gridHTML(); wireGrid(c);
+  c.innerHTML=gridHTML(); wireGrid(c); remember();
+}
+function remember(){
+  Memory.savePlace(APP, {view:state.view, sel:state.sel, page:state.page, cat:state.cat,
+    q:state.q, edition:state.edition});
+}
+function syncCarButton(){
+  const btn=document.getElementById("fcar");
+  const car=carNow();
+  if(!car && state.carOnly){ state.carOnly=false; Memory.setFlag(APP, "carOnly", "0"); }
+  btn.textContent=car?Garage.label(car):"Pick a car";
+  btn.classList.toggle("on", !!(state.carOnly && car));
+  btn.title=car
+    ? "This tab only. Show circuits that fit "+Garage.label(car)+". The repair tab keeps its own car."
+    : "Save a car in the garage, then this tab can filter to it.";
+}
+function placeHTML(kind){
+  const items=kind==="pins"?Memory.pins(APP):Memory.recent(APP);
+  const title=kind==="pins"?"Pinned pages":"Recently opened";
+  const head='<div class="cbar"><span class="ttl">'+title+'</span><span class="sub">'+items.length+' in this tab</span></div>';
+  if(!items.length) return head+'<div class="empty">Nothing here yet. Open a circuit, or pin it from the page.</div>';
+  const cards=items.filter(item=>BY_ID[item.id]).map(item=>{
+    return '<div class="gcard" data-id="'+esc(item.id)+'" data-page="'+(item.page||'')+'"><div class="gmeta"><div class="gtitle">'+
+      esc(item.title)+'</div><div class="gsub">'+(item.page?'Page '+item.page:'Start of circuit')+'</div></div></div>';
+  }).join("");
+  return head+'<div class="gridwrap"><div class="grid">'+cards+'</div></div>';
 }
 
 // ---------- grid (one card per system) ----------
@@ -320,15 +312,15 @@ function gridHTML(){
   cards.sort((a,b)=>a.rank-b.rank || a.s.order-b.s.order);
   const title=state.cat==="all"?"All systems":CAT_NAME[state.cat];
   const sub=cards.length+" system"+(cards.length!==1?"s":"")+
-    (state.carOnly?" that apply to your car":"")+
+    (state.carOnly && carNow()?" that fit "+esc(Garage.label(carNow())):"")+
     (state.edition?" in "+edLabel(SRC[state.edition]):"")+
     (state.q?' matching “'+esc(state.q)+'”':'');
   let h='<div class="cbar"><span class="ttl">'+esc(title)+'</span><span class="sub">'+sub+'</span></div>'+
     '<div class="gridwrap">';
-  if(!PROFILE.configured)
-    h+='<div class="banner">🚗 <span>Tell the app about your car (year, A/C type, blower control, options) '+
-       'and “My car” will hide circuits that don\'t apply.</span>'+
-       '<button class="btn ghost" data-view="profile">Set up My car</button></div>';
+  if(!carNow())
+    h+='<div class="banner">🚗 <span>Add your car in the garage. This tab can use a different car than the repair tab. '+
+       'The filter then hides circuits that do not fit.</span>'+
+       '<button class="btn ghost" data-view="garage">Open garage</button></div>';
   h+='<div class="grid">';
   if(searching){
     const locs=locationHits().slice(0,14);
@@ -343,7 +335,7 @@ function gridHTML(){
     }
   }
   if(!cards.length){
-    h+='</div><div class="empty">No systems match. Try clearing the search, the edition filter or “My car”.</div></div>';
+    h+='</div><div class="empty">No systems match. Try clearing the search, the edition filter, or the car filter.</div></div>';
     return h;
   }
   let lastRank=-1;
@@ -352,22 +344,26 @@ function gridHTML(){
       h+='<div class="divider">'+(rank===0?"Title / feature matches":"Component & content matches")+'</div>';
       lastRank=rank;
     }
+    const opener=searching
+      ? list.slice().sort((a,b)=>rankOf(a)-rankOf(b) || score(b)-score(a))[0]
+      : best;
+    const hit=searching?hitFor(opener):null;
     const years=[...new Set(list.map(c=>c.year).filter(Boolean))].sort();
     const variants=new Set(list.map(c=>c.source+"|"+c.variant)).size;
     const blowers=[...new Set([].concat(...list.map(c=>(c.applies.blower||[]))))];
-    h+='<div class="gcard" data-sys="'+esc(s.key)+'" data-id="'+esc(best.id)+'">'+
-      '<div class="gthumb"><img loading="lazy" src="'+esc(best.thumb)+'" alt="" '+
+    h+='<div class="gcard" data-sys="'+esc(s.key)+'" data-id="'+esc(opener.id)+'" data-page="'+(hit&&hit.page?hit.page:'')+'">'+
+      '<div class="gthumb"><img loading="lazy" src="'+esc(opener.thumb)+'" alt="" '+
         'onerror="this.style.display=\'none\'">'+
         '<div class="bstack">'+
-          (PROFILE.configured&&list.some(fits)?'<span class="badge b-fit">MY CAR ✓</span>':'')+
+          (carNow()&&list.some(fits)?'<span class="badge b-fit">MY CAR ✓</span>':'')+
           (s.category==="hvac"?blowerBadge(blowers):'')+
           (variants>years.length?'<span class="badge b-var">'+variants+' VARIANTS</span>':'')+
         '</div></div>'+
       '<div class="gmeta"><div class="gtitle">'+hi(s.name)+'</div>'+
-        '<div class="gsub">'+esc(CAT_NAME[s.category])+' · '+best.features.length+' feature'+
-          (best.features.length!==1?'s':'')+' · '+best.components.length+' parts</div>'+
+        '<div class="gsub">'+esc(CAT_NAME[s.category])+' · '+opener.features.length+' feature'+
+          (opener.features.length!==1?'s':'')+' · '+opener.components.length+' parts</div>'+
         '<div class="gyears">'+years.map(y=>'<span class="badge b-yr">'+y+'</span>').join("")+'</div>'+
-        (searching&&rank===1&&snippet(best)?'<div class="gsnip">'+snippet(list.find(matches)||best)+'</div>':'')+
+        (hit&&hit.snippet?'<div class="gsnip">'+hit.snippet+'</div>':'')+
       '</div></div>';
   });
   return h+'</div></div>';
@@ -381,7 +377,9 @@ function locationHits(){
       ((SRC[b.source]||{}).year||0)-((SRC[a.source]||{}).year||0));
 }
 function wireGrid(c){
-  c.querySelectorAll(".gcard").forEach(el=>el.onclick=()=>openCircuit(el.dataset.id));
+  c.querySelectorAll(".gcard").forEach(el=>el.onclick=()=>{
+    openCircuit(el.dataset.id, el.dataset.page?parseInt(el.dataset.page,10):null);
+  });
   wireGeneric(c);
 }
 function wireGeneric(c){
@@ -391,7 +389,7 @@ function wireGeneric(c){
   });
   c.querySelectorAll("[data-view]").forEach(el=>el.onclick=()=>{state.view=el.dataset.view; render();});
   c.querySelectorAll("[data-repair]").forEach(el=>el.onclick=()=>Shell.open("repair", el.dataset.repair));
-  bindPreviews(c);
+  Lib.bindPreviews(c);
 }
 
 // ---------- detail ----------
@@ -421,11 +419,12 @@ function detailHTML(c, jumpPage){
   const sib=all.filter(x=>x.source===c.source);
   const varChips=sib.length>1?sib.map(x=>
     '<span class="chip'+(x.id===c.id?' on':'')+'" data-open="'+esc(x.id)+'" title="'+esc(x.title)+'">'+
-      esc(x.variant||"Base")+(PROFILE.configured&&fits(x)?' ✓':'')+'</span>').join(""):"";
+      esc(x.variant||"Base")+(carNow()&&fits(x)?' ✓':'')+'</span>').join(""):"";
   const why=misfit(c);
-  const fitLine=!PROFILE.configured?'':
-    why.length?'<div class="fitnote no">✗ Not for your car: '+esc(why.join(", "))+'</div>'
-              :'<div class="fitnote ok">✓ Applies to your car ('+esc(PROFILE.year+" "+PROFILE.model)+')</div>';
+  const picked=carNow();
+  const fitLine=!picked?'':
+    why.length?'<div class="fitnote no">Outside '+esc(Garage.label(picked))+' in this tab: '+esc(why.join(", "))+'</div>'
+              :'<div class="fitnote ok">Fits '+esc(Garage.label(picked))+' in this tab.</div>';
 
   let info="";
   if(c.category==="hvac") info+=hvacCard(c);
@@ -439,10 +438,12 @@ function detailHTML(c, jumpPage){
       c.options.map(o=>'<span class="badge b-code">'+esc(o.replace(/^W\/O /,"w/o ").replace(/^W\/ /,"w/ "))+'</span>').join("")+
       '</div><p class="hint" style="margin:8px 0 0">Equipment the diagram marks with “w/” or “w/o” — wiring that only exists on some cars.</p></div></div>';
 
-  return '<div class="detail">'+
+  return '<div class="detail'+(state.infoOpen?'':' fold')+'">'+
     '<div class="dtop"><div class="row1">'+
       '<button class="btn ghost" id="back">← Systems</button>'+
       '<h2>'+esc(sys.name)+(c.variant?' — '+esc(c.variant):'')+'</h2>'+
+      '<button class="btn ghost" id="pin">'+(Memory.isPinned(APP, c.id, jumpPage)?'Unpin':'Pin')+'</button>'+
+      '<button class="btn ghost" id="fold">'+(state.infoOpen?'Hide details':'Show details')+'</button>'+
       '<a class="btn" href="'+viewerSrc(c,jumpPage)+'" target="_blank" rel="noopener">Open in new tab ↗</a>'+
     '</div>'+
     '<div class="drow"><div class="chips"><span class="lbl">Edition</span>'+edChips+'</div>'+
@@ -585,12 +586,26 @@ function hvacPick(acKey, blower){
   return bestOf(list);
 }
 
-function wireDetail(c){
-  c.querySelector("#back").onclick=()=>{state.view="grid";state.sel=null;render();};
+function wireDetail(c, jumpPage){
+  c.querySelector("#back").onclick=()=>{state.view="grid";state.sel=null;state.page=null;render();};
   const viewer=c.querySelector("#viewer");
   const cur=BY_ID[state.sel];
+  c.querySelector("#pin").onclick=()=>{
+    const on=Memory.togglePin(APP, {id:cur.id, title:cur.name+(cur.variant?" — "+cur.variant:""), page:jumpPage||null});
+    c.querySelector("#pin").textContent=on?"Unpin":"Pin";
+    buildRail(); syncRail();
+  };
+  c.querySelector("#fold").onclick=()=>{
+    state.infoOpen=!state.infoOpen;
+    Memory.setFlag(APP, "infoOpen", state.infoOpen?"1":"0");
+    c.querySelector(".detail").classList.toggle("fold", !state.infoOpen);
+    c.querySelector("#fold").textContent=state.infoOpen?"Hide details":"Show details";
+  };
   c.querySelectorAll("[data-goto]").forEach(el=>el.onclick=()=>{
-    viewer.src=viewerSrc(cur, parseInt(el.dataset.goto,10));
+    const page=parseInt(el.dataset.goto,10);
+    state.page=page;
+    Lib.showPdfPage(viewer, viewerSrc(cur, page), page);
+    remember();
   });
   c.querySelectorAll("[data-bl]").forEach(el=>el.addEventListener("click",()=>{state.hvacBlower=el.dataset.bl;},true));
   c.querySelectorAll("[data-hvac-ac]").forEach(el=>el.onclick=()=>{
@@ -611,7 +626,7 @@ function wireDetail(c){
 }
 
 // ---------- locations index ----------
-const LOC={q:"", kind:"", edition:""};
+const LOC={q:"", kind:"", edition:"", limit:80};
 const KIND_NAME={part:"Part / component", joint:"Harness joint connector", junction:"Junction block connector", relay:"Relay block"};
 function locationsHTML(){
   return '<div class="cbar"><span class="ttl">Locations index</span><span class="sub">Where every part, '+
@@ -628,62 +643,24 @@ function drawLocations(){
   const t=LOC.q.toLowerCase().split(/\s+/).filter(Boolean);
   const rows=D.locations.filter(l=>(!LOC.kind||l.kind===LOC.kind)&&(!LOC.edition||l.source===LOC.edition)&&
     t.every(w=>(l.code+" "+l.name).toLowerCase().includes(w)));
-  const shown=rows.slice(0,400);
+  const shown=rows.slice(0, LOC.limit);
   body.innerHTML=!rows.length?'<div class="empty">No locations match.</div>':
     '<table class="loctable"><tr><th>Code</th><th>Name</th><th>Kind</th><th>Edition</th><th>Location page</th></tr>'+
     shown.map(l=>'<tr><td class="code">'+esc(l.code)+'</td><td>'+esc(l.name)+'</td><td>'+KIND_NAME[l.kind]+'</td>'+
       '<td>'+esc(edLabel(SRC[l.source]||{pub:l.source}))+'</td><td>'+l.loc.map(x=>locLink(x)).join(" ")+'</td></tr>').join("")+
-    '</table>'+(rows.length>shown.length?'<p class="hint" style="margin:10px 0">Showing 400 of '+rows.length+' — refine the search.</p>':'');
+    '</table>'+(rows.length>shown.length
+      ? '<button class="btn ghost morebtn" id="lmore">Show more ('+shown.length+' of '+rows.length+')</button>'
+      : '');
   wireGeneric(body);
+  const more=body.querySelector("#lmore");
+  if(more) more.onclick=()=>{ LOC.limit+=80; drawLocations(); };
 }
 function wireLocations(c){
   const lq=c.querySelector("#lq");
-  lq.oninput=()=>{LOC.q=lq.value; drawLocations();};
-  c.querySelector("#lk").onchange=e=>{LOC.kind=e.target.value; drawLocations();};
-  c.querySelector("#le").onchange=e=>{LOC.edition=e.target.value; drawLocations();};
+  lq.oninput=()=>{LOC.q=lq.value; LOC.limit=80; drawLocations();};
+  c.querySelector("#lk").onchange=e=>{LOC.kind=e.target.value; LOC.limit=80; drawLocations();};
+  c.querySelector("#le").onchange=e=>{LOC.edition=e.target.value; LOC.limit=80; drawLocations();};
   drawLocations(); lq.focus();
-}
-
-// ---------- My car ----------
-function opt(v,l,cur){return '<option value="'+v+'"'+(String(cur)===String(v)?' selected':'')+'>'+l+'</option>';}
-function triSel(id,cur){return '<select id="'+id+'">'+opt("","Not sure / show both",cur)+opt("yes","Yes",cur)+opt("no","No",cur)+'</select>';}
-function profileHTML(){
-  const p=PROFILE, sb=suggestedBlower(p.year);
-  return '<div class="cbar"><span class="ttl">My car</span><span class="sub">Used to pick the right edition and variant, '+
-    'and by the “My car” filter</span></div><div class="addwrap"><div class="card"><h3>Vehicle</h3><div class="inner">'+
-    '<div class="formgrid">'+
-      '<label>Model year</label><select id="p_year">'+[1990,1991,1992,1993].map(y=>opt(y,y,p.year)).join("")+'</select>'+
-      '<label>Model</label><select id="p_model">'+Object.entries(MODELS).map(([k,m])=>opt(k,m.label,p.model)).join("")+'</select>'+
-      '<label>Transmission</label><select id="p_trans">'+opt("M/T","Manual",p.trans)+opt("A/T","Automatic",p.trans)+opt("","Not sure",p.trans)+'</select>'+
-      '<label>Body</label><select id="p_body">'+opt("LIFTBACK","Liftback",p.body)+opt("COUPE","Coupe",p.body)+opt("CONVERTIBLE","Convertible",p.body)+'</select>'+
-      '<label>Market</label><select id="p_market">'+opt("USA","USA",p.market)+opt("CANADA","Canada",p.market)+'</select>'+
-    '</div></div></div>'+
-    '<div class="card"><h3>Climate control</h3><div class="inner"><div class="formgrid">'+
-      '<label>A/C type</label><select id="p_ac">'+opt("","Not sure / show both",p.ac)+opt("auto","Automatic climate control",p.ac)+
-        opt("manual","Manual A/C",p.ac)+opt("none","No A/C",p.ac)+'</select>'+
-      '<label>Blower control</label><select id="p_blower">'+opt("","Use year default"+(sb?" ("+(sb==="push"?"push-button":"dial")+")":" (1992: not sure)"),p.blower)+
-        opt("push","Five push buttons",p.blower)+opt("dial","Single dial (Off-Auto-Lo-Hi)",p.blower)+'</select>'+
-    '</div><p class="hint" style="margin:10px 0 0">1990–91: blower speed is set with five push buttons. 1992–93: a single rotary dial. '+
-      '1992 cars can have either.</p></div></div>'+
-    '<div class="card"><h3>Options</h3><div class="inner"><div class="formgrid">'+
-      '<label>CD player</label>'+triSel("p_cd",p.cd)+
-      '<label>Power seat</label>'+triSel("p_power_seat",p.power_seat)+
-      '<label>Sun roof</label>'+triSel("p_sunroof",p.sunroof)+
-      '<label>Cruise control</label>'+triSel("p_cruise",p.cruise)+
-      '<label>ABS</label>'+triSel("p_abs",p.abs)+
-    '</div></div></div>'+
-    '<div class="btnrow" style="max-width:760px;margin:0 auto"><button class="btn" id="psave">Save &amp; show my circuits</button>'+
-    '<button class="btn ghost" id="preset">Reset</button><span class="sub" id="pmsg"></span></div></div>';
-}
-function wireProfile(c){
-  const keys=["year","model","trans","body","market","ac","blower","cd","power_seat","sunroof","cruise","abs"];
-  c.querySelector("#psave").onclick=()=>{
-    keys.forEach(k=>{ const v=c.querySelector("#p_"+k).value; PROFILE[k]=k==="year"?parseInt(v,10):v; });
-    PROFILE.configured=true; saveProfile();
-    state.carOnly=true; document.getElementById("fcar").classList.add("on");
-    state.view="grid"; state.cat="all"; state.hvacBlower=null; render();
-  };
-  c.querySelector("#preset").onclick=()=>{PROFILE=Object.assign({},PROFILE_DEFAULT); saveProfile(); render();};
 }
 
 // ---------- editions ----------
@@ -715,24 +692,31 @@ const ADDP = AddManuals.create({
   checkHint: "Uploads are checked against your library first: the same filename, or the same edition "+
     "with the same circuit pages, triggers a comparison so you never silently lose a more complete copy.",
   rebuildHint: "Rebuilding re-scans every wiring diagram, splits books into circuits and re-renders previews. "+
-    "Text-based PDFs are split automatically; scanned ones need a page map (see Editions).",
+    "Picture-only pages are read the first time, which takes longer. After that they search like the other pages.",
 });
 
 // ---------- events ----------
 let deb;
+document.getElementById("q").value=state.q;
+document.getElementById("fed").value=state.edition;
 document.getElementById("q").addEventListener("input",e=>{
   clearTimeout(deb); deb=setTimeout(()=>{
     state.q=e.target.value.trim();
+    Memory.setFlag(APP, "q", state.q);
     if(state.view!=="grid") state.view="grid";
     render();
   },130);
 });
 document.getElementById("fed").onchange=e=>{
-  state.edition=e.target.value; if(state.view==="detail") state.view="grid"; render();};
-document.getElementById("fcar").onclick=e=>{
-  if(!PROFILE.configured){ state.view="profile"; render(); return; }
-  state.carOnly=!state.carOnly; e.target.classList.toggle("on",state.carOnly);
-  if(state.view!=="grid") state.view="grid"; render();};
+  state.edition=e.target.value; Memory.setFlag(APP, "edition", state.edition);
+  if(state.view==="detail") state.view="grid"; render();};
+document.getElementById("fcar").onclick=()=>{
+  if(!carNow()){ state.view="garage"; render(); return; }
+  state.carOnly=!state.carOnly;
+  Memory.setFlag(APP, "carOnly", state.carOnly?"1":"0");
+  if(state.view!=="grid") state.view="grid";
+  render();
+};
 document.addEventListener("keydown",e=>{
   if(e.key==="/"&&!/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName)){
     e.preventDefault(); document.getElementById("q").focus(); }
@@ -740,10 +724,25 @@ document.addEventListener("keydown",e=>{
 });
 
 buildRail();
+(function restore(){
+  if(/open=/.test(location.hash)) return;
+  const place=Memory.place(APP);
+  if(!place || place.view==="add") return;
+  if(place.cat) state.cat=place.cat;
+  if(place.view==="detail" && BY_ID[place.sel]){
+    state.view="detail"; state.sel=place.sel; state.page=place.page||null;
+  } else if(place.view) state.view=place.view;
+})();
 render();
 Shell.onOpen((id,page)=>{
   if(id.startsWith("sys:")) openSystem(id.slice(4));
   else openCircuit(id,page);
+});
+window.addEventListener("storage", e=>{
+  if(!e.key || e.key.indexOf("celica.")!==0) return;
+  if(e.key==="celica.repair.carId" || e.key==="celica.repair.carOnly") return;
+  if(state.view==="garage" || state.view==="add") return;
+  render();
 });
 </script>
 </body>

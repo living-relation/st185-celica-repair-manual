@@ -26,6 +26,8 @@ try:
 except ImportError:
     sys.exit("PyMuPDF not installed. Run: python -m pip install pymupdf")
 
+import ocr_pages
+
 def _find_app_dir() -> Path:
     """celica-manual dir. When frozen inside CelicaManual.exe, __file__ points
     at the PyInstaller temp extraction dir, so anchor on the exe instead."""
@@ -76,6 +78,7 @@ CODE_MAP = {
     "SF": ("SFI System", "Engine"),
     "EC": ("Emission Control", "Engine"),
     "FU": ("Fuel", "Engine"),
+    "EG": ("Engine Mechanical", "Engine"),
     "DI": ("Body Dimensions", "Body"),
     "IG": ("Ignition", "Engine Electrical"),
     "ST": ("Starting", "Engine Electrical"),
@@ -215,19 +218,46 @@ def prettify(stem: str) -> str:
     return s[:1].upper() + s[1:] if s else stem
 
 
+def _engine_hits(blob: str) -> list[str]:
+    """Engines named in a filename or page text. Longer names are checked
+    first so 3S-GTE is never mistaken for 3S-GE."""
+    low = blob.lower()
+    found = []
+    checks = (
+        ("3sgte", ("3sgte", "3s-gte", "3s gte")),
+        ("3sge", ("3sge", "3s-ge", "3s ge")),
+        ("5sfe", ("5sfe", "5s-fe", "5s fe")),
+        ("4afe", ("4afe", "4a-fe", "4a fe")),
+    )
+    for key, names in checks:
+        if any(name in low for name in names):
+            found.append(key)
+    return found
+
+
 def detect_engine(stem: str, text: str):
-    s = stem.lower()
-    has3 = "3sgte" in s or "3s-gte" in s or "3S-GTE" in text or "3S GTE" in text
-    has5 = "5sfe" in s or "5s-fe" in s or "5S-FE" in text or "5S FE" in text
-    if "3sgte_and_5sfe" in s or (has3 and has5 and "and" in s):
+    """Prefer the engine in the file name. A long book that mentions a
+    second engine in passing stays with the engine the file is about."""
+    named = _engine_hits(stem)
+    if len(named) == 1:
+        return named[0]
+    if len(named) > 1:
         return "both"
-    if has3 and has5:
+    found = _engine_hits(text)
+    if len(found) == 1:
+        return found[0]
+    if len(found) > 1:
         return "both"
-    if has3:
-        return "3sgte"
-    if has5:
-        return "5sfe"
     return "na"
+
+
+def detect_edition(stem: str, meta: dict) -> str:
+    """Year stamped on an imported book. Blank means the main 1993 shelf."""
+    edition = str(meta.get("edition") or "")
+    if edition:
+        return edition
+    match = re.search(r"(1990|1991|1992|1993)", stem)
+    return match.group(1) if match else ""
 
 
 def extract_pdf(path: Path, thumb_path: Path):
@@ -258,6 +288,7 @@ def load_library() -> dict:
 
 
 def build():
+    ocr_pages.convert_tree(MANUALS_DIR)
     pdfs = sorted(MANUALS_DIR.glob("*.pdf"), key=lambda p: p.name.lower())
     print(f"Found {len(pdfs)} PDFs in {MANUALS_DIR}")
     library = load_library()
@@ -271,7 +302,8 @@ def build():
         stem = path.stem
         meta = library.get(path.name, {})
         thumb_name = stem + ".png"
-        pages = extract_pdf(path, THUMB_DIR / thumb_name)
+        pages = [ocr_pages.strip_sentinel(pg)
+                 for pg in extract_pdf(path, THUMB_DIR / thumb_name)]
         n = len(pages)
         full = "\n".join(
             f"\n===== PAGE {i} of {n} =====\n{pg}" for i, pg in enumerate(pages, 1)
@@ -329,8 +361,11 @@ def build():
             unmapped.append(stem)
 
         engine = meta.get("engine") or detect_engine(stem, full)
-        image_only = len(full.strip()) < 200
-        relevance = "ref" if engine == "5sfe" else "car"
+        real_chars = sum(len("".join(pg.split())) for pg in pages)
+        image_only = real_chars < 40 * max(1, n)
+        # "ref" keeps other-engine books out of the All-Trac wiring links.
+        # The My car filter uses the engine tag, not this flag.
+        relevance = "ref" if engine in ("5sfe", "3sge", "4afe") else "car"
 
         # --- first heading (title) from page 1, ignoring markers ---
         first_heading = ""
@@ -341,7 +376,7 @@ def build():
                 first_heading = t
                 break
         title = meta.get("title") or prettify(stem)
-        edition = meta.get("edition", "")
+        edition = detect_edition(stem, meta)
 
         # --- torque specs ---
         torques = []
