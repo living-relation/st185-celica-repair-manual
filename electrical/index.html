@@ -741,7 +741,7 @@ Shell.onOpen((id,page)=>{
 window.addEventListener("storage", e=>{
   if(!e.key || e.key.indexOf("celica.")!==0) return;
   if(e.key==="celica.repair.carId" || e.key==="celica.repair.carOnly") return;
-  if(state.view==="garage" || state.view==="add") return;
+  if(state.view==="detail" || state.view==="garage" || state.view==="add") return;
   render();
 });
 </script>
