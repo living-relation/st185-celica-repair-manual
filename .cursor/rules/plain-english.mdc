@@ -1,0 +1,14 @@
+---
+description: Explain answers in plain, everyday English
+alwaysApply: true
+---
+
+# Plain English
+
+Write every user-facing reply in plain English, the way you would explain it to a smart kid.
+
+- Short sentences. Everyday words.
+- Say what something does before you name the file or function.
+- If you need a technical word, explain it in the same sentence.
+- Lead with the answer. Put the details after that.
+- Stay accurate. Simple wording still has to be true.
