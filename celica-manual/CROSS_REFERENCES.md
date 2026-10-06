@@ -496,6 +496,15 @@ Where each 'See page XX-nn' reference resolves to a file in this set. Unresolved
 - CH-25  ->  Generator.pdf
 - EM-309  ->  Cylinder_Block_5sfe.pdf
 
+## Toyota - 3S-GTE - 1991 - Repair Manual (RM266E)  (`Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf`)
+- TC-12  ->  (not in set)
+- TC-20  ->  (not in set)
+- TC-8  ->  (not in set)
+- TC-16  ->  (not in set)
+- TC-10  ->  (not in set)
+- TC-14  ->  (not in set)
+- TC-21  ->  (not in set)
+
 ## Transfer  (`Transfer.pdf`)
 - MT-201  ->  (not in set)
 - MT-196  ->  (not in set)

@@ -49,6 +49,10 @@ except ImportError:
 
 import taxonomy as tx
 
+if not getattr(sys, "frozen", False):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "celica-manual" / "build"))
+import ocr_pages
+
 
 def _find_app_dir() -> Path:
     """electrical/ dir. When frozen inside CelicaManual.exe, __file__ points
@@ -119,7 +123,7 @@ def analyze_page(page) -> dict:
             head = _clean(" ".join(t for _, t in spans[1:]))
             if len(head) >= 4:
                 features.append((int(m.group(1)), head))
-    text = tx.norm_text(page.get_text("text"))
+    text = ocr_pages.strip_sentinel(tx.norm_text(page.get_text("text")))
     return {"printed": printed, "title": title, "features": features, "text": text}
 
 
@@ -386,6 +390,7 @@ def _hvac_blower(c_text, info):
 
 
 def build():
+    ocr_pages.convert_tree(SRC_DIR)
     SRC_DIR.mkdir(parents=True, exist_ok=True)
     for d in (DATA_DIR, THUMB_DIR, PAGES_DIR, CIRCUIT_DIR):
         d.mkdir(parents=True, exist_ok=True)
@@ -523,13 +528,18 @@ def build():
         src = src_by_id[g["source"]]
         pages = analyzed[g["file"]]
         cpages = [pages[i] for i in g["pages"]]
-        text = "\n".join(p["text"] for p in cpages)
-        ls = _lines(text)
+        plain = "\n".join(p["text"] for p in cpages)
+        # Page banners let the app open the page a search hit came from.
+        # Parsers keep using the plain text so the banners are not parts.
+        text = "\n".join(
+            f"\n===== PAGE {i} of {len(cpages)} =====\n{p['text']}"
+            for i, p in enumerate(cpages, 1))
+        ls = _lines(plain)
         v = dict(info["variant"])
         if info["key"].startswith("hvac-"):
             heads = " ".join(h for _pg, _n, h in g["features"]) if "features" in g \
                 else " ".join(h for p in cpages for _n, h in p["features"])
-            b = _hvac_blower(" ".join([text, heads, *g["subtitles"].values()]), info)
+            b = _hvac_blower(" ".join([plain, heads, *g["subtitles"].values()]), info)
             if b:
                 v["blower"] = b
             label = tx.variant_label(info["key"], info["paren"], v)
@@ -580,7 +590,7 @@ def build():
         rblocks = [{"code": c, "name": d, "loc": [resolve(g["source"], p) for p in pg]}
                    for c, pg, d in parse_relay_blocks(ls)]
         refs, seen = [], set()
-        for m in _SEE_PAGE.finditer(text):
+        for m in _SEE_PAGE.finditer(plain):
             pr = int(m.group(1))
             if pr in seen or pr in own_printed:
                 continue
@@ -615,9 +625,9 @@ def build():
             "junction_blocks": jblocks,
             "relay_blocks": rblocks,
             "fuses": parse_fuses(ls),
-            "options": parse_options(text),
+            "options": parse_options(plain),
             "refs": refs,
-            "image_only": len(text.strip()) < 25 * max(1, len(cpages)),
+            "image_only": len(plain.strip()) < 25 * max(1, len(cpages)),
             "text": re.sub(r"[ \t]*\n[ \t]*", "\n", text).strip(),
         })
 

@@ -571,6 +571,11 @@ REPAIR_DOCS = {
     "Toyota ST185 Chassis Dimensions.pdf": ("ST185 Chassis Dimensions", "Body Dimensions", "Body"),
     "E Gearbox Identification.pdf": ("E-Series Gearbox Identification", "Manual Transmission E150F (4WD)", "Drivetrain"),
     "E Gearbox Information.pdf": ("E-Series Gearbox Information", "Manual Transmission E150F (4WD)", "Drivetrain"),
+    "Brake Upgrade Guide.pdf": ("Brake Upgrades (5x100 Celica)", "Brakes", "Brakes"),
+    "Toyota DBA Rotors Catalouge.pdf": ("DBA Brake Rotor Catalogue", "Brakes", "Brakes"),
+    "Whiteline ST185 Catalogue.pdf": ("Whiteline ST185 Catalogue", "Suspension", "Chassis"),
+    "Hot4s-ST185-Handling-Guide.pdf": ("ST185 Handling Guide (Hot 4's)", "Suspension", "Chassis"),
+    "CT26 Turbo Rebuild Guide.pdf": ("CT26 Turbo Rebuild Guide", "Turbocharger", "Engine"),
 }
 EWD_DOCS = {
     "3SGTE ECU Pinouts.pdf": "ENGINE CONTROL (3S-GTE, ECU PINOUTS)",
@@ -583,8 +588,12 @@ def import_small_docs(folder, library):
     for fname, (title, system, group) in REPAIR_DOCS.items():
         if (folder / fname).is_file():
             shutil.copyfile(folder / fname, REPAIR_DIR / fname)
-            library["files"][fname] = {"title": title, "system": system, "group": group,
-                                       "book": BOOK_MWP}
+            meta = {"title": title, "system": system, "group": group, "book": BOOK_MWP}
+            if fname in ("CT26 Turbo Rebuild Guide.pdf",
+                         "Whiteline ST185 Catalogue.pdf",
+                         "Hot4s-ST185-Handling-Guide.pdf"):
+                meta["engine"] = "3sgte"
+            library["files"][fname] = meta
     files = []
     for fname, title in EWD_DOCS.items():
         if not (folder / fname).is_file():

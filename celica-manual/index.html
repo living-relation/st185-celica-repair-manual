@@ -10,6 +10,8 @@
   .b-3sgte{background:#3a1416;color:#ff9a9e;border-color:#5a1f22}
   .b-5sfe{background:#20262e;color:#9fb0c0}
   .b-both{background:#2a1c3a;color:var(--purple);border-color:#43305f}
+  .b-3sge{background:#3a2a14;color:#f0c674;border-color:#5a431c}
+  .b-4afe{background:#142e2a;color:#8fd6c8;border-color:#1f4a42}
   .b-tq{background:#12251a;color:#7ee2a8;border-color:#1f4630}
   .b-ewd{background:#2b2410;color:var(--amber);border-color:#4a3d16}
   .b-book{background:#14233a;color:#8fbfff;border-color:#25406a}
@@ -43,17 +45,22 @@
       <option value="both">Shared</option>
       <option value="na">Non-engine</option>
     </select>
-    <button class="tglbtn" id="fcar" title="Show only content that applies to your 1993 All-Trac">My car</button>
+    <button class="tglbtn" id="fcar" title="Show only sections that fit the car picked in this tab">Pick a car</button>
   </div>
 </header>
 <div id="protowarn">⚠ Opened as a plain file — the in-app PDF viewer needs the local server.
-  Close this tab and double-click <b>Open Celica Manual.bat</b> instead.</div>
+  Run <b>CelicaManual.exe</b> instead.</div>
 <main>
   <nav class="rail" id="rail"></nav>
   <section class="content" id="content"></section>
 </main>
 <div id="pv"><img alt=""><span class="cap"></span></div>
 
+<script src="../shared/search.js"></script>
+<script src="../shared/preview.js"></script>
+<script src="../shared/pdfnav.js"></script>
+<script src="../shared/memory.js"></script>
+<script src="../shared/garage.js"></script>
 <script src="../shared/bridge.js"></script>
 <script src="../shared/addmanuals.js"></script>
 <script src="data/data.js"></script>
@@ -75,9 +82,12 @@ const TQ_TABLES = RECS.filter(r=>r.torque_table_pages.length).length;
 const GROUP_ORDER = ["Engine","Engine Electrical","Drivetrain","Chassis","Brakes",
   "Electrical","HVAC","Body","General","Other"];
 const ENG_BADGE = {"3sgte":["3S-GTE","b-3sgte"],"5sfe":["5S-FE","b-5sfe"],
-  "both":["3S+5S","b-both"],"na":["",""]};
+  "both":["3S+5S","b-both"],"3sge":["3S-GE","b-3sge"],"4afe":["4A-FE","b-4afe"],"na":["",""]};
+const APP = "repair";
 
-const state = {group:"All", q:"", engine:"", carOnly:false, view:"grid", sel:null, page:null};
+const state = {group:"All", q: Memory.flag(APP, "q", ""), engine: Memory.flag(APP, "engine", ""),
+  carOnly: Memory.flag(APP, "carOnly", "0") === "1", view:"grid", sel:null, page:null,
+  infoOpen: Memory.flag(APP, "infoOpen", "1") === "1"};
 
 document.getElementById("stats").textContent =
   RECS.length+" sections · "+TQ_TABLES+" torque tables · "+
@@ -85,13 +95,14 @@ document.getElementById("stats").textContent =
 if(location.protocol==="file:") document.getElementById("protowarn").style.display="block";
 
 // ---------- helpers ----------
-function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
-function terms(){return state.q.toLowerCase().split(/\s+/).filter(Boolean);}
+function esc(s){return Lib.esc(s);}
+function terms(){return Lib.terms(state.q);}
 function matchGroup(r){return state.group==="All" || r.group===state.group;}
+function carNow(){return state.carOnly ? Garage.selected(APP) : null;}
 function matchFilters(r){
   if(!matchGroup(r)) return false;
   if(state.engine && r.engine!==state.engine) return false;
-  if(state.carOnly && r.relevance!=="car") return false;
+  if(carNow() && !Garage.repairFits(r, RECS, carNow())) return false;
   return terms().every(w=>r._blob.includes(w));
 }
 // rank 0 = every search term found in title/header; rank 1 = body-only match
@@ -99,21 +110,8 @@ function rankOf(r){
   const t=terms(); if(!t.length) return 0;
   return t.every(w=>r._titleBlob.includes(w)) ? 0 : 1;
 }
-function hi(text){
-  let out=esc(text); const t=terms();
-  t.forEach(w=>{ if(!w)return;
-    const re=new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig");
-    out=out.replace(re,"<mark>$1</mark>"); });
-  return out;
-}
-function snippet(r){
-  const t=terms(); if(!t.length) return "";
-  const low=r.text.toLowerCase(); let i=-1;
-  for(const w of t){const p=low.indexOf(w); if(p>=0&&(i<0||p<i))i=p;}
-  if(i<0) return "";
-  const s=Math.max(0,i-60), e=Math.min(r.text.length,i+110);
-  return (s>0?"…":"")+hi(r.text.slice(s,e).replace(/\s+/g," "))+(e<r.text.length?"…":"");
-}
+function hi(text){return Lib.hi(text, terms());}
+function hitFor(r){return Lib.findHit(r.text, terms());}
 function thumbHref(r){return "thumbs/"+encodeURIComponent(r.thumb);}
 function pageThumb(id,page){return "thumbs/pages/"+encodeURIComponent(id)+"_p"+page+".png";}
 // PDF.js viewer URL — renders the PDF in-app (no browser plugin, no download)
@@ -122,30 +120,12 @@ function viewerSrc(r,page){
   return "../shared/pdfjs/web/viewer.html?file="+encodeURIComponent(abs)+
          (page?("#page="+page+"&zoom=page-width"):"#zoom=page-width");
 }
-function openSection(id,page){ if(!BY_ID[id])return; state.sel=id; state.view="detail";
-  state.page=page||null; hidePv(); render(); }
-
-// ---------- floating hover preview ----------
-const pv=document.getElementById("pv");
-function hidePv(){pv.style.display="none";}
-function movePv(e){
-  const w=274,h=380; let x=e.clientX+18,y=e.clientY+14;
-  if(x+w>innerWidth)x=e.clientX-w-18;
-  if(y+h>innerHeight)y=Math.max(8,innerHeight-h-8);
-  pv.style.left=x+"px"; pv.style.top=y+"px";
-}
-function bindPreviews(root){
-  root.querySelectorAll("[data-pv]").forEach(el=>{
-    el.addEventListener("mouseenter",e=>{
-      const img=pv.querySelector("img");
-      img.onerror=hidePv;
-      img.src=el.dataset.pv;
-      pv.querySelector(".cap").textContent=el.dataset.pvcap||"";
-      pv.style.display="block"; movePv(e);
-    });
-    el.addEventListener("mousemove",movePv);
-    el.addEventListener("mouseleave",hidePv);
-  });
+function openSection(id,page){
+  if(!BY_ID[id]) return;
+  state.sel=id; state.view="detail"; state.page=page||null;
+  Lib.hidePreview();
+  Memory.pushRecent(APP, {id:id, title:BY_ID[id].title, page:page||null});
+  render();
 }
 
 // ---------- left rail ----------
@@ -158,13 +138,29 @@ function buildRail(){
   h+='<div class="railsec">Tools</div>';
   h+='<button class="railbtn" data-view="torque"><span>⚙ Torque tables</span>'+
      '<span class="cnt">'+TQ_TABLES+'</span></button>';
+  h+='<button class="railbtn" data-view="garage"><span>🚗 Garage</span>'+
+     '<span class="cnt">'+Garage.cars().length+'</span></button>';
+  h+=placeRail("pins", "Pinned", Memory.pins(APP));
+  h+=placeRail("recent", "Recent", Memory.recent(APP));
   h+='<button class="railbtn" data-view="add"><span>+ Add manuals</span></button>';
   rail.innerHTML=h;
   rail.querySelectorAll("[data-group]").forEach(b=>b.onclick=()=>{
     state.group=b.dataset.group; state.view="grid"; state.sel=null; render();
   });
-  rail.querySelector('[data-view="torque"]').onclick=()=>{state.view="torque";render();};
-  rail.querySelector('[data-view="add"]').onclick=()=>{state.view="add";render();};
+  rail.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;render();});
+  rail.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{
+    openSection(b.dataset.open, b.dataset.page?parseInt(b.dataset.page,10):null);
+  });
+}
+function placeRail(view, label, items){
+  let h='<button class="railbtn" data-view="'+view+'"><span>'+label+'</span>'+
+    '<span class="cnt">'+items.length+'</span></button>';
+  items.slice(0, 5).forEach(item=>{
+    if(!BY_ID[item.id]) return;
+    h+='<button class="railbtn" data-open="'+esc(item.id)+'" data-page="'+(item.page||'')+'">'+
+      '<span>'+esc(item.title)+(item.page?' p.'+item.page:'')+'</span></button>';
+  });
+  return h;
 }
 function railBtn(group,label,count){
   return '<button class="railbtn" data-group="'+esc(group)+'"><span>'+esc(label)+
@@ -172,24 +168,62 @@ function railBtn(group,label,count){
 }
 function syncRail(){
   document.querySelectorAll(".rail .railbtn").forEach(b=>{
-    const on = (state.view!=="torque" && state.view!=="add" && b.dataset.group===state.group) ||
-               (state.view==="torque" && b.dataset.view==="torque") ||
-               (state.view==="add" && b.dataset.view==="add");
+    const tools = state.view==="torque" || state.view==="add" || state.view==="garage" ||
+      state.view==="pins" || state.view==="recent";
+    const on = (!tools && b.dataset.group===state.group) ||
+               (b.dataset.view && b.dataset.view===state.view);
     b.classList.toggle("active",!!on);
   });
 }
 
 // ---------- render ----------
 function render(){
-  syncRail(); hidePv();
+  syncRail(); Lib.hidePreview(); syncCarButton();
   const c=document.getElementById("content");
-  if(state.view==="torque"){ c.innerHTML=gridHTML(true); wireGrid(c); return; }
+  if(state.view==="torque"){ c.innerHTML=gridHTML(true); wireGrid(c); remember(); return; }
   if(state.view==="add"){ c.innerHTML=ADDP.html(); ADDP.wire(c); return; }
+  if(state.view==="garage"){ c.innerHTML=Garage.panelHTML(APP); Garage.wire(c, APP, (action)=>{
+    if(action==="use" || action==="save") state.carOnly=!!Garage.selected(APP);
+    if(!Garage.selected(APP)) state.carOnly=false;
+    Memory.setFlag(APP, "carOnly", state.carOnly ? "1" : "0");
+    if(action==="use" || action==="save") state.view="grid";
+    render();
+  }); return; }
+  if(state.view==="pins" || state.view==="recent"){ c.innerHTML=placeHTML(state.view); wireGrid(c); remember(); return; }
   if(state.view==="detail" && BY_ID[state.sel]){
-    const p=state.page; state.page=null;
-    c.innerHTML=detailHTML(BY_ID[state.sel],p); wireDetail(c); return;
+    const p=state.page; state.page=p||null;
+    c.innerHTML=detailHTML(BY_ID[state.sel],p); wireDetail(c, p); remember(); return;
   }
-  c.innerHTML=gridHTML(false); wireGrid(c);
+  state.view="grid";
+  c.innerHTML=gridHTML(false); wireGrid(c); remember();
+}
+function remember(){
+  Memory.savePlace(APP, {view:state.view, sel:state.sel, page:state.page, group:state.group,
+    q:state.q, engine:state.engine});
+}
+function syncCarButton(){
+  const btn=document.getElementById("fcar");
+  const car=Garage.selected(APP);
+  if(!car && state.carOnly){ state.carOnly=false; Memory.setFlag(APP, "carOnly", "0"); }
+  btn.textContent = car ? Garage.label(car) : "Pick a car";
+  btn.classList.toggle("on", !!(state.carOnly && car));
+  btn.title = car
+    ? "This tab only. Show sections that fit "+Garage.label(car)+". The electrical tab keeps its own car."
+    : "Save a car in the garage, then this tab can filter to it.";
+}
+function placeHTML(kind){
+  const items = kind==="pins" ? Memory.pins(APP) : Memory.recent(APP);
+  const title = kind==="pins" ? "Pinned pages" : "Recently opened";
+  const head='<div class="cbar"><span class="ttl">'+title+'</span><span class="sub">'+
+    items.length+" in this tab"+'</span></div>';
+  if(!items.length) return head+'<div class="empty">Nothing here yet. Open a section, or pin it from the page.</div>';
+  const cards=items.filter(item=>BY_ID[item.id]).map(item=>{
+    const r=BY_ID[item.id];
+    return '<div class="gcard" data-id="'+esc(r.id)+'" data-page="'+(item.page||'')+'">'+
+      '<div class="gmeta"><div class="gtitle">'+esc(r.title)+'</div>'+
+      '<div class="gsub">'+(item.page?'Page '+item.page:'Start of section')+'</div></div></div>';
+  }).join("");
+  return head+'<div class="gridwrap"><div class="grid">'+cards+'</div></div>';
 }
 
 // ---------- grid ----------
@@ -209,7 +243,7 @@ function gridHTML(torqueOnly){
     (state.q?' matching “'+esc(state.q)+'” — title/header matches first':'')+
     (torqueOnly?" — opens the PDF at the table page":"");
   const head='<div class="cbar"><span class="ttl">'+esc(title)+'</span><span class="sub">'+sub+'</span></div>';
-  if(!list.length) return head+'<div class="empty">No sections match. Try clearing the search or the “My car” filter.</div>';
+  if(!list.length) return head+'<div class="empty">No sections match. Try clearing the search or the car filter.</div>';
   let cards=""; let lastRank=-1;
   list.forEach(r=>{
     const rk=rankOf(r);
@@ -217,8 +251,9 @@ function gridHTML(torqueOnly){
       cards+='<div class="divider">'+(rk===0?"Title / header matches":"Content matches")+'</div>';
       lastRank=rk;
     }
-    const eb=ENG_BADGE[r.engine];
-    const jp=torqueOnly?r.torque_table_pages[0]:"";
+    const eb=ENG_BADGE[r.engine]||["",""];
+    const hit=searching?hitFor(r):null;
+    const jp=torqueOnly?r.torque_table_pages[0]:(hit&&hit.page?hit.page:"");
     const badges='<div class="bstack">'+
       (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
       (r.relevance==="ref"?'<span class="badge b-ref">REF</span>':'')+
@@ -235,7 +270,7 @@ function gridHTML(torqueOnly){
         badges+'</div>'+
       '<div class="gmeta"><div class="gtitle">'+hi(r.title)+'</div>'+
         '<div class="gsub">'+sub+'</div>'+
-        (snippet(r)?'<div class="gsnip">'+snippet(r)+'</div>':'')+
+        (hit&&hit.snippet?'<div class="gsnip">'+hit.snippet+'</div>':'')+
       '</div></div>';
   });
   return head+'<div class="gridwrap"><div class="grid">'+cards+'</div></div>';
@@ -260,7 +295,7 @@ function tqSource(rr,kind){
   return h+'</div></div>';
 }
 function detailHTML(r,jumpPage){
-  const eb=ENG_BADGE[r.engine];
+  const eb=ENG_BADGE[r.engine]||["",""];
 
   // jump links — named per linked section, hover shows target-page image
   let refs="";
@@ -314,33 +349,58 @@ function detailHTML(r,jumpPage){
     '</div></div></div>':'';
 
   return ''+
-    '<div class="detail">'+
+      '<div class="detail'+(state.infoOpen?'':' fold')+'">'+
       '<div class="dtop"><div class="row1">'+
         '<button class="btn ghost" id="back">← Sections</button>'+
         '<h2>'+esc(r.title)+'</h2>'+
+        '<button class="btn ghost" id="pin">'+(Memory.isPinned(APP, r.id, jumpPage)?'Unpin':'Pin')+'</button>'+
+        '<button class="btn ghost" id="fold">'+(state.infoOpen?'Hide details':'Show details')+'</button>'+
         '<a class="btn" href="'+viewerSrc(r,jumpPage)+'" target="_blank" rel="noopener">Open in new tab ↗</a>'+
       '</div>'+
       '<div class="dmeta">'+
         '<span class="badge b-code">'+esc(r.system)+(r.code?' · '+esc(r.code):'')+'</span>'+
         (eb[0]?'<span class="badge '+eb[1]+'">'+eb[0]+'</span>':'')+
-        (r.relevance==="ref"?'<span class="badge b-ref">5S-FE reference</span>':'')+
+        (r.engine==="5sfe"?'<span class="badge b-ref">5S-FE reference</span>':'')+
+        (r.engine==="3sge"?'<span class="badge b-3sge">3S-GE</span>':'')+
+        (r.engine==="4afe"?'<span class="badge b-4afe">4A-FE</span>':'')+
         (r.book?'<span class="badge b-book">From '+esc(r.book)+'</span>':'')+
         '<span>'+r.pages+' pages</span><span style="color:#63707d">'+esc(r.file)+'</span>'+
-      '</div></div>'+
+      '</div>'+fitNote(r)+'</div>'+
       '<div class="dsplit">'+
-        '<div class="pdfpane"><iframe src="'+viewerSrc(r,jumpPage)+'" title="'+esc(r.title)+' PDF"></iframe></div>'+
+        '<div class="pdfpane"><iframe id="viewer" src="'+viewerSrc(r,jumpPage)+'" title="'+esc(r.title)+' PDF"></iframe></div>'+
         '<div class="infopane">'+ewd+tq+refs+'</div>'+
       '</div>'+
     '</div>';
 }
-function wireDetail(c){
+function fitNote(r){
+  const car=Garage.selected(APP);
+  if(!car) return "";
+  const why=Garage.repairWhy(r, RECS, car);
+  if(!why.length) return '<div class="fitnote ok">Fits '+esc(Garage.label(car))+' in this tab.</div>';
+  return '<div class="fitnote no">Kept visible because you opened it. It is outside '+esc(Garage.label(car))+
+    ': '+esc(why.join(", "))+'. </div>';
+}
+function wireDetail(c, jumpPage){
   c.querySelector("#back").onclick=()=>{state.view="grid";state.sel=null;render();};
+  c.querySelector("#pin").onclick=()=>{
+    const r=BY_ID[state.sel];
+    const on=Memory.togglePin(APP, {id:r.id, title:r.title, page:jumpPage||null});
+    c.querySelector("#pin").textContent=on?"Unpin":"Pin";
+    buildRail();
+    syncRail();
+  };
+  c.querySelector("#fold").onclick=()=>{
+    state.infoOpen=!state.infoOpen;
+    Memory.setFlag(APP, "infoOpen", state.infoOpen?"1":"0");
+    c.querySelector(".detail").classList.toggle("fold", !state.infoOpen);
+    c.querySelector("#fold").textContent=state.infoOpen?"Hide details":"Show details";
+  };
   c.querySelectorAll("[data-open]").forEach(el=>el.onclick=()=>{
     const pg=el.dataset.page?parseInt(el.dataset.page,10):null;
     openSection(el.dataset.open,pg);
   });
   c.querySelectorAll("[data-ewd]").forEach(el=>el.onclick=()=>Shell.open("electrical","sys:"+el.dataset.ewd));
-  bindPreviews(c);
+  Lib.bindPreviews(c);
 }
 
 // ---------- add manuals ----------
@@ -350,8 +410,9 @@ const ADDP = AddManuals.create({
   overlapNoun: "page codes",
   checkHint: "Uploads are checked against your library first: same filename or overlapping "+
     "Toyota page codes trigger a comparison so you never silently lose a more complete section.",
-  rebuildHint: "Rebuilding re-scans every PDF and takes about 10–30 seconds. New sections get "+
-    "the full treatment: search, thumbnails, torque-table links and cross-references.",
+  rebuildHint: "Rebuilding re-scans every PDF. A normal rebuild takes about 10–30 seconds. "+
+    "The first time a scanned picture PDF is added, reading the pictures takes longer. "+
+    "New sections get search, thumbnails, torque-table links and cross-references.",
 });
 
 // ---------- events ----------
@@ -359,23 +420,46 @@ let deb;
 document.getElementById("q").addEventListener("input",e=>{
   clearTimeout(deb); deb=setTimeout(()=>{
     state.q=e.target.value.trim();
+    Memory.setFlag(APP, "q", state.q);
     if(state.view==="detail") state.view="grid";
     render();
   },130);
 });
+document.getElementById("fengine").value=state.engine;
+document.getElementById("q").value=state.q;
 document.getElementById("fengine").onchange=e=>{
-  state.engine=e.target.value; if(state.view==="detail")state.view="grid"; render();};
-document.getElementById("fcar").onclick=e=>{
-  state.carOnly=!state.carOnly; e.target.classList.toggle("on",state.carOnly);
+  state.engine=e.target.value; Memory.setFlag(APP, "engine", state.engine);
   if(state.view==="detail")state.view="grid"; render();};
+document.getElementById("fcar").onclick=()=>{
+  if(!Garage.selected(APP)){ state.view="garage"; render(); return; }
+  state.carOnly=!state.carOnly;
+  Memory.setFlag(APP, "carOnly", state.carOnly?"1":"0");
+  if(state.view==="detail") state.view="grid";
+  render();
+};
 document.addEventListener("keydown",e=>{
   if(e.key==="/"&&document.activeElement.id!=="q"){e.preventDefault();document.getElementById("q").focus();}
   if(e.key==="Escape"&&state.view==="detail"){state.view="grid";state.sel=null;render();}
 });
 
 buildRail();
+(function restore(){
+  if(/open=/.test(location.hash)) return;
+  const place=Memory.place(APP);
+  if(!place || place.view==="add") return;
+  if(place.group) state.group=place.group;
+  if(place.view==="detail" && BY_ID[place.sel]){
+    state.view="detail"; state.sel=place.sel; state.page=place.page||null;
+  } else if(place.view) state.view=place.view;
+})();
 render();
 Shell.onOpen((id,page)=>openSection(id,page));
+window.addEventListener("storage", e=>{
+  if(!e.key || e.key.indexOf("celica.")!==0) return;
+  if(e.key==="celica.electrical.carId" || e.key==="celica.electrical.carOnly") return;
+  if(state.view==="detail" || state.view==="garage" || state.view==="add") return;
+  render();
+});
 </script>
 </body>
 </html>

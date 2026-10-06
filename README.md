@@ -110,11 +110,15 @@ which edition covers each combination, and the system-outline features
 operation) as jump links. Other circuits whose wiring changes with the blower
 control (e.g. 1992 engine control) are listed too.
 
-**My car.** Preset to the owner's car — 1993 ST185, manual transmission,
-automatic A/C with the dial blower control — and switched on. Change year,
-model, transmission, body, A/C type, blower control and options under
-**My car**; the toggle hides circuits that don't apply, and every card opens
-the edition that best matches your car.
+**Garage.** Both tabs share one list of saved cars. Each tab picks its own
+car, so the repair tab can stay on a 1993 All-Trac while the electrical tab
+looks at a 1990 car. The toolbar button turns that tab's filter on or off.
+With the filter on, wiring circuits that do not fit the picked car are hidden,
+and repair sections for a different engine or a different year are hidden when
+the picked year already has that system. Add, edit, or delete cars under
+**Garage** in either tab. A 1993 All-Trac can be filled in as an example, and
+it is not selected until you save it. An older saved car from a previous
+version is kept for the electrical tab only.
 
 **Locations index.** Every part code (A34 *Auto A/C Amplifier*), harness joint
 (IE1), junction block and relay block from each edition's routing pages, with
@@ -148,7 +152,7 @@ not already have (matched by Toyota page code):
 | 1993 ST185 Repair Manual vol. 1 (RM305U1) | Repair Manual | One section per chapter (page-header topic), skipping chapters already in the library and 4A-FE-only chapters |
 | 1990 ST185 All-Trac Repair Manual (RM176U) | Repair Manual | Clutch, E150F transaxle, propeller shaft, suspension & axle, brakes, steering, body electrical, body — tagged 1990 so its page codes never link into 1993 pages |
 | 1993 Celica Service Manual (aftermarket) | Electrical + Repair Manual | Electrical articles and wiring diagrams become the *1993 Mitchell* edition; ST185-relevant mechanical articles (2.0L turbo engine, engine performance/diagnostics, A/C servicing, axles, brakes, steering, suspension, alignment, maintenance) become repair sections |
-| Small references | either app | Specifications, chassis dimensions, E-series gearbox notes, ECU pinouts, alternator guide, Wire Harness Repair Manual |
+| Small references | either app | Specifications, chassis dimensions, E-series gearbox notes, ECU pinouts, alternator guide, Wire Harness Repair Manual, brake and suspension notes, CT26 rebuild guide, and the 1990 FWD wiring diagram |
 
 ```powershell
 python tools\import_books.py C:\Users\<you>\Downloads    # folder with the MWP PDFs (original names)
@@ -169,7 +173,13 @@ and circuit titles against an edition already in the library (so a single
 circuit page pulled from TIS lands in the right year). Add an entry to
 `sources.json` to name an edition or set its year.
 
-Text-based PDFs are split automatically. A scanned (image-only) PDF is shown
+Picture-only pages are read with Tesseract the first time a catalog is built,
+and the words are stored invisibly on those pages so search and the PDF viewer
+treat them like the other manuals. That needs Tesseract installed. If it is
+missing, the build still finishes and those pages stay pictures.
+
+Text-based PDFs are split automatically. A scanned PDF that still has no text
+is shown
 unsplit until you add a page map `electrical\build\overrides\<file name>.json`:
 
 ```json
@@ -243,6 +253,7 @@ python -m PyInstaller --noconfirm --onefile --windowed --name CelicaManual `
   --workpath "$env:TEMP\cm-build" --specpath "$env:TEMP\cm-build" --distpath . `
   --paths "celica-manual\build" --paths "electrical\build" `
   --hidden-import build --hidden-import build_ewd --hidden-import taxonomy `
+  --hidden-import ocr_pages `
   --hidden-import fitz "celica-manual\build\app.py"
 ```
 

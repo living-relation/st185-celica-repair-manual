@@ -26,6 +26,8 @@ try:
 except ImportError:
     sys.exit("PyMuPDF not installed. Run: python -m pip install pymupdf")
 
+import ocr_pages
+
 def _find_app_dir() -> Path:
     """celica-manual dir. When frozen inside CelicaManual.exe, __file__ points
     at the PyInstaller temp extraction dir, so anchor on the exe instead."""
@@ -76,6 +78,7 @@ CODE_MAP = {
     "SF": ("SFI System", "Engine"),
     "EC": ("Emission Control", "Engine"),
     "FU": ("Fuel", "Engine"),
+    "EG": ("Engine Mechanical", "Engine"),
     "DI": ("Body Dimensions", "Body"),
     "IG": ("Ignition", "Engine Electrical"),
     "ST": ("Starting", "Engine Electrical"),
@@ -215,19 +218,70 @@ def prettify(stem: str) -> str:
     return s[:1].upper() + s[1:] if s else stem
 
 
+_ENGINE_NAMES = (
+    ("3sgte", ("3sgte", "3s-gte", "3s gte")),
+    ("3sge", ("3sge", "3s-ge", "3s ge")),
+    ("5sfe", ("5sfe", "5s-fe", "5s fe")),
+    ("4afe", ("4afe", "4a-fe", "4a fe")),
+)
+
+
+def _engine_hits(blob: str) -> list[str]:
+    """Engines named in a filename. Longer names are listed first so
+    3S-GTE is never mistaken for 3S-GE."""
+    low = blob.lower()
+    return [key for key, names in _ENGINE_NAMES if any(name in low for name in names)]
+
+
+def _engine_counts(text: str) -> dict[str, int]:
+    low = text.lower()
+    return {key: sum(low.count(name) for name in names)
+            for key, names in _ENGINE_NAMES}
+
+
 def detect_engine(stem: str, text: str):
-    s = stem.lower()
-    has3 = "3sgte" in s or "3s-gte" in s or "3S-GTE" in text or "3S GTE" in text
-    has5 = "5sfe" in s or "5s-fe" in s or "5S-FE" in text or "5S FE" in text
-    if "3sgte_and_5sfe" in s or (has3 and has5 and "and" in s):
+    """Prefer the engine in the file name. A passing mention such as
+    "for 3S-GE" does not relabel a shared job. 3S-GTE and 5S-FE keep
+    the older single-mention rule."""
+    named = _engine_hits(stem)
+    if len(named) == 1:
+        return named[0]
+    if len(named) > 1:
         return "both"
-    if has3 and has5:
+    counts = _engine_counts(text)
+    strong = [key for key, n in counts.items() if n >= 4]
+    if len(strong) == 1:
+        return strong[0]
+    if "3sgte" in strong and "5sfe" in strong:
         return "both"
-    if has3:
-        return "3sgte"
-    if has5:
-        return "5sfe"
+    if len(strong) > 1:
+        return "both"
+    light = [key for key in ("3sgte", "5sfe") if counts.get(key, 0) >= 1]
+    if len(light) == 1:
+        return light[0]
+    if len(light) == 2:
+        return "both"
     return "na"
+
+
+def _torque_engines_match(section: str, table: str) -> bool:
+    """A torque table can serve a section when they name the same engine.
+    'both' means the shared 3S-GTE and 5S-FE tables."""
+    if section in ("", "na") or table in ("", "na"):
+        return True
+    if section == table:
+        return True
+    shared = {"both", "3sgte", "5sfe"}
+    return {section, table} <= shared
+
+
+def detect_edition(stem: str, meta: dict) -> str:
+    """Year stamped on an imported book. Blank means the main 1993 shelf."""
+    edition = str(meta.get("edition") or "")
+    if edition:
+        return edition
+    match = re.search(r"(1990|1991|1992|1993)", stem)
+    return match.group(1) if match else ""
 
 
 def extract_pdf(path: Path, thumb_path: Path):
@@ -258,6 +312,7 @@ def load_library() -> dict:
 
 
 def build():
+    ocr_pages.convert_tree(MANUALS_DIR)
     pdfs = sorted(MANUALS_DIR.glob("*.pdf"), key=lambda p: p.name.lower())
     print(f"Found {len(pdfs)} PDFs in {MANUALS_DIR}")
     library = load_library()
@@ -271,7 +326,8 @@ def build():
         stem = path.stem
         meta = library.get(path.name, {})
         thumb_name = stem + ".png"
-        pages = extract_pdf(path, THUMB_DIR / thumb_name)
+        pages = [ocr_pages.strip_sentinel(pg)
+                 for pg in extract_pdf(path, THUMB_DIR / thumb_name)]
         n = len(pages)
         full = "\n".join(
             f"\n===== PAGE {i} of {n} =====\n{pg}" for i, pg in enumerate(pages, 1)
@@ -329,8 +385,11 @@ def build():
             unmapped.append(stem)
 
         engine = meta.get("engine") or detect_engine(stem, full)
-        image_only = len(full.strip()) < 200
-        relevance = "ref" if engine == "5sfe" else "car"
+        real_chars = sum(len("".join(pg.split())) for pg in pages)
+        image_only = real_chars < 40 * max(1, n)
+        # "ref" keeps other-engine books out of the All-Trac wiring links.
+        # The My car filter uses the engine tag, not this flag.
+        relevance = "ref" if engine in ("5sfe", "3sge", "4afe") else "car"
 
         # --- first heading (title) from page 1, ignoring markers ---
         first_heading = ""
@@ -341,7 +400,11 @@ def build():
                 first_heading = t
                 break
         title = meta.get("title") or prettify(stem)
-        edition = meta.get("edition", "")
+        edition = detect_edition(stem, meta)
+        # A whole 3S-GE book uses the same page codes as later Celicas.
+        # Keep those codes on their own shelf so they do not steal links.
+        if not edition and "3sge" in _engine_hits(stem):
+            edition = "3sge"
 
         # --- torque specs ---
         torques = []
@@ -523,9 +586,8 @@ def compute_master_torque(records):
                 s = by_id[sid]
                 if s["edition"] != r["edition"]:
                     continue
-                # don't offer the wrong engine's spec table
-                if (r["engine"] == "3sgte" and s["engine"] == "5sfe") or \
-                   (r["engine"] == "5sfe" and s["engine"] == "3sgte"):
+                # don't offer a different engine's spec table
+                if not _torque_engines_match(r["engine"], s["engine"]):
                     continue
                 masters.append({"target": sid,
                                 "pages": s["torque_table_pages"]})
@@ -620,8 +682,8 @@ def write_outputs(records, page_index, unmapped):
     by_group = defaultdict(list)
     for r in records:
         by_group[r["group"]].append(r)
-    eng_label = {"3sgte": "3S-GTE", "5sfe": "5S-FE", "both": "3S-GTE + 5S-FE",
-                 "na": "-"}
+    eng_label = {"3sgte": "3S-GTE", "5sfe": "5S-FE", "3sge": "3S-GE",
+                 "4afe": "4A-FE", "both": "3S-GTE + 5S-FE", "na": "-"}
     lines = ["# ST185 Celica GT-Four / All-Trac - Master Section Index",
              "",
              f"Total section files: **{len(records)}**  |  "
@@ -634,7 +696,7 @@ def write_outputs(records, page_index, unmapped):
         lines.append("|---|---|---|---|---|---|")
         for r in recs:
             lines.append(f"| {r['title']} | {r['system']} | {r['code'] or '-'} "
-                         f"| {eng_label[r['engine']]} | {r['pages']} "
+                         f"| {eng_label.get(r['engine'], r['engine'])} | {r['pages']} "
                          f"| {len(r['torques'])} |")
         lines.append("")
     (APP_DIR / "SECTION_INDEX.md").write_text("\n".join(lines), encoding="utf-8")

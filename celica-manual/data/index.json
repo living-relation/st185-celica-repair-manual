@@ -1,32 +1,6 @@
 {
   "records": [
     {
-      "id": "3SGE-workshop-manual-early",
-      "file": "3SGE-workshop-manual-early.pdf",
-      "thumb": "3SGE-workshop-manual-early.png",
-      "title": "3SGE-workshop-manual-early",
-      "heading": "",
-      "code": "",
-      "system": "Uncategorized",
-      "group": "Other",
-      "engine": "na",
-      "relevance": "car",
-      "image_only": false,
-      "pages": 495,
-      "own_codes": [],
-      "code_pages": {},
-      "torque_pages": [],
-      "torque_table_pages": [],
-      "torques": [],
-      "has_torque_table": false,
-      "refs": [],
-      "book": "",
-      "edition": "",
-      "refs_resolved": [],
-      "master_torque": [],
-      "torque_count": 0
-    },
-    {
       "id": "Abbreviations_Used_In_This_Manu_1",
       "file": "Abbreviations_Used_In_This_Manu_1.pdf",
       "thumb": "Abbreviations_Used_In_This_Manu_1.png",
@@ -85,7 +59,15 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 0
     },
     {
@@ -529,6 +511,34 @@
       "has_torque_table": false,
       "refs": [],
       "book": "",
+      "edition": "",
+      "refs_resolved": [],
+      "master_torque": [],
+      "torque_count": 0
+    },
+    {
+      "id": "Brake Upgrade Guide",
+      "file": "Brake Upgrade Guide.pdf",
+      "thumb": "Brake Upgrade Guide.png",
+      "title": "Brake Upgrades (5x100 Celica)",
+      "heading": "Brake Upgrades for FWD/4WD with 5x100 stud pattern",
+      "code": "",
+      "system": "Brakes",
+      "group": "Brakes",
+      "engine": "na",
+      "relevance": "car",
+      "image_only": false,
+      "pages": 8,
+      "own_codes": [],
+      "code_pages": {},
+      "torque_pages": [
+        7
+      ],
+      "torque_table_pages": [],
+      "torques": [],
+      "has_torque_table": false,
+      "refs": [],
+      "book": "gt4.mwp.id.au",
       "edition": "",
       "refs_resolved": [],
       "master_torque": [],
@@ -989,7 +999,7 @@
       "group": "Engine",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "EC-17"
@@ -1019,7 +1029,7 @@
       "group": "Engine",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "EC-32"
@@ -1049,7 +1059,7 @@
       "group": "Engine",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "EC-3"
@@ -1293,7 +1303,7 @@
       "code": "EM",
       "system": "Engine Mechanical",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -1435,7 +1445,7 @@
       "group": "Body",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 2,
       "own_codes": [
         "RE-16",
@@ -1451,6 +1461,38 @@
       "has_torque_table": false,
       "refs": [],
       "book": "",
+      "edition": "",
+      "refs_resolved": [],
+      "master_torque": [],
+      "torque_count": 0
+    },
+    {
+      "id": "CT26 Turbo Rebuild Guide",
+      "file": "CT26 Turbo Rebuild Guide.pdf",
+      "thumb": "CT26 Turbo Rebuild Guide.png",
+      "title": "CT26 Turbo Rebuild Guide",
+      "heading": "How to: Rebuild the CT-26, and MAKE IT LIVE",
+      "code": "",
+      "system": "Turbocharger",
+      "group": "Engine",
+      "engine": "3sgte",
+      "relevance": "car",
+      "image_only": false,
+      "pages": 6,
+      "own_codes": [],
+      "code_pages": {},
+      "torque_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "torque_table_pages": [],
+      "torques": [],
+      "has_torque_table": false,
+      "refs": [],
+      "book": "gt4.mwp.id.au",
       "edition": "",
       "refs_resolved": [],
       "master_torque": [],
@@ -1890,6 +1932,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 32
@@ -2307,6 +2362,20 @@
       ],
       "master_torque": [
         {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
             3,
@@ -2705,6 +2774,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 16
@@ -2859,14 +2941,7 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Turbocharger_System",
-          "pages": [
-            1
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -2912,6 +2987,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 0
@@ -2946,6 +3034,20 @@
       "edition": "",
       "refs_resolved": [],
       "master_torque": [
+        {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
         {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
@@ -3582,7 +3684,7 @@
       "group": "Body",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 2,
       "own_codes": [],
       "code_pages": {},
@@ -3606,7 +3708,7 @@
       "code": "",
       "system": "Manual Transmission E150F (4WD)",
       "group": "Drivetrain",
-      "engine": "na",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -3634,7 +3736,7 @@
       "code": "",
       "system": "Manual Transmission E150F (4WD)",
       "group": "Drivetrain",
-      "engine": "na",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 4,
@@ -3665,7 +3767,7 @@
       "group": "Electrical",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [],
       "code_pages": {},
@@ -3691,7 +3793,7 @@
       "group": "Electrical",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [],
       "code_pages": {},
@@ -3827,6 +3929,19 @@
           "pages": [
             25
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 0
@@ -3860,6 +3975,20 @@
       "edition": "",
       "refs_resolved": [],
       "master_torque": [
+        {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
         {
           "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
           "pages": [
@@ -5455,6 +5584,35 @@
       "torque_count": 0
     },
     {
+      "id": "Hot4s-ST185-Handling-Guide",
+      "file": "Hot4s-ST185-Handling-Guide.pdf",
+      "thumb": "Hot4s-ST185-Handling-Guide.png",
+      "title": "ST185 Handling Guide (Hot 4's)",
+      "heading": "AUTOMOTIVE",
+      "code": "",
+      "system": "Suspension",
+      "group": "Chassis",
+      "engine": "3sgte",
+      "relevance": "car",
+      "image_only": false,
+      "pages": 3,
+      "own_codes": [],
+      "code_pages": {},
+      "torque_pages": [
+        1,
+        2
+      ],
+      "torque_table_pages": [],
+      "torques": [],
+      "has_torque_table": false,
+      "refs": [],
+      "book": "gt4.mwp.id.au",
+      "edition": "",
+      "refs_resolved": [],
+      "master_torque": [],
+      "torque_count": 0
+    },
+    {
       "id": "How_To_Use_This_Manual",
       "file": "How_To_Use_This_Manual.pdf",
       "thumb": "How_To_Use_This_Manual.png",
@@ -5595,8 +5753,8 @@
       "code": "FI",
       "system": "Fuel / EFI (MFI-SFI)",
       "group": "Engine",
-      "engine": "both",
-      "relevance": "car",
+      "engine": "5sfe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 3,
       "own_codes": [
@@ -5651,7 +5809,7 @@
       "code": "EM",
       "system": "Engine Mechanical",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -6051,7 +6209,15 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 0
     },
     {
@@ -6063,8 +6229,8 @@
       "code": "IG",
       "system": "Ignition",
       "group": "Engine Electrical",
-      "engine": "na",
-      "relevance": "car",
+      "engine": "4afe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 6,
       "own_codes": [
@@ -6109,14 +6275,7 @@
           "approx": true
         }
       ],
-      "master_torque": [
-        {
-          "target": "Ignition_System",
-          "pages": [
-            1
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 1
     },
     {
@@ -6474,6 +6633,7 @@
         "BR-14": 6
       },
       "torque_pages": [
+        2,
         4,
         5,
         6
@@ -6610,7 +6770,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6643,7 +6803,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6672,7 +6832,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6700,7 +6860,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6732,7 +6892,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6769,7 +6929,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6800,7 +6960,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6828,7 +6988,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6861,7 +7021,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6892,7 +7052,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -6935,37 +7095,9 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Cylinder_Head_3sgte",
-          "pages": [
-            25
-          ]
-        },
-        {
-          "target": "Engine_Mechanical_3sgte",
-          "pages": [
-            1,
-            3,
-            4
-          ]
-        },
-        {
-          "target": "Engine_Mechanical_5sfe",
-          "pages": [
-            3,
-            4
-          ]
-        },
-        {
-          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
-          "pages": [
-            24
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7017,24 +7149,9 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Cylinder_Head_3sgte",
-          "pages": [
-            25
-          ]
-        },
-        {
-          "target": "Engine_Mechanical_3sgte",
-          "pages": [
-            1,
-            3,
-            4
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7091,23 +7208,9 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Engine_Mechanical_5sfe",
-          "pages": [
-            3,
-            4
-          ]
-        },
-        {
-          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
-          "pages": [
-            24
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7131,7 +7234,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7157,7 +7260,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7186,7 +7289,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7212,7 +7315,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7245,7 +7348,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7276,7 +7379,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7308,7 +7411,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7336,7 +7439,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7370,7 +7473,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7398,7 +7501,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7424,7 +7527,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7450,7 +7553,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7484,7 +7587,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7510,7 +7613,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7538,16 +7641,9 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Cooling_System",
-          "pages": [
-            1
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7573,7 +7669,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7605,7 +7701,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7633,7 +7729,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7661,7 +7757,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7691,7 +7787,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7722,7 +7818,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7754,7 +7850,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7786,7 +7882,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7818,7 +7914,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7849,7 +7945,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7879,16 +7975,9 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Service_Specifications",
-          "pages": [
-            4
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7914,16 +8003,9 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Service_Specifications",
-          "pages": [
-            4
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -7952,7 +8034,7 @@
       "has_torque_table": true,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -7982,7 +8064,7 @@
       "has_torque_table": false,
       "refs": [],
       "book": "Mitchell 1993 (aftermarket)",
-      "edition": "",
+      "edition": "1993",
       "refs_resolved": [],
       "master_torque": [],
       "torque_count": 0
@@ -8262,8 +8344,8 @@
       "code": "LU",
       "system": "Lubrication",
       "group": "Engine",
-      "engine": "3sgte",
-      "relevance": "car",
+      "engine": "4afe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 2,
       "own_codes": [
@@ -8284,15 +8366,7 @@
       "book": "",
       "edition": "",
       "refs_resolved": [],
-      "master_torque": [
-        {
-          "target": "Lubrication_System",
-          "pages": [
-            1,
-            2
-          ]
-        }
-      ],
+      "master_torque": [],
       "torque_count": 0
     },
     {
@@ -8649,7 +8723,7 @@
       "group": "Drivetrain",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "MX-3"
@@ -9276,7 +9350,7 @@
       "group": "Body",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 2,
       "own_codes": [],
       "code_pages": {},
@@ -11902,7 +11976,7 @@
       "code": "CO",
       "system": "Cooling",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 3,
@@ -12621,6 +12695,20 @@
       ],
       "master_torque": [
         {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
             3,
@@ -12678,6 +12766,19 @@
             1,
             3,
             4
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
           ]
         }
       ],
@@ -13197,7 +13298,7 @@
       "group": "General",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "IN-24"
@@ -13267,7 +13368,7 @@
       "code": "LU",
       "system": "Lubrication",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -13335,7 +13436,7 @@
       "code": "MA",
       "system": "Maintenance",
       "group": "General",
-      "engine": "3sgte",
+      "engine": "both",
       "relevance": "car",
       "image_only": false,
       "pages": 2,
@@ -13416,7 +13517,15 @@
           "page": 2
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 1
     },
     {
@@ -13486,6 +13595,8 @@
       },
       "torque_pages": [
         1,
+        2,
+        3,
         4
       ],
       "torque_table_pages": [],
@@ -13595,7 +13706,7 @@
       "code": "FI",
       "system": "Fuel / EFI (MFI-SFI)",
       "group": "Engine",
-      "engine": "both",
+      "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 4,
@@ -14020,7 +14131,15 @@
           "page": 4
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 2
     },
     {
@@ -14111,7 +14230,15 @@
           "page": 4
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 6
     },
     {
@@ -14363,7 +14490,15 @@
           "page": 2
         }
       ],
-      "master_torque": [],
+      "master_torque": [
+        {
+          "target": "Mfi_And_Sfi_Systems_3sgte",
+          "pages": [
+            1,
+            4
+          ]
+        }
+      ],
       "torque_count": 9
     },
     {
@@ -15787,7 +15922,7 @@
       "group": "Drivetrain",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "MT-172"
@@ -15817,7 +15952,7 @@
       "group": "Drivetrain",
       "engine": "na",
       "relevance": "car",
-      "image_only": true,
+      "image_only": false,
       "pages": 1,
       "own_codes": [
         "MX-67"
@@ -18367,6 +18502,19 @@
             3,
             4
           ]
+        },
+        {
+          "target": "Engine_Mechanical_5sfe",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "target": "RM305U1 - Engine Mechanical - Cylinder Head (5S-FE)",
+          "pages": [
+            24
+          ]
         }
       ],
       "torque_count": 14
@@ -18499,6 +18647,20 @@
       ],
       "master_torque": [
         {
+          "target": "Cylinder_Head_3sgte",
+          "pages": [
+            25
+          ]
+        },
+        {
+          "target": "Engine_Mechanical_3sgte",
+          "pages": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
           "target": "Engine_Mechanical_5sfe",
           "pages": [
             3,
@@ -18519,28 +18681,391 @@
       "file": "Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf",
       "thumb": "Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).png",
       "title": "Toyota - 3S-GTE - 1991 - Repair Manual (RM266E)",
-      "heading": "",
-      "code": "",
-      "system": "Uncategorized",
-      "group": "Other",
+      "heading": "TOYOTA",
+      "code": "FI",
+      "system": "Fuel / EFI (MFI-SFI)",
+      "group": "Engine",
       "engine": "3sgte",
       "relevance": "car",
       "image_only": false,
       "pages": 144,
-      "own_codes": [],
-      "code_pages": {},
-      "torque_pages": [
-        111
+      "own_codes": [
+        "EM-2",
+        "EM-3",
+        "EM-4",
+        "EM-5",
+        "EM-6",
+        "EM-7",
+        "EM-8",
+        "EM-9",
+        "EM-10",
+        "EM-11",
+        "EM-12",
+        "EM-13",
+        "EM-14",
+        "EM-15",
+        "FI-3",
+        "FI-4",
+        "FI-5",
+        "FI-6",
+        "FI-7",
+        "FI-8",
+        "FI-9",
+        "FI-10",
+        "FI-11",
+        "FI-12",
+        "FI-13",
+        "FI-14",
+        "FI-15",
+        "FI-16",
+        "FI-17",
+        "FI-18",
+        "FI-19",
+        "FI-20",
+        "FI-21",
+        "FI-22",
+        "FI-23",
+        "FI-24",
+        "FI-25",
+        "FI-26",
+        "FI-27",
+        "FI-28",
+        "FI-29",
+        "FI-30",
+        "FI-31",
+        "FI-32",
+        "FI-33",
+        "FI-34",
+        "FI-35",
+        "FI-36",
+        "FI-37",
+        "FI-38",
+        "FI-39",
+        "FI-40",
+        "FI-41",
+        "FI-42",
+        "FI-43",
+        "FI-44",
+        "FI-45",
+        "FI-46",
+        "CO-1",
+        "CO-2",
+        "CO-3",
+        "CO-4",
+        "CO-5",
+        "CO-7",
+        "CO-8",
+        "IG-1",
+        "IG-2",
+        "IG-3",
+        "IG-4",
+        "IG-5",
+        "IG-6"
       ],
-      "torque_table_pages": [],
-      "torques": [],
-      "has_torque_table": false,
-      "refs": [],
+      "code_pages": {
+        "EM-2": 16,
+        "EM-3": 17,
+        "EM-4": 18,
+        "EM-5": 19,
+        "EM-6": 20,
+        "EM-7": 21,
+        "EM-8": 22,
+        "EM-9": 23,
+        "EM-10": 24,
+        "EM-11": 25,
+        "EM-12": 26,
+        "EM-13": 27,
+        "EM-14": 28,
+        "EM-15": 29,
+        "FI-3": 61,
+        "FI-4": 62,
+        "FI-5": 63,
+        "FI-6": 64,
+        "FI-7": 65,
+        "FI-8": 66,
+        "FI-9": 67,
+        "FI-10": 68,
+        "FI-11": 69,
+        "FI-12": 70,
+        "FI-13": 71,
+        "FI-14": 72,
+        "FI-15": 73,
+        "FI-16": 74,
+        "FI-17": 75,
+        "FI-18": 76,
+        "FI-19": 77,
+        "FI-20": 78,
+        "FI-21": 79,
+        "FI-22": 80,
+        "FI-23": 81,
+        "FI-24": 82,
+        "FI-25": 83,
+        "FI-26": 84,
+        "FI-27": 85,
+        "FI-28": 86,
+        "FI-29": 87,
+        "FI-30": 88,
+        "FI-31": 89,
+        "FI-32": 90,
+        "FI-33": 91,
+        "FI-34": 92,
+        "FI-35": 93,
+        "FI-36": 94,
+        "FI-37": 95,
+        "FI-38": 96,
+        "FI-39": 97,
+        "FI-40": 98,
+        "FI-41": 99,
+        "FI-42": 100,
+        "FI-43": 101,
+        "FI-44": 102,
+        "FI-45": 103,
+        "FI-46": 104,
+        "CO-1": 107,
+        "CO-2": 108,
+        "CO-3": 109,
+        "CO-4": 110,
+        "CO-5": 111,
+        "CO-7": 113,
+        "CO-8": 114,
+        "IG-1": 115,
+        "IG-2": 116,
+        "IG-3": 117,
+        "IG-4": 118,
+        "IG-5": 119,
+        "IG-6": 120
+      },
+      "torque_pages": [
+        8,
+        13,
+        21,
+        22,
+        28,
+        29,
+        35,
+        36,
+        38,
+        40,
+        47,
+        48,
+        49,
+        51,
+        52,
+        55,
+        60,
+        64,
+        66,
+        69,
+        77,
+        83,
+        89,
+        95,
+        96,
+        109,
+        110,
+        111,
+        117,
+        119,
+        125,
+        130
+      ],
+      "torque_table_pages": [
+        5,
+        128,
+        129,
+        131,
+        133,
+        135,
+        136,
+        137
+      ],
+      "torques": [
+        {
+          "context": "(c) Install the head cover with the twelve seal washers and screws. Uniformly tighten the screws in several passes.",
+          "value": "25 N-m (250 kgf-cm, 21 ft-lbf)"
+        },
+        {
+          "context": "(a) Install two new gaskets, the EGR valve and pipe as- sembly with the four bolts.",
+          "value": "26 N-m (260 kgf.cm, 19 ft-lbf)"
+        },
+        {
+          "context": "(d) Tighten the hold-down bolts, and recheck the igni- tion timing.",
+          "value": "39 N-m (400 kgf.cm, 29 ft-lbf)"
+        },
+        {
+          "context": "Catalytic Converter",
+          "value": "64 N-m (650 kgf-cm, 47 ft-lbf)"
+        },
+        {
+          "context": "Catalytic Converter",
+          "value": "51 N-m (525 kgf-cm, 38 ft-lbf)"
+        },
+        {
+          "context": "Catalytic Converter",
+          "value": "17 N-m (175 kgf-cm, 13 ft-lbf)"
+        },
+        {
+          "context": "Install a new gasket and the outlet elbow with the six nuts.",
+          "value": "64 N-m (650 kgf-cm, 47 ft-lbf)"
+        },
+        {
+          "context": "Install a new gasket and the housing plate with the two nuts.",
+          "value": "11 N-m (120 kgf-cm, 9 ft-lbf)"
+        },
+        {
+          "context": "Install a new gasket and the water pipe with the two nuts and two bolts.",
+          "value": "11 N-m (120 kgf-cm, 9 ft-lbf)"
+        },
+        {
+          "context": "(c) Tighten the four nuts holding the turbocharger to the exhaust manifold.",
+          "value": "64 N-m (650 kgf-cm, 47 ft-lbf)"
+        },
+        {
+          "context": "(d) Tighten the two nuts holding the oil pipe to the turbocharger.",
+          "value": "17 N-m (175 kgf-cm, 13 ft-lbf)"
+        },
+        {
+          "context": "(e) Tighten the union bolt holding the oil pipe to the cylinder block.",
+          "value": "51 N-m (525 kgf-cm, 38 ft-lbf)"
+        },
+        {
+          "context": "(f) Tighten the bolt holding the oil pipe to the cylinder block.",
+          "value": "43 N-m (440 kgf-cm, 32 ft-lbf)"
+        },
+        {
+          "context": "Install the turbocharger stay with the three bolts.",
+          "value": "To turbocharger 69 N-m (705 kgf-cm, 51 ft-lbf). To cylinder block 59 N-m (600 kgf-cm, 43 ft-lbf)"
+        },
+        {
+          "context": "(a) Install a new gasket and the oxygen sensor with the two nuts.",
+          "value": "44 N-m (450 kgf-cm, 33 ft-lbf)"
+        },
+        {
+          "context": "(d) Install the catalytic converter with the three bolts and two nuts.",
+          "value": "29 N-m (300 kgf-cm, 22 ft-lbf)"
+        },
+        {
+          "context": "(e) Install the RH converter stay with the four bolts.",
+          "value": "59 N-m (600 kgf-cm, 43 ft-lbf)"
+        },
+        {
+          "context": "(f) Install the LH converter stay with the three bolts.",
+          "value": "59 N-m (600 kgf-cm, 43 ft-lbf)"
+        },
+        {
+          "context": "(a) Install the alternator with the two bolts.",
+          "value": "12 mm head bolt 19 N-m (195 kgf-cm, 14 ft-lbf). 14 mm head bolt 52 N-m (530 kgf-cm, 38 ft-lbf)"
+        },
+        {
+          "context": "(c) Install the No.2 alternator bracket with the two bolts.",
+          "value": "To turbine outlet elbow 43 N-m (440 kgf-cm, 32 ft-lbf). To No. 1 alternator bracket 39 N-m (400 kgf-cm, 29 ft-lbf)"
+        },
+        {
+          "context": "Install a new gasket and the throttle body with the four bolts.",
+          "value": "19 N-m (195 kgf.cm, 14 ft-lbf)"
+        },
+        {
+          "context": "(c) Close the drain cocks.",
+          "value": "(Engine drain cock): 13 N.m (130 kgf-cm, 9 ft-lbf)"
+        },
+        {
+          "context": "Using SST, install and torque the spark plug. SST 09155-16100",
+          "value": "18 N-m (180 kgf-cm, 13 ft-lbf)"
+        },
+        {
+          "context": "A-6 SERVICE SPECIFICATIONS - Engine Mechanical",
+          "value": "Oil pump pulley x Oil pump drive shaft 35 N-m (355 kgf-cm, 26 ft-lbf)"
+        },
+        {
+          "context": "Intercooler water pump amperage 1.5 - 2.1 A",
+          "value": "Turbine outlet elbow x Turbocharger 64 N-m (650 kgf-cm, 47 ft-lbf)"
+        },
+        {
+          "context": "RSC - B and RSO + B1 19.3 - 22.3 ohm",
+          "value": "Fuel line Union bolt type 29 N-m (300 kgf-cm, 22 ft-lbf)"
+        },
+        {
+          "context": "Valve lift at 95°C (203°F) 8 mm (0.31 in.) or more",
+          "value": "Engine coolant drain plug 13 N-m (130 kgf-cm, 9 ft-lbf)"
+        },
+        {
+          "context": "Tip clearance STD 0.04 - 0.16 mm (0.0016 - 0.0063 in.) Limit 0.20 mm (0.0079 in.)",
+          "value": "Engine oil drain plug 25 N-m (250 kgf-cm, 18 ft-lbf)"
+        }
+      ],
+      "has_torque_table": true,
+      "refs": [
+        "TC-12",
+        "FI-35",
+        "FI-36",
+        "TC-20",
+        "TC-8",
+        "TC-16",
+        "FI-42",
+        "TC-10",
+        "FI-7",
+        "FI-5",
+        "FI-4",
+        "FI-14",
+        "FI-33",
+        "FI-16",
+        "FI-31",
+        "FI-41",
+        "TC-14",
+        "TC-21",
+        "IG-3",
+        "IG-6",
+        "IG-7",
+        "IG-2"
+      ],
       "book": "",
-      "edition": "",
-      "refs_resolved": [],
+      "edition": "1991",
+      "refs_resolved": [
+        {
+          "code": "TC-12",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-20",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-8",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-16",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-10",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-14",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-21",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        }
+      ],
       "master_torque": [],
-      "torque_count": 0
+      "torque_count": 28
     },
     {
       "id": "Toyota Celica ST185 Specifications",
@@ -18561,6 +19086,35 @@
         2,
         5,
         6
+      ],
+      "torque_table_pages": [],
+      "torques": [],
+      "has_torque_table": false,
+      "refs": [],
+      "book": "gt4.mwp.id.au",
+      "edition": "",
+      "refs_resolved": [],
+      "master_torque": [],
+      "torque_count": 0
+    },
+    {
+      "id": "Toyota DBA Rotors Catalouge",
+      "file": "Toyota DBA Rotors Catalouge.pdf",
+      "thumb": "Toyota DBA Rotors Catalouge.png",
+      "title": "DBA Brake Rotor Catalogue",
+      "heading": "Also available in:",
+      "code": "",
+      "system": "Brakes",
+      "group": "Brakes",
+      "engine": "na",
+      "relevance": "car",
+      "image_only": false,
+      "pages": 10,
+      "own_codes": [],
+      "code_pages": {},
+      "torque_pages": [
+        1,
+        3
       ],
       "torque_table_pages": [],
       "torques": [],
@@ -18791,8 +19345,8 @@
       "code": "",
       "system": "A/C Bulletin",
       "group": "HVAC",
-      "engine": "na",
-      "relevance": "car",
+      "engine": "5sfe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 13,
       "own_codes": [],
@@ -19427,8 +19981,8 @@
       "code": "",
       "system": "Turbocharger",
       "group": "Engine",
-      "engine": "both",
-      "relevance": "car",
+      "engine": "4afe",
+      "relevance": "ref",
       "image_only": false,
       "pages": 1,
       "own_codes": [],
@@ -19743,6 +20297,34 @@
         }
       ],
       "torque_count": 5
+    },
+    {
+      "id": "Whiteline ST185 Catalogue",
+      "file": "Whiteline ST185 Catalogue.pdf",
+      "thumb": "Whiteline ST185 Catalogue.png",
+      "title": "Whiteline ST185 Catalogue",
+      "heading": "Page 1",
+      "code": "",
+      "system": "Suspension",
+      "group": "Chassis",
+      "engine": "3sgte",
+      "relevance": "car",
+      "image_only": false,
+      "pages": 1,
+      "own_codes": [],
+      "code_pages": {},
+      "torque_pages": [
+        1
+      ],
+      "torque_table_pages": [],
+      "torques": [],
+      "has_torque_table": false,
+      "refs": [],
+      "book": "gt4.mwp.id.au",
+      "edition": "",
+      "refs_resolved": [],
+      "master_torque": [],
+      "torque_count": 0
     }
   ],
   "page_index": {

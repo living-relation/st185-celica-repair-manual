@@ -1,5 +1,18 @@
 {
  "files": {
+  "Brake Upgrade Guide.pdf": {
+   "title": "Brake Upgrades (5x100 Celica)",
+   "system": "Brakes",
+   "group": "Brakes",
+   "book": "gt4.mwp.id.au"
+  },
+  "CT26 Turbo Rebuild Guide.pdf": {
+   "title": "CT26 Turbo Rebuild Guide",
+   "system": "Turbocharger",
+   "group": "Engine",
+   "engine": "3sgte",
+   "book": "gt4.mwp.id.au"
+  },
   "E Gearbox Identification.pdf": {
    "title": "E-Series Gearbox Identification",
    "system": "Manual Transmission E150F (4WD)",
@@ -16,6 +29,13 @@
    "title": "ST185 Data Sheet (Haynes)",
    "system": "Specifications",
    "group": "General",
+   "book": "gt4.mwp.id.au"
+  },
+  "Hot4s-ST185-Handling-Guide.pdf": {
+   "title": "ST185 Handling Guide (Hot 4's)",
+   "system": "Suspension",
+   "group": "Chassis",
+   "engine": "3sgte",
    "book": "gt4.mwp.id.au"
   },
   "Mitchell 1993 - A-C Compressor Oil Checking.pdf": {
@@ -589,10 +609,23 @@
    "group": "General",
    "book": "gt4.mwp.id.au"
   },
+  "Toyota DBA Rotors Catalouge.pdf": {
+   "title": "DBA Brake Rotor Catalogue",
+   "system": "Brakes",
+   "group": "Brakes",
+   "book": "gt4.mwp.id.au"
+  },
   "Toyota ST185 Chassis Dimensions.pdf": {
    "title": "ST185 Chassis Dimensions",
    "system": "Body Dimensions",
    "group": "Body",
+   "book": "gt4.mwp.id.au"
+  },
+  "Whiteline ST185 Catalogue.pdf": {
+   "title": "Whiteline ST185 Catalogue",
+   "system": "Suspension",
+   "group": "Chassis",
+   "engine": "3sgte",
    "book": "gt4.mwp.id.au"
   }
  },

@@ -19,6 +19,25 @@
       "note": "ST185 only. A/C chapters cover the push-button blower control only."
     },
     {
+      "id": "ewd1990fwd",
+      "year": 1990,
+      "pub": "1990 Celica FWD EWD",
+      "title": "1990 Celica FWD Electrical Wiring Diagram",
+      "models": [
+        "AT180",
+        "ST184"
+      ],
+      "engines": [
+        "4A-FE",
+        "5S-FE"
+      ],
+      "kind": "book",
+      "files": [
+        "1990 Celica FWD EWD.pdf"
+      ],
+      "note": "FWD only: AT180 (4A-FE) and ST184 (5S-FE). The site file is named as a 1993 EWD160U, but the book itself is the 1990 FWD wiring diagram. Kept apart from the 1990 All-Trac book."
+    },
+    {
       "id": "ewd1992",
       "year": 1992,
       "pub": "EWD132U",
