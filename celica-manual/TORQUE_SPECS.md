@@ -33,7 +33,6 @@ Sections containing a factory TORQUE SPECIFICATIONS table, with the PDF page(s) 
 
 ## Engine
 
-- **3SGE-workshop-manual-early** [Engine Mechanical] — torque table page(s): p.419, p.439, p.463, p.493 — `3SGE-workshop-manual-early.pdf`
 - **Cooling System** [Cooling] — torque table page(s): p.1 — `Cooling_System.pdf`
 - **Cylinder Head (5S-FE) — Engine Mechanical** [Engine Mechanical] — torque table page(s): p.24 — `RM305U1 - Engine Mechanical - Cylinder Head (5S-FE).pdf`
 - **Cylinder Head 3sgte** [Engine Mechanical] — torque table page(s): p.25 — `Cylinder_Head_3sgte.pdf`
