@@ -1,6 +1,6 @@
 # ST185 Celica GT-Four / All-Trac - Master Section Index
 
-Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
+Total section files: **367**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
 
 ## Body  (118)
 
@@ -125,15 +125,17 @@ Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Seatbelt | Supplemental Restraint | - | - | 2 | 0 |
 | Tilt Steering Column | Supplemental Restraint | SR | 5S-FE | 8 | 6 |
 
-## Brakes  (13)
+## Brakes  (15)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
 | Antilock Brake System Circuit | Brakes | BR | - | 4 | 0 |
 | Brake Booster | Brakes | BR | - | 4 | 4 |
 | Brake System | Brakes | - | 3S-GTE + 5S-FE | 15 | 0 |
+| Brake Upgrades (5x100 Celica) | Brakes | - | - | 8 | 0 |
 | Brakes (1990 All-Trac) | Brakes | BR | - | 32 | 5 |
 | Control Relay | Brakes | BR | - | 1 | 0 |
+| DBA Brake Rotor Catalogue | Brakes | - | - | 10 | 0 |
 | Description | Brakes | BR | - | 6 | 0 |
 | Disc Brake | Brakes | BR | - | 8 | 5 |
 | Front Brake | Brakes | BR | - | 8 | 4 |
@@ -143,7 +145,7 @@ Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Proportioning Valve P Valve | Brakes | BR | 5S-FE | 1 | 0 |
 | Speed Sensor And Decelerationse | Brakes | BR | - | 5 | 0 |
 
-## Chassis  (16)
+## Chassis  (18)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -151,6 +153,8 @@ Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Steering Column - Standard | Steering | - | - | 5 | 0 |
 | Steering Column - Tilt | Steering | - | - | 7 | 0 |
 | Steering System - Power Rack & Pinion | Steering | - | - | 10 | 0 |
+| ST185 Handling Guide (Hot 4's) | Suspension | - | 3S-GTE | 3 | 0 |
+| Whiteline ST185 Catalogue | Suspension | - | 3S-GTE | 1 | 0 |
 | Differential 4wd | Suspension & Axle | SA | - | 26 | 13 |
 | Front Axle Hub | Suspension & Axle | SA | - | 9 | 12 |
 | Front Drive Shaft 4wd | Suspension & Axle | SA | - | 13 | 5 |
@@ -220,7 +224,7 @@ Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Electric | Electrical / Wiring | - | - | 1 | 0 |
 | Electrical Wire Routing | Electrical / Wiring | - | - | 1 | 0 |
 
-## Engine  (111)
+## Engine  (112)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -330,6 +334,7 @@ Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Oil Pressure Check | Lubrication | LU | 4A-FE | 2 | 0 |
 | Oil Pump 3sgte And 5sfe | Lubrication | LU | 3S-GTE + 5S-FE | 8 | 5 |
 | Replacement of Engine Oil and Oil Filter — Lubrication System | Lubrication | LU | 3S-GTE | 2 | 1 |
+| CT26 Turbo Rebuild Guide | Turbocharger | - | 3S-GTE | 6 | 0 |
 | Description | Turbocharger | TC | 3S-GTE | 3 | 0 |
 | Precautions — Turbocharger | Turbocharger | TC | - | 1 | 0 |
 | Troubleshooting — Turbocharger | Turbocharger | TC | - | 2 | 0 |
