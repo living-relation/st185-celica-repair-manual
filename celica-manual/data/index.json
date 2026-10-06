@@ -18601,13 +18601,7 @@
       "image_only": false,
       "pages": 144,
       "own_codes": [
-        "IN-8",
-        "IN-2",
-        "IN-3",
-        "IN-5",
-        "IN-6",
-        "IN-7",
-        "IN-8",
+        "EM-2",
         "EM-3",
         "EM-4",
         "EM-5",
@@ -18616,75 +18610,71 @@
         "EM-8",
         "EM-9",
         "EM-10",
-        "EM-71",
+        "EM-11",
         "EM-12",
         "EM-13",
         "EM-14",
         "EM-15",
-        "TC-1",
-        "TC-2",
-        "TC-3",
-        "TC-4",
-        "TC-5",
-        "TC-6",
-        "TC-8",
-        "TC-9",
-        "TC-10",
-        "TC-12",
-        "TC-13",
-        "TC-14",
-        "TC-15",
-        "TC-16",
-        "TC-17",
-        "TC-18",
-        "TC-19",
-        "TC-20",
-        "TC-22",
-        "TC-23",
-        "TC-24",
-        "TC-25",
-        "TC-26",
-        "TC-27",
-        "FI-2",
         "FI-3",
+        "FI-4",
         "FI-5",
         "FI-6",
         "FI-7",
-        "FI-29",
+        "FI-8",
         "FI-9",
         "FI-10",
         "FI-11",
         "FI-12",
+        "FI-13",
         "FI-14",
         "FI-15",
         "FI-16",
         "FI-17",
         "FI-18",
+        "FI-19",
         "FI-20",
         "FI-21",
         "FI-22",
         "FI-23",
         "FI-24",
+        "FI-25",
         "FI-26",
+        "FI-27",
         "FI-28",
         "FI-29",
         "FI-30",
+        "FI-31",
         "FI-32",
+        "FI-33",
         "FI-34",
+        "FI-35",
         "FI-36",
+        "FI-37",
+        "FI-38",
+        "FI-39",
         "FI-40",
+        "FI-41",
         "FI-42",
+        "FI-43",
         "FI-44",
+        "FI-45",
         "FI-46",
-        "CO-4"
+        "CO-1",
+        "CO-2",
+        "CO-3",
+        "CO-4",
+        "CO-5",
+        "CO-7",
+        "CO-8",
+        "IG-1",
+        "IG-2",
+        "IG-3",
+        "IG-4",
+        "IG-5",
+        "IG-6"
       ],
       "code_pages": {
-        "IN-8": 7,
-        "IN-2": 8,
-        "IN-3": 9,
-        "IN-5": 11,
-        "IN-6": 12,
-        "IN-7": 13,
+        "EM-2": 16,
         "EM-3": 17,
         "EM-4": 18,
         "EM-5": 19,
@@ -18693,80 +18683,78 @@
         "EM-8": 22,
         "EM-9": 23,
         "EM-10": 24,
-        "EM-71": 25,
+        "EM-11": 25,
         "EM-12": 26,
         "EM-13": 27,
         "EM-14": 28,
         "EM-15": 29,
-        "TC-1": 31,
-        "TC-2": 32,
-        "TC-3": 33,
-        "TC-4": 34,
-        "TC-5": 35,
-        "TC-6": 36,
-        "TC-8": 38,
-        "TC-9": 39,
-        "TC-10": 40,
-        "TC-12": 42,
-        "TC-13": 43,
-        "TC-14": 44,
-        "TC-15": 45,
-        "TC-16": 46,
-        "TC-17": 47,
-        "TC-18": 48,
-        "TC-19": 49,
-        "TC-20": 50,
-        "TC-22": 52,
-        "TC-23": 53,
-        "TC-24": 54,
-        "TC-25": 55,
-        "TC-26": 56,
-        "TC-27": 57,
-        "FI-2": 60,
         "FI-3": 61,
+        "FI-4": 62,
         "FI-5": 63,
         "FI-6": 64,
         "FI-7": 65,
-        "FI-29": 66,
+        "FI-8": 66,
         "FI-9": 67,
         "FI-10": 68,
         "FI-11": 69,
         "FI-12": 70,
+        "FI-13": 71,
         "FI-14": 72,
         "FI-15": 73,
         "FI-16": 74,
         "FI-17": 75,
         "FI-18": 76,
+        "FI-19": 77,
         "FI-20": 78,
         "FI-21": 79,
         "FI-22": 80,
         "FI-23": 81,
         "FI-24": 82,
+        "FI-25": 83,
         "FI-26": 84,
+        "FI-27": 85,
         "FI-28": 86,
+        "FI-29": 87,
         "FI-30": 88,
+        "FI-31": 89,
         "FI-32": 90,
+        "FI-33": 91,
         "FI-34": 92,
+        "FI-35": 93,
         "FI-36": 94,
+        "FI-37": 95,
+        "FI-38": 96,
+        "FI-39": 97,
         "FI-40": 98,
+        "FI-41": 99,
         "FI-42": 100,
+        "FI-43": 101,
         "FI-44": 102,
+        "FI-45": 103,
         "FI-46": 104,
-        "CO-4": 107
+        "CO-1": 107,
+        "CO-2": 108,
+        "CO-3": 109,
+        "CO-4": 110,
+        "CO-5": 111,
+        "CO-7": 113,
+        "CO-8": 114,
+        "IG-1": 115,
+        "IG-2": 116,
+        "IG-3": 117,
+        "IG-4": 118,
+        "IG-5": 119,
+        "IG-6": 120
       },
       "torque_pages": [
         8,
         13,
-        14,
         21,
         22,
-        26,
-        27,
         28,
         29,
         35,
         36,
-        37,
         38,
         40,
         47,
@@ -18779,14 +18767,9 @@
         64,
         66,
         69,
-        75,
-        76,
         77,
-        82,
         83,
-        84,
         89,
-        92,
         95,
         96,
         109,
@@ -18795,76 +18778,130 @@
         117,
         119,
         125,
-        130,
-        137
+        130
       ],
       "torque_table_pages": [
+        5,
         128,
         129,
         131,
         133,
-        135
+        135,
+        136,
+        137
       ],
       "torques": [
         {
-          "context": "KOK ey",
-          "value": "25 N-m"
+          "context": "(c) Install the head cover with the twelve seal washers and screws. Uniformly tighten the screws in several passes.",
+          "value": "25 N-m (250 kgf-cm, 21 ft-lbf)"
         },
         {
-          "context": "od a",
-          "value": "26 N-m (260 kgf-cm, 19 ft-Ibf)"
+          "context": "(a) Install two new gaskets, the EGR valve and pipe as- sembly with the four bolts.",
+          "value": "26 N-m (260 kgf.cm, 19 ft-lbf)"
         },
         {
-          "context": "tion timing.",
-          "value": "39 N-m (400 kgf-cm, 29 ft-lbf)"
+          "context": "(d) Tighten the hold-down bolts, and recheck the igni- tion timing.",
+          "value": "39 N-m (400 kgf.cm, 29 ft-lbf)"
         },
         {
-          "context": "BSB AS) )",
-          "value": "64 N-m"
+          "context": "Catalytic Converter",
+          "value": "64 N-m (650 kgf-cm, 47 ft-lbf)"
         },
         {
-          "context": "BR ~",
-          "value": "11N-m(120 kgf-cm,9ft-ibf)"
+          "context": "Catalytic Converter",
+          "value": "51 N-m (525 kgf-cm, 38 ft-lbf)"
         },
         {
-          "context": "bolts.",
-          "value": "11 N-m"
+          "context": "Catalytic Converter",
+          "value": "17 N-m (175 kgf-cm, 13 ft-lbf)"
         },
         {
-          "context": "bocharger.",
-          "value": "17 N-m(175 kgf-cm,13 ft-lbf)"
+          "context": "Install a new gasket and the outlet elbow with the six nuts.",
+          "value": "64 N-m (650 kgf-cm, 47 ft-lbf)"
         },
         {
-          "context": "cia \\ \\ \\ oe",
-          "value": "51 N-m"
+          "context": "Install a new gasket and the housing plate with the two nuts.",
+          "value": "11 N-m (120 kgf-cm, 9 ft-lbf)"
         },
         {
-          "context": "J) ---",
-          "value": "43 N-m"
+          "context": "Install a new gasket and the water pipe with the two nuts and two bolts.",
+          "value": "11 N-m (120 kgf-cm, 9 ft-lbf)"
         },
         {
-          "context": "ZIP oar",
-          "value": "44N-m(450kgf-cm,33ft-lbf}"
+          "context": "(c) Tighten the four nuts holding the turbocharger to the exhaust manifold.",
+          "value": "64 N-m (650 kgf-cm, 47 ft-lbf)"
         },
         {
-          "context": "é Ww",
-          "value": "22N-m(300kgf-cm,22 ft-Ibf)"
+          "context": "(d) Tighten the two nuts holding the oil pipe to the turbocharger.",
+          "value": "17 N-m (175 kgf-cm, 13 ft-lbf)"
         },
         {
-          "context": "\\ Yat",
-          "value": "59 N-m(600kgf-em,43ftlbf}"
+          "context": "(e) Tighten the union bolt holding the oil pipe to the cylinder block.",
+          "value": "51 N-m (525 kgf-cm, 38 ft-lbf)"
         },
         {
-          "context": "\\\\ a3 Sy}",
-          "value": "59 N-m"
+          "context": "(f) Tighten the bolt holding the oil pipe to the cylinder block.",
+          "value": "43 N-m (440 kgf-cm, 32 ft-lbf)"
         },
         {
-          "context": "bolts.",
-          "value": "19 N-m (195 kgf-cm,"
+          "context": "Install the turbocharger stay with the three bolts.",
+          "value": "To turbocharger 69 N-m (705 kgf-cm, 51 ft-lbf). To cylinder block 59 N-m (600 kgf-cm, 43 ft-lbf)"
         },
         {
-          "context": "Install the air connectorwith the four bolts.",
-          "value": "19 N-m"
+          "context": "(a) Install a new gasket and the oxygen sensor with the two nuts.",
+          "value": "44 N-m (450 kgf-cm, 33 ft-lbf)"
+        },
+        {
+          "context": "(d) Install the catalytic converter with the three bolts and two nuts.",
+          "value": "29 N-m (300 kgf-cm, 22 ft-lbf)"
+        },
+        {
+          "context": "(e) Install the RH converter stay with the four bolts.",
+          "value": "59 N-m (600 kgf-cm, 43 ft-lbf)"
+        },
+        {
+          "context": "(f) Install the LH converter stay with the three bolts.",
+          "value": "59 N-m (600 kgf-cm, 43 ft-lbf)"
+        },
+        {
+          "context": "(a) Install the alternator with the two bolts.",
+          "value": "12 mm head bolt 19 N-m (195 kgf-cm, 14 ft-lbf). 14 mm head bolt 52 N-m (530 kgf-cm, 38 ft-lbf)"
+        },
+        {
+          "context": "(c) Install the No.2 alternator bracket with the two bolts.",
+          "value": "To turbine outlet elbow 43 N-m (440 kgf-cm, 32 ft-lbf). To No. 1 alternator bracket 39 N-m (400 kgf-cm, 29 ft-lbf)"
+        },
+        {
+          "context": "Install a new gasket and the throttle body with the four bolts.",
+          "value": "19 N-m (195 kgf.cm, 14 ft-lbf)"
+        },
+        {
+          "context": "(c) Close the drain cocks.",
+          "value": "(Engine drain cock): 13 N.m (130 kgf-cm, 9 ft-lbf)"
+        },
+        {
+          "context": "Using SST, install and torque the spark plug. SST 09155-16100",
+          "value": "18 N-m (180 kgf-cm, 13 ft-lbf)"
+        },
+        {
+          "context": "A-6 SERVICE SPECIFICATIONS - Engine Mechanical",
+          "value": "Oil pump pulley x Oil pump drive shaft 35 N-m (355 kgf-cm, 26 ft-lbf)"
+        },
+        {
+          "context": "Intercooler water pump amperage 1.5 - 2.1 A",
+          "value": "Turbine outlet elbow x Turbocharger 64 N-m (650 kgf-cm, 47 ft-lbf)"
+        },
+        {
+          "context": "RSC - B and RSO + B1 19.3 - 22.3 ohm",
+          "value": "Fuel line Union bolt type 29 N-m (300 kgf-cm, 22 ft-lbf)"
+        },
+        {
+          "context": "Valve lift at 95°C (203°F) 8 mm (0.31 in.) or more",
+          "value": "Engine coolant drain plug 13 N-m (130 kgf-cm, 9 ft-lbf)"
+        },
+        {
+          "context": "Tip clearance STD 0.04 - 0.16 mm (0.0016 - 0.0063 in.) Limit 0.20 mm (0.0079 in.)",
+          "value": "Engine oil drain plug 25 N-m (250 kgf-cm, 18 ft-lbf)"
         }
       ],
       "has_torque_table": true,
@@ -18875,35 +18912,71 @@
         "TC-20",
         "TC-8",
         "TC-16",
+        "FI-42",
         "TC-10",
+        "FI-7",
         "FI-5",
         "FI-4",
+        "FI-14",
         "FI-33",
         "FI-16",
-        "FI-14",
+        "FI-31",
+        "FI-41",
         "TC-14",
         "TC-21",
         "IG-3",
-        "IG-7"
+        "IG-6",
+        "IG-7",
+        "IG-2"
       ],
       "book": "",
       "edition": "1991",
       "refs_resolved": [
         {
-          "code": "IG-3",
+          "code": "TC-12",
           "target": null,
           "page": null,
-          "system": "Ignition"
+          "system": "Turbocharger"
         },
         {
-          "code": "IG-7",
+          "code": "TC-20",
           "target": null,
           "page": null,
-          "system": "Ignition"
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-8",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-16",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-10",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-14",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
+        },
+        {
+          "code": "TC-21",
+          "target": null,
+          "page": null,
+          "system": "Turbocharger"
         }
       ],
       "master_torque": [],
-      "torque_count": 15
+      "torque_count": 28
     },
     {
       "id": "Toyota Celica ST185 Specifications",

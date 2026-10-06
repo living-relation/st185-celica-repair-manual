@@ -43,7 +43,7 @@ Sections containing a factory TORQUE SPECIFICATIONS table, with the PDF page(s) 
 - **Engine Performance N — Remove/Install/Overhaul** [Engine Performance] — torque table page(s): p.1, p.2, p.8, p.9, p.11, p.12, p.13 — `Mitchell 1993 - Engine Performance N — Remove-Install-Overhaul.pdf`
 - **Lubrication System** [Lubrication] — torque table page(s): p.1, p.2 — `Lubrication_System.pdf`
 - **Mfi And Sfi Systems 3sgte** [Fuel / EFI] — torque table page(s): p.1, p.4 — `Mfi_And_Sfi_Systems_3sgte.pdf`
-- **Toyota - 3S-GTE - 1991 - Repair Manual (RM266E)** [Fuel / EFI (MFI-SFI)] — torque table page(s): p.128, p.129, p.131, p.133, p.135 — `Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf`
+- **Toyota - 3S-GTE - 1991 - Repair Manual (RM266E)** [Fuel / EFI (MFI-SFI)] — torque table page(s): p.5, p.128, p.129, p.131, p.133, p.135, p.136, p.137 — `Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf`
 - **Turbocharger System** [Turbocharger] — torque table page(s): p.1 — `Turbocharger_System.pdf`
 
 ## Engine Electrical

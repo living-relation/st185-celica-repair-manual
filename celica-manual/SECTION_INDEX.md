@@ -316,7 +316,7 @@ Total section files: **362**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Mfi And Sfi Main Relay | Fuel / EFI (MFI-SFI) | FI | - | 1 | 0 |
 | Precautions, Inspection Precautions — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | - | 1 | 0 |
 | Throttle Body 3sgte | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 7 | 3 |
-| Toyota - 3S-GTE - 1991 - Repair Manual (RM266E) | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 144 | 15 |
+| Toyota - 3S-GTE - 1991 - Repair Manual (RM266E) | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 144 | 28 |
 | Troubleshooting with Volt Ohmmeter — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 66 | 0 |
 | Troubleshooting — MFI and SFI Systems | Fuel / EFI (MFI-SFI) | FI | 3S-GTE + 5S-FE | 16 | 0 |
 | Turbocharging Pressure Sensor | Fuel / EFI (MFI-SFI) | FI | 3S-GTE | 1 | 0 |
