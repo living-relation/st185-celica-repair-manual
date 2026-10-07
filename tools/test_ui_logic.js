@@ -29,6 +29,11 @@ const clustered = Lib.findHit(
   "===== PAGE 2 of 9 =====\nblock only\n===== PAGE 8 of 9 =====\ncylinder block main journal bore",
   ["cylinder", "block", "journal"]);
 check("search prefers words that sit together", clustered.page === 8);
+let earlyNoise = "===== PAGE 1 of 2 =====\n";
+for (let i = 0; i < 40; i++) earlyNoise += "turbocharger of the case ";
+earlyNoise += "\n===== PAGE 2 of 2 =====\nREMOVAL OF TURBOCHARGER\n";
+const later = Lib.findHit(earlyNoise, ["removal", "of", "turbocharger"]);
+check("search still finds a heading later in a long book", later.page === 2);
 
 const st185 = {id: "a", name: "All-Trac", year: 1993, model: "ST185", trans: "M/T",
   body: "LIFTBACK", market: "USA", ac: "auto", blower: "dial"};
@@ -58,6 +63,11 @@ check("1990 engine pages hide when 1993 has that system", !Garage.repairFits(rec
 check("1990 clutch stays when that year is the only copy", Garage.repairFits(recs[5], recs, car));
 const side = {id: "gebook", system: "Engine Mechanical", engine: "na", edition: "3sge"};
 check("a side book is not treated as the 1993 shelf", Garage.repairFits(side, recs.concat([side]), car));
+const whole = {id: "rm266", system: "Fuel / EFI (MFI-SFI)", engine: "3sgte", edition: "1991",
+  own_codes: ["FI-1", "EM-10", "CO-2", "IG-3"]};
+const efi93 = {id: "efi93", system: "Fuel / EFI (MFI-SFI)", engine: "3sgte", edition: ""};
+check("a whole older manual stays when this year has one of its systems",
+  Garage.repairFits(whole, recs.concat([whole, efi93]), car));
 
 const circuit = {applies: {engines: ["5S-FE"], drive: ["2WD"]}, option: ""};
 check("wiring circuit fits the other tab's car",

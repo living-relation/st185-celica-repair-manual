@@ -139,10 +139,23 @@
     return engine === want;
   }
 
+  function codeFamilies(rec) {
+    const seen = {};
+    (rec.own_codes || []).forEach(function (code) {
+      const prefix = String(code).split("-")[0];
+      if (prefix && prefix !== String(code)) seen[prefix] = true;
+    });
+    return Object.keys(seen);
+  }
+
   function yearFits(rec, records, car) {
     const year = sectionYear(rec);
     const want = Number(car.year);
     if (year == null || !want || year === want) return true;
+    // One PDF can hold several systems and still be filed under just one.
+    // The 1991 3S-GTE book is filed as fuel, but it also has engine,
+    // cooling, and ignition pages. A newer fuel section does not replace it.
+    if (codeFamilies(rec).length > 1) return true;
     const covered = (records || []).some(function (other) {
       return other !== rec && other.system === rec.system &&
         sectionYear(other) === want && engineFits(other.engine, car);
