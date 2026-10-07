@@ -151,6 +151,7 @@ not already have (matched by Toyota page code):
 |---|---|---|
 | 1993 ST185 Repair Manual vol. 1 (RM305U1) | Repair Manual | One section per chapter (page-header topic), skipping chapters already in the library and 4A-FE-only chapters |
 | 1990 ST185 All-Trac Repair Manual (RM176U) | Repair Manual | Clutch, E150F transaxle, propeller shaft, suspension & axle, brakes, steering, body electrical, body — tagged 1990 so its page codes never link into 1993 pages |
+| 1994 3S-GTE engine supplement (RM398E) and ST205 chassis and body supplement (RM399E) | Repair Manual | Whole books. Tagged 1994 so their page numbers never open a 1993 page. They still show when a 1993 All-Trac is selected, because a few procedures differ |
 | 1993 Celica Service Manual (aftermarket) | Electrical + Repair Manual | Electrical articles and wiring diagrams become the *1993 Mitchell* edition; ST185-relevant mechanical articles (2.0L turbo engine, engine performance/diagnostics, A/C servicing, axles, brakes, steering, suspension, alignment, maintenance) become repair sections |
 | Small references | either app | Specifications, chassis dimensions, E-series gearbox notes, ECU pinouts, alternator guide, Wire Harness Repair Manual, brake and suspension notes, CT26 rebuild guide, and the 1990 FWD wiring diagram |
 

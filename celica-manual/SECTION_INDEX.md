@@ -1,6 +1,6 @@
 # ST185 Celica GT-Four / All-Trac - Master Section Index
 
-Total section files: **367**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
+Total section files: **369**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac AWD)**
 
 ## Body  (118)
 
@@ -145,10 +145,11 @@ Total section files: **367**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Proportioning Valve P Valve | Brakes | BR | 5S-FE | 1 | 0 |
 | Speed Sensor And Decelerationse | Brakes | BR | - | 5 | 0 |
 
-## Chassis  (18)
+## Chassis  (19)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
+| Celica 4WD Chassis and Body Supplement (ST205, 1994) | Chassis & Body | MX | 3S-GTE | 352 | 103 |
 | Steering (1990 All-Trac) | Steering | SR | - | 9 | 3 |
 | Steering Column - Standard | Steering | - | - | 5 | 0 |
 | Steering Column - Tilt | Steering | - | - | 7 | 0 |
@@ -224,7 +225,7 @@ Total section files: **367**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | Electric | Electrical / Wiring | - | - | 1 | 0 |
 | Electrical Wire Routing | Electrical / Wiring | - | - | 1 | 0 |
 
-## Engine  (112)
+## Engine  (113)
 
 | Title | System | Code | Engine | Pages | Torques |
 |---|---|---|---|---|---|
@@ -255,6 +256,7 @@ Total section files: **367**  |  Vehicle: **1993 ST185 (3S-GTE turbo, All-Trac A
 | T-EG003-96 | Engine Bulletin | - | - | 1 | 0 |
 | T-EG007-02 | Engine Bulletin | - | - | 1 | 0 |
 | Diagnosis System 3SGTE And 5SFE | Engine Diagnostics | FI | 3S-GTE + 5S-FE | 19 | 0 |
+| 3S-GTE Engine Repair Manual Supplement (1994) | Engine Mechanical | EG | 3S-GTE | 222 | 50 |
 | Compression Check | Engine Mechanical | EM | 3S-GTE | 2 | 1 |
 | Cylinder Block 3sgte | Engine Mechanical | EM | 3S-GTE | 45 | 32 |
 | Cylinder Block 5sfe | Engine Mechanical | EM | 5S-FE | 44 | 30 |

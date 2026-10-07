@@ -280,7 +280,7 @@ def detect_edition(stem: str, meta: dict) -> str:
     edition = str(meta.get("edition") or "")
     if edition:
         return edition
-    match = re.search(r"(1990|1991|1992|1993)", stem)
+    match = re.search(r"(1990|1991|1992|1993|1994)", stem)
     return match.group(1) if match else ""
 
 

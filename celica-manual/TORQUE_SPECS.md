@@ -15,6 +15,7 @@ Sections containing a factory TORQUE SPECIFICATIONS table, with the PDF page(s) 
 
 ## Chassis
 
+- **Celica 4WD Chassis and Body Supplement (ST205, 1994)** [Chassis & Body] — torque table page(s): p.245, p.265 — `Toyota - ST205 - 1994 - Chassis and Body Supplement (RM399E).pdf`
 - **Steering Column - Standard** [Steering] — torque table page(s): p.3, p.5 — `Mitchell 1993 - Steering Column - Standard.pdf`
 - **Steering Column - Tilt** [Steering] — torque table page(s): p.7 — `Mitchell 1993 - Steering Column - Tilt.pdf`
 - **Steering System - Power Rack & Pinion** [Steering] — torque table page(s): p.10 — `Mitchell 1993 - Steering System - Power Rack & Pinion.pdf`
@@ -33,6 +34,7 @@ Sections containing a factory TORQUE SPECIFICATIONS table, with the PDF page(s) 
 
 ## Engine
 
+- **3S-GTE Engine Repair Manual Supplement (1994)** [Engine Mechanical] — torque table page(s): p.83 — `Toyota - 3S-GTE - 1994 - Engine Repair Manual Supplement (RM398E).pdf`
 - **Cooling System** [Cooling] — torque table page(s): p.1 — `Cooling_System.pdf`
 - **Cylinder Head (5S-FE) — Engine Mechanical** [Engine Mechanical] — torque table page(s): p.24 — `RM305U1 - Engine Mechanical - Cylinder Head (5S-FE).pdf`
 - **Cylinder Head 3sgte** [Engine Mechanical] — torque table page(s): p.25 — `Cylinder_Head_3sgte.pdf`
