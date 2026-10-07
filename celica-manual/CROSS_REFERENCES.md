@@ -31,7 +31,6 @@ Where each 'See page XX-nn' reference resolves to a file in this set. Unresolved
 ## Celica 4WD Chassis and Body Supplement (ST205, 1994)  (`Toyota - ST205 - 1994 - Chassis and Body Supplement (RM399E).pdf`)
 - BR-82  ->  (not in set)
 - BR-60  ->  (not in set)
-- BR-4  ->  (not in set)
 
 ## Clutch Master Cylinder  (`Clutch_Master_Cylinder.pdf`)
 - CL-3  ->  Check_And_Adjustment_Of_Clutch.pdf
