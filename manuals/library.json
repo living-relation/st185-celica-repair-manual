@@ -627,6 +627,22 @@
    "group": "Chassis",
    "engine": "3sgte",
    "book": "gt4.mwp.id.au"
+  },
+  "Toyota - 3S-GTE - 1994 - Engine Repair Manual Supplement (RM398E).pdf": {
+   "title": "3S-GTE Engine Repair Manual Supplement (1994)",
+   "system": "Engine Mechanical",
+   "group": "Engine",
+   "engine": "3sgte",
+   "edition": "1994",
+   "book": "RM398E (1994)"
+  },
+  "Toyota - ST205 - 1994 - Chassis and Body Supplement (RM399E).pdf": {
+   "title": "Celica 4WD Chassis and Body Supplement (ST205, 1994)",
+   "system": "Chassis & Body",
+   "group": "Chassis",
+   "engine": "3sgte",
+   "edition": "1994",
+   "book": "RM399E (1994 ST205)"
   }
  },
  "_comment": "Sections split out of whole manuals by tools/import_books.py: title, system/group, engine, source book and edition per file."

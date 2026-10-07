@@ -68,6 +68,14 @@ const whole = {id: "rm266", system: "Fuel / EFI (MFI-SFI)", engine: "3sgte", edi
 const efi93 = {id: "efi93", system: "Fuel / EFI (MFI-SFI)", engine: "3sgte", edition: ""};
 check("a whole older manual stays when this year has one of its systems",
   Garage.repairFits(whole, recs.concat([whole, efi93]), car));
+const y94 = {id: "rm398", system: "Engine Mechanical", engine: "3sgte", edition: "1994",
+  own_codes: ["EG-4", "EG-10"]};
+check("1994 supplement stays visible for a 1993 car",
+  Garage.repairFits(y94, recs.concat([y94]), car));
+const feCar = {id: "c", name: "GT", year: 1993, model: "ST184", trans: "M/T",
+  body: "LIFTBACK", market: "USA", ac: "auto", blower: "dial"};
+check("1994 3S-GTE supplement stays off a 5S-FE car",
+  !Garage.repairFits(y94, recs.concat([y94]), feCar));
 
 const circuit = {applies: {engines: ["5S-FE"], drive: ["2WD"]}, option: ""};
 check("wiring circuit fits the other tab's car",

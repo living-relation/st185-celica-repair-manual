@@ -126,6 +126,8 @@
 
   function sectionYear(rec) {
     const edition = String(rec.edition || "");
+    // 1994 is the ST205 supplement. A few pages differ from the 1993 book,
+    // so it stays in the list instead of being treated as a replacement year.
     if (/^(1990|1991|1992|1993)$/.test(edition)) return Number(edition);
     if (!edition) return 1993;
     return null;

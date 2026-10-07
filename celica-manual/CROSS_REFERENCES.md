@@ -2,6 +2,9 @@
 
 Where each 'See page XX-nn' reference resolves to a file in this set. Unresolved codes are pages not present as separate PDFs.
 
+## 3S-GTE Engine Repair Manual Supplement (1994)  (`Toyota - 3S-GTE - 1994 - Engine Repair Manual Supplement (RM398E).pdf`)
+- EG-286  ->  (not in set)
+
 ## Air Induction System (Throttle Body (5S-FE)) — MFI and SFI Systems  (`RM305U1 - MFI and SFI Systems - Air Induction System (Throttle Body (5S-FE)).pdf`)
 - CO-6  ->  RM305U1 - Cooling System - Check and Replacement of Engine Coolant.pdf
 
@@ -24,6 +27,10 @@ Where each 'See page XX-nn' reference resolves to a file in this set. Unresolved
 - BR-77  ->  (not in set)
 - SA-17  ->  RM176U 1990 - Suspension and Axle.pdf
 - SA-87  ->  (not in set)
+
+## Celica 4WD Chassis and Body Supplement (ST205, 1994)  (`Toyota - ST205 - 1994 - Chassis and Body Supplement (RM399E).pdf`)
+- BR-82  ->  (not in set)
+- BR-60  ->  (not in set)
 
 ## Clutch Master Cylinder  (`Clutch_Master_Cylinder.pdf`)
 - CL-3  ->  Check_And_Adjustment_Of_Clutch.pdf

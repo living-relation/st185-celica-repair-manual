@@ -9,7 +9,7 @@ The GitHub repo is public. The 1991 3S-GTE repair manual was read from that publ
 - Keep `manuals/3SGE-workshop-manual-early.pdf` out of the library. It was removed on this branch. Do not put it back.
 - Leave `manuals/Toyota - 3S-GTE - 1991 - Repair Manual (RM266E).pdf` as it is. A rebuild skips pages that already have words, so the new text stays.
 - Leave the smaller 3S-GTE and 5S-FE scans, and the electrical scans, on their current rough text unless the user asks for those too.
-- The index at https://gt4.mwp.id.au/ was already compared. The 1990 and 1993 ST185 repair books and the Mitchell book are already split into sections. Do not add those whole files again. Do not add the ST165, ST205, or ST245 books. Their page codes would fight the 1993 links. The 1990 FWD wiring book is already in `manuals-electrical` as its own edition, `ewd1990fwd`.
+- The index at https://gt4.mwp.id.au/ was already compared. The 1990 and 1993 ST185 repair books and the Mitchell book are already split into sections. Do not add those whole files again. Do not add the ST165 or ST245 books. Their page codes would fight the 1993 links. The Feb 1994 3S-GTE engine supplement (RM398E) and the ST205 chassis and body supplement (RM399E) are already in the repair library as edition 1994. Do not add other ST205 books. Do not add the aftermarket ARP, Wiseco, Mahle, Hawk, AC fitting, PRS, or Fury sheets. The 1990 FWD wiring book is already in `manuals-electrical` as its own edition, `ewd1990fwd`.
 - Do not use a live Extend workspace. The test reads for this book are already paid for and already on the PDF.
 
 ## Where the work lives
